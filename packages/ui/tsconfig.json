@@ -1,0 +1,10 @@
+{
+  "extends": "@resume-builder/typescript-config/react-library.json",
+  "compilerOptions": {
+    "paths": {
+      "@resume-builder/ui/*": ["./src/*"]
+    }
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "dist"]
+}

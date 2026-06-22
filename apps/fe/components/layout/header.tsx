@@ -1,0 +1,464 @@
+"use client";
+
+import {
+  SignedIn,
+  SignedOut,
+  SignOutButton,
+  UserAvatar,
+  useUser,
+} from "@clerk/nextjs";
+import { Button } from "@resume-builder/ui/components/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@resume-builder/ui/components/dropdown-menu";
+import { cn } from "@resume-builder/ui/lib/utils";
+import { AnimatePresence, m } from "framer-motion";
+import {
+  CreditCard,
+  FileText,
+  Home,
+  LogOut,
+  Menu,
+  User,
+  X,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
+
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { Link, usePathname } from "@/i18n/navigation";
+
+const navLinks = [
+  { href: "/", labelKey: "home" as const, icon: Home },
+  { href: "/templates", labelKey: "templates" as const, icon: FileText },
+];
+
+// Animation variants
+const headerVariants = {
+  hidden: { y: -100, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
+};
+
+const navItemVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.3 + i * 0.1,
+      duration: 0.5,
+      ease: "easeOut" as const,
+    },
+  }),
+};
+
+const logoVariants = {
+  hidden: { opacity: 0, scale: 0.8, rotate: -10 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    rotate: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
+};
+
+const mobileMenuVariants = {
+  hidden: { opacity: 0, height: 0 },
+  visible: {
+    opacity: 1,
+    height: "auto",
+    transition: { duration: 0.3, ease: "easeOut" as const },
+  },
+  exit: {
+    opacity: 0,
+    height: 0,
+    transition: { duration: 0.2, ease: "easeIn" as const },
+  },
+};
+
+const mobileItemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.1, duration: 0.3 },
+  }),
+  exit: { opacity: 0, x: -20 },
+};
+
+const Header = () => {
+  const t = useTranslations("Nav");
+  const { user, isLoaded } = useUser();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isActive = (path: string) => pathname === path;
+
+  return (
+    <m.nav
+      className={cn(
+        "relative z-50 transition-all duration-300",
+        pathname === "/"
+          ? "fixed top-0 right-0 left-0"
+          : "bg-background border-b",
+        pathname === "/" &&
+          (isScrolled || isOpen) &&
+          "glass border-border/50 border-b shadow-md",
+      )}
+      variants={headerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="container mx-auto overflow-x-hidden px-4">
+        <div className="flex h-16 items-center justify-between">
+          {/* Animated Logo */}
+          <m.div variants={logoVariants} initial="hidden" animate="visible">
+            <Link
+              href="/"
+              className="group flex items-center gap-2 select-none"
+            >
+              <m.div
+                className={`
+                  gradient-bg flex h-9 w-9 items-center justify-center
+                  rounded-lg shadow-md
+                `}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  boxShadow: "0 0 20px rgba(124, 58, 237, 0.5)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <m.div>
+                  <FileText className="text-primary-foreground h-5 w-5" />
+                </m.div>
+              </m.div>
+              <m.span
+                className="font-display text-xl font-bold"
+                whileHover={{ scale: 1.05 }}
+              >
+                CV<span className="gradient-text">Craft</span>
+              </m.span>
+            </Link>
+          </m.div>
+
+          {/* Desktop Navigation with staggered animation */}
+          <div
+            className={`
+              hidden items-center gap-4
+              md:flex
+            `}
+          >
+            {navLinks.map((link, i) => (
+              <m.div
+                key={link.href}
+                custom={i}
+                variants={navItemVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <Link href={link.href}>
+                  <m.div
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  >
+                    <Button
+                      className={cn("relative gap-2 overflow-hidden")}
+                      variant={isActive(link.href) ? "default" : "ghost"}
+                    >
+                      <m.span
+                        animate={
+                          isActive(link.href) ? { rotate: [0, -10, 10, 0] } : {}
+                        }
+                        transition={{ duration: 0.5 }}
+                      >
+                        <link.icon className="h-4 w-4" />
+                      </m.span>
+                      {t(link.labelKey)}
+                    </Button>
+                  </m.div>
+                </Link>
+              </m.div>
+            ))}
+          </div>
+
+          {/* Auth Buttons with animation */}
+          <div
+            className={`
+              hidden items-center gap-2
+              md:flex
+            `}
+          >
+            <LanguageSwitcher />
+            {/* Loading placeholder handled by Clerk's internal loading state or we can use ClerkLoading if needed */}
+            {!isLoaded ? (
+              <div className="h-10 w-24"></div>
+            ) : (
+              <>
+                <SignedIn>
+                  <m.div
+                    custom={navLinks.length}
+                    variants={navItemVariants}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    <DropdownMenu modal={false}>
+                      <DropdownMenuTrigger className="cursor-pointer">
+                        <UserAvatar />
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent
+                        className="w-56"
+                        align="end"
+                        forceMount
+                      >
+                        <DropdownMenuLabel className="font-normal">
+                          <div className="flex flex-col space-y-1">
+                            <p className="text-sm leading-none font-medium">
+                              {user?.fullName}
+                            </p>
+                          </div>
+                        </DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem asChild disabled>
+                          <Link href="/profile" className="cursor-pointer">
+                            <User className="mr-2 h-4 w-4" />
+                            {t("profile")}
+                          </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild disabled>
+                          <Link href="/subscription" className="cursor-pointer">
+                            <CreditCard className="mr-2 h-4 w-4" />
+                            {t("subscription")}
+                          </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem asChild>
+                          <SignOutButton>
+                            <div
+                              className={`
+                                flex w-full cursor-pointer items-center
+                              `}
+                            >
+                              <LogOut className="mr-2 h-4 w-4" />
+                              {t("signOut")}
+                            </div>
+                          </SignOutButton>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </m.div>
+                </SignedIn>
+
+                <SignedOut>
+                  <m.div
+                    custom={navLinks.length}
+                    variants={navItemVariants}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    <Link href="/auth/sign-in">
+                      <m.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Button variant="ghost">{t("signIn")}</Button>
+                      </m.div>
+                    </Link>
+                  </m.div>
+                  <m.div
+                    custom={navLinks.length + 1}
+                    variants={navItemVariants}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    <Link href="/auth/sign-in">
+                      <m.div
+                        whileHover={{
+                          scale: 1.05,
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 17,
+                        }}
+                      >
+                        <Button variant="gradient">{t("getStarted")}</Button>
+                      </m.div>
+                    </Link>
+                  </m.div>
+                </SignedOut>
+              </>
+            )}
+          </div>
+
+          {/* Animated Mobile Menu Button */}
+          <m.div className="md:hidden" whileTap={{ scale: 0.9 }}>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <AnimatePresence mode="wait">
+                {isOpen ? (
+                  <m.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X className="h-5 w-5" />
+                  </m.div>
+                ) : (
+                  <m.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu className="h-5 w-5" />
+                  </m.div>
+                )}
+              </AnimatePresence>
+            </Button>
+          </m.div>
+        </div>
+
+        {/* Animated Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <m.div
+              className={`
+                fixed top-16 right-0 left-0 overflow-hidden rounded-b-lg
+                bg-white px-2 shadow
+                md:hidden
+              `}
+              variants={mobileMenuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <div className="flex flex-col gap-1 py-4">
+                <div className="flex justify-center px-2 pb-3">
+                  <LanguageSwitcher />
+                </div>
+                {navLinks.map((link, i) => (
+                  <m.div
+                    key={link.href}
+                    custom={i}
+                    variants={mobileItemVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <Link href={link.href} onClick={() => setIsOpen(false)}>
+                      <m.div whileTap={{ scale: 0.98, x: 5 }}>
+                        <Button
+                          variant={isActive(link.href) ? "secondary" : "ghost"}
+                          className="w-full justify-start gap-3"
+                        >
+                          <link.icon className="h-4 w-4" />
+                          {t(link.labelKey)}
+                        </Button>
+                      </m.div>
+                    </Link>
+                  </m.div>
+                ))}
+                <m.div
+                  custom={navLinks.length}
+                  variants={mobileItemVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <SignedIn>
+                    <Link href="/subscription" onClick={() => setIsOpen(false)}>
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start gap-3"
+                      >
+                        <CreditCard className="h-4 w-4" />
+                        {t("subscription")}
+                      </Button>
+                    </Link>
+                    <Link href="/profile" onClick={() => setIsOpen(false)}>
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start gap-3"
+                      >
+                        <User className="h-4 w-4" />
+                        {t("profile")}
+                      </Button>
+                    </Link>
+
+                    <div className="border-border mt-2 flex border-t pt-2">
+                      <div className="border-border flex-1 border-r px-4 py-2">
+                        <div className="flex items-center gap-3">
+                          <UserAvatar />
+                          <div className="flex flex-col">
+                            <p className="text-sm font-medium">
+                              {user?.fullName ||
+                                user?.primaryEmailAddress?.emailAddress.split(
+                                  "@",
+                                )[0]}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1 px-4 py-2">
+                        <SignOutButton>
+                          <Button
+                            variant="ghost"
+                            className={`
+                              w-full justify-start gap-3 text-red-500
+                              hover:bg-red-50 hover:text-red-500
+                            `}
+                          >
+                            <LogOut className="h-4 w-4" />
+                            {t("signOut")}
+                          </Button>
+                        </SignOutButton>
+                      </div>
+                    </div>
+                  </SignedIn>
+                  <SignedOut>
+                    <Link href="/auth/sign-in" onClick={() => setIsOpen(false)}>
+                      <m.div whileTap={{ scale: 0.98 }} whileHover={{}}>
+                        <Button variant="gradient" className="mt-2 w-full">
+                          {t("signInSignUp")}
+                        </Button>
+                      </m.div>
+                    </Link>
+                  </SignedOut>
+                </m.div>
+              </div>
+            </m.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </m.nav>
+  );
+};
+
+export default Header;

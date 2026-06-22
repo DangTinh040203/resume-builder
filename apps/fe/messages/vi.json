@@ -1,0 +1,228 @@
+{
+  "Nav": {
+    "home": "Trang chủ",
+    "templates": "Mẫu CV",
+    "profile": "Hồ sơ",
+    "subscription": "Gói đăng ký",
+    "signOut": "Đăng xuất",
+    "signIn": "Đăng nhập",
+    "getStarted": "Bắt đầu",
+    "signInSignUp": "Đăng nhập / Đăng ký"
+  },
+  "Language": {
+    "label": "Ngôn ngữ"
+  },
+  "Footer": {
+    "tagline": "Trình tạo CV bằng AI giúp bạn đạt được công việc mơ ước.",
+    "product": "Sản phẩm",
+    "company": "Công ty",
+    "legal": "Pháp lý",
+    "productLinks": {
+      "0": "Mẫu CV",
+      "1": "Tạo CV",
+      "2": "Phỏng vấn thử",
+      "3": "Bảng giá"
+    },
+    "companyLinks": {
+      "0": "Giới thiệu",
+      "1": "Blog",
+      "2": "Tuyển dụng",
+      "3": "Liên hệ"
+    },
+    "legalLinks": {
+      "0": "Chính sách bảo mật",
+      "1": "Điều khoản dịch vụ",
+      "2": "Chính sách cookie"
+    },
+    "copyright": "© 2026 CVCraft - Cao Dang Tinh. Bảo lưu mọi quyền."
+  },
+  "NotFound": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn tìm không tồn tại hoặc đã được chuyển.",
+    "back": "Quay lại",
+    "home": "Trang chủ"
+  },
+  "Hero": {
+    "badge": "Trình tạo CV bằng AI",
+    "new": "MỚI",
+    "headline1": "Kết nối,",
+    "headline2": "phát triển.",
+    "sub": "Chào mừng đến CVCraft, nền tảng tạo CV chuyên nghiệp hàng đầu.\nTạo CV đẹp, tối ưu ATS chỉ trong vài phút với AI.",
+    "buildProfile": "Tạo hồ sơ",
+    "viewTemplates": "Xem mẫu",
+    "statLabels": {
+      "0": "Chuyên gia",
+      "1": "Kết nối",
+      "2": "Tin tuyển dụng",
+      "3": "Hồ sơ ứng tuyển"
+    },
+    "scrollHint": "Cuộn để khám phá"
+  },
+  "Marquee": {
+    "title": "Được tin dùng bởi chuyên gia trên toàn cầu"
+  },
+  "Features": {
+    "badge": "Tính năng mạnh mẽ",
+    "title": "Mọi thứ bạn cần để xây dựng sự nghiệp",
+    "description": "Từ mẫu chuyên nghiệp đến nội dung AI và phỏng vấn thử, CVCraft cung cấp bộ công cụ trọn vẹn cho hành trình xin việc của bạn.",
+    "items": {
+      "templates": {
+        "title": "10 mẫu CV chuyên nghiệp",
+        "description": "Chọn trong các mẫu được thiết kế đẹp mắt, thu hút nhà tuyển dụng."
+      },
+      "ai": {
+        "title": "Viết bằng AI",
+        "description": "Tạo và chỉnh nội dung CV với AI. Chỉ cần dán mô tả công việc."
+      },
+      "interview": {
+        "title": "Phỏng vấn thử",
+        "description": "Luyện tập phỏng vấn AI theo vị trí và ngành bạn nhắm tới."
+      }
+    }
+  },
+  "HowItWorks": {
+    "badge": "Quy trình 3 bước",
+    "title": "Bắt đầu chỉ trong vài phút",
+    "description": "Chúng tôi tinh gọn quy trình để bạn tập trung kể câu chuyện nghề nghiệp của mình.",
+    "steps": {
+      "0": {
+        "title": "Nhập thông tin",
+        "description": "Bắt đầu mới hoặc nhập CV hiện có. Thêm kinh nghiệm, học vấn và kỹ năng."
+      },
+      "1": {
+        "title": "Tối ưu bằng AI",
+        "description": "Để AI tối ưu nội dung theo công việc bạn muốn. Dán mô tả tin tuyển dụng để gợi ý phù hợp."
+      },
+      "2": {
+        "title": "Tải xuống & ứng tuyển",
+        "description": "Xuất CV PDF hoặc Word. Sẵn sàng chinh phục nhà tuyển dụng!"
+      }
+    }
+  },
+  "TemplatePreview": {
+    "badge": "Thiết kế cao cấp",
+    "titleBefore": "Chọn trong",
+    "titleHighlight": "10+ mẫu",
+    "titleAfter": "chuyên nghiệp",
+    "description": "Bộ mẫu được chế tác kỹ lưỡng để đáp ứng tiêu chuẩn của các công ty và nhà tuyển dụng hàng đầu.",
+    "explore": "Xem tất cả mẫu",
+    "categories": {
+      "professional": "Chuyên nghiệp",
+      "modern": "Hiện đại",
+      "creative": "Sáng tạo",
+      "minimal": "Tối giản"
+    },
+    "previewDesign": "Xem trước"
+  },
+  "WhyChooseUs": {
+    "badge": "Ưu thế CVCraft",
+    "title": "Vì sao chọn CVCraft?",
+    "subtitle": "Chúng tôi kết hợp chuyên môn tuyển dụng và AI tiên tiến để xây bộ công cụ phát triển sự nghiệp trọn vẹn.",
+    "items": {
+      "0": {
+        "title": "Cực nhanh",
+        "description": "Tạo CV chuyên nghiệp dưới 10 phút với trình dựng trực quan."
+      },
+      "1": {
+        "title": "Thân thiện ATS",
+        "description": "Mọi mẫu đều tối ưu để vượt hệ thống sàng lọc hồ sơ."
+      },
+      "2": {
+        "title": "Tiết kiệm thời gian",
+        "description": "AI viết nội dung thuyết phục để bạn tập trung điều quan trọng."
+      },
+      "3": {
+        "title": "Theo từng tin tuyển dụng",
+        "description": "Điều chỉnh CV theo mô tả công việc để tăng tỷ lệ thành công."
+      },
+      "4": {
+        "title": "Được chuyên gia tin dùng",
+        "description": "Mẫu do nhà tuyển dụng và cố vấn nghề nghiệp thiết kế."
+      },
+      "5": {
+        "title": "Kết quả đã chứng minh",
+        "description": "95% người dùng báo cáo nhận được nhiều cuộc gọi phỏng vấn hơn."
+      }
+    }
+  },
+  "Benefits": {
+    "badge": "Thiết kế để thành công",
+    "title": "Nổi bật giữa đám đông ứng viên",
+    "description": "Trình tạo CV do chuyên gia thiết kế để hồ sơ của bạn được hệ thống tuyển dụng hiện đại chú ý.",
+    "items": {
+      "0": "Định dạng tối ưu ATS",
+      "1": "Xem trước thời gian thực",
+      "2": "Xuất PDF & Word",
+      "3": "Tùy chỉnh theo tin tuyển dụng",
+      "4": "Kiểm tra ngữ pháp & chính tả",
+      "5": "Chỉnh sửa không giới hạn"
+    },
+    "cta": "Bắt đầu miễn phí ngay"
+  },
+  "Stats": {
+    "0": {
+      "label": "CV đã tạo"
+    },
+    "1": {
+      "label": "Ứng viên được tuyển"
+    },
+    "2": {
+      "label": "Tỷ lệ thành công"
+    }
+  },
+  "Testimonials": {
+    "badge": "Câu chuyện thành công",
+    "title": "Được yêu thích bởi hàng nghìn ứng viên",
+    "description": "Xem chuyên gia từ các công ty hàng đầu dùng CVCraft để thăng tiến sự nghiệp.",
+    "items": {
+      "0": {
+        "name": "Sarah Chen",
+        "role": "Kỹ sư phần mềm tại Google",
+        "content": "CVCraft giúp tôi có công việc mơ ước tại Google. Gợi ý AI khiến CV của tôi nổi bật giữa hàng trăm hồ sơ."
+      },
+      "1": {
+        "name": "Michael Roberts",
+        "role": "Quản lý sản phẩm tại Meta",
+        "content": "Phỏng vấn thử với AI thay đổi hoàn toàn trải nghiệm. Tôi tự tin vào vòng phỏng vấn cuối."
+      },
+      "2": {
+        "name": "Emily Watson",
+        "role": "Giám đốc Marketing",
+        "content": "Tôi đã thử nhiều công cụ, nhưng mẫu và nội dung AI của CVCraft là tốt nhất. Rất đáng dùng!"
+      }
+    }
+  },
+  "FAQ": {
+    "badge": "Trung tâm hỗ trợ",
+    "title": "Câu hỏi thường gặp",
+    "description": "Mọi điều bạn cần biết về CVCraft và cách nền tảng giúp bạn đạt công việc mong muốn.",
+    "items": {
+      "0": {
+        "q": "CVCraft có miễn phí không?",
+        "a": "Có! Bạn có thể tạo và tải CV miễn phí. Chúng tôi có mẫu cao cấp và tính năng AI nâng cao cho người cần thêm độ hoàn thiện."
+      },
+      "1": {
+        "q": "AI viết CV hoạt động thế nào?",
+        "a": "AI phân tích kinh nghiệm và mô tả công việc bạn nhắm tới, đề xuất bullet point mạnh, tối ưu từ khóa và giúp CV phù hợp với vị trí."
+      },
+      "2": {
+        "q": "Mẫu có thân thiện ATS không?",
+        "a": "Hoàn toàn. Mọi mẫu đều được thiết kế để vượt ATS và vẫn trông chuyên nghiệp, hiện đại."
+      },
+      "3": {
+        "q": "Tôi có chỉnh sửa CV sau khi tải không?",
+        "a": "Có! CV được lưu trong tài khoản. Bạn có thể quay lại chỉnh và tải bản mới bất cứ lúc nào."
+      },
+      "4": {
+        "q": "Phỏng vấn thử hoạt động ra sao?",
+        "a": "AI đặt câu hỏi phổ biến cho vị trí của bạn. Bạn luyện trả lời và nhận phản hồi từ AI."
+      }
+    }
+  },
+  "CTA": {
+    "badge": "Bước tiếp theo",
+    "title": "Sẵn sàng cho công việc mơ ước?",
+    "description": "Tham gia cùng hơn 10.000 chuyên gia đã thay đổi sự nghiệp với bộ công cụ AI của chúng tôi.",
+    "button": "Bắt đầu miễn phí"
+  }
+}

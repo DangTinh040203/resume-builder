@@ -1,0 +1,228 @@
+{
+  "Nav": {
+    "home": "首页",
+    "templates": "模板",
+    "profile": "个人资料",
+    "subscription": "订阅",
+    "signOut": "退出登录",
+    "signIn": "登录",
+    "getStarted": "开始使用",
+    "signInSignUp": "登录 / 注册"
+  },
+  "Language": {
+    "label": "语言"
+  },
+  "Footer": {
+    "tagline": "AI驱动的简历工具，助你拿下心仪工作。",
+    "product": "产品",
+    "company": "公司",
+    "legal": "法律",
+    "productLinks": {
+      "0": "模板",
+      "1": "简历制作",
+      "2": "模拟面试",
+      "3": "定价"
+    },
+    "companyLinks": {
+      "0": "关于",
+      "1": "博客",
+      "2": "招聘",
+      "3": "联系"
+    },
+    "legalLinks": {
+      "0": "隐私政策",
+      "1": "服务条款",
+      "2": "Cookie政策"
+    },
+    "copyright": "© 2026 CVCraft - Cao Dang Tinh. 保留所有权利。"
+  },
+  "NotFound": {
+    "title": "页面未找到",
+    "description": "您访问的页面不存在或已移动。",
+    "back": "返回",
+    "home": "首页"
+  },
+  "Hero": {
+    "badge": "AI简历生成器",
+    "new": "新",
+    "headline1": "发现、连接、",
+    "headline2": "成长。",
+    "sub": "欢迎来到 CVCraft，领先的专业简历平台。\n用 AI 几分钟打造精美且 ATS 友好的简历。",
+    "buildProfile": "创建简历",
+    "viewTemplates": "查看模板",
+    "statLabels": {
+      "0": "专业人士",
+      "1": "连接",
+      "2": "职位",
+      "3": "投递"
+    },
+    "scrollHint": "向下滚动探索"
+  },
+  "Marquee": {
+    "title": "深受全球专业人士信赖"
+  },
+  "Features": {
+    "badge": "强大功能",
+    "title": "打造理想职业所需的一切",
+    "description": "从专业模板到 AI 内容与模拟面试，CVCraft 提供求职全流程工具。",
+    "items": {
+      "templates": {
+        "title": "10款专业模板",
+        "description": "精选设计，抓住招聘者眼球。"
+      },
+      "ai": {
+        "title": "AI 写作",
+        "description": "粘贴职位描述，AI 帮你打磨简历内容。"
+      },
+      "interview": {
+        "title": "模拟面试",
+        "description": "针对目标岗位与行业的 AI 面试练习。"
+      }
+    }
+  },
+  "HowItWorks": {
+    "badge": "简单三步",
+    "title": "几分钟即可开始",
+    "description": "我们简化流程，让你专注于讲述职业故事。",
+    "steps": {
+      "0": {
+        "title": "填写信息",
+        "description": "从零开始或导入简历，添加经历、教育与技能。"
+      },
+      "1": {
+        "title": "AI 优化",
+        "description": "针对目标职位优化内容，粘贴招聘启事获取建议。"
+      },
+      "2": {
+        "title": "下载投递",
+        "description": "导出 PDF 或 Word，自信求职！"
+      }
+    }
+  },
+  "TemplatePreview": {
+    "badge": "精选设计",
+    "titleBefore": "从",
+    "titleHighlight": "10+ 款专业",
+    "titleAfter": "模板中选择",
+    "description": "模板精心打磨，满足顶尖企业与猎头标准。",
+    "explore": "浏览全部模板",
+    "categories": {
+      "professional": "专业",
+      "modern": "现代",
+      "creative": "创意",
+      "minimal": "极简"
+    },
+    "previewDesign": "预览设计"
+  },
+  "WhyChooseUs": {
+    "badge": "CVCraft 优势",
+    "title": "为什么选择 CVCraft？",
+    "subtitle": "我们将招聘专业经验与前沿 AI 相结合，打造终极职业发展工具包。",
+    "items": {
+      "0": {
+        "title": "极速生成",
+        "description": "直观编辑器，10分钟内完成专业简历。"
+      },
+      "1": {
+        "title": "ATS 友好",
+        "description": "模板优化以通过申请人追踪系统。"
+      },
+      "2": {
+        "title": "节省时间",
+        "description": "AI 撰写有力内容，让你专注重点。"
+      },
+      "3": {
+        "title": "岗位定制",
+        "description": "按职位描述调整简历，提高成功率。"
+      },
+      "4": {
+        "title": "专家认可",
+        "description": "由招聘经理与职业顾问参与设计。"
+      },
+      "5": {
+        "title": "口碑验证",
+        "description": "95% 用户反馈获得更多面试机会。"
+      }
+    }
+  },
+  "Benefits": {
+    "badge": "为成功而造",
+    "title": "在激烈竞争中脱颖而出",
+    "description": "行业专家设计，让你的档案在现代招聘系统中更受关注。",
+    "items": {
+      "0": "ATS 优化排版",
+      "1": "实时预览",
+      "2": "导出 PDF 与 Word",
+      "3": "按职位定制",
+      "4": "语法与拼写检查",
+      "5": "无限次修改"
+    },
+    "cta": "免费开始"
+  },
+  "Stats": {
+    "0": {
+      "label": "已创建简历"
+    },
+    "1": {
+      "label": "成功入职"
+    },
+    "2": {
+      "label": "成功率"
+    }
+  },
+  "Testimonials": {
+    "badge": "用户故事",
+    "title": "万千求职者信赖",
+    "description": "看看顶尖公司的专业人士如何用 CVCraft 加速职业发展。",
+    "items": {
+      "0": {
+        "name": "Sarah Chen",
+        "role": "Google 软件工程师",
+        "content": "CVCraft 帮我拿到 Google 的 offer，AI 建议让我的简历从数百份申请中脱颖而出。"
+      },
+      "1": {
+        "name": "Michael Roberts",
+        "role": "Meta 产品经理",
+        "content": "模拟面试功能至关重要，让我在终面时充满自信。"
+      },
+      "2": {
+        "name": "Emily Watson",
+        "role": "市场总监",
+        "content": "我用过很多工具，但 CVCraft 的模板和 AI 写作是最好的。"
+      }
+    }
+  },
+  "FAQ": {
+    "badge": "支持中心",
+    "title": "常见问题",
+    "description": "关于 CVCraft 以及它如何帮助你拿到 dream job。",
+    "items": {
+      "0": {
+        "q": "CVCraft 真的免费吗？",
+        "a": "是的！你可以免费创建并下载简历。我们也提供高级模板与进阶 AI 功能。"
+      },
+      "1": {
+        "q": "AI 写作如何工作？",
+        "a": "AI 分析你的经历与目标职位描述，生成有力的要点、优化关键词并量身定制。"
+      },
+      "2": {
+        "q": "模板是否 ATS 友好？",
+        "a": "当然。所有模板既专业现代，又兼顾 ATS 筛查。"
+      },
+      "3": {
+        "q": "下载后还能编辑吗？",
+        "a": "可以！简历保存在账户中，随时修改并重新下载。"
+      },
+      "4": {
+        "q": "模拟面试怎么用？",
+        "a": "AI 会根据岗位提问，你可以练习口头回答并获得反馈。"
+      }
+    }
+  },
+  "CTA": {
+    "badge": "迈出下一步",
+    "title": "准备好拿下 dream job 了吗？",
+    "description": "已有超过一万名专业人士用我们的 AI 工具改变职业轨迹。",
+    "button": "免费开始"
+  }
+}

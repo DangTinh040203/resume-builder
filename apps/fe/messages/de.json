@@ -1,0 +1,239 @@
+{
+  "Nav": {
+    "home": "Startseite",
+    "templates": "Vorlagen",
+    "profile": "Profil",
+    "subscription": "Abonnement",
+    "signOut": "Abmelden",
+    "signIn": "Anmelden",
+    "getStarted": "Jetzt starten",
+    "signInSignUp": "Anmelden/Registrieren"
+  },
+  "Language": {
+    "label": "Sprache",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "zh": "中文",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "ar": "العربية",
+    "ko": "한국어",
+    "de": "Deutsch"
+  },
+  "Footer": {
+    "tagline": "Der KI-gestützte Lebenslauf-Builder, der Ihnen hilft, Ihren Traumjob zu finden.",
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "productLinks": {
+      "0": "Vorlagen",
+      "1": "Lebenslauf-Builder",
+      "2": "Scheininterviews",
+      "3": "Preise"
+    },
+    "companyLinks": {
+      "0": "Über uns",
+      "1": "Blog",
+      "2": "Karrieren",
+      "3": "Kontakt"
+    },
+    "legalLinks": {
+      "0": "Datenschutzrichtlinie",
+      "1": "Nutzungsbedingungen",
+      "2": "Cookie-Richtlinie"
+    },
+    "copyright": "© 2026 CVCraft – Cao Dang Tinh. Alle Rechte vorbehalten."
+  },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "back": "Zurück",
+    "home": "Heim"
+  },
+  "Hero": {
+    "badge": "KI-gestützter Lebenslauf-Builder",
+    "new": "NEU",
+    "headline1": "Entdecken, verbinden,",
+    "headline2": "wachsen.",
+    "sub": "Willkommen bei CVCraft, der größten professionellen Plattform zum Erstellen von Lebensläufen.\nErstellen Sie mit KI in wenigen Minuten beeindruckende, ATS-freundliche Lebensläufe.",
+    "buildProfile": "Erstellen Sie Ihr Profil",
+    "viewTemplates": "Vorlagen anzeigen",
+    "statLabels": {
+      "0": "Profis",
+      "1": "Verbindungen",
+      "2": "Stellenangebote",
+      "3": "Anwendungen"
+    },
+    "scrollHint": "Scrollen Sie zum Erkunden"
+  },
+  "Marquee": {
+    "title": "Fachleute auf der ganzen Welt vertrauen darauf"
+  },
+  "Features": {
+    "badge": "Leistungsstarke Funktionen",
+    "title": "Alles, was Sie brauchen, um eine erfolgreiche Karriere aufzubauen",
+    "description": "Von professionellen Vorlagen bis hin zur KI-gestützten Inhaltsgenerierung und Probeinterviews bietet CVCraft das End-to-End-Toolkit für Ihre Jobsuche.",
+    "items": {
+      "templates": {
+        "title": "10 professionelle Vorlagen",
+        "description": "Wählen Sie aus wunderschön gestalteten Vorlagen, die die Aufmerksamkeit von Personalvermittlern auf sich ziehen."
+      },
+      "ai": {
+        "title": "KI-gestütztes Schreiben",
+        "description": "Generieren und verfeinern Sie Ihre Lebenslaufinhalte mit KI. Fügen Sie einfach eine Stellenbeschreibung ein."
+      },
+      "interview": {
+        "title": "Scheininterviews",
+        "description": "Üben Sie mit KI-Interviews, die auf Ihre Zielrolle und Branche zugeschnitten sind."
+      }
+    }
+  },
+  "HowItWorks": {
+    "badge": "Einfacher 3-Schritte-Prozess",
+    "title": "Beginnen Sie Ihre Reise in wenigen Minuten",
+    "description": "Wir haben den Prozess der Lebenslauferstellung optimiert, damit Sie sich auf das Wesentliche konzentrieren können: das Erzählen Ihrer beruflichen Geschichte.",
+    "steps": {
+      "0": {
+        "title": "Laden Sie Ihre Informationen hoch",
+        "description": "Beginnen Sie neu oder importieren Sie Ihren vorhandenen Lebenslauf. Fügen Sie Ihre Erfahrung, Ausbildung und Fähigkeiten hinzu."
+      },
+      "1": {
+        "title": "KI-Verbesserung",
+        "description": "Lassen Sie KI Ihre Inhalte für den von Ihnen gewünschten Auftrag optimieren. Fügen Sie eine Stellenbeschreibung ein, um maßgeschneiderte Vorschläge zu erhalten."
+      },
+      "2": {
+        "title": "Herunterladen und anwenden",
+        "description": "Exportieren Sie Ihren ausgefeilten Lebenslauf im PDF- oder Word-Format. Bereit für Ihren Traumjob!"
+      }
+    }
+  },
+  "TemplatePreview": {
+    "badge": "Premium-Designs",
+    "titleBefore": "Wählen Sie aus",
+    "titleHighlight": "10+ Profi",
+    "titleAfter": "Vorlagen",
+    "description": "Unsere Sammlung leistungsstarker Vorlagen wurde sorgfältig erstellt, um den Standards erstklassiger Unternehmen und Personalvermittlungsagenturen gerecht zu werden.",
+    "explore": "Entdecken Sie alle Vorlagen",
+    "categories": {
+      "professional": "Professional",
+      "modern": "Modern",
+      "creative": "Kreativ",
+      "minimal": "Minimal"
+    },
+    "previewDesign": "Vorschau des Designs"
+  },
+  "WhyChooseUs": {
+    "badge": "Der CVCraft Edge",
+    "title": "Warum CVCraft wählen?",
+    "subtitle": "Wir haben Rekrutierungsexpertise mit modernster KI kombiniert, um das ultimative Toolkit für die Karriereentwicklung zu entwickeln.",
+    "items": {
+      "0": {
+        "title": "Blitzschnell",
+        "description": "Erstellen Sie mit unserem intuitiven Builder in weniger als 10 Minuten einen professionellen Lebenslauf."
+      },
+      "1": {
+        "title": "ATS-freundlich",
+        "description": "Alle Vorlagen sind für die Prüfung durch Bewerber-Tracking-Systeme optimiert."
+      },
+      "2": {
+        "title": "Sparen Sie Zeit",
+        "description": "KI schreibt überzeugende Inhalte, damit Sie sich auf das Wesentliche konzentrieren können."
+      },
+      "3": {
+        "title": "Joborientiert",
+        "description": "Passen Sie Ihren Lebenslauf an bestimmte Stellenbeschreibungen an, um höhere Erfolgsquoten zu erzielen."
+      },
+      "4": {
+        "title": "Von Experten genehmigt",
+        "description": "Von Personalmanagern und Karrierecoaches entworfene Vorlagen."
+      },
+      "5": {
+        "title": "Bewährte Ergebnisse",
+        "description": "95 % der Benutzer berichten, dass sie mehr Rückrufe bei Vorstellungsgesprächen erhalten."
+      }
+    }
+  },
+  "Benefits": {
+    "badge": "Gebaut für den Erfolg",
+    "title": "Heben Sie sich von der großen Konkurrenz ab",
+    "description": "Unser Lebenslauf-Builder wurde von Branchenexperten entwickelt, um sicherzustellen, dass Ihr Profil in modernen Einstellungssystemen die Aufmerksamkeit erhält, die es verdient.",
+    "items": {
+      "0": "ATS-optimierte Formatierung",
+      "1": "Echtzeitvorschau",
+      "2": "Export nach PDF und Word",
+      "3": "Auftragsspezifische Maßanfertigung",
+      "4": "Grammatik- und Rechtschreibprüfung",
+      "5": "Unbegrenzte Überarbeitungen"
+    },
+    "cta": "Jetzt kostenlos starten"
+  },
+  "Stats": {
+    "0": {
+      "label": "Lebensläufe erstellt"
+    },
+    "1": {
+      "label": "Benutzer eingestellt"
+    },
+    "2": {
+      "label": "Erfolgsquote"
+    }
+  },
+  "Testimonials": {
+    "badge": "Erfolgsgeschichten von Benutzern",
+    "title": "Von Tausenden Arbeitssuchenden geliebt",
+    "description": "Entdecken Sie, wie Fachkräfte aus Top-Unternehmen CVCraft nutzen, um ihre Karriereentwicklung zu beschleunigen.",
+    "items": {
+      "0": {
+        "name": "Sarah Chen",
+        "role": "Softwareentwickler bei Google",
+        "content": "CVCraft hat mir geholfen, meinen Traumjob bei Google zu finden. Durch die KI-Vorschläge hebt sich mein Lebenslauf von Hunderten von Bewerbern ab."
+      },
+      "1": {
+        "name": "Michael Roberts",
+        "role": "Produktmanager bei Meta",
+        "content": "Die Funktion „Mock-Interview“ war ein Game-Changer. Ich fühlte mich so vorbereitet, als ich in meine Abschlussgespräche ging."
+      },
+      "2": {
+        "name": "Emily Watson",
+        "role": "Marketingdirektor",
+        "content": "Ich habe viele CV-Builder ausprobiert, aber die Vorlagen und das KI-Schreiben von CVCraft sind einfach die besten. Sehr zu empfehlen!"
+      }
+    }
+  },
+  "FAQ": {
+    "badge": "Support-Center",
+    "title": "Häufig gestellte Fragen",
+    "description": "Alles, was Sie über CVCraft wissen müssen und wie es Ihnen dabei helfen kann, Ihren Traumjob zu finden.",
+    "items": {
+      "0": {
+        "q": "Ist die Nutzung von CVCraft wirklich kostenlos?",
+        "a": "Ja! Sie können Ihren Lebenslauf kostenlos erstellen und herunterladen. Wir bieten Premium-Vorlagen und erweiterte KI-Funktionen für Benutzer, die zusätzlichen Schliff wünschen."
+      },
+      "1": {
+        "q": "Wie funktioniert das Verfassen eines AI-Lebenslaufs?",
+        "a": "Unsere KI analysiert Ihre Erfahrungen und die Stellenbeschreibung, auf die Sie abzielen. Anschließend werden wirkungsvolle Aufzählungspunkte vorgeschlagen, Schlüsselwörter optimiert und sichergestellt, dass Ihr Lebenslauf auf die Stelle zugeschnitten ist."
+      },
+      "2": {
+        "q": "Sind die Vorlagen ATS-freundlich?",
+        "a": "Absolut. Alle unsere Vorlagen sind so konzipiert, dass sie das Bewerber-Tracking-System bestehen und dennoch professionell und modern aussehen."
+      },
+      "3": {
+        "q": "Kann ich meinen Lebenslauf nach dem Herunterladen bearbeiten?",
+        "a": "Ja! Ihre Lebensläufe werden in Ihrem Konto gespeichert. Sie können jederzeit zurückkommen, um Änderungen vorzunehmen und aktualisierte Versionen herunterzuladen."
+      },
+      "4": {
+        "q": "Wie funktioniert die Funktion „Mock-Interview“?",
+        "a": "Unser KI-Interviewer stellt Ihnen häufige Fragen für Ihre Zielrolle. Sie können das mündliche Antworten üben und die KI gibt Feedback zu Ihren Antworten."
+      }
+    }
+  },
+  "CTA": {
+    "badge": "Machen Sie den nächsten Schritt",
+    "title": "Sind Sie bereit, Ihren Traumjob zu bekommen?",
+    "description": "Schließen Sie sich über 10.000 Fachleuten an, die ihre Karriere bereits mit unserem KI-gestützten Toolkit verändert haben.",
+    "button": "Starten Sie kostenlos durch"
+  }
+}

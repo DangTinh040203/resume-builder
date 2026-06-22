@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/styles/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "@resume-builder/ui/components",
+    "utils": "@resume-builder/ui/lib/utils",
+    "hooks": "@resume-builder/ui/hooks",
+    "lib": "@resume-builder/ui/lib",
+    "ui": "@resume-builder/ui/components"
+  }
+}

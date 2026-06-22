@@ -1,0 +1,239 @@
+{
+  "Nav": {
+    "home": "Inicio",
+    "templates": "Plantillas",
+    "profile": "Perfil",
+    "subscription": "Suscripción",
+    "signOut": "Cerrar sesión",
+    "signIn": "Iniciar sesión",
+    "getStarted": "Empezar",
+    "signInSignUp": "Iniciar sesión / Registrarse"
+  },
+  "Language": {
+    "label": "Idioma",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "zh": "中文",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "ar": "العربية",
+    "ko": "한국어",
+    "de": "Deutsch"
+  },
+  "Footer": {
+    "tagline": "El creador de CV impulsado por IA que te ayuda a conseguir el trabajo de tus sueños.",
+    "product": "Producto",
+    "company": "Compañía",
+    "legal": "Legal",
+    "productLinks": {
+      "0": "Plantillas",
+      "1": "Creador de CV",
+      "2": "Entrevistas simuladas",
+      "3": "Precios"
+    },
+    "companyLinks": {
+      "0": "Acerca de",
+      "1": "Blog",
+      "2": "Carreras",
+      "3": "Contacto"
+    },
+    "legalLinks": {
+      "0": "Política de privacidad",
+      "1": "Términos de servicio",
+      "2": "Política de cookies"
+    },
+    "copyright": "© 2026 CVCraft - Cao Dang Tinh. Reservados todos los derechos."
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "back": "Atrás",
+    "home": "Hogar"
+  },
+  "Hero": {
+    "badge": "Creador de CV impulsado por IA",
+    "new": "NUEVO",
+    "headline1": "Descubre, conecta,",
+    "headline2": "crecer.",
+    "sub": "Bienvenido a CVCraft, la plataforma de creación de CV profesional más grande.\nCree currículums impresionantes y compatibles con ATS en minutos con IA.",
+    "buildProfile": "Construye tu perfil",
+    "viewTemplates": "Ver plantillas",
+    "statLabels": {
+      "0": "Profesionales",
+      "1": "Conexiones",
+      "2": "Listados de trabajo",
+      "3": "Aplicaciones"
+    },
+    "scrollHint": "Desplácese para explorar"
+  },
+  "Marquee": {
+    "title": "Con la confianza de profesionales de todo el mundo"
+  },
+  "Features": {
+    "badge": "Funciones potentes",
+    "title": "Todo lo que necesitas para construir una carrera ganadora",
+    "description": "Desde plantillas profesionales hasta generación de contenido impulsada por IA y entrevistas simuladas, CVCraft proporciona el conjunto de herramientas de un extremo a otro para su búsqueda de empleo.",
+    "items": {
+      "templates": {
+        "title": "10 plantillas profesionales",
+        "description": "Elija entre plantillas bellamente diseñadas que capten la atención de los reclutadores."
+      },
+      "ai": {
+        "title": "Escritura impulsada por IA",
+        "description": "Genera y perfecciona el contenido de tu CV con IA. Simplemente pegue una descripción del trabajo."
+      },
+      "interview": {
+        "title": "Entrevistas simuladas",
+        "description": "Practique con entrevistas de IA adaptadas a su función e industria objetivo."
+      }
+    }
+  },
+  "HowItWorks": {
+    "badge": "Proceso simple de 3 pasos",
+    "title": "Comience su viaje en minutos",
+    "description": "Hemos simplificado el proceso de creación de CV para que puedas centrarte en lo que importa: contar tu historia profesional.",
+    "steps": {
+      "0": {
+        "title": "Sube tu información",
+        "description": "Comience de nuevo o importe su CV existente. Agregue su experiencia, educación y habilidades."
+      },
+      "1": {
+        "title": "Mejora de la IA",
+        "description": "Deje que la IA optimice su contenido para el trabajo que desea. Pegue una descripción del trabajo para obtener sugerencias personalizadas."
+      },
+      "2": {
+        "title": "Descargar y aplicar",
+        "description": "Exporta tu CV pulido en formato PDF o Word. ¡Listo para conseguir el trabajo de tus sueños!"
+      }
+    }
+  },
+  "TemplatePreview": {
+    "badge": "Diseños premium",
+    "titleBefore": "Elige entre",
+    "titleHighlight": "10+ Profesional",
+    "titleAfter": "Plantillas",
+    "description": "Nuestra colección de plantillas de alto rendimiento está meticulosamente diseñada para cumplir con los estándares de empresas y agencias de contratación de primer nivel.",
+    "explore": "Explorar todas las plantillas",
+    "categories": {
+      "professional": "Profesional",
+      "modern": "Moderno",
+      "creative": "Creativo",
+      "minimal": "Mínimo"
+    },
+    "previewDesign": "Vista previa del diseño"
+  },
+  "WhyChooseUs": {
+    "badge": "La ventaja de CVCraft",
+    "title": "¿Por qué elegir CVCraft?",
+    "subtitle": "Combinamos experiencia en reclutamiento con inteligencia artificial de vanguardia para crear el conjunto de herramientas de crecimiento profesional definitivo.",
+    "items": {
+      "0": {
+        "title": "Rayo rápido",
+        "description": "Crea un CV profesional en menos de 10 minutos con nuestro creador intuitivo."
+      },
+      "1": {
+        "title": "Compatible con ATS",
+        "description": "Todas las plantillas están optimizadas para aprobar los sistemas de seguimiento de candidatos."
+      },
+      "2": {
+        "title": "Ahorra tiempo",
+        "description": "La IA escribe contenido atractivo para que puedas concentrarte en lo que importa."
+      },
+      "3": {
+        "title": "Orientado al trabajo",
+        "description": "Adapte su CV a descripciones de trabajo específicas para obtener mayores tasas de éxito."
+      },
+      "4": {
+        "title": "Aprobado por expertos",
+        "description": "Plantillas diseñadas por gerentes de contratación y asesores profesionales."
+      },
+      "5": {
+        "title": "Resultados probados",
+        "description": "El 95% de los usuarios informan haber recibido más devoluciones de llamadas para entrevistas."
+      }
+    }
+  },
+  "Benefits": {
+    "badge": "Construido para el éxito",
+    "title": "Destaca entre la competencia masiva",
+    "description": "Nuestro creador de CV está diseñado por expertos de la industria para garantizar que su perfil reciba la atención que merece por parte de los sistemas de contratación modernos.",
+    "items": {
+      "0": "Formato optimizado para ATS",
+      "1": "Vista previa en tiempo real",
+      "2": "Exportar a PDF y Word",
+      "3": "Adaptación específica del trabajo",
+      "4": "Revisión de gramática y ortografía",
+      "5": "Revisiones ilimitadas"
+    },
+    "cta": "Comience ahora gratis"
+  },
+  "Stats": {
+    "0": {
+      "label": "CV creados"
+    },
+    "1": {
+      "label": "Usuarios contratados"
+    },
+    "2": {
+      "label": "Tasa de éxito"
+    }
+  },
+  "Testimonials": {
+    "badge": "Historias de éxito de usuarios",
+    "title": "Amado por miles de solicitantes de empleo",
+    "description": "Descubra cómo los profesionales de las principales empresas utilizan CVCraft para acelerar el crecimiento de su carrera.",
+    "items": {
+      "0": {
+        "name": "Sara Chen",
+        "role": "Ingeniero de software en Google",
+        "content": "CVCraft me ayudó a conseguir el trabajo de mis sueños en Google. Las sugerencias de la IA hicieron que mi currículum se destacara entre cientos de solicitantes."
+      },
+      "1": {
+        "name": "Michael Roberts",
+        "role": "Gerente de Producto en Meta",
+        "content": "La función de entrevista simulada cambió las reglas del juego. Me sentí muy preparado para entrar en mi ronda final de entrevistas."
+      },
+      "2": {
+        "name": "Emily Watson",
+        "role": "Director de marketing",
+        "content": "Probé muchos creadores de CV, pero las plantillas y la redacción de IA de CVCraft son simplemente las mejores. ¡Muy recomendable!"
+      }
+    }
+  },
+  "FAQ": {
+    "badge": "Centro de soporte",
+    "title": "Preguntas frecuentes",
+    "description": "Todo lo que necesita saber sobre CVCraft y cómo puede ayudarle a conseguir el trabajo de sus sueños.",
+    "items": {
+      "0": {
+        "q": "¿CVCraft es realmente gratuito?",
+        "a": "¡Sí! Puedes crear y descargar tu CV de forma gratuita. Ofrecemos plantillas premium y funciones avanzadas de IA para usuarios que desean un pulido adicional."
+      },
+      "1": {
+        "q": "¿Cómo funciona la redacción de CV con IA?",
+        "a": "Nuestra IA analiza su experiencia y la descripción del trabajo al que se dirige. Luego sugiere viñetas impactantes, optimiza las palabras clave y garantiza que su CV esté adaptado al puesto."
+      },
+      "2": {
+        "q": "¿Las plantillas son compatibles con ATS?",
+        "a": "Absolutamente. Todas nuestras plantillas están diseñadas para aprobar los sistemas de seguimiento de candidatos sin dejar de tener un aspecto profesional y moderno."
+      },
+      "3": {
+        "q": "¿Puedo editar mi CV después de descargarlo?",
+        "a": "¡Sí! Sus CV se guardan en su cuenta. Puede regresar en cualquier momento para realizar modificaciones y descargar versiones actualizadas."
+      },
+      "4": {
+        "q": "¿Cómo funciona la función de entrevista simulada?",
+        "a": "Nuestro entrevistador de IA le hace preguntas comunes para su función objetivo. Puedes practicar respondiendo verbalmente y la IA proporciona comentarios sobre tus respuestas."
+      }
+    }
+  },
+  "CTA": {
+    "badge": "Da el siguiente paso",
+    "title": "¿Listo para conseguir el trabajo de tus sueños?",
+    "description": "Únase a más de 10 000 profesionales que ya han transformado sus carreras con nuestro conjunto de herramientas impulsado por IA.",
+    "button": "Comience gratis"
+  }
+}
