@@ -3,8 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "main": "./index.js",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "main": "./dist/index.js",
   "exports": {
-    ".": "./index.js"
+    ".": "./dist/index.js"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
   }
 }

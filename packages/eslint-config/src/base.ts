@@ -2,58 +2,49 @@ import js from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import importPlugin from "eslint-plugin-import";
 import prettier from "eslint-plugin-prettier";
-import readableTailwind from "eslint-plugin-readable-tailwind";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import turboPlugin from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
 
-const callees = [
-  "clsx",
-  "cva",
-  "ctl",
-  "twMerge",
-  "cx",
-  "cn",
-  ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-];
-
 /**
  * A shared ESLint configuration for the repository.
+ * Framework-agnostic — no React, no Tailwind rules here.
  *
  * @type {import("eslint").Linter.Config}
- * */
+ */
 export const config = [
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
   {
-    plugins: {
-      turbo: turboPlugin,
-    },
-    rules: {
-      "turbo/no-undeclared-env-vars": "warn",
-    },
+    plugins: { turbo: turboPlugin },
+    rules: { "turbo/no-undeclared-env-vars": "warn" },
   },
   {
     ignores: ["dist/**", "node_modules/**", ".next/**"],
+  },
+  {
+    settings: {
+      "import/resolver": {
+        typescript: { alwaysTryTypes: true },
+        node: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
+      },
+    },
   },
   {
     plugins: {
       prettier,
       "simple-import-sort": simpleImportSort,
       import: importPlugin,
-      "readable-tailwind": readableTailwind,
     },
     rules: {
-      // TypeScript rules
-      "@typescript-eslint/no-unused-vars": "warn",
+      // TypeScript
+      "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-empty-object-type": "warn",
       "@typescript-eslint/consistent-type-imports": [
         "error",
-        {
-          fixStyle: "inline-type-imports",
-        },
+        { fixStyle: "inline-type-imports" },
       ],
 
       // Prettier
@@ -65,10 +56,11 @@ export const config = [
       "import/first": "error",
       "import/newline-after-import": "error",
       "import/no-duplicates": "error",
+      "import/no-unresolved": "error",
       "import/extensions": 0,
       "import/no-relative-parent-imports": "error",
 
-      // General rules
+      // General
       semi: "warn",
       curly: ["error", "multi-line"],
       "no-console": "warn",
@@ -89,33 +81,6 @@ export const config = [
                 "Relative imports are not allowed. Please use path aliases instead.",
             },
           ],
-        },
-      ],
-
-      // Tailwind readable
-      "readable-tailwind/multiline": [
-        "warn",
-        {
-          callees,
-          printWidth: 80,
-        },
-      ],
-      "readable-tailwind/no-unnecessary-whitespace": [
-        "warn",
-        {
-          callees,
-        },
-      ],
-      "readable-tailwind/sort-classes": [
-        "warn",
-        {
-          callees,
-        },
-      ],
-      "readable-tailwind/no-duplicate-classes": [
-        "error",
-        {
-          callees,
         },
       ],
     },
