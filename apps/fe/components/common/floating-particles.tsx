@@ -1,5 +1,5 @@
-"use client";
-import { useMemo } from "react";
+'use client';
+import { useMemo } from 'react';
 
 interface Particle {
   id: number;
@@ -23,16 +23,16 @@ const FloatingParticles = () => {
   }, []);
 
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div className='pointer-events-none absolute inset-0 overflow-hidden'>
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className="bg-primary/15 absolute h-2 w-2 rounded-full"
+          className='bg-primary/15 absolute h-2 w-2 rounded-full'
           style={{
             left: `${particle.left}%`,
             top: `${particle.top}%`,
             animation: `float-particle ${particle.duration}s ease-in-out ${particle.delay}s infinite`,
-            willChange: "transform, opacity",
+            willChange: 'transform, opacity',
           }}
         />
       ))}

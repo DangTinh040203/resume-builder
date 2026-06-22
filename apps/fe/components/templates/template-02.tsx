@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { Page, View } from "@rawwee/react-pdf-html";
-import { Font } from "@react-pdf/renderer";
-import dayjs from "dayjs";
-import React, { useCallback } from "react";
+import { Page, View } from '@rawwee/react-pdf-html';
+import { Font } from '@react-pdf/renderer';
+import dayjs from 'dayjs';
+import React, { useCallback } from 'react';
 
 import {
   SECTION_REGISTRY,
   type SectionRendererProps,
-} from "@/components/templates/section-registry";
-import { type TemplateProp } from "@/components/templates/template-wrapper";
-import { useTemplate02Style } from "@/hooks/use-template-02-style";
+} from '@/components/templates/section-registry';
+import { type TemplateProp } from '@/components/templates/template-wrapper';
+import { useTemplate02Style } from '@/hooks/use-template-02-style';
 
 Font.registerHyphenationCallback((word) => [word]);
 
@@ -19,7 +19,7 @@ const Template02: React.FC<TemplateProp> = ({ templateFormat, resume }) => {
 
   const formatDate = useCallback(
     (date: Date | string | null | undefined) => {
-      if (!date) return "Present";
+      if (!date) return 'Present';
       return dayjs(date).format(templateFormat.dateFormat);
     },
     [templateFormat.dateFormat],
@@ -37,21 +37,21 @@ const Template02: React.FC<TemplateProp> = ({ templateFormat, resume }) => {
   };
 
   // Split: personal always first, rest dynamic
-  const personalRenderer = SECTION_REGISTRY["personal"];
+  const personalRenderer = SECTION_REGISTRY['personal'];
   const otherSections = sectionOrder.filter(
-    (type) => type !== "personal" && !hiddenSections.includes(type),
+    (type) => type !== 'personal' && !hiddenSections.includes(type),
   );
 
   return (
-    <Page size={"A4"} style={styles.page}>
+    <Page size={'A4'} style={styles.page}>
       {/* Personal header — always first, with bottom accent line */}
-      {!hiddenSections.includes("personal") && (
+      {!hiddenSections.includes('personal') && (
         <>
           {personalRenderer?.(rendererProps)}
           <View
             style={{
               height: 1.5,
-              width: "100%",
+              width: '100%',
               backgroundColor: templateFormat.color,
               opacity: 0.3,
             }}

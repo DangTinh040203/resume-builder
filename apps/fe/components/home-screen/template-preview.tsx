@@ -1,34 +1,34 @@
-"use client";
-import { Button } from "@resume-builder/ui/components/button";
-import { m } from "framer-motion";
-import { ChevronRight } from "lucide-react";
-import { useTranslations } from "next-intl";
-import React from "react";
+'use client';
+import { Button } from '@resume-builder/ui/components/button';
+import { m } from 'framer-motion';
+import { ChevronRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import { Link } from "@/i18n/navigation";
-import { fadeInUp, scaleIn, staggerContainer } from "@/styles/animation";
+import { Link } from '@/i18n/navigation';
+import { fadeInUp, scaleIn, staggerContainer } from '@/styles/animation';
 
 const categoryKeys = [
   {
-    key: "professional" as const,
+    key: 'professional' as const,
     count: 4,
-    color: "bg-primary/10 text-primary",
+    color: 'bg-primary/10 text-primary',
   },
-  { key: "modern" as const, count: 2, color: "bg-secondary/10 text-primary" },
+  { key: 'modern' as const, count: 2, color: 'bg-secondary/10 text-primary' },
   {
-    key: "creative" as const,
+    key: 'creative' as const,
     count: 2,
-    color: "bg-destructive/10 text-destructive",
+    color: 'bg-destructive/10 text-destructive',
   },
   {
-    key: "minimal" as const,
+    key: 'minimal' as const,
     count: 2,
-    color: "bg-muted text-muted-foreground",
+    color: 'bg-muted text-muted-foreground',
   },
 ];
 
 const TemplatePreviewSection = () => {
-  const t = useTranslations("TemplatePreview");
+  const t = useTranslations('TemplatePreview');
 
   return (
     <section
@@ -37,18 +37,16 @@ const TemplatePreviewSection = () => {
         md:px-4 md:py-24
       `}
     >
-      <div className="container mx-auto">
-        <div
-          className={`
-            grid items-center gap-16
-            lg:grid-cols-2
-          `}
-        >
+      <div className='container mx-auto'>
+        <div className={`
+          grid items-center gap-16
+          lg:grid-cols-2
+        `}>
           <m.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <m.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -59,7 +57,7 @@ const TemplatePreviewSection = () => {
                 py-1.5 text-sm font-semibold tracking-wider uppercase
               `}
             >
-              {t("badge")}
+              {t('badge')}
             </m.div>
             <h2
               className={`
@@ -67,10 +65,10 @@ const TemplatePreviewSection = () => {
                 md:text-5xl
               `}
             >
-              {t("titleBefore")}
-              {t("titleBefore") ? " " : ""}
-              <span className="gradient-text">{t("titleHighlight")}</span>{" "}
-              {t("titleAfter")}
+              {t('titleBefore')}
+              {t('titleBefore') ? ' ' : ''}
+              <span className='gradient-text'>{t('titleHighlight')}</span>{' '}
+              {t('titleAfter')}
             </h2>
             <p
               className={`
@@ -78,14 +76,14 @@ const TemplatePreviewSection = () => {
                 md:text-xl
               `}
             >
-              {t("description")}
+              {t('description')}
             </p>
 
             <m.div
-              className="mb-12 flex flex-wrap gap-3"
+              className='mb-12 flex flex-wrap gap-3'
               variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
+              initial='hidden'
+              whileInView='visible'
               viewport={{ once: true }}
             >
               {categoryKeys.map((cat) => (
@@ -105,27 +103,27 @@ const TemplatePreviewSection = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   {t(`categories.${cat.key}`)}
-                  <span className="ml-2 text-xs font-medium opacity-60">
+                  <span className='ml-2 text-xs font-medium opacity-60'>
                     ({cat.count})
                   </span>
                 </m.span>
               ))}
             </m.div>
 
-            <Link href="/templates">
+            <Link href='/templates'>
               <m.div
                 whileHover={{ scale: 1.05, x: 5 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Button
-                  size="xl"
+                  size='xl'
                   className={`
                     group shadow-primary/10 h-14 rounded-full px-10 text-base
                     shadow-xl
                     lg:text-lg
                   `}
                 >
-                  {t("explore")}
+                  {t('explore')}
                   <ChevronRight
                     className={`
                       ml-2 h-5 w-5 transition-transform duration-300
@@ -138,11 +136,11 @@ const TemplatePreviewSection = () => {
           </m.div>
 
           <m.div
-            className="relative"
+            className='relative'
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <div
               className={`
@@ -157,18 +155,19 @@ const TemplatePreviewSection = () => {
                 sm:grid-cols-2
               `}
               variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
+              initial='hidden'
+              whileInView='visible'
               viewport={{ once: true }}
             >
               {[1, 2, 3, 4].map((i) => (
                 <m.div
                   key={i}
                   className={`
-                    bg-card border-border/60 group relative aspect-square
-                    overflow-hidden rounded-[24px] border p-5 shadow-xl
-                    transition-all duration-500
-                    hover:border-primary/30 hover:shadow-2xl
+                    bg-card border-border/60 group
+                    hover:border-primary/30
+                    relative aspect-square overflow-hidden rounded-[24px] border
+                    p-5 shadow-xl transition-all duration-500
+                    hover:shadow-2xl
                   `}
                   variants={fadeInUp}
                 >
@@ -186,7 +185,7 @@ const TemplatePreviewSection = () => {
                       space-y-4
                     `}
                   >
-                    <div className="flex items-center gap-4">
+                    <div className='flex items-center gap-4'>
                       <div
                         className={`
                           bg-primary/10 text-primary flex h-12 w-12 items-center
@@ -195,12 +194,12 @@ const TemplatePreviewSection = () => {
                       >
                         {i}
                       </div>
-                      <div className="flex-1">
+                      <div className='flex-1'>
                         <div
                           className={`
-                            bg-foreground/15 h-2.5 w-3/4 rounded-full
-                            transition-colors
+                            bg-foreground/15
                             group-hover:bg-primary/20
+                            h-2.5 w-3/4 rounded-full transition-colors
                           `}
                         />
                         <div
@@ -211,26 +210,26 @@ const TemplatePreviewSection = () => {
                       </div>
                     </div>
 
-                    <div className="border-border/60 space-y-3 border-t pt-4">
+                    <div className='border-border/60 space-y-3 border-t pt-4'>
                       <m.div
-                        className="bg-muted/60 h-2 rounded-full"
+                        className='bg-muted/60 h-2 rounded-full'
                         initial={{ width: 0 }}
-                        whileInView={{ width: "100%" }}
+                        whileInView={{ width: '100%' }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: i * 0.1 + 0.3 }}
                       />
                       <m.div
-                        className="bg-muted/60 h-2 rounded-full"
+                        className='bg-muted/60 h-2 rounded-full'
                         initial={{ width: 0 }}
-                        whileInView={{ width: "85%" }}
+                        whileInView={{ width: '85%' }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: i * 0.1 + 0.4 }}
                       />
                       {i === 1 && (
                         <m.div
-                          className="bg-muted/60 h-2 rounded-full"
+                          className='bg-muted/60 h-2 rounded-full'
                           initial={{ width: 0 }}
-                          whileInView={{ width: "92%" }}
+                          whileInView={{ width: '92%' }}
                           viewport={{ once: true }}
                           transition={{ duration: 1, delay: 0.5 }}
                         />
@@ -250,7 +249,7 @@ const TemplatePreviewSection = () => {
                           uppercase
                         `}
                       >
-                        {t("previewDesign")}
+                        {t('previewDesign')}
                       </div>
                     </div>
                   </div>

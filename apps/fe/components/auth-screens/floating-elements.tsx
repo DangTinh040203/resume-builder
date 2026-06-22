@@ -1,6 +1,6 @@
-"use client";
-import { motion } from "framer-motion";
-import React, { useEffect, useMemo, useState } from "react";
+'use client';
+import { motion } from 'framer-motion';
+import React, { useEffect, useMemo, useState } from 'react';
 
 interface FloatingDot {
   id: number;
@@ -29,25 +29,17 @@ const FloatingElements = () => {
   return (
     <>
       <motion.div
-        className={`
-          absolute top-20 right-20 h-32 w-32 rounded-full border border-white/20
-        `}
+        className={`absolute top-20 right-20 h-32 w-32 rounded-full border border-white/20`}
         animate={{ rotate: 360, scale: [1, 1.1, 1] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       />
       <motion.div
-        className={`
-          absolute bottom-40 left-10 h-24 w-24 rounded-full border
-          border-white/10
-        `}
+        className={`absolute bottom-40 left-10 h-24 w-24 rounded-full border border-white/10`}
         animate={{ rotate: -360 }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
       />
       <motion.div
-        className={`
-          absolute top-1/3 right-10 h-16 w-16 rounded-full bg-white/5
-          backdrop-blur-sm
-        `}
+        className={`absolute top-1/3 right-10 h-16 w-16 rounded-full bg-white/5 backdrop-blur-sm`}
         animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
         transition={{ duration: 5, repeat: Infinity }}
       />
@@ -57,7 +49,7 @@ const FloatingElements = () => {
         floatingDots.map((dot) => (
           <motion.div
             key={dot.id}
-            className="absolute h-2 w-2 rounded-full bg-white/30"
+            className='absolute h-2 w-2 rounded-full bg-white/30'
             style={{
               top: `${dot.top}%`,
               left: `${dot.left}%`,
@@ -76,16 +68,12 @@ const FloatingElements = () => {
 
       {/* Geometric shapes */}
       <motion.div
-        className={`
-          absolute top-1/4 left-1/4 h-8 w-8 rotate-45 border-2 border-white/20
-        `}
+        className={`absolute top-1/4 left-1/4 h-8 w-8 rotate-45 border-2 border-white/20`}
         animate={{ rotate: [45, 135, 45] }}
         transition={{ duration: 8, repeat: Infinity }}
       />
       <motion.div
-        className={`
-          absolute right-1/4 bottom-1/4 h-6 w-6 rotate-12 rounded-sm bg-white/10
-        `}
+        className={`absolute right-1/4 bottom-1/4 h-6 w-6 rotate-12 rounded-sm bg-white/10`}
         animate={{ rotate: [12, -12, 12], scale: [1, 1.2, 1] }}
         transition={{ duration: 4, repeat: Infinity }}
       />

@@ -1,9 +1,9 @@
-import { Text, View } from "@rawwee/react-pdf-html";
-import { StyleSheet } from "@react-pdf/renderer";
-import { useMemo } from "react";
+import { Text, View } from '@rawwee/react-pdf-html';
+import { StyleSheet } from '@react-pdf/renderer';
+import { useMemo } from 'react';
 
-import { templateGlobalStyles } from "@/configs/template-style.config";
-import { type Format } from "@/stores/features/template.slice";
+import { templateGlobalStyles } from '@/configs/template-style.config';
+import { type Format } from '@/stores/features/template.slice';
 
 export const useTemplateStyle = (templateFormat: Format) => {
   const styles = useMemo(() => {
@@ -35,7 +35,7 @@ export const useTemplateStyle = (templateFormat: Format) => {
       page: {
         ...templateGlobalStyles.page,
         padding: theme.margin,
-        flexDirection: "column",
+        flexDirection: 'column',
         rowGap: theme.sectionSpacing,
         fontSize: theme.fontSize,
         lineHeight: theme.lineHeight,
@@ -45,21 +45,21 @@ export const useTemplateStyle = (templateFormat: Format) => {
       },
 
       section: {
-        flexDirection: "column",
-        width: "100%",
+        flexDirection: 'column',
+        width: '100%',
         gap: 2,
       },
 
       sectionContent: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 10,
         marginTop: 6,
       },
 
       separator: {
         height: 1,
-        width: "100%",
-        backgroundColor: "gray",
+        width: '100%',
+        backgroundColor: 'gray',
       },
 
       text: {
@@ -114,14 +114,14 @@ export const useTemplateStyle = (templateFormat: Format) => {
 
       informationGroup: {
         ...templateGlobalStyles.gapXl,
-        flexDirection: "row",
-        justifyContent: "flex-start",
-        width: "100%",
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        width: '100%',
       },
 
       informationItem: {
-        flexDirection: "row",
-        fontStyle: "normal",
+        flexDirection: 'row',
+        fontStyle: 'normal',
       },
 
       informationLabel: {
@@ -130,38 +130,38 @@ export const useTemplateStyle = (templateFormat: Format) => {
       },
 
       row: {
-        flexDirection: "row",
+        flexDirection: 'row',
         gap: 10,
       },
 
       rowBetween: {
-        flexDirection: "row",
-        justifyContent: "space-between",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
       },
 
       col: {
-        display: "flex",
-        flexDirection: "column",
+        display: 'flex',
+        flexDirection: 'column',
       },
 
       // Project table styles
       projectTable: {
-        border: "0.5px solid #ccc",
-        flexDirection: "column",
+        border: '0.5px solid #ccc',
+        flexDirection: 'column',
         gap: 0,
       },
 
       projectTableRow: {
-        flexDirection: "row",
-        borderTop: "0.5px solid #ccc",
+        flexDirection: 'row',
+        borderTop: '0.5px solid #ccc',
       },
 
       projectTableFirstRow: {
-        flexDirection: "row",
+        flexDirection: 'row',
       },
 
       projectTableLabelCell: {
-        borderRight: "0.5px solid #ccc",
+        borderRight: '0.5px solid #ccc',
         paddingHorizontal: 8,
         paddingVertical: 4,
         width: 120,

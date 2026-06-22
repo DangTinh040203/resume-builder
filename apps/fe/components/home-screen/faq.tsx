@@ -1,21 +1,21 @@
-"use client";
+'use client';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@resume-builder/ui/components/accordion";
-import { m } from "framer-motion";
-import { useTranslations } from "next-intl";
-import React from "react";
+} from '@resume-builder/ui/components/accordion';
+import { m } from 'framer-motion';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import BlurText from "@/components/common/blur-text";
-import ShinyText from "@/components/common/shiny-text";
+import BlurText from '@/components/common/blur-text';
+import ShinyText from '@/components/common/shiny-text';
 
-const faqIndices = ["0", "1", "2", "3", "4"] as const;
+const faqIndices = ['0', '1', '2', '3', '4'] as const;
 
 const FAQSection = () => {
-  const t = useTranslations("FAQ");
+  const t = useTranslations('FAQ');
 
   return (
     <section
@@ -24,9 +24,9 @@ const FAQSection = () => {
         md:px-4 md:py-24
       `}
     >
-      <div className="relative z-10 container mx-auto max-w-3xl">
+      <div className='relative z-10 container mx-auto max-w-3xl'>
         <m.div
-          className="mb-20 text-center"
+          className='mb-20 text-center'
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -42,16 +42,16 @@ const FAQSection = () => {
             `}
           >
             <ShinyText
-              text={t("badge")}
+              text={t('badge')}
               speed={3}
-              className="text-sm font-semibold tracking-wider uppercase"
+              className='text-sm font-semibold tracking-wider uppercase'
             />
           </m.div>
           <BlurText
-            text={t("title")}
+            text={t('title')}
             delay={80}
-            animateBy="words"
-            direction="top"
+            animateBy='words'
+            direction='top'
             className={`
               font-display mb-6 flex-wrap justify-center text-3xl font-extrabold
               tracking-tight
@@ -64,16 +64,16 @@ const FAQSection = () => {
               md:text-lg
             `}
           >
-            {t("description")}
+            {t('description')}
           </p>
         </m.div>
 
         <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion type='single' collapsible className='w-full space-y-4'>
             {faqIndices.map((idx, index) => (
               <m.div
                 key={idx}
@@ -85,15 +85,17 @@ const FAQSection = () => {
                 <AccordionItem
                   value={`item-${idx}`}
                   className={`
-                    bg-card/40 border-border/50 rounded-2xl border px-6
-                    backdrop-blur-sm transition-all duration-300
+                    bg-card/40 border-border/50
                     hover:border-primary/20
+                    rounded-2xl border px-6 backdrop-blur-sm transition-all
+                    duration-300
                   `}
                 >
                   <AccordionTrigger
                     className={`
-                      hover:text-primary hover:no-underline
+                      hover:text-primary
                       py-6 text-left text-base font-bold transition-colors
+                      hover:no-underline
                       md:text-lg
                     `}
                   >

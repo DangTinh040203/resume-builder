@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { cn } from "@resume-builder/ui/lib/utils";
-import { GripVerticalIcon } from "lucide-react";
-import * as React from "react";
-import * as ResizablePrimitive from "react-resizable-panels";
+import { cn } from '@resume-builder/ui/lib/utils';
+import { GripVerticalIcon } from 'lucide-react';
+import * as React from 'react';
+import * as ResizablePrimitive from 'react-resizable-panels';
 
 function ResizablePanelGroup({
   className,
@@ -11,7 +11,7 @@ function ResizablePanelGroup({
 }: React.ComponentProps<typeof ResizablePrimitive.PanelGroup>) {
   return (
     <ResizablePrimitive.PanelGroup
-      data-slot="resizable-panel-group"
+      data-slot='resizable-panel-group'
       className={cn(
         `
           flex h-full w-full
@@ -27,7 +27,7 @@ function ResizablePanelGroup({
 function ResizablePanel({
   ...props
 }: React.ComponentProps<typeof ResizablePrimitive.Panel>) {
-  return <ResizablePrimitive.Panel data-slot="resizable-panel" {...props} />;
+  return <ResizablePrimitive.Panel data-slot='resizable-panel' {...props} />;
 }
 
 function ResizableHandle({
@@ -39,7 +39,7 @@ function ResizableHandle({
 }) {
   return (
     <ResizablePrimitive.PanelResizeHandle
-      data-slot="resizable-handle"
+      data-slot='resizable-handle'
       className={cn(
         `
           bg-border relative flex w-px items-center justify-center
@@ -67,7 +67,7 @@ function ResizableHandle({
             border
           `}
         >
-          <GripVerticalIcon className="size-2.5" />
+          <GripVerticalIcon className='size-2.5' />
         </div>
       )}
     </ResizablePrimitive.PanelResizeHandle>

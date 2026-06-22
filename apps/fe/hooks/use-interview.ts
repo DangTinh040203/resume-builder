@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { useSession } from "@clerk/nextjs";
-import { toast } from "@resume-builder/ui/components/sonner";
-import { useTranslations } from "next-intl";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useSession } from '@clerk/nextjs';
+import { toast } from '@resume-builder/ui/components/sonner';
+import { useTranslations } from 'next-intl';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
-import { AUDIO_CONFIG } from "@/constants/interview.constant";
-import { InterviewService } from "@/services/interview.service";
+import { AUDIO_CONFIG } from '@/constants/interview.constant';
+import { InterviewService } from '@/services/interview.service';
 import type {
   InterviewConfig,
   InterviewFeedback,
   InterviewState,
   TurnCompleteData,
-} from "@/types/interview.type";
+} from '@/types/interview.type';
 
 export interface UseInterviewReturn {
   // State
@@ -37,11 +37,11 @@ export interface UseInterviewReturn {
 }
 
 export function useInterview(): UseInterviewReturn {
-  const t = useTranslations("Interview");
+  const t = useTranslations('Interview');
   const { session: clerkSession } = useSession();
 
   // ─── State ────────────────────────────────────────────
-  const [state, setState] = useState<InterviewState>("idle");
+  const [state, setState] = useState<InterviewState>('idle');
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [questionProgress, setQuestionProgress] = useState({
     current: 0,
@@ -83,7 +83,7 @@ export function useInterview(): UseInterviewReturn {
     if (!ctx || pcmData.length === 0) return;
 
     // Ensure playback context is running (browsers may suspend it)
-    if (ctx.state === "suspended") {
+    if (ctx.state === 'suspended') {
       void ctx.resume();
     }
 
@@ -228,7 +228,7 @@ export function useInterview(): UseInterviewReturn {
 
         // Convert to base64 and send
         const uint8 = new Uint8Array(int16.buffer);
-        let binary = "";
+        let binary = '';
         for (let i = 0; i < uint8.length; i++) {
           binary += String.fromCharCode(uint8[i]!);
         }
@@ -242,7 +242,7 @@ export function useInterview(): UseInterviewReturn {
 
       return true;
     } catch {
-      toast.error(t("errors.microphoneDenied"));
+      toast.error(t('errors.microphoneDenied'));
       return false;
     }
   }, [t]);
@@ -288,12 +288,12 @@ export function useInterview(): UseInterviewReturn {
     activeSourceCountRef.current = 0;
 
     // Close both audio contexts
-    if (captureCtxRef.current?.state !== "closed") {
+    if (captureCtxRef.current?.state !== 'closed') {
       void captureCtxRef.current?.close();
     }
     captureCtxRef.current = null;
 
-    if (playbackCtxRef.current?.state !== "closed") {
+    if (playbackCtxRef.current?.state !== 'closed') {
       void playbackCtxRef.current?.close();
     }
     playbackCtxRef.current = null;
@@ -308,11 +308,11 @@ export function useInterview(): UseInterviewReturn {
   const startInterview = useCallback(
     async (config: InterviewConfig) => {
       if (!clerkSession) {
-        toast.error(t("errors.signInRequired"));
+        toast.error(t('errors.signInRequired'));
         return;
       }
 
-      setState("connecting");
+      setState('connecting');
       setError(null);
       setFeedback(null);
       setQuestionProgress({ current: 0, total: config.questionCount });
@@ -324,7 +324,7 @@ export function useInterview(): UseInterviewReturn {
         // 1. Request microphone access
         const micGranted = await startAudioCapture();
         if (!micGranted) {
-          setState("setup");
+          setState('setup');
           return;
         }
 
@@ -337,7 +337,7 @@ export function useInterview(): UseInterviewReturn {
         });
 
         // 3. Register event listeners
-        socket.on("connect", () => {
+        socket.on('connect', () => {
           // Socket connected — now send the start command
           service.startInterview({
             jobDescription: config.jobDescription,
@@ -349,15 +349,15 @@ export function useInterview(): UseInterviewReturn {
           });
         });
 
-        socket.on("connect_error", () => {
-          setError(t("errors.connectFailed"));
-          setState("error");
+        socket.on('connect_error', () => {
+          setError(t('errors.connectFailed'));
+          setState('error');
           cleanup();
         });
 
         service.onStarted(({ sessionId: sid }) => {
           setSessionId(sid);
-          setState("active");
+          setState('active');
           startTimer();
 
           // AI is about to speak (greeting + first question) — block mic
@@ -387,34 +387,34 @@ export function useInterview(): UseInterviewReturn {
         });
 
         service.onEvaluating(() => {
-          setState("evaluating");
+          setState('evaluating');
           stopAudioCapture();
           stopTimer();
         });
 
         service.onFeedback((fb) => {
           setFeedback(fb);
-          setState("result");
+          setState('result');
           cleanup();
         });
 
         service.onError(({ message }) => {
           toast.error(message);
           setError(message);
-          setState("error");
+          setState('error');
           cleanup();
         });
 
         service.onSessionLost(({ message }) => {
-          const fallbackMessage = t("errors.sessionLost");
+          const fallbackMessage = t('errors.sessionLost');
           toast.error(message || fallbackMessage);
           setError(message || fallbackMessage);
-          setState("error");
+          setState('error');
           cleanup();
         });
       } catch {
-        setError(t("errors.startFailed"));
-        setState("error");
+        setError(t('errors.startFailed'));
+        setState('error');
         cleanup();
       }
     },
@@ -441,7 +441,7 @@ export function useInterview(): UseInterviewReturn {
 
   const reset = useCallback(() => {
     cleanup();
-    setState("idle");
+    setState('idle');
     setSessionId(null);
     setQuestionProgress({ current: 0, total: 0 });
     setFeedback(null);

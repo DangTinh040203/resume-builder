@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import * as TabsPrimitive from "@radix-ui/react-tabs";
-import { cn } from "@resume-builder/ui/lib/utils";
-import * as React from "react";
+import * as TabsPrimitive from '@radix-ui/react-tabs';
+import { cn } from '@resume-builder/ui/lib/utils';
+import * as React from 'react';
 
 function Tabs({
   className,
@@ -10,8 +10,8 @@ function Tabs({
 }: React.ComponentProps<typeof TabsPrimitive.Root>) {
   return (
     <TabsPrimitive.Root
-      data-slot="tabs"
-      className={cn("flex flex-col gap-2", className)}
+      data-slot='tabs'
+      className={cn('flex flex-col gap-2', className)}
       {...props}
     />
   );
@@ -23,7 +23,7 @@ function TabsList({
 }: React.ComponentProps<typeof TabsPrimitive.List>) {
   return (
     <TabsPrimitive.List
-      data-slot="tabs-list"
+      data-slot='tabs-list'
       className={cn(
         `
           bg-primary/10 text-muted-foreground border-primary inline-flex h-11
@@ -42,7 +42,7 @@ function TabsTrigger({
 }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
   return (
     <TabsPrimitive.Trigger
-      data-slot="tabs-trigger"
+      data-slot='tabs-trigger'
       className={cn(
         `
           data-[state=active]:bg-primary data-[state=active]:text-white
@@ -74,8 +74,8 @@ function TabsContent({
 }: React.ComponentProps<typeof TabsPrimitive.Content>) {
   return (
     <TabsPrimitive.Content
-      data-slot="tabs-content"
-      className={cn("flex-1 outline-none", className)}
+      data-slot='tabs-content'
+      className={cn('flex-1 outline-none', className)}
       {...props}
     />
   );

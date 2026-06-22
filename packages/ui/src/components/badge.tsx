@@ -1,7 +1,7 @@
-import { Slot } from "@radix-ui/react-slot";
-import { cn } from "@resume-builder/ui/lib/utils";
-import { cva, type VariantProps } from "class-variance-authority";
-import * as React from "react";
+import { Slot } from '@radix-ui/react-slot';
+import { cn } from '@resume-builder/ui/lib/utils';
+import { cva, type VariantProps } from 'class-variance-authority';
+import * as React from 'react';
 
 const badgeVariants = cva(
   `
@@ -38,7 +38,7 @@ const badgeVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: 'default',
     },
   },
 );
@@ -48,13 +48,13 @@ function Badge({
   variant,
   asChild = false,
   ...props
-}: React.ComponentProps<"span"> &
+}: React.ComponentProps<'span'> &
   VariantProps<typeof badgeVariants> & { asChild?: boolean }) {
-  const Comp = asChild ? Slot : "span";
+  const Comp = asChild ? Slot : 'span';
 
   return (
     <Comp
-      data-slot="badge"
+      data-slot='badge'
       className={cn(badgeVariants({ variant }), className)}
       {...props}
     />

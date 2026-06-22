@@ -1,33 +1,33 @@
-"use client";
+'use client';
 
-import { Page, Text, View } from "@rawwee/react-pdf-html";
-import { Font } from "@react-pdf/renderer";
-import dayjs from "dayjs";
-import React, { useCallback } from "react";
-import { v4 as uuid } from "uuid";
+import { Page, Text, View } from '@rawwee/react-pdf-html';
+import { Font } from '@react-pdf/renderer';
+import dayjs from 'dayjs';
+import React, { useCallback } from 'react';
+import { v4 as uuid } from 'uuid';
 
-import HtmlToPdf from "@/components/templates/html-to-pdf";
+import HtmlToPdf from '@/components/templates/html-to-pdf';
 import {
   SECTION_REGISTRY,
   type SectionRendererProps,
-} from "@/components/templates/section-registry";
-import { type TemplateProp } from "@/components/templates/template-wrapper";
-import { useTemplate05Style } from "@/hooks/use-template-05-style";
-import { type SectionType } from "@/stores/features/template.slice";
+} from '@/components/templates/section-registry';
+import { type TemplateProp } from '@/components/templates/template-wrapper';
+import { useTemplate05Style } from '@/hooks/use-template-05-style';
+import { type SectionType } from '@/stores/features/template.slice';
 
 Font.registerHyphenationCallback((word) => [word]);
 
-type Template05Styles = ReturnType<typeof useTemplate05Style>["styles"];
+type Template05Styles = ReturnType<typeof useTemplate05Style>['styles'];
 
 // Sections that use timeline layout
-const TIMELINE_SECTIONS: SectionType[] = ["experience", "education"];
+const TIMELINE_SECTIONS: SectionType[] = ['experience', 'education'];
 
 const Template05: React.FC<TemplateProp> = ({ templateFormat, resume }) => {
   const { styles, TableRow } = useTemplate05Style(templateFormat);
 
   const formatDate = useCallback(
     (date: Date | string | null | undefined) => {
-      if (!date) return "Present";
+      if (!date) return 'Present';
       return dayjs(date).format(templateFormat.dateFormat);
     },
     [templateFormat.dateFormat],
@@ -47,13 +47,13 @@ const Template05: React.FC<TemplateProp> = ({ templateFormat, resume }) => {
   const { title, subTitle, information } = resume;
 
   const bodySections = sectionOrder.filter(
-    (type) => type !== "personal" && !hiddenSections.includes(type),
+    (type) => type !== 'personal' && !hiddenSections.includes(type),
   );
 
   return (
-    <Page size={"A4"} style={styles.page}>
+    <Page size={'A4'} style={styles.page}>
       {/* ── Bold Header Block ── */}
-      {!hiddenSections.includes("personal") && (
+      {!hiddenSections.includes('personal') && (
         <View style={styles.headerBlock}>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.subTitle}>{subTitle}</Text>
@@ -102,7 +102,7 @@ function renderTimelineSection(
 ) {
   const { resume, formatDate } = props;
 
-  if (type === "experience") {
+  if (type === 'experience') {
     const { workExperiences } = resume;
     if (!workExperiences || workExperiences.length === 0) return null;
 
@@ -125,15 +125,15 @@ function renderTimelineSection(
               <View style={styles.timelineContent}>
                 <View
                   style={{
-                    flexDirection: "column",
+                    flexDirection: 'column',
                     gap: 1,
                   }}
                 >
                   <View
                     style={{
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      alignItems: "flex-start",
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      alignItems: 'flex-start',
                     }}
                   >
                     <Text style={styles.itemTitle}>{exp.company}</Text>
@@ -144,7 +144,7 @@ function renderTimelineSection(
                   <Text
                     style={{
                       opacity: 0.8,
-                      fontStyle: "italic",
+                      fontStyle: 'italic',
                       marginBottom: 2,
                     }}
                   >
@@ -160,7 +160,7 @@ function renderTimelineSection(
     );
   }
 
-  if (type === "education") {
+  if (type === 'education') {
     const { educations } = resume;
     if (!educations || educations.length === 0) return null;
 

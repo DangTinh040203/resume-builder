@@ -1,8 +1,8 @@
-import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
-import { cn } from "@resume-builder/ui/lib/utils";
-import { cva } from "class-variance-authority";
-import { ChevronDownIcon } from "lucide-react";
-import * as React from "react";
+import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
+import { cn } from '@resume-builder/ui/lib/utils';
+import { cva } from 'class-variance-authority';
+import { ChevronDownIcon } from 'lucide-react';
+import * as React from 'react';
 
 function NavigationMenu({
   className,
@@ -14,7 +14,7 @@ function NavigationMenu({
 }) {
   return (
     <NavigationMenuPrimitive.Root
-      data-slot="navigation-menu"
+      data-slot='navigation-menu'
       data-viewport={viewport}
       className={cn(
         `
@@ -37,9 +37,9 @@ function NavigationMenuList({
 }: React.ComponentProps<typeof NavigationMenuPrimitive.List>) {
   return (
     <NavigationMenuPrimitive.List
-      data-slot="navigation-menu-list"
+      data-slot='navigation-menu-list'
       className={cn(
-        "group flex flex-1 list-none items-center justify-center gap-1",
+        'group flex flex-1 list-none items-center justify-center gap-1',
         className,
       )}
       {...props}
@@ -53,8 +53,8 @@ function NavigationMenuItem({
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Item>) {
   return (
     <NavigationMenuPrimitive.Item
-      data-slot="navigation-menu-item"
-      className={cn("relative", className)}
+      data-slot='navigation-menu-item'
+      className={cn('relative', className)}
       {...props}
     />
   );
@@ -81,17 +81,17 @@ function NavigationMenuTrigger({
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>) {
   return (
     <NavigationMenuPrimitive.Trigger
-      data-slot="navigation-menu-trigger"
-      className={cn(navigationMenuTriggerStyle(), "group", className)}
+      data-slot='navigation-menu-trigger'
+      className={cn(navigationMenuTriggerStyle(), 'group', className)}
       {...props}
     >
-      {children}{" "}
+      {children}{' '}
       <ChevronDownIcon
         className={`
           relative top-[1px] ml-1 size-3 transition duration-300
           group-data-[state=open]:rotate-180
         `}
-        aria-hidden="true"
+        aria-hidden='true'
       />
     </NavigationMenuPrimitive.Trigger>
   );
@@ -103,7 +103,7 @@ function NavigationMenuContent({
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Content>) {
   return (
     <NavigationMenuPrimitive.Content
-      data-slot="navigation-menu-content"
+      data-slot='navigation-menu-content'
       className={cn(
         `
           data-[motion^=from-]:animate-in data-[motion^=from-]:fade-in
@@ -148,11 +148,11 @@ function NavigationMenuViewport({
   return (
     <div
       className={cn(
-        "absolute top-full left-0 isolate z-50 flex justify-center",
+        'absolute top-full left-0 isolate z-50 flex justify-center',
       )}
     >
       <NavigationMenuPrimitive.Viewport
-        data-slot="navigation-menu-viewport"
+        data-slot='navigation-menu-viewport'
         className={cn(
           `
             origin-top-center bg-popover text-popover-foreground relative mt-1.5
@@ -176,7 +176,7 @@ function NavigationMenuLink({
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
   return (
     <NavigationMenuPrimitive.Link
-      data-slot="navigation-menu-link"
+      data-slot='navigation-menu-link'
       className={cn(
         `
           data-[active=true]:focus:bg-accent data-[active=true]:hover:bg-accent
@@ -203,7 +203,7 @@ function NavigationMenuIndicator({
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Indicator>) {
   return (
     <NavigationMenuPrimitive.Indicator
-      data-slot="navigation-menu-indicator"
+      data-slot='navigation-menu-indicator'
       className={cn(
         `
           data-[state=visible]:animate-in data-[state=visible]:fade-in

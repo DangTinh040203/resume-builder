@@ -1,10 +1,10 @@
-import { cn } from "@resume-builder/ui/lib/utils";
-import * as React from "react";
+import { cn } from '@resume-builder/ui/lib/utils';
+import * as React from 'react';
 
-function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
+function Textarea({ className, ...props }: React.ComponentProps<'textarea'>) {
   return (
     <textarea
-      data-slot="textarea"
+      data-slot='textarea'
       className={cn(
         `
           border-input flex field-sizing-content min-h-16 w-full rounded-md

@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { ArrowUp } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { ArrowUp } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useEffect, useState } from 'react';
 
 export const ScrollToTop = () => {
-  const t = useTranslations("Common");
+  const t = useTranslations('Common');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -13,17 +13,17 @@ export const ScrollToTop = () => {
       setIsVisible(window.scrollY > 300);
     };
 
-    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener('scroll', toggleVisibility);
     };
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -38,14 +38,16 @@ export const ScrollToTop = () => {
       <button
         onClick={scrollToTop}
         className={`
-          bg-primary text-primary-foreground flex size-12 cursor-pointer
-          items-center justify-center rounded-full shadow-lg transition-all
-          hover:bg-primary/90 hover:shadow-xl
+          bg-primary text-primary-foreground
+          hover:bg-primary/90
+          flex size-12 cursor-pointer items-center justify-center rounded-full
+          shadow-lg transition-all
+          hover:shadow-xl
           focus:ring-2 focus:ring-offset-2 focus:outline-none
         `}
-        aria-label={t("scrollToTop")}
+        aria-label={t('scrollToTop')}
       >
-        <ArrowUp className="size-6" />
+        <ArrowUp className='size-6' />
       </button>
     </div>
   );

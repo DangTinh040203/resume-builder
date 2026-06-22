@@ -1,7 +1,7 @@
-"use client";
-import { Document } from "@rawwee/react-pdf-html";
-import { type DocumentProps } from "@react-pdf/renderer";
-import { type ReactElement } from "react";
+'use client';
+import { Document } from '@rawwee/react-pdf-html';
+import { type DocumentProps } from '@react-pdf/renderer';
+import { type ReactElement } from 'react';
 
 interface DocumentPDFProps {
   document: ReactElement<DocumentProps>;

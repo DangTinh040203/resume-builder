@@ -1,11 +1,11 @@
-import { HttpService, type HttpServiceOptions } from "@/services/http.service";
+import { HttpService, type HttpServiceOptions } from '@/services/http.service';
 import {
   type GenerateEmailResponse,
   type MatchResult,
   type ParseResumeResponse,
   type Resume,
   type UpdateResumeDto,
-} from "@/types/resume.type";
+} from '@/types/resume.type';
 
 export class ResumeService extends HttpService {
   constructor(options?: HttpServiceOptions) {
@@ -13,7 +13,7 @@ export class ResumeService extends HttpService {
   }
 
   async getResume(): Promise<Resume> {
-    const { data } = await this.get<Resume>("/resumes");
+    const { data } = await this.get<Resume>('/resumes');
     return data;
   }
 
@@ -27,9 +27,9 @@ export class ResumeService extends HttpService {
 
   async resumeParse(file: File) {
     const formData = new FormData();
-    formData.append("file", file);
+    formData.append('file', file);
     const { data } = await this.post<FormData, ParseResumeResponse>(
-      "/resumes/parse",
+      '/resumes/parse',
       formData,
     );
     return data;
@@ -62,16 +62,16 @@ export class ResumeService extends HttpService {
     file?: File,
   ): Promise<MatchResult> {
     const formData = new FormData();
-    formData.append("resumeId", resumeId);
+    formData.append('resumeId', resumeId);
 
     if (file) {
-      formData.append("file", file);
+      formData.append('file', file);
     } else if (jobDescription) {
-      formData.append("jobDescription", jobDescription);
+      formData.append('jobDescription', jobDescription);
     }
 
     const { data } = await this.post<FormData, MatchResult>(
-      "/resumes/match",
+      '/resumes/match',
       formData,
     );
     return data;

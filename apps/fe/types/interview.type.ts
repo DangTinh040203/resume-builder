@@ -1,25 +1,25 @@
 // ─── Enums ────────────────────────────────────────────────
 
 export enum InterviewType {
-  TECHNICAL = "TECHNICAL",
-  BEHAVIORAL = "BEHAVIORAL",
-  ALL = "ALL",
+  TECHNICAL = 'TECHNICAL',
+  BEHAVIORAL = 'BEHAVIORAL',
+  ALL = 'ALL',
 }
 
 export enum InterviewStatus {
-  IN_PROGRESS = "IN_PROGRESS",
-  COMPLETED = "COMPLETED",
-  CANCELLED = "CANCELLED",
+  IN_PROGRESS = 'IN_PROGRESS',
+  COMPLETED = 'COMPLETED',
+  CANCELLED = 'CANCELLED',
 }
 
 export type InterviewState =
-  | "idle"
-  | "setup"
-  | "connecting"
-  | "active"
-  | "evaluating"
-  | "result"
-  | "error";
+  | 'idle'
+  | 'setup'
+  | 'connecting'
+  | 'active'
+  | 'evaluating'
+  | 'result'
+  | 'error';
 
 // ─── Config & Payloads ───────────────────────────────────
 
@@ -68,7 +68,7 @@ export interface EvaluationCriteria {
 
 export interface InterviewFeedback {
   overallScore: number;
-  verdict: "PASS" | "BORDERLINE" | "FAIL";
+  verdict: 'PASS' | 'BORDERLINE' | 'FAIL';
   summary: string;
   criteria: EvaluationCriteria;
   questionFeedbacks: QuestionFeedback[];

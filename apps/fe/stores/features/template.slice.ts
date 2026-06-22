@@ -1,22 +1,22 @@
-import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
-import { StorageSliceName } from "@/constants";
-import { type RootState } from "@/stores/store";
+import { StorageSliceName } from '@/constants';
+import { type RootState } from '@/stores/store';
 
-export type FontWeight = "normal" | "medium" | "semibold" | "bold";
-export type ColumnLayout = "single" | "double";
-export type HeaderStyle = "left" | "center";
-export type Theme = "light" | "dark" | "auto";
-export type BorderStyle = "none" | "simple" | "double" | "accent";
+export type FontWeight = 'normal' | 'medium' | 'semibold' | 'bold';
+export type ColumnLayout = 'single' | 'double';
+export type HeaderStyle = 'left' | 'center';
+export type Theme = 'light' | 'dark' | 'auto';
+export type BorderStyle = 'none' | 'simple' | 'double' | 'accent';
 export type SectionType =
-  | "personal"
-  | "summary"
-  | "skills"
-  | "education"
-  | "experience"
-  | "projects"
-  | "certifications"
-  | "languages";
+  | 'personal'
+  | 'summary'
+  | 'skills'
+  | 'education'
+  | 'experience'
+  | 'projects'
+  | 'certifications'
+  | 'languages';
 
 export interface Format {
   // Typography
@@ -32,7 +32,7 @@ export interface Format {
   // Layout
   sectionSpacing: number;
   margin: number;
-  pageFormat: "A4";
+  pageFormat: 'A4';
   columnLayout: ColumnLayout;
   sectionOrder: SectionType[];
   hiddenSections: SectionType[];
@@ -56,41 +56,41 @@ export interface TemplateState {
 }
 
 export const defaultSectionOrder: SectionType[] = [
-  "personal",
-  "summary",
-  "skills",
-  "education",
-  "certifications",
-  "languages",
-  "experience",
-  "projects",
+  'personal',
+  'summary',
+  'skills',
+  'education',
+  'certifications',
+  'languages',
+  'experience',
+  'projects',
 ];
 
 export const defaultFormat: Format = {
   // Typography
   fontSize: 11,
-  fontFamily: "Inter",
+  fontFamily: 'Inter',
   titleSize: 30,
   sectionTitleSize: 14,
   subTitleSize: 14,
   lineHeight: 1.8,
-  fontWeight: "normal",
+  fontWeight: 'normal',
   letterSpacing: 0,
 
   // Layout
   sectionSpacing: 10,
   margin: 20,
-  pageFormat: "A4",
-  columnLayout: "single",
+  pageFormat: 'A4',
+  columnLayout: 'single',
   sectionOrder: defaultSectionOrder,
   hiddenSections: [],
-  headerStyle: "left",
+  headerStyle: 'left',
 
   // Appearance
-  color: "#1e3a8a",
-  theme: "light",
-  borderStyle: "none",
-  dateFormat: "MM/YYYY",
+  color: '#1e3a8a',
+  theme: 'light',
+  borderStyle: 'none',
+  dateFormat: 'MM/YYYY',
 };
 
 const initialState: TemplateState = {

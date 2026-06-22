@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   closestCenter,
@@ -9,42 +9,42 @@ import {
   PointerSensor,
   useSensor,
   useSensors,
-} from "@dnd-kit/core";
+} from '@dnd-kit/core';
 import {
   arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
   useSortable,
   verticalListSortingStrategy,
-} from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
-import { Button } from "@resume-builder/ui/components/button";
+} from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
+import { Button } from '@resume-builder/ui/components/button';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@resume-builder/ui/components/card";
-import { Input } from "@resume-builder/ui/components/input";
-import { Label } from "@resume-builder/ui/components/label";
-import { cn } from "@resume-builder/ui/lib/utils";
-import { motion } from "framer-motion";
+} from '@resume-builder/ui/components/card';
+import { Input } from '@resume-builder/ui/components/input';
+import { Label } from '@resume-builder/ui/components/label';
+import { cn } from '@resume-builder/ui/lib/utils';
+import { motion } from 'framer-motion';
 import {
   AlertCircle,
   FolderGit2,
   GripVertical,
   Plus,
   Trash2,
-} from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useCallback, useEffect, useState } from "react";
+} from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useCallback, useEffect, useState } from 'react';
 
-import BuilderNavigation from "@/components/builder-screen/builder-navigation";
-import Editor from "@/components/builder-screen/editor";
-import { useSyncResume } from "@/hooks/use-sync-resume";
-import { updateResume } from "@/stores/features/resume.slice";
-import { useAppDispatch } from "@/stores/store";
-import type { Project } from "@/types/resume.type";
+import BuilderNavigation from '@/components/builder-screen/builder-navigation';
+import Editor from '@/components/builder-screen/editor';
+import { useSyncResume } from '@/hooks/use-sync-resume';
+import { updateResume } from '@/stores/features/resume.slice';
+import { useAppDispatch } from '@/stores/store';
+import type { Project } from '@/types/resume.type';
 
 interface ProjectsFormProps {
   onNext?: () => void;
@@ -71,7 +71,7 @@ function SortableProjectItem({
     transition,
     isDragging,
   } = useSortable({ id: item.id });
-  const t = useTranslations("BuilderForms");
+  const t = useTranslations('BuilderForms');
 
   const style = {
     transform: CSS.Translate.toString(transform),
@@ -95,158 +95,148 @@ function SortableProjectItem({
       ref={setNodeRef}
       style={style}
       className={cn(
-        "group rounded-xl bg-white p-4",
-        "ring-1 ring-slate-200",
-        "hover:ring-slate-300",
-        "dark:bg-slate-800 dark:ring-slate-700",
-        isDragging && "relative z-50 opacity-50",
+        'group rounded-xl bg-white p-4',
+        'ring-1 ring-slate-200',
+        'hover:ring-slate-300',
+        'dark:bg-slate-800 dark:ring-slate-700',
+        isDragging && 'relative z-50 opacity-50',
       )}
     >
-      <div className="mb-3 flex items-center justify-between">
+      <div className='mb-3 flex items-center justify-between'>
         {/* Drag Handle */}
         <button
-          type="button"
+          type='button'
           className={cn(
-            "cursor-grab touch-none rounded p-1",
-            "text-slate-400 transition-colors",
-            "hover:bg-slate-100 hover:text-slate-600",
-            "dark:hover:bg-slate-700",
-            isDragging && "cursor-grabbing",
+            'cursor-grab touch-none rounded p-1',
+            'text-slate-400 transition-colors',
+            'hover:bg-slate-100 hover:text-slate-600',
+            'dark:hover:bg-slate-700',
+            isDragging && 'cursor-grabbing',
           )}
           {...attributes}
           {...listeners}
         >
-          <GripVertical className="h-4 w-4" />
+          <GripVertical className='h-4 w-4' />
         </button>
 
         {/* Delete Button */}
         <Button
-          variant="ghost"
-          size="icon"
+          variant='ghost'
+          size='icon'
           className={cn(
-            "h-8 w-8 shrink-0 rounded-md",
-            "text-slate-400 opacity-0 transition-opacity",
-            "group-hover:opacity-100",
-            "hover:bg-rose-50 hover:text-rose-500",
-            "dark:hover:bg-rose-500/10",
+            'h-8 w-8 shrink-0 rounded-md',
+            'text-slate-400 opacity-0 transition-opacity',
+            'group-hover:opacity-100',
+            'hover:bg-rose-50 hover:text-rose-500',
+            'dark:hover:bg-rose-500/10',
           )}
           onClick={() => onRemove(item.id)}
-          type="button"
+          type='button'
         >
-          <Trash2 className="h-4 w-4" />
+          <Trash2 className='h-4 w-4' />
         </Button>
       </div>
 
-      <div className="grid gap-3">
-        <div
-          className={`
-            grid gap-3
-            sm:grid-cols-2
-          `}
-        >
-          <div className="space-y-1">
+      <div className='grid gap-3'>
+        <div className={`grid gap-3 sm:grid-cols-2`}>
+          <div className='space-y-1'>
             <Input
               value={item.title}
-              onChange={(e) => onUpdate(item.id, "title", e.target.value)}
-              placeholder={t("projects.placeholders.name")}
+              onChange={(e) => onUpdate(item.id, 'title', e.target.value)}
+              placeholder={t('projects.placeholders.name')}
               className={cn(
-                "h-10 rounded-lg border-slate-200 bg-slate-50 text-sm",
-                "focus:bg-white focus:ring-2 focus:ring-cyan-500/20",
-                "dark:border-slate-700 dark:bg-slate-700",
-                errors?.title && "border-red-400 focus:ring-red-500/20",
+                'h-10 rounded-lg border-slate-200 bg-slate-50 text-sm',
+                'focus:bg-white focus:ring-2 focus:ring-cyan-500/20',
+                'dark:border-slate-700 dark:bg-slate-700',
+                errors?.title && 'border-red-400 focus:ring-red-500/20',
               )}
             />
             {errors?.title && (
-              <p className="flex items-center gap-1 text-xs text-red-500">
-                <AlertCircle className="h-3 w-3" />
+              <p className='flex items-center gap-1 text-xs text-red-500'>
+                <AlertCircle className='h-3 w-3' />
                 {errors.title}
               </p>
             )}
           </div>
           <Input
             value={item.subTitle}
-            onChange={(e) => onUpdate(item.id, "subTitle", e.target.value)}
-            placeholder={t("projects.placeholders.subtitle")}
+            onChange={(e) => onUpdate(item.id, 'subTitle', e.target.value)}
+            placeholder={t('projects.placeholders.subtitle')}
             className={cn(
-              "h-10 rounded-lg border-slate-200 bg-slate-50 text-sm",
-              "focus:bg-white focus:ring-2 focus:ring-cyan-500/20",
-              "dark:border-slate-700 dark:bg-slate-700",
+              'h-10 rounded-lg border-slate-200 bg-slate-50 text-sm',
+              'focus:bg-white focus:ring-2 focus:ring-cyan-500/20',
+              'dark:border-slate-700 dark:bg-slate-700',
             )}
           />
         </div>
 
-        <div
-          className={`
-            grid gap-3
-            sm:grid-cols-2
-          `}
-        >
+        <div className={`grid gap-3 sm:grid-cols-2`}>
           <Input
             value={item.position}
-            onChange={(e) => onUpdate(item.id, "position", e.target.value)}
-            placeholder={t("projects.placeholders.position")}
+            onChange={(e) => onUpdate(item.id, 'position', e.target.value)}
+            placeholder={t('projects.placeholders.position')}
             className={cn(
-              "h-10 rounded-lg border-slate-200 bg-slate-50 text-sm",
-              "focus:bg-white focus:ring-2 focus:ring-cyan-500/20",
-              "dark:border-slate-700 dark:bg-slate-700",
+              'h-10 rounded-lg border-slate-200 bg-slate-50 text-sm',
+              'focus:bg-white focus:ring-2 focus:ring-cyan-500/20',
+              'dark:border-slate-700 dark:bg-slate-700',
             )}
           />
           <Input
             value={item.domain}
-            onChange={(e) => onUpdate(item.id, "domain", e.target.value)}
-            placeholder={t("projects.placeholders.domain")}
+            onChange={(e) => onUpdate(item.id, 'domain', e.target.value)}
+            placeholder={t('projects.placeholders.domain')}
             className={cn(
-              "h-10 rounded-lg border-slate-200 bg-slate-50 text-sm",
-              "focus:bg-white focus:ring-2 focus:ring-cyan-500/20",
-              "dark:border-slate-700 dark:bg-slate-700",
+              'h-10 rounded-lg border-slate-200 bg-slate-50 text-sm',
+              'focus:bg-white focus:ring-2 focus:ring-cyan-500/20',
+              'dark:border-slate-700 dark:bg-slate-700',
             )}
           />
         </div>
 
         <Input
           value={item.technologies}
-          onChange={(e) => onUpdate(item.id, "technologies", e.target.value)}
-          placeholder={t("projects.placeholders.technologies")}
+          onChange={(e) => onUpdate(item.id, 'technologies', e.target.value)}
+          placeholder={t('projects.placeholders.technologies')}
           className={cn(
-            "h-10 rounded-lg border-slate-200 bg-slate-50 text-sm",
-            "focus:bg-white focus:ring-2 focus:ring-cyan-500/20",
-            "dark:border-slate-700 dark:bg-slate-700",
+            'h-10 rounded-lg border-slate-200 bg-slate-50 text-sm',
+            'focus:bg-white focus:ring-2 focus:ring-cyan-500/20',
+            'dark:border-slate-700 dark:bg-slate-700',
           )}
         />
 
         <Input
-          value={item.demo || ""}
-          onChange={(e) => onUpdate(item.id, "demo", e.target.value)}
-          placeholder={t("projects.placeholders.demo")}
+          value={item.demo || ''}
+          onChange={(e) => onUpdate(item.id, 'demo', e.target.value)}
+          placeholder={t('projects.placeholders.demo')}
           className={cn(
-            "h-10 rounded-lg border-slate-200 bg-slate-50 text-sm",
-            "focus:bg-white focus:ring-2 focus:ring-cyan-500/20",
-            "dark:border-slate-700 dark:bg-slate-700",
+            'h-10 rounded-lg border-slate-200 bg-slate-50 text-sm',
+            'focus:bg-white focus:ring-2 focus:ring-cyan-500/20',
+            'dark:border-slate-700 dark:bg-slate-700',
           )}
         />
 
         <div>
-          <Label className="mb-1.5 block text-xs text-slate-500">
-            {t("projects.description")}
+          <Label className='mb-1.5 block text-xs text-slate-500'>
+            {t('projects.description')}
           </Label>
           <Editor
-            className="[&_.ql-editor]:min-h-[100px]"
+            className='[&_.ql-editor]:min-h-[100px]'
             value={details}
             onChange={setDetails}
-            onBlur={() => onUpdate(item.id, "details", details)}
+            onBlur={() => onUpdate(item.id, 'details', details)}
           />
         </div>
 
         <div>
-          <Label className="mb-1.5 block text-xs text-slate-500">
-            {t("projects.responsibilities")}
+          <Label className='mb-1.5 block text-xs text-slate-500'>
+            {t('projects.responsibilities')}
           </Label>
           <Editor
-            className="[&_.ql-editor]:min-h-[100px]"
+            className='[&_.ql-editor]:min-h-[100px]'
             value={responsibilities}
             onChange={setResponsibilities}
             onBlur={() =>
-              onUpdate(item.id, "responsibilities", responsibilities)
+              onUpdate(item.id, 'responsibilities', responsibilities)
             }
           />
         </div>
@@ -256,7 +246,7 @@ function SortableProjectItem({
 }
 
 const ProjectsForm = ({ onNext, onBack }: ProjectsFormProps) => {
-  const t = useTranslations("BuilderForms");
+  const t = useTranslations('BuilderForms');
   const dispatch = useAppDispatch();
   const { resume } = useSyncResume();
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -285,7 +275,7 @@ const ProjectsForm = ({ onNext, onBack }: ProjectsFormProps) => {
 
     projectItems.forEach((item) => {
       if (!item.title.trim()) {
-        errors[item.id] = { title: t("projects.validation.nameRequired") };
+        errors[item.id] = { title: t('projects.validation.nameRequired') };
         isValid = false;
       }
     });
@@ -316,15 +306,15 @@ const ProjectsForm = ({ onNext, onBack }: ProjectsFormProps) => {
   const addProjectItem = () => {
     const newItem: Project = {
       id: crypto.randomUUID(),
-      title: "",
-      subTitle: "",
-      details: "",
-      technologies: "",
-      position: "",
-      responsibilities: "",
-      domain: "",
-      demo: "",
-      resumeId: resume?.id || "",
+      title: '',
+      subTitle: '',
+      details: '',
+      technologies: '',
+      position: '',
+      responsibilities: '',
+      domain: '',
+      demo: '',
+      resumeId: resume?.id || '',
     };
     dispatch(updateResume({ projects: [...projectItems, newItem] }));
   };
@@ -355,75 +345,59 @@ const ProjectsForm = ({ onNext, onBack }: ProjectsFormProps) => {
   if (!resume) return null;
 
   return (
-    <div className="space-y-6">
+    <div className='space-y-6'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
+        transition={{ duration: 0.4, ease: 'easeOut' }}
       >
-        <Card className={cn("relative gap-0 py-0 shadow-xl")}>
+        <Card className={cn('relative gap-0 py-0 shadow-xl')}>
           <CardHeader
-            className={`
-              border-b border-slate-100 pt-6 pb-5
-              dark:border-slate-800
-            `}
+            className={`border-b border-slate-100 pt-6 pb-5 dark:border-slate-800`}
           >
-            <CardTitle className="flex items-center gap-3">
+            <CardTitle className='flex items-center gap-3'>
               <div
                 className={cn(
-                  "flex h-10 w-10 items-center justify-center rounded-xl",
-                  "bg-linear-to-br from-violet-500 to-purple-600",
-                  "shadow-md shadow-violet-500/25",
+                  'flex h-10 w-10 items-center justify-center rounded-xl',
+                  'bg-linear-to-br from-violet-500 to-purple-600',
+                  'shadow-md shadow-violet-500/25',
                 )}
               >
-                <FolderGit2 className="h-5 w-5 text-white" />
+                <FolderGit2 className='h-5 w-5 text-white' />
               </div>
-              <div className="flex flex-col">
+              <div className='flex flex-col'>
                 <span
-                  className={`
-                    text-lg font-bold text-slate-900
-                    dark:text-white
-                  `}
+                  className={`text-lg font-bold text-slate-900 dark:text-white`}
                 >
-                  {t("projects.title")}
+                  {t('projects.title')}
                 </span>
                 <span
-                  className={`
-                    text-sm font-normal text-slate-500
-                    dark:text-slate-400
-                  `}
+                  className={`text-sm font-normal text-slate-500 dark:text-slate-400`}
                 >
-                  {t("projects.subtitle")}
+                  {t('projects.subtitle')}
                 </span>
               </div>
             </CardTitle>
           </CardHeader>
 
-          <CardContent className="space-y-6 p-6">
+          <CardContent className='space-y-6 p-6'>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1 }}
-              className="space-y-3"
+              className='space-y-3'
             >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="h-1 w-1 rounded-full bg-cyan-500" />
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-2'>
+                  <div className='h-1 w-1 rounded-full bg-cyan-500' />
                   <Label
-                    className={`
-                      text-xs font-semibold tracking-wider text-slate-500
-                      uppercase
-                    `}
+                    className={`text-xs font-semibold tracking-wider text-slate-500 uppercase`}
                   >
-                    {t("projects.list")}
+                    {t('projects.list')}
                   </Label>
                   {projectItems.length > 0 && (
                     <span
-                      className={`
-                        rounded-full bg-cyan-100 px-2 py-0.5 text-xs font-medium
-                        text-cyan-600
-                        dark:bg-cyan-900/30 dark:text-cyan-400
-                      `}
+                      className={`rounded-full bg-cyan-100 px-2 py-0.5 text-xs font-medium text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400`}
                     >
                       {projectItems.length}
                     </span>
@@ -433,22 +407,20 @@ const ProjectsForm = ({ onNext, onBack }: ProjectsFormProps) => {
 
               <div
                 className={cn(
-                  "rounded-xl border border-slate-200 bg-slate-50/50 p-3",
-                  "dark:border-slate-700 dark:bg-slate-800/30",
+                  'rounded-xl border border-slate-200 bg-slate-50/50 p-3',
+                  'dark:border-slate-700 dark:bg-slate-800/30',
                 )}
               >
                 {projectItems.length === 0 ? (
                   <div
-                    className={`
-                      flex flex-col items-center justify-center py-8 text-center
-                    `}
+                    className={`flex flex-col items-center justify-center py-8 text-center`}
                   >
-                    <FolderGit2 className="mb-2 h-8 w-8 text-slate-300" />
-                    <p className="text-sm font-medium text-slate-500">
-                      {t("projects.emptyTitle")}
+                    <FolderGit2 className='mb-2 h-8 w-8 text-slate-300' />
+                    <p className='text-sm font-medium text-slate-500'>
+                      {t('projects.emptyTitle')}
                     </p>
-                    <p className="mt-1 text-xs text-slate-400">
-                      {t("projects.emptyDescription")}
+                    <p className='mt-1 text-xs text-slate-400'>
+                      {t('projects.emptyDescription')}
                     </p>
                   </div>
                 ) : (
@@ -462,7 +434,7 @@ const ProjectsForm = ({ onNext, onBack }: ProjectsFormProps) => {
                       items={projectItems.map((item) => item.id)}
                       strategy={verticalListSortingStrategy}
                     >
-                      <div className="space-y-3">
+                      <div className='space-y-3'>
                         {projectItems.map((item) => (
                           <SortableProjectItem
                             key={item.id}
@@ -489,19 +461,19 @@ const ProjectsForm = ({ onNext, onBack }: ProjectsFormProps) => {
               </div>
 
               <Button
-                size="sm"
-                variant="outline"
+                size='sm'
+                variant='outline'
                 onClick={addProjectItem}
                 className={cn(
-                  "h-9 w-full gap-1.5 rounded-lg border-dashed",
-                  "border-slate-300 text-slate-600",
+                  'h-9 w-full gap-1.5 rounded-lg border-dashed',
+                  'border-slate-300 text-slate-600',
                   `hover:border-cyan-500 hover:bg-cyan-50 hover:text-cyan-600`,
-                  "dark:border-slate-600 dark:text-slate-400",
+                  'dark:border-slate-600 dark:text-slate-400',
                 )}
-                type="button"
+                type='button'
               >
-                <Plus className="h-3.5 w-3.5" />
-                {t("projects.add")}
+                <Plus className='h-3.5 w-3.5' />
+                {t('projects.add')}
               </Button>
             </motion.div>
 

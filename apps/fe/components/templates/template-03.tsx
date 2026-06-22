@@ -1,29 +1,29 @@
-"use client";
+'use client';
 
-import { Page, Text, View } from "@rawwee/react-pdf-html";
-import { Font } from "@react-pdf/renderer";
-import dayjs from "dayjs";
-import React, { useCallback } from "react";
-import { v4 as uuid } from "uuid";
+import { Page, Text, View } from '@rawwee/react-pdf-html';
+import { Font } from '@react-pdf/renderer';
+import dayjs from 'dayjs';
+import React, { useCallback } from 'react';
+import { v4 as uuid } from 'uuid';
 
 import {
   SECTION_REGISTRY,
   type SectionRendererProps,
-} from "@/components/templates/section-registry";
-import { type TemplateProp } from "@/components/templates/template-wrapper";
-import { useTemplate03Style } from "@/hooks/use-template-03-style";
-import { type SectionType } from "@/stores/features/template.slice";
+} from '@/components/templates/section-registry';
+import { type TemplateProp } from '@/components/templates/template-wrapper';
+import { useTemplate03Style } from '@/hooks/use-template-03-style';
+import { type SectionType } from '@/stores/features/template.slice';
 
 Font.registerHyphenationCallback((word) => [word]);
 
-type Template03Styles = ReturnType<typeof useTemplate03Style>["styles"];
+type Template03Styles = ReturnType<typeof useTemplate03Style>['styles'];
 
 // Sections shown in the sidebar
 const SIDEBAR_SECTIONS: SectionType[] = [
-  "skills",
-  "languages",
-  "certifications",
-  "education",
+  'skills',
+  'languages',
+  'certifications',
+  'education',
 ];
 
 const Template03: React.FC<TemplateProp> = ({ templateFormat, resume }) => {
@@ -31,7 +31,7 @@ const Template03: React.FC<TemplateProp> = ({ templateFormat, resume }) => {
 
   const formatDate = useCallback(
     (date: Date | string | null | undefined) => {
-      if (!date) return "Present";
+      if (!date) return 'Present';
       return dayjs(date).format(templateFormat.dateFormat);
     },
     [templateFormat.dateFormat],
@@ -52,25 +52,25 @@ const Template03: React.FC<TemplateProp> = ({ templateFormat, resume }) => {
   const sidebarSections = sectionOrder.filter(
     (type) =>
       SIDEBAR_SECTIONS.includes(type) &&
-      type !== "personal" &&
+      type !== 'personal' &&
       !hiddenSections.includes(type),
   );
 
   const mainSections = sectionOrder.filter(
     (type) =>
       !SIDEBAR_SECTIONS.includes(type) &&
-      type !== "personal" &&
+      type !== 'personal' &&
       !hiddenSections.includes(type),
   );
 
   const { title, subTitle, information } = resume;
 
   return (
-    <Page size={"A4"} style={styles.page}>
+    <Page size={'A4'} style={styles.page}>
       {/* ── Sidebar ── */}
       <View style={styles.sidebar}>
         {/* Personal info in sidebar */}
-        {!hiddenSections.includes("personal") && (
+        {!hiddenSections.includes('personal') && (
           <View style={styles.sidebarSection}>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.subTitle}>{subTitle}</Text>
@@ -120,7 +120,7 @@ function renderSidebarSection(
   const { resume, formatDate } = props;
 
   switch (type) {
-    case "skills": {
+    case 'skills': {
       const { skills } = resume;
       if (!skills || skills.length === 0) return null;
       return (
@@ -137,7 +137,7 @@ function renderSidebarSection(
       );
     }
 
-    case "languages": {
+    case 'languages': {
       const { languages } = resume;
       if (!languages || languages.length === 0) return null;
       return (
@@ -156,7 +156,7 @@ function renderSidebarSection(
       );
     }
 
-    case "certifications": {
+    case 'certifications': {
       const { certifications } = resume;
       if (!certifications || certifications.length === 0) return null;
       return (
@@ -175,7 +175,7 @@ function renderSidebarSection(
       );
     }
 
-    case "education": {
+    case 'education': {
       const { educations } = resume;
       if (!educations || educations.length === 0) return null;
       return (

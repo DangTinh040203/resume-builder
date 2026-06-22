@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@reference "@shared/ui/globals.css";
+@reference "@resume-builder/ui/globals.css";
 @plugin "tailwind-scrollbar";
 
 /* Local fonts for CV builder (from /public/fonts) */

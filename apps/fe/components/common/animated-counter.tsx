@@ -1,10 +1,10 @@
-"use client";
-import { useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+'use client';
+import { useInView } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 const AnimatedCounter = ({
   value,
-  suffix = "",
+  suffix = '',
 }: {
   value: string;
   suffix?: string;
@@ -12,7 +12,7 @@ const AnimatedCounter = ({
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const numericValue = parseInt(value.replace(/\D/g, ""));
+  const numericValue = parseInt(value.replace(/\D/g, ''));
 
   useEffect(() => {
     if (isInView) {

@@ -1,28 +1,26 @@
-"use client";
-import { CardContent } from "@resume-builder/ui/components/card";
-import { m } from "framer-motion";
-import { Award, Clock, Shield, Target, TrendingUp, Zap } from "lucide-react";
-import { useTranslations } from "next-intl";
-import React from "react";
+'use client';
+import { CardContent } from '@resume-builder/ui/components/card';
+import { m } from 'framer-motion';
+import { Award, Clock, Shield, Target, TrendingUp, Zap } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import BlurText from "@/components/common/blur-text";
-import ShinyText from "@/components/common/shiny-text";
-import SpotlightCard from "@/components/common/spotlight-card";
-import { fadeInUp, staggerContainer } from "@/styles/animation";
+import BlurText from '@/components/common/blur-text';
+import ShinyText from '@/components/common/shiny-text';
+import SpotlightCard from '@/components/common/spotlight-card';
+import { fadeInUp, staggerContainer } from '@/styles/animation';
 
 const whyIcons = [Zap, Shield, Clock, Target, Award, TrendingUp];
-const whyIndices = ["0", "1", "2", "3", "4", "5"] as const;
+const whyIndices = ['0', '1', '2', '3', '4', '5'] as const;
 
 const WhyChooseUsSection = () => {
-  const t = useTranslations("WhyChooseUs");
+  const t = useTranslations('WhyChooseUs');
 
   return (
-    <section
-      className={`
-        relative overflow-hidden px-2 py-8
-        md:px-4 md:py-24
-      `}
-    >
+    <section className={`
+      relative overflow-hidden px-2 py-8
+      md:px-4 md:py-24
+    `}>
       <div
         className={`
           via-primary/20 absolute top-0 left-0 h-px w-full bg-linear-to-r
@@ -36,7 +34,7 @@ const WhyChooseUsSection = () => {
         `}
       />
 
-      <div className="container mx-auto">
+      <div className='container mx-auto'>
         <m.div
           className={`
             mb-10 text-center
@@ -57,16 +55,16 @@ const WhyChooseUsSection = () => {
             `}
           >
             <ShinyText
-              text={t("badge")}
+              text={t('badge')}
               speed={3}
-              className="text-sm font-semibold tracking-wider uppercase"
+              className='text-sm font-semibold tracking-wider uppercase'
             />
           </m.div>
           <BlurText
-            text={t("title")}
+            text={t('title')}
             delay={80}
-            animateBy="words"
-            direction="top"
+            animateBy='words'
+            direction='top'
             className={`
               font-display mb-6 flex-wrap justify-center text-3xl font-extrabold
               tracking-tight
@@ -79,7 +77,7 @@ const WhyChooseUsSection = () => {
               md:text-lg
             `}
           >
-            {t("subtitle")}
+            {t('subtitle')}
           </p>
         </m.div>
 
@@ -90,8 +88,8 @@ const WhyChooseUsSection = () => {
             lg:grid-cols-3 lg:gap-8
           `}
           variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
+          initial='hidden'
+          whileInView='visible'
           viewport={{ once: true }}
         >
           {whyIndices.map((idx, index) => {
@@ -100,11 +98,13 @@ const WhyChooseUsSection = () => {
               <m.div key={idx} variants={fadeInUp}>
                 <SpotlightCard
                   className={`
-                    border-border/50 group bg-card/40 h-full rounded-3xl
-                    backdrop-blur-sm transition-all duration-500
-                    hover:border-primary/20 hover:shadow-2xl
+                    border-border/50 group bg-card/40
+                    hover:border-primary/20
+                    h-full rounded-3xl backdrop-blur-sm transition-all
+                    duration-500
+                    hover:shadow-2xl
                   `}
-                  spotlightColor="rgba(var(--primary-rgb, 124 58 237) / 0.12)"
+                  spotlightColor='rgba(var(--primary-rgb, 124 58 237) / 0.12)'
                 >
                   <CardContent
                     className={`
@@ -127,7 +127,7 @@ const WhyChooseUsSection = () => {
                       `}
                       whileHover={{ scale: 1.15 }}
                     >
-                      <Icon className="h-8 w-8" />
+                      <Icon className='h-8 w-8' />
                     </m.div>
                     <h3
                       className={`

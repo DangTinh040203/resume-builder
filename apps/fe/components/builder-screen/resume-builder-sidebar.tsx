@@ -1,7 +1,7 @@
-"use client";
-import { Card, CardContent } from "@resume-builder/ui/components/card";
-import { cn } from "@resume-builder/ui/lib/utils";
-import { motion } from "framer-motion";
+'use client';
+import { Card, CardContent } from '@resume-builder/ui/components/card';
+import { cn } from '@resume-builder/ui/lib/utils';
+import { motion } from 'framer-motion';
 import {
   Briefcase,
   ChevronRight,
@@ -11,32 +11,32 @@ import {
   GraduationCap,
   Plus,
   User,
-} from "lucide-react";
-import { useTranslations } from "next-intl";
-import React from "react";
+} from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
 export enum Section {
-  Personal = "personal",
-  Summary = "summary",
-  Skills = "skills",
-  Education = "education",
-  Experience = "experience",
-  Projects = "projects",
-  Extra = "extra",
+  Personal = 'personal',
+  Summary = 'summary',
+  Skills = 'skills',
+  Education = 'education',
+  Experience = 'experience',
+  Projects = 'projects',
+  Extra = 'extra',
 }
 
 const sectionConfig = [
-  { id: Section.Personal, labelKey: "sections.personal", icon: User },
-  { id: Section.Summary, labelKey: "sections.summary", icon: FileText },
-  { id: Section.Skills, labelKey: "sections.skills", icon: Code },
+  { id: Section.Personal, labelKey: 'sections.personal', icon: User },
+  { id: Section.Summary, labelKey: 'sections.summary', icon: FileText },
+  { id: Section.Skills, labelKey: 'sections.skills', icon: Code },
   {
     id: Section.Education,
-    labelKey: "sections.education",
+    labelKey: 'sections.education',
     icon: GraduationCap,
   },
-  { id: Section.Experience, labelKey: "sections.experience", icon: Briefcase },
-  { id: Section.Projects, labelKey: "sections.projects", icon: FolderGit2 },
-  { id: Section.Extra, labelKey: "sections.extra", icon: Plus },
+  { id: Section.Experience, labelKey: 'sections.experience', icon: Briefcase },
+  { id: Section.Projects, labelKey: 'sections.projects', icon: FolderGit2 },
+  { id: Section.Extra, labelKey: 'sections.extra', icon: Plus },
 ];
 
 interface ResumeBuilderSidebarProps {
@@ -48,28 +48,22 @@ const ResumeBuilderSidebar = ({
   activeSection,
   onSectionChange,
 }: ResumeBuilderSidebarProps) => {
-  const t = useTranslations("Builder");
+  const t = useTranslations('Builder');
 
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
-      className={`
-        order-1 h-full w-full
-        lg:col-span-2
-      `}
+      className={`order-1 h-full w-full lg:col-span-2`}
     >
       {/* Responsive navigation: Horizontal on mobile, Vertical on desktop */}
       <Card
-        className={`
-          bg-card/80 border-border/50 sticky top-0 z-20 py-0 backdrop-blur-sm
-          lg:top-4
-        `}
+        className={`bg-card/80 border-border/50 sticky top-0 z-20 py-0 backdrop-blur-sm lg:top-4`}
       >
-        <CardContent className="p-2">
+        <CardContent className='p-2'>
           <nav
             className={`
-              scrollbar-hide scrollbar-none flex space-x-2 overflow-x-auto
+              scrollbar-hide flex scrollbar-none space-x-2 overflow-x-auto
               lg:flex-col lg:space-y-1 lg:space-x-0
             `}
           >
@@ -81,30 +75,20 @@ const ResumeBuilderSidebar = ({
                 transition={{ delay: index * 0.05 }}
                 onClick={() => onSectionChange(section.id)}
                 className={cn(
-                  `
-                    flex h-10 w-auto shrink-0 cursor-pointer items-center
-                    justify-between rounded-lg px-3 py-2.5 text-sm font-medium
-                    transition-all duration-200
-                    lg:w-full
-                  `,
+                  `flex h-10 w-auto shrink-0 cursor-pointer items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200 lg:w-full`,
                   activeSection === section.id
-                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
-                    : "text-muted-foreground hover:bg-muted hover:text-foreground",
+                    ? 'bg-primary text-primary-foreground shadow-primary/25 shadow-lg'
+                    : 'text-muted-foreground hover:bg-muted hover:text-foreground',
                 )}
               >
-                <span className="flex items-center gap-2">
-                  <section.icon className="h-4 w-4" />
-                  <span className="whitespace-nowrap">
+                <span className='flex items-center gap-2'>
+                  <section.icon className='h-4 w-4' />
+                  <span className='whitespace-nowrap'>
                     {t(section.labelKey)}
                   </span>
                 </span>
                 {activeSection === section.id && (
-                  <ChevronRight
-                    className={`
-                      hidden h-4 w-4
-                      lg:block
-                    `}
-                  />
+                  <ChevronRight className={`hidden h-4 w-4 lg:block`} />
                 )}
               </motion.button>
             ))}

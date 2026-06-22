@@ -1,8 +1,8 @@
-import { Text, View } from "@rawwee/react-pdf-html";
-import { StyleSheet } from "@react-pdf/renderer";
-import { useMemo } from "react";
+import { Text, View } from '@rawwee/react-pdf-html';
+import { StyleSheet } from '@react-pdf/renderer';
+import { useMemo } from 'react';
 
-import { type Format } from "@/stores/features/template.slice";
+import { type Format } from '@/stores/features/template.slice';
 
 export const useTemplate05Style = (templateFormat: Format) => {
   const styles = useMemo(() => {
@@ -30,13 +30,13 @@ export const useTemplate05Style = (templateFormat: Format) => {
 
     return StyleSheet.create({
       page: {
-        flexDirection: "column",
+        flexDirection: 'column',
         fontSize: theme.fontSize,
         lineHeight: theme.lineHeight,
         letterSpacing: theme.letterSpacing,
         fontWeight: fontWeightValue,
         fontFamily: theme.fontFamily,
-        backgroundColor: "#ffffff",
+        backgroundColor: '#ffffff',
       },
 
       // ── Bold header with accent background ──
@@ -44,13 +44,13 @@ export const useTemplate05Style = (templateFormat: Format) => {
         backgroundColor: theme.color,
         padding: theme.margin + 5,
         paddingBottom: theme.margin,
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 8,
       },
 
       headerInfoRow: {
-        flexDirection: "row",
-        flexWrap: "wrap",
+        flexDirection: 'row',
+        flexWrap: 'wrap',
         rowGap: 2,
         columnGap: 14,
         marginTop: 4,
@@ -60,24 +60,24 @@ export const useTemplate05Style = (templateFormat: Format) => {
       body: {
         padding: theme.margin,
         paddingTop: theme.margin - 4,
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: theme.sectionSpacing + 2,
       },
 
       section: {
-        flexDirection: "column",
-        width: "100%",
+        flexDirection: 'column',
+        width: '100%',
         gap: 3,
       },
 
       sectionContent: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 10,
         marginTop: 4,
       },
 
       sectionContentNoGap: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 0,
         marginTop: 6,
       },
@@ -85,7 +85,7 @@ export const useTemplate05Style = (templateFormat: Format) => {
       // Bold colored underline
       separator: {
         height: 2.5,
-        width: "100%",
+        width: '100%',
         backgroundColor: theme.color,
         opacity: 0.2,
         marginTop: 2,
@@ -117,16 +117,16 @@ export const useTemplate05Style = (templateFormat: Format) => {
       },
 
       headerInfoValue: {
-        color: "#ffffff",
+        color: '#ffffff',
         fontSize: theme.fontSize,
       },
 
       title: {
         fontSize: theme.titleSize + 6,
         fontWeight: 700,
-        color: "#ffffff",
+        color: '#ffffff',
         lineHeight: 1.05,
-        textTransform: "uppercase",
+        textTransform: 'uppercase',
         letterSpacing: 2,
       },
 
@@ -134,7 +134,7 @@ export const useTemplate05Style = (templateFormat: Format) => {
         fontSize: theme.subTitleSize + 1,
         fontWeight: 500,
         lineHeight: 1.3,
-        color: "#ffffff",
+        color: '#ffffff',
         opacity: 0.9,
         letterSpacing: 1,
       },
@@ -143,7 +143,7 @@ export const useTemplate05Style = (templateFormat: Format) => {
         fontSize: theme.sectionTitleSize,
         fontWeight: 700,
         color: theme.color,
-        textTransform: "uppercase",
+        textTransform: 'uppercase',
         letterSpacing: 2,
       },
 
@@ -156,41 +156,41 @@ export const useTemplate05Style = (templateFormat: Format) => {
         fontWeight: 700,
         minWidth: 70,
         fontSize: theme.fontSize + 0.5,
-        color: "#2a2a2a",
+        color: '#2a2a2a',
       },
 
       // Header info items (white text)
       informationGroup: {
-        flexDirection: "row",
-        justifyContent: "flex-start",
-        width: "100%",
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        width: '100%',
         gap: 4,
-        flexWrap: "wrap",
+        flexWrap: 'wrap',
       },
 
       informationItem: {
-        flexDirection: "row",
-        alignItems: "center",
+        flexDirection: 'row',
+        alignItems: 'center',
         gap: 4,
       },
 
       informationLabel: {
         fontWeight: 700,
-        color: "#ffffff",
+        color: '#ffffff',
         opacity: 0.7,
         fontSize: theme.fontSize - 1,
       },
 
       // Timeline styles for experience
       timelineItem: {
-        flexDirection: "row",
+        flexDirection: 'row',
         gap: 0,
       },
 
       timelineGutter: {
         width: 16,
-        alignItems: "center",
-        flexDirection: "column",
+        alignItems: 'center',
+        flexDirection: 'column',
       },
 
       timelineDot: {
@@ -214,24 +214,24 @@ export const useTemplate05Style = (templateFormat: Format) => {
       },
 
       row: {
-        flexDirection: "row",
+        flexDirection: 'row',
         gap: 10,
       },
 
       rowBetween: {
-        flexDirection: "row",
-        justifyContent: "space-between",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
       },
 
       col: {
-        flexDirection: "column",
+        flexDirection: 'column',
       },
 
       // Card-style project layout
       projectTable: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 0,
-        backgroundColor: "#f8f9fa",
+        backgroundColor: '#f8f9fa',
         borderRadius: 6,
         borderLeft: `3px solid ${theme.color}`,
         padding: 10,
@@ -239,12 +239,12 @@ export const useTemplate05Style = (templateFormat: Format) => {
       },
 
       projectTableRow: {
-        flexDirection: "row",
+        flexDirection: 'row',
         marginTop: 4,
       },
 
       projectTableFirstRow: {
-        flexDirection: "row",
+        flexDirection: 'row',
       },
 
       projectTableLabelCell: {

@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { Page } from "@rawwee/react-pdf-html";
-import { Font } from "@react-pdf/renderer";
-import dayjs from "dayjs";
-import React, { useCallback } from "react";
+import { Page } from '@rawwee/react-pdf-html';
+import { Font } from '@react-pdf/renderer';
+import dayjs from 'dayjs';
+import React, { useCallback } from 'react';
 
 import {
   SECTION_REGISTRY,
   type SectionRendererProps,
-} from "@/components/templates/section-registry";
-import { type TemplateProp } from "@/components/templates/template-wrapper";
-import { useTemplateStyle } from "@/hooks/use-template-style";
+} from '@/components/templates/section-registry';
+import { type TemplateProp } from '@/components/templates/template-wrapper';
+import { useTemplateStyle } from '@/hooks/use-template-style';
 
 Font.registerHyphenationCallback((word) => [word]);
 
@@ -19,7 +19,7 @@ const Template01: React.FC<TemplateProp> = ({ templateFormat, resume }) => {
 
   const formatDate = useCallback(
     (date: Date | string | null | undefined) => {
-      if (!date) return "Present";
+      if (!date) return 'Present';
       return dayjs(date).format(templateFormat.dateFormat);
     },
     [templateFormat.dateFormat],
@@ -37,7 +37,7 @@ const Template01: React.FC<TemplateProp> = ({ templateFormat, resume }) => {
   };
 
   return (
-    <Page size={"A4"} style={styles.page}>
+    <Page size={'A4'} style={styles.page}>
       {sectionOrder
         .filter((type) => !hiddenSections.includes(type))
         .map((sectionType) => {

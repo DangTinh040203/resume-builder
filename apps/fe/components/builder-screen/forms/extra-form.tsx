@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import React from "react";
+import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import BuilderNavigation from "@/components/builder-screen/builder-navigation";
-import CertificationForm from "@/components/builder-screen/forms/certification-form";
-import LanguageForm from "@/components/builder-screen/forms/language-form";
-import { useSyncResume } from "@/hooks/use-sync-resume";
-import { updatePreviewMode } from "@/stores/features/template.slice";
-import { useAppDispatch } from "@/stores/store";
+import BuilderNavigation from '@/components/builder-screen/builder-navigation';
+import CertificationForm from '@/components/builder-screen/forms/certification-form';
+import LanguageForm from '@/components/builder-screen/forms/language-form';
+import { useSyncResume } from '@/hooks/use-sync-resume';
+import { updatePreviewMode } from '@/stores/features/template.slice';
+import { useAppDispatch } from '@/stores/store';
 
 interface ExtraFormProps {
   onBack?: () => void;
 }
 
 const ExtraForm = ({ onBack }: ExtraFormProps) => {
-  const t = useTranslations("BuilderForms");
+  const t = useTranslations('BuilderForms');
   const { sync, isSyncing } = useSyncResume();
   const dispatch = useAppDispatch();
 
@@ -28,7 +28,7 @@ const ExtraForm = ({ onBack }: ExtraFormProps) => {
   };
 
   return (
-    <div className="space-y-8">
+    <div className='space-y-8'>
       <CertificationForm hideNavigation />
       <LanguageForm hideNavigation />
 
@@ -43,7 +43,7 @@ const ExtraForm = ({ onBack }: ExtraFormProps) => {
           onNext={onSubmit}
           disableBack={!onBack}
           loading={isSyncing}
-          nextLabel={t("extra.finished")}
+          nextLabel={t('extra.finished')}
         />
       </motion.div>
     </div>

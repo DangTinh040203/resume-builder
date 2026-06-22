@@ -1,5 +1,5 @@
 export enum StorageSliceName {
-  User = "user",
-  Template = "template",
-  Resume = "resume",
+  User = 'user',
+  Template = 'template',
+  Resume = 'resume',
 }

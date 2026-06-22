@@ -1,30 +1,30 @@
-"use client";
+'use client';
 
-import { Button, buttonVariants } from "@resume-builder/ui/components/button";
-import { cn } from "@resume-builder/ui/lib/utils";
+import { Button, buttonVariants } from '@resume-builder/ui/components/button';
+import { cn } from '@resume-builder/ui/lib/utils';
 import {
   ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-} from "lucide-react";
-import * as React from "react";
+} from 'lucide-react';
+import * as React from 'react';
 import {
   type DayButton,
   DayPicker,
   getDefaultClassNames,
-} from "react-day-picker";
+} from 'react-day-picker';
 
 function Calendar({
   className,
   classNames,
   showOutsideDays = true,
-  captionLayout = "label",
-  buttonVariant = "ghost",
+  captionLayout = 'label',
+  buttonVariant = 'ghost',
   formatters,
   components,
   ...props
 }: React.ComponentProps<typeof DayPicker> & {
-  buttonVariant?: React.ComponentProps<typeof Button>["variant"];
+  buttonVariant?: React.ComponentProps<typeof Button>['variant'];
 }) {
   const defaultClassNames = getDefaultClassNames();
 
@@ -45,11 +45,11 @@ function Calendar({
       captionLayout={captionLayout}
       formatters={{
         formatMonthDropdown: (date) =>
-          date.toLocaleString("default", { month: "short" }),
+          date.toLocaleString('default', { month: 'short' }),
         ...formatters,
       }}
       classNames={{
-        root: cn("w-fit", defaultClassNames.root),
+        root: cn('w-fit', defaultClassNames.root),
         months: cn(
           `
             relative flex flex-col gap-4
@@ -57,7 +57,7 @@ function Calendar({
           `,
           defaultClassNames.months,
         ),
-        month: cn("flex w-full flex-col gap-4", defaultClassNames.month),
+        month: cn('flex w-full flex-col gap-4', defaultClassNames.month),
         nav: cn(
           `
             absolute inset-x-0 top-0 flex w-full items-center justify-between
@@ -103,18 +103,18 @@ function Calendar({
           defaultClassNames.dropdown_root,
         ),
         dropdown: cn(
-          "bg-popover absolute inset-0 opacity-0",
+          'bg-popover absolute inset-0 opacity-0',
           defaultClassNames.dropdown,
         ),
         caption_label: cn(
-          "font-medium select-none",
-          captionLayout === "label"
-            ? "text-sm"
-            : "rounded-md pl-2 pr-1 flex items-center gap-1 text-sm h-8 [&>svg]:text-muted-foreground [&>svg]:size-3.5",
+          'font-medium select-none',
+          captionLayout === 'label'
+            ? 'text-sm'
+            : 'rounded-md pl-2 pr-1 flex items-center gap-1 text-sm h-8 [&>svg]:text-muted-foreground [&>svg]:size-3.5',
           defaultClassNames.caption_label,
         ),
-        table: "w-full border-collapse",
-        weekdays: cn("flex", defaultClassNames.weekdays),
+        table: 'w-full border-collapse',
+        weekdays: cn('flex', defaultClassNames.weekdays),
         weekday: cn(
           `
             text-muted-foreground flex-1 rounded-md text-[0.8rem] font-normal
@@ -122,13 +122,13 @@ function Calendar({
           `,
           defaultClassNames.weekday,
         ),
-        week: cn("mt-2 flex w-full", defaultClassNames.week),
+        week: cn('mt-2 flex w-full', defaultClassNames.week),
         week_number_header: cn(
-          "w-(--cell-size) select-none",
+          'w-(--cell-size) select-none',
           defaultClassNames.week_number_header,
         ),
         week_number: cn(
-          "text-muted-foreground text-[0.8rem] select-none",
+          'text-muted-foreground text-[0.8rem] select-none',
           defaultClassNames.week_number,
         ),
         day: cn(
@@ -138,16 +138,16 @@ function Calendar({
             [&:last-child[data-selected=true]_button]:rounded-r-md
           `,
           props.showWeekNumber
-            ? "[&:nth-child(2)[data-selected=true]_button]:rounded-l-md"
-            : "[&:first-child[data-selected=true]_button]:rounded-l-md",
+            ? '[&:nth-child(2)[data-selected=true]_button]:rounded-l-md'
+            : '[&:first-child[data-selected=true]_button]:rounded-l-md',
           defaultClassNames.day,
         ),
         range_start: cn(
-          "bg-accent rounded-l-md",
+          'bg-accent rounded-l-md',
           defaultClassNames.range_start,
         ),
-        range_middle: cn("rounded-none", defaultClassNames.range_middle),
-        range_end: cn("bg-accent rounded-r-md", defaultClassNames.range_end),
+        range_middle: cn('rounded-none', defaultClassNames.range_middle),
+        range_end: cn('bg-accent rounded-r-md', defaultClassNames.range_end),
         today: cn(
           `
             bg-accent text-accent-foreground rounded-md
@@ -163,17 +163,17 @@ function Calendar({
           defaultClassNames.outside,
         ),
         disabled: cn(
-          "text-muted-foreground opacity-50",
+          'text-muted-foreground opacity-50',
           defaultClassNames.disabled,
         ),
-        hidden: cn("invisible", defaultClassNames.hidden),
+        hidden: cn('invisible', defaultClassNames.hidden),
         ...classNames,
       }}
       components={{
         Root: ({ className, rootRef, ...props }) => {
           return (
             <div
-              data-slot="calendar"
+              data-slot='calendar'
               ref={rootRef}
               className={cn(className)}
               {...props}
@@ -181,23 +181,23 @@ function Calendar({
           );
         },
         Chevron: ({ className, orientation, ...props }) => {
-          if (orientation === "left") {
+          if (orientation === 'left') {
             return (
-              <ChevronLeftIcon className={cn("size-4", className)} {...props} />
+              <ChevronLeftIcon className={cn('size-4', className)} {...props} />
             );
           }
 
-          if (orientation === "right") {
+          if (orientation === 'right') {
             return (
               <ChevronRightIcon
-                className={cn("size-4", className)}
+                className={cn('size-4', className)}
                 {...props}
               />
             );
           }
 
           return (
-            <ChevronDownIcon className={cn("size-4", className)} {...props} />
+            <ChevronDownIcon className={cn('size-4', className)} {...props} />
           );
         },
         DayButton: CalendarDayButton,
@@ -238,8 +238,8 @@ function CalendarDayButton({
   return (
     <Button
       ref={ref}
-      variant="ghost"
-      size="icon"
+      variant='ghost'
+      size='icon'
       data-day={day.date.toLocaleDateString()}
       data-selected-single={
         modifiers.selected &&

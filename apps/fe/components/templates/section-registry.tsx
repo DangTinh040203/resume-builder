@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { Text, View } from "@rawwee/react-pdf-html";
-import React from "react";
-import { v4 as uuid } from "uuid";
+import { Text, View } from '@rawwee/react-pdf-html';
+import React from 'react';
+import { v4 as uuid } from 'uuid';
 
-import HtmlToPdf from "@/components/templates/html-to-pdf";
+import HtmlToPdf from '@/components/templates/html-to-pdf';
 import {
   type Format,
   type SectionType,
-} from "@/stores/features/template.slice";
-import { type Resume } from "@/types/resume.type";
+} from '@/stores/features/template.slice';
+import { type Resume } from '@/types/resume.type';
 
 export interface SectionRendererProps {
   resume: Resume;
@@ -37,7 +37,7 @@ function renderPersonalSection({
   };
 
   return (
-    <React.Fragment key="personal">
+    <React.Fragment key='personal'>
       {/* HEADER */}
       <View style={{ ...styles.col, gap: 4 }}>
         <Text style={styles.title}>{title}</Text>
@@ -153,7 +153,7 @@ function renderCertificationsSection({
       <View style={{ ...styles.sectionContent, gap: 2 }}>
         {certifications.map((cert) => (
           <View key={cert.id} style={styles.row}>
-            <Text style={{ fontWeight: "bold" }}>{cert.name}</Text>
+            <Text style={{ fontWeight: 'bold' }}>{cert.name}</Text>
             <Text>
               {cert.issuer} - {formatDate(cert.date)}
             </Text>
@@ -178,7 +178,7 @@ function renderLanguagesSection({
       <View style={{ ...styles.sectionContent, gap: 2 }}>
         {languages.map((lang) => (
           <View key={lang.id} style={styles.row}>
-            <Text style={{ fontWeight: "bold" }}>{lang.name}</Text>
+            <Text style={{ fontWeight: 'bold' }}>{lang.name}</Text>
             <Text>{lang.description}</Text>
           </View>
         ))}
@@ -204,17 +204,17 @@ function renderExperienceSection({
           <View key={exp.id} style={styles.col} wrap={false}>
             <View
               style={{
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignContent: "center",
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignContent: 'center',
               }}
             >
               <Text style={styles.itemTitle}>{exp.company}</Text>
-              <Text style={{ ...styles.textSm, fontWeight: "semibold" }}>
+              <Text style={{ ...styles.textSm, fontWeight: 'semibold' }}>
                 {formatDate(exp.startDate)} - {formatDate(exp.endDate)}
               </Text>
             </View>
-            <Text style={{ opacity: 0.8, fontStyle: "italic" }}>
+            <Text style={{ opacity: 0.8, fontStyle: 'italic' }}>
               {exp.position}
             </Text>
             <View>
@@ -244,37 +244,37 @@ function renderProjectsSection({
           <View key={uuid()} style={styles.col}>
             <View style={styles.col}>
               <Text style={styles.itemTitle}>{project.title}</Text>
-              <Text style={{ opacity: 0.8, fontStyle: "italic" }}>
+              <Text style={{ opacity: 0.8, fontStyle: 'italic' }}>
                 {project.subTitle}
               </Text>
             </View>
 
             <View style={styles.projectTable}>
-              <TableRow label="Descriptions" isFirst>
+              <TableRow label='Descriptions' isFirst>
                 <HtmlToPdf style={styles.text} content={project.details} />
               </TableRow>
 
-              <TableRow label="Responsibilities">
+              <TableRow label='Responsibilities'>
                 <HtmlToPdf
                   style={styles.text}
                   content={project.responsibilities}
                 />
               </TableRow>
 
-              <TableRow label="Technologies">
+              <TableRow label='Technologies'>
                 <Text>{project.technologies}</Text>
               </TableRow>
 
-              <TableRow label="Position">
+              <TableRow label='Position'>
                 <Text>{project.position}</Text>
               </TableRow>
 
-              <TableRow label="Domain">
+              <TableRow label='Domain'>
                 <Text>{project.domain}</Text>
               </TableRow>
 
               {project.demo && (
-                <TableRow label="Demo">
+                <TableRow label='Demo'>
                   <Text>{project.demo}</Text>
                 </TableRow>
               )}

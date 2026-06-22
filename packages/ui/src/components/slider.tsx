@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import * as SliderPrimitive from "@radix-ui/react-slider";
-import { cn } from "@resume-builder/ui/lib/utils";
-import * as React from "react";
+import * as SliderPrimitive from '@radix-ui/react-slider';
+import { cn } from '@resume-builder/ui/lib/utils';
+import * as React from 'react';
 
 function Slider({
   className,
@@ -24,7 +24,7 @@ function Slider({
 
   return (
     <SliderPrimitive.Root
-      data-slot="slider"
+      data-slot='slider'
       defaultValue={defaultValue}
       value={value}
       min={min}
@@ -43,7 +43,7 @@ function Slider({
       {...props}
     >
       <SliderPrimitive.Track
-        data-slot="slider-track"
+        data-slot='slider-track'
         className={cn(
           `
             bg-muted relative grow overflow-hidden rounded-full
@@ -54,7 +54,7 @@ function Slider({
         )}
       >
         <SliderPrimitive.Range
-          data-slot="slider-range"
+          data-slot='slider-range'
           className={cn(
             `
               bg-primary absolute
@@ -66,7 +66,7 @@ function Slider({
       </SliderPrimitive.Track>
       {Array.from({ length: _values.length }, (_, index) => (
         <SliderPrimitive.Thumb
-          data-slot="slider-thumb"
+          data-slot='slider-thumb'
           key={index}
           className={`
             border-primary ring-ring/50 block size-4 shrink-0 rounded-full

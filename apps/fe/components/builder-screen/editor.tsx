@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import "react-quill-new/dist/quill.snow.css";
+import 'react-quill-new/dist/quill.snow.css';
 
-import { cn } from "@resume-builder/ui/lib/utils";
-import dynamic from "next/dynamic";
-import { useCallback, useMemo } from "react";
-import type { QuillOptionsStatic } from "react-quill-new";
+import { cn } from '@resume-builder/ui/lib/utils';
+import dynamic from 'next/dynamic';
+import { useCallback, useMemo } from 'react';
+import type { QuillOptionsStatic } from 'react-quill-new';
 
-const ReactQuill = dynamic(() => import("react-quill-new"), {
+const ReactQuill = dynamic(() => import('react-quill-new'), {
   ssr: false,
 });
 
@@ -27,12 +27,12 @@ const Editor = ({
   placeholder,
   className,
 }: EditorProps) => {
-  const modules = useMemo<QuillOptionsStatic["modules"]>(
+  const modules = useMemo<QuillOptionsStatic['modules']>(
     () => ({
       toolbar: [
-        ["bold", "italic", "underline"],
-        [{ list: "ordered" }, { list: "bullet" }],
-        ["link"],
+        ['bold', 'italic', 'underline'],
+        [{ list: 'ordered' }, { list: 'bullet' }],
+        ['link'],
         [{ color: [] }],
       ],
     }),
@@ -40,7 +40,7 @@ const Editor = ({
   );
 
   const formats = useMemo<string[]>(
-    () => ["bold", "italic", "underline", "list", "link", "color"],
+    () => ['bold', 'italic', 'underline', 'list', 'link', 'color'],
     [],
   );
 
@@ -55,28 +55,28 @@ const Editor = ({
     <div
       onBlur={onBlur}
       className={cn(
-        "relative",
+        'relative',
         `
           [&_.ql-container]:rounded-b-xl [&_.ql-container]:border-gray-200/80
           [&_.ql-container]:bg-white/80 [&_.ql-container]:backdrop-blur-sm
           dark:[&_.ql-container]:border-gray-700/50
           dark:[&_.ql-container]:bg-gray-800/50
-          dark:[&_.ql-toolbar]:border-gray-700/50
-          dark:[&_.ql-toolbar]:bg-gray-800/50
           [&_.ql-editor]:min-h-[140px]
           [&_.ql-toolbar]:rounded-t-xl [&_.ql-toolbar]:border-gray-200/80
           [&_.ql-toolbar]:bg-gray-50/80 [&_.ql-toolbar]:backdrop-blur-sm
+          dark:[&_.ql-toolbar]:border-gray-700/50
+          dark:[&_.ql-toolbar]:bg-gray-800/50
         `,
         className,
       )}
     >
       <ReactQuill
-        theme="snow"
+        theme='snow'
         value={value}
         onChange={handleChange}
         modules={modules}
         formats={formats}
-        placeholder={placeholder || "Write something..."}
+        placeholder={placeholder || 'Write something...'}
       />
     </div>
   );

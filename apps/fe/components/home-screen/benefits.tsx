@@ -1,19 +1,19 @@
-"use client";
-import { Button } from "@resume-builder/ui/components/button";
-import { m } from "framer-motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import React from "react";
+'use client';
+import { Button } from '@resume-builder/ui/components/button';
+import { m } from 'framer-motion';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import BlurText from "@/components/common/blur-text";
-import ShinyText from "@/components/common/shiny-text";
-import { Link } from "@/i18n/navigation";
-import { fadeInLeft, staggerContainer } from "@/styles/animation";
+import BlurText from '@/components/common/blur-text';
+import ShinyText from '@/components/common/shiny-text';
+import { Link } from '@/i18n/navigation';
+import { fadeInLeft, staggerContainer } from '@/styles/animation';
 
-const benefitIndices = ["0", "1", "2", "3", "4", "5"] as const;
+const benefitIndices = ['0', '1', '2', '3', '4', '5'] as const;
 
 const BenefitsSection = () => {
-  const t = useTranslations("Benefits");
+  const t = useTranslations('Benefits');
 
   return (
     <section
@@ -22,18 +22,16 @@ const BenefitsSection = () => {
         md:px-4 md:py-24
       `}
     >
-      <div className="container mx-auto">
-        <div
-          className={`
-            grid items-center gap-16
-            lg:grid-cols-2
-          `}
-        >
+      <div className='container mx-auto'>
+        <div className={`
+          grid items-center gap-16
+          lg:grid-cols-2
+        `}>
           <m.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <m.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -45,16 +43,16 @@ const BenefitsSection = () => {
               `}
             >
               <ShinyText
-                text={t("badge")}
+                text={t('badge')}
                 speed={3}
-                className="text-sm font-semibold tracking-wider uppercase"
+                className='text-sm font-semibold tracking-wider uppercase'
               />
             </m.div>
             <BlurText
-              text={t("title")}
+              text={t('title')}
               delay={80}
-              animateBy="words"
-              direction="top"
+              animateBy='words'
+              direction='top'
               className={`
                 font-display mb-8 flex-wrap text-3xl font-extrabold
                 tracking-tight
@@ -67,7 +65,7 @@ const BenefitsSection = () => {
                 md:text-xl
               `}
             >
-              {t("description")}
+              {t('description')}
             </p>
 
             <m.div
@@ -76,14 +74,14 @@ const BenefitsSection = () => {
                 sm:grid-cols-2
               `}
               variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
+              initial='hidden'
+              whileInView='visible'
               viewport={{ once: true }}
             >
               {benefitIndices.map((idx, index) => (
                 <m.div
                   key={idx}
-                  className="group flex items-center gap-4"
+                  className='group flex items-center gap-4'
                   variants={fadeInLeft}
                 >
                   <m.div
@@ -92,16 +90,17 @@ const BenefitsSection = () => {
                     viewport={{ once: true }}
                     transition={{
                       delay: index * 0.1,
-                      type: "spring",
+                      type: 'spring',
                       stiffness: 200,
                       damping: 12,
                     }}
                     className={`
-                      bg-primary/10 rounded-lg p-2 transition-colors
+                      bg-primary/10
                       group-hover:bg-primary/20
+                      rounded-lg p-2 transition-colors
                     `}
                   >
-                    <CheckCircle2 className="text-primary h-6 w-6 shrink-0" />
+                    <CheckCircle2 className='text-primary h-6 w-6 shrink-0' />
                   </m.div>
                   <span
                     className={`
@@ -115,32 +114,32 @@ const BenefitsSection = () => {
               ))}
             </m.div>
 
-            <Link href="/builder" className="mt-12 inline-block">
+            <Link href='/builder' className='mt-12 inline-block'>
               <m.div
                 whileHover={{ scale: 1.05, x: 5 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Button
-                  size="xl"
+                  size='xl'
                   className={`
                     shadow-primary/20 h-14 rounded-full px-10 text-base
                     shadow-lg
                     lg:text-lg
                   `}
                 >
-                  {t("cta")}
-                  <ArrowRight className="ml-3 h-5 w-5" />
+                  {t('cta')}
+                  <ArrowRight className='ml-3 h-5 w-5' />
                 </Button>
               </m.div>
             </Link>
           </m.div>
 
           <m.div
-            className="relative"
+            className='relative'
             initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
           >
             <div
               className={`
@@ -165,8 +164,8 @@ const BenefitsSection = () => {
                 `}
               />
 
-              <div className="space-y-8">
-                <div className="flex items-center gap-6">
+              <div className='space-y-8'>
+                <div className='flex items-center gap-6'>
                   <div
                     className={`
                       from-primary to-accent text-primary-foreground
@@ -187,15 +186,15 @@ const BenefitsSection = () => {
                     >
                       John Anderson
                     </div>
-                    <div className="text-primary font-medium tracking-wide">
+                    <div className='text-primary font-medium tracking-wide'>
                       Senior Software Engineer
                     </div>
                   </div>
                 </div>
 
-                <div className="border-border/60 space-y-6 border-t pt-6">
+                <div className='border-border/60 space-y-6 border-t pt-6'>
                   {[100, 85, 95, 75].map((width, i) => (
-                    <div key={i} className="space-y-2">
+                    <div key={i} className='space-y-2'>
                       <div
                         className={`
                           text-muted-foreground flex justify-between text-sm
@@ -205,16 +204,16 @@ const BenefitsSection = () => {
                         <span>
                           {
                             [
-                              "Technical Skills",
-                              "Experience",
-                              "Education",
-                              "Projects",
+                              'Technical Skills',
+                              'Experience',
+                              'Education',
+                              'Projects',
                             ][i]
                           }
                         </span>
                         <span>{width}% Match</span>
                       </div>
-                      <div className="bg-muted h-3 overflow-hidden rounded-full">
+                      <div className='bg-muted h-3 overflow-hidden rounded-full'>
                         <m.div
                           className={`
                             bg-primary h-full rounded-full
@@ -226,7 +225,7 @@ const BenefitsSection = () => {
                           transition={{
                             duration: 1.5,
                             delay: 0.5 + i * 0.2,
-                            ease: "easeOut",
+                            ease: 'easeOut',
                           }}
                         />
                       </div>
@@ -234,7 +233,7 @@ const BenefitsSection = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-4 pt-4">
+                <div className='flex gap-4 pt-4'>
                   <div
                     className={`
                       bg-primary/5 border-primary/10 text-primary rounded-full

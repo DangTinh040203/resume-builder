@@ -1,13 +1,13 @@
-"use client";
-import { type DocumentProps } from "@react-pdf/renderer";
-import { Spinner } from "@resume-builder/ui/components/spinner";
-import { type ReactElement, useMemo } from "react";
-import { useMeasure } from "react-use";
+'use client';
+import { type DocumentProps } from '@react-pdf/renderer';
+import { Spinner } from '@resume-builder/ui/components/spinner';
+import { type ReactElement, useMemo } from 'react';
+import { useMeasure } from 'react-use';
 
-import DocumentPDF from "@/components/templates/document-pdf";
-import { registerFonts } from "@/configs/font.config";
-import { type Format } from "@/stores/features/template.slice";
-import { type Resume } from "@/types/resume.type";
+import DocumentPDF from '@/components/templates/document-pdf';
+import { registerFonts } from '@/configs/font.config';
+import { type Format } from '@/stores/features/template.slice';
+import { type Resume } from '@/types/resume.type';
 
 // Register all fonts for @react-pdf/renderer at module load
 registerFonts();
@@ -63,21 +63,18 @@ const TemplateWrapper = ({
   return (
     <div
       ref={ref}
-      className={`
-        scrollbar-none border/10 bg-background relative z-10 w-full
-        overflow-hidden rounded-lg border shadow-xl
-        ${scrollable ? "overflow-y-auto" : ""}
-        ${!selectable ? "select-none" : ""}
-      `}
-      style={{ aspectRatio: "210 / 297" }}
+      className={`border/10 bg-background relative z-10 w-full scrollbar-none overflow-hidden rounded-lg border shadow-xl ${
+        scrollable ? `overflow-y-auto` : ''
+      } ${!selectable ? `select-none` : ''} `}
+      style={{ aspectRatio: '210 / 297' }}
     >
       {!ready ? (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className='absolute inset-0 flex items-center justify-center'>
           <Spinner />
         </div>
       ) : (
         <div
-          className="absolute top-0 left-0 z-50 origin-top-left"
+          className='absolute top-0 left-0 z-50 origin-top-left'
           style={{
             width: DEFAULT_DOCUMENT_SIZE.width,
             height: DEFAULT_DOCUMENT_SIZE.height,

@@ -1,4 +1,4 @@
-import { toast } from "@resume-builder/ui/components/sonner";
+import { toast } from '@resume-builder/ui/components/sonner';
 
 interface ClerkError {
   message: string;
@@ -15,9 +15,9 @@ interface ClerkAPIError {
 
 export function isClerkAPIError(error: unknown): error is ClerkAPIError {
   return (
-    typeof error === "object" &&
+    typeof error === 'object' &&
     error !== null &&
-    "errors" in error &&
+    'errors' in error &&
     Array.isArray((error as ClerkAPIError).errors)
   );
 }
@@ -34,7 +34,7 @@ export function getClerkErrorMessage(error: unknown): string {
     return error.message;
   }
 
-  return "Something went wrong, please try again.";
+  return 'Something went wrong, please try again.';
 }
 
 export function getClerkErrorMessages(error: unknown): string[] {
@@ -46,7 +46,7 @@ export function getClerkErrorMessages(error: unknown): string[] {
     return [error.message];
   }
 
-  return ["Something went wrong, please try again."];
+  return ['Something went wrong, please try again.'];
 }
 
 export function showClerkErrors(error: unknown) {

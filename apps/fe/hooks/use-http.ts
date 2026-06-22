@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useSession } from "@clerk/nextjs";
-import { useMemo } from "react";
+import { useSession } from '@clerk/nextjs';
+import { useMemo } from 'react';
 
-import { HttpService, type HttpServiceOptions } from "@/services/http.service";
+import { HttpService, type HttpServiceOptions } from '@/services/http.service';
 
 type HttpServiceConstructor<T extends HttpService> = new (
   options?: HttpServiceOptions,

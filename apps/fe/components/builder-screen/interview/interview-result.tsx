@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { Button } from "@resume-builder/ui/components/button";
-import { ScrollArea } from "@resume-builder/ui/components/scroll-area";
+import { Button } from '@resume-builder/ui/components/button';
+import { ScrollArea } from '@resume-builder/ui/components/scroll-area';
 import {
   AlertCircle,
   Award,
@@ -11,12 +11,12 @@ import {
   ChevronUp,
   MessageSquare,
   RefreshCw,
-} from "lucide-react";
-import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+} from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import React, { useState } from 'react';
 
-import { ScoreGauge } from "@/components/builder-screen/score-gauge";
-import type { InterviewFeedback } from "@/types/interview.type";
+import { ScoreGauge } from '@/components/builder-screen/score-gauge';
+import type { InterviewFeedback } from '@/types/interview.type';
 
 interface InterviewResultProps {
   feedback: InterviewFeedback;
@@ -25,48 +25,48 @@ interface InterviewResultProps {
 
 const CRITERIA_LABELS: Record<string, { labelKey: string; weight: string }> = {
   technicalKnowledge: {
-    labelKey: "result.criteria.technicalKnowledge",
-    weight: "25%",
+    labelKey: 'result.criteria.technicalKnowledge',
+    weight: '25%',
   },
   communicationSkills: {
-    labelKey: "result.criteria.communicationSkills",
-    weight: "20%",
+    labelKey: 'result.criteria.communicationSkills',
+    weight: '20%',
   },
-  problemSolving: { labelKey: "result.criteria.problemSolving", weight: "20%" },
+  problemSolving: { labelKey: 'result.criteria.problemSolving', weight: '20%' },
   relevanceToRole: {
-    labelKey: "result.criteria.relevanceToRole",
-    weight: "15%",
+    labelKey: 'result.criteria.relevanceToRole',
+    weight: '15%',
   },
   interviewConduct: {
-    labelKey: "result.criteria.interviewConduct",
-    weight: "20%",
+    labelKey: 'result.criteria.interviewConduct',
+    weight: '20%',
   },
 };
 
 const getScoreColor = (score: number) => {
-  if (score >= 80) return "text-green-600 dark:text-green-400";
-  if (score >= 60) return "text-blue-600 dark:text-blue-400";
-  if (score >= 40) return "text-yellow-600 dark:text-yellow-400";
-  return "text-red-600 dark:text-red-400";
+  if (score >= 80) return 'text-green-600 dark:text-green-400';
+  if (score >= 60) return 'text-blue-600 dark:text-blue-400';
+  if (score >= 40) return 'text-yellow-600 dark:text-yellow-400';
+  return 'text-red-600 dark:text-red-400';
 };
 
 const getScoreBarColor = (score: number) => {
-  if (score >= 80) return "bg-green-500";
-  if (score >= 60) return "bg-blue-500";
-  if (score >= 40) return "bg-yellow-500";
-  return "bg-red-500";
+  if (score >= 80) return 'bg-green-500';
+  if (score >= 60) return 'bg-blue-500';
+  if (score >= 40) return 'bg-yellow-500';
+  return 'bg-red-500';
 };
 
 const getVerdictStyle = (verdict: string) => {
   switch (verdict) {
-    case "PASS":
-      return "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400";
-    case "BORDERLINE":
-      return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400";
-    case "FAIL":
-      return "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400";
+    case 'PASS':
+      return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400';
+    case 'BORDERLINE':
+      return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400';
+    case 'FAIL':
+      return 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400';
     default:
-      return "bg-gray-100 text-gray-800";
+      return 'bg-gray-100 text-gray-800';
   }
 };
 
@@ -74,7 +74,7 @@ export const InterviewResult = ({
   feedback,
   onReset,
 }: InterviewResultProps) => {
-  const t = useTranslations("Interview");
+  const t = useTranslations('Interview');
   const [expandedQuestions, setExpandedQuestions] = useState<Set<number>>(
     new Set(),
   );
@@ -82,19 +82,19 @@ export const InterviewResult = ({
   const getScoreLabel = (score: number) => {
     if (score >= 80) {
       return {
-        label: t("result.score.excellent"),
-        color: "text-green-500",
+        label: t('result.score.excellent'),
+        color: 'text-green-500',
       };
     }
     if (score >= 60) {
-      return { label: t("result.score.good"), color: "text-blue-500" };
+      return { label: t('result.score.good'), color: 'text-blue-500' };
     }
     if (score >= 40) {
-      return { label: t("result.score.fair"), color: "text-yellow-500" };
+      return { label: t('result.score.fair'), color: 'text-yellow-500' };
     }
     return {
-      label: t("result.score.needsImprovement"),
-      color: "text-red-500",
+      label: t('result.score.needsImprovement'),
+      color: 'text-red-500',
     };
   };
 
@@ -110,8 +110,8 @@ export const InterviewResult = ({
   const overallStatus = getScoreLabel(feedback.overallScore);
 
   return (
-    <ScrollArea className="scrollbar-thin max-h-[80vh] pr-4">
-      <div className="space-y-4 pb-4">
+    <ScrollArea className='max-h-[80vh] scrollbar-thin pr-4'>
+      <div className='space-y-4 pb-4'>
         {/* Overall Score + Verdict */}
         <div
           className={`
@@ -120,8 +120,8 @@ export const InterviewResult = ({
           `}
         >
           <ScoreGauge score={feedback.overallScore} />
-          <div className="space-y-2">
-            <div className="flex items-center justify-center gap-3">
+          <div className='space-y-2'>
+            <div className='flex items-center justify-center gap-3'>
               <h3
                 className={`
                   text-lg font-bold tracking-tight
@@ -153,34 +153,32 @@ export const InterviewResult = ({
 
         {/* Criteria Breakdown */}
         {feedback.criteria && (
-          <div className="border-border/50 bg-background rounded-xl border p-5">
-            <div className="flex items-center gap-2 pb-4">
-              <Award size={18} className="text-primary" />
-              <h4 className="text-xs font-bold tracking-wider uppercase">
-                {t("result.evaluationCriteria")}
+          <div className='border-border/50 bg-background rounded-xl border p-5'>
+            <div className='flex items-center gap-2 pb-4'>
+              <Award size={18} className='text-primary' />
+              <h4 className='text-xs font-bold tracking-wider uppercase'>
+                {t('result.evaluationCriteria')}
               </h4>
             </div>
-            <div className="space-y-3">
+            <div className='space-y-3'>
               {Object.entries(CRITERIA_LABELS).map(
                 ([key, { labelKey, weight }]) => {
                   const score =
                     feedback.criteria[key as keyof typeof feedback.criteria] ??
                     0;
                   return (
-                    <div key={key} className="space-y-1">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-foreground">
-                          {t(labelKey)}{" "}
-                          <span className="text-muted-foreground text-xs">
+                    <div key={key} className='space-y-1'>
+                      <div className='flex items-center justify-between text-sm'>
+                        <span className='text-foreground'>
+                          {t(labelKey)}{' '}
+                          <span className='text-muted-foreground text-xs'>
                             ({weight})
                           </span>
                         </span>
-                        <span
-                          className={`
-                            font-bold
-                            ${getScoreColor(score)}
-                          `}
-                        >
+                        <span className={`
+                          font-bold
+                          ${getScoreColor(score)}
+                        `}>
                           {score}
                         </span>
                       </div>
@@ -207,23 +205,23 @@ export const InterviewResult = ({
 
         {/* Per-Question Feedback */}
         {feedback.questionFeedbacks?.length > 0 && (
-          <div className="border-border/50 bg-background rounded-xl border p-5">
-            <div className="flex items-center gap-2 pb-4">
-              <MessageSquare size={18} className="text-primary" />
-              <h4 className="text-xs font-bold tracking-wider uppercase">
-                {t("result.perQuestionFeedback")}
+          <div className='border-border/50 bg-background rounded-xl border p-5'>
+            <div className='flex items-center gap-2 pb-4'>
+              <MessageSquare size={18} className='text-primary' />
+              <h4 className='text-xs font-bold tracking-wider uppercase'>
+                {t('result.perQuestionFeedback')}
               </h4>
             </div>
-            <div className="space-y-2">
+            <div className='space-y-2'>
               {feedback.questionFeedbacks.map((qf) => {
                 const isExpanded = expandedQuestions.has(qf.questionNumber);
                 return (
                   <div
                     key={qf.questionNumber}
-                    className="border-border/30 rounded-lg border"
+                    className='border-border/30 rounded-lg border'
                   >
                     <button
-                      type="button"
+                      type='button'
                       onClick={() => toggleQuestion(qf.questionNumber)}
                       className={`
                         hover:bg-muted/50
@@ -231,7 +229,7 @@ export const InterviewResult = ({
                         py-3 text-left transition-colors
                       `}
                     >
-                      <div className="flex items-center gap-3">
+                      <div className='flex items-center gap-3'>
                         <div
                           className={`
                             flex h-7 w-7 shrink-0 items-center justify-center
@@ -252,12 +250,12 @@ export const InterviewResult = ({
                       {isExpanded ? (
                         <ChevronUp
                           size={16}
-                          className="text-muted-foreground shrink-0"
+                          className='text-muted-foreground shrink-0'
                         />
                       ) : (
                         <ChevronDown
                           size={16}
-                          className="text-muted-foreground shrink-0"
+                          className='text-muted-foreground shrink-0'
                         />
                       )}
                     </button>
@@ -275,7 +273,7 @@ export const InterviewResult = ({
                           {qf.feedback}
                         </p>
                         {qf.suggestions && (
-                          <div className="bg-muted/50 rounded-md p-3">
+                          <div className='bg-muted/50 rounded-md p-3'>
                             <p
                               className={`
                                 text-xs font-semibold tracking-wider
@@ -283,7 +281,7 @@ export const InterviewResult = ({
                                 dark:text-blue-400
                               `}
                             >
-                              {t("result.suggestion")}
+                              {t('result.suggestion')}
                             </p>
                             <p
                               className={`
@@ -304,12 +302,10 @@ export const InterviewResult = ({
         )}
 
         {/* 2-Column Grid: Strengths & Areas for Improvement */}
-        <div
-          className={`
-            grid grid-cols-1 gap-4
-            md:grid-cols-2
-          `}
-        >
+        <div className={`
+          grid grid-cols-1 gap-4
+          md:grid-cols-2
+        `}>
           {/* Strengths */}
           <div
             className={`
@@ -317,7 +313,7 @@ export const InterviewResult = ({
               dark:border-green-900/50 dark:bg-green-950/20
             `}
           >
-            <div className="flex items-center gap-2 pb-4">
+            <div className='flex items-center gap-2 pb-4'>
               <CheckCircle2
                 size={18}
                 className={`
@@ -331,10 +327,10 @@ export const InterviewResult = ({
                   dark:text-green-400
                 `}
               >
-                {t("result.strengths")}
+                {t('result.strengths')}
               </h4>
             </div>
-            <ul className="space-y-3">
+            <ul className='space-y-3'>
               {feedback.strengths.length > 0 ? (
                 feedback.strengths.map((s, i) => (
                   <li
@@ -346,14 +342,14 @@ export const InterviewResult = ({
                   >
                     <Check
                       size={16}
-                      className="mt-0.5 shrink-0 text-green-500"
+                      className='mt-0.5 shrink-0 text-green-500'
                     />
-                    <span className="leading-tight">{s}</span>
+                    <span className='leading-tight'>{s}</span>
                   </li>
                 ))
               ) : (
-                <li className="text-sm text-green-700/70 italic">
-                  {t("result.noStrengths")}
+                <li className='text-sm text-green-700/70 italic'>
+                  {t('result.noStrengths')}
                 </li>
               )}
             </ul>
@@ -366,18 +362,18 @@ export const InterviewResult = ({
               dark:border-red-900/50 dark:bg-red-950/20
             `}
           >
-            <div className="flex items-center gap-2 pb-4">
-              <AlertCircle size={18} className="text-red-500" />
+            <div className='flex items-center gap-2 pb-4'>
+              <AlertCircle size={18} className='text-red-500' />
               <h4
                 className={`
                   text-xs font-bold tracking-wider text-red-700 uppercase
                   dark:text-red-400
                 `}
               >
-                {t("result.areasForImprovement")}
+                {t('result.areasForImprovement')}
               </h4>
             </div>
-            <ul className="space-y-3">
+            <ul className='space-y-3'>
               {feedback.improvements.length > 0 ? (
                 feedback.improvements.map((imp, i) => (
                   <li
@@ -397,12 +393,12 @@ export const InterviewResult = ({
                     >
                       {i + 1}
                     </div>
-                    <span className="pt-0.5 leading-relaxed">{imp}</span>
+                    <span className='pt-0.5 leading-relaxed'>{imp}</span>
                   </li>
                 ))
               ) : (
-                <li className="text-sm text-red-700/70 italic">
-                  {t("result.noImprovements")}
+                <li className='text-sm text-red-700/70 italic'>
+                  {t('result.noImprovements')}
                 </li>
               )}
             </ul>
@@ -410,17 +406,18 @@ export const InterviewResult = ({
         </div>
 
         {/* Try Again Action */}
-        <div className="pt-2">
+        <div className='pt-2'>
           <Button
-            variant="outline"
+            variant='outline'
             className={`
-              text-foreground w-full py-6 shadow-sm
+              text-foreground
               hover:bg-muted/50
+              w-full py-6 shadow-sm
             `}
             onClick={onReset}
           >
-            <RefreshCw size={18} className="mr-2" />
-            {t("result.interviewAgain")}
+            <RefreshCw size={18} className='mr-2' />
+            {t('result.interviewAgain')}
           </Button>
         </div>
       </div>

@@ -1,26 +1,26 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
-import type { NextFetchEvent, NextRequest } from "next/server";
-import { NextResponse } from "next/server";
-import createIntlMiddleware from "next-intl/middleware";
+import { clerkMiddleware } from '@clerk/nextjs/server';
+import type { NextFetchEvent, NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
+import createIntlMiddleware from 'next-intl/middleware';
 
-import { routing } from "@/i18n/routing";
+import { routing } from '@/i18n/routing';
 
 const intlMiddleware = createIntlMiddleware(routing);
 
 const LOCALIZED_PREFIX = /^\/(vi|ja|zh|th|hi|es|fr|ar|ko|de)(?=\/|$)/;
 
 function stripLocalePrefix(pathname: string): string {
-  const stripped = pathname.replace(LOCALIZED_PREFIX, "");
-  return stripped === ""
-    ? "/"
-    : stripped.startsWith("/")
+  const stripped = pathname.replace(LOCALIZED_PREFIX, '');
+  return stripped === ''
+    ? '/'
+    : stripped.startsWith('/')
       ? stripped
       : `/${stripped}`;
 }
 
 function localePrefix(pathname: string): string {
   const match = pathname.match(LOCALIZED_PREFIX);
-  return match?.[1] ? `/${match[1]}` : "";
+  return match?.[1] ? `/${match[1]}` : '';
 }
 
 const clerkHandler = clerkMiddleware(async (auth, req) => {
@@ -29,13 +29,13 @@ const clerkHandler = clerkMiddleware(async (auth, req) => {
   const bare = stripLocalePrefix(pathname);
   const prefix = localePrefix(pathname);
 
-  if (isAuthenticated && bare.startsWith("/auth")) {
+  if (isAuthenticated && bare.startsWith('/auth')) {
     return NextResponse.redirect(new URL(`${prefix}/not-found`, req.url));
   }
 
-  if (!isAuthenticated && bare.startsWith("/builder")) {
+  if (!isAuthenticated && bare.startsWith('/builder')) {
     const signInUrl = new URL(`${prefix}/auth/sign-in`, req.url);
-    signInUrl.searchParams.set("callbackUrl", pathname);
+    signInUrl.searchParams.set('callbackUrl', pathname);
     return NextResponse.redirect(signInUrl);
   }
 
@@ -48,7 +48,7 @@ export function proxy(req: NextRequest, event: NextFetchEvent) {
 
 export const config = {
   matcher: [
-    "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
-    "/(api|trpc)(.*)",
+    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    '/(api|trpc)(.*)',
   ],
 };

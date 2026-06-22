@@ -1,9 +1,9 @@
-import baseConfig from "@resume-builder/prettier-config"
+import baseConfig from '@resume-builder/prettier-config';
 
 /** @type {import("prettier").Config} */
 const config = {
   ...baseConfig,
-  plugins: ["prettier-plugin-tailwindcss"],
-}
+  plugins: ['prettier-plugin-tailwindcss'],
+};
 
-export default config
+export default config;

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { cn } from "@resume-builder/ui/lib/utils";
-import { OTPInput, OTPInputContext } from "input-otp";
-import { MinusIcon } from "lucide-react";
-import * as React from "react";
+import { cn } from '@resume-builder/ui/lib/utils';
+import { OTPInput, OTPInputContext } from 'input-otp';
+import { MinusIcon } from 'lucide-react';
+import * as React from 'react';
 
 function InputOTP({
   className,
@@ -14,7 +14,7 @@ function InputOTP({
 }) {
   return (
     <OTPInput
-      data-slot="input-otp"
+      data-slot='input-otp'
       containerClassName={cn(
         `
           flex items-center gap-2
@@ -22,17 +22,17 @@ function InputOTP({
         `,
         containerClassName,
       )}
-      className={cn("disabled:cursor-not-allowed", className)}
+      className={cn('disabled:cursor-not-allowed', className)}
       {...props}
     />
   );
 }
 
-function InputOTPGroup({ className, ...props }: React.ComponentProps<"div">) {
+function InputOTPGroup({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
-      data-slot="input-otp-group"
-      className={cn("flex items-center", className)}
+      data-slot='input-otp-group'
+      className={cn('flex items-center', className)}
       {...props}
     />
   );
@@ -42,7 +42,7 @@ function InputOTPSlot({
   index,
   className,
   ...props
-}: React.ComponentProps<"div"> & {
+}: React.ComponentProps<'div'> & {
   index: number;
 }) {
   const inputOTPContext = React.useContext(OTPInputContext);
@@ -50,7 +50,7 @@ function InputOTPSlot({
 
   return (
     <div
-      data-slot="input-otp-slot"
+      data-slot='input-otp-slot'
       data-active={isActive}
       className={cn(
         `
@@ -89,9 +89,9 @@ function InputOTPSlot({
   );
 }
 
-function InputOTPSeparator({ ...props }: React.ComponentProps<"div">) {
+function InputOTPSeparator({ ...props }: React.ComponentProps<'div'>) {
   return (
-    <div data-slot="input-otp-separator" role="separator" {...props}>
+    <div data-slot='input-otp-separator' role='separator' {...props}>
       <MinusIcon />
     </div>
   );

@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { io, type Socket } from "socket.io-client";
+import { io, type Socket } from 'socket.io-client';
 
-import { Env } from "@/configs/env.config";
+import { Env } from '@/configs/env.config';
 import type {
   InterviewFeedback,
   StartInterviewPayload,
   TurnCompleteData,
-} from "@/types/interview.type";
+} from '@/types/interview.type';
 
 export type GetTokenFn = () => Promise<string | null>;
 
@@ -32,7 +32,7 @@ export class InterviewService {
         const token = await getToken();
         cb({ token });
       },
-      transports: ["websocket"],
+      transports: ['websocket'],
       reconnection: true,
       reconnectionAttempts: 3,
       reconnectionDelay: 1000,
@@ -63,53 +63,53 @@ export class InterviewService {
   // ─── Emitters (Client → Server) ────────────────────────
 
   startInterview(payload: StartInterviewPayload): void {
-    this.socket?.emit("interview:start", payload);
+    this.socket?.emit('interview:start', payload);
   }
 
   sendAudio(audioBase64: string): void {
-    this.socket?.emit("interview:audio", { audio: audioBase64 });
+    this.socket?.emit('interview:audio', { audio: audioBase64 });
   }
 
   stopInterview(): void {
-    this.socket?.emit("interview:stop");
+    this.socket?.emit('interview:stop');
   }
 
   /** Notify server that AI audio playback finished on the client. */
   sendPlaybackComplete(): void {
-    this.socket?.emit("interview:playback-complete");
+    this.socket?.emit('interview:playback-complete');
   }
 
   // ─── Listeners (Server → Client) ──────────────────────
 
   onStarted(callback: (data: { sessionId: string }) => void): void {
-    this.socket?.on("interview:started", callback);
+    this.socket?.on('interview:started', callback);
   }
 
   onAudioResponse(callback: (data: { audio: string }) => void): void {
-    this.socket?.on("interview:audio", callback);
+    this.socket?.on('interview:audio', callback);
   }
 
   onTurnComplete(callback: (data: TurnCompleteData) => void): void {
-    this.socket?.on("interview:turn-complete", callback);
+    this.socket?.on('interview:turn-complete', callback);
   }
 
   onInterrupted(callback: () => void): void {
-    this.socket?.on("interview:interrupted", callback);
+    this.socket?.on('interview:interrupted', callback);
   }
 
   onEvaluating(callback: () => void): void {
-    this.socket?.on("interview:evaluating", callback);
+    this.socket?.on('interview:evaluating', callback);
   }
 
   onFeedback(callback: (data: InterviewFeedback) => void): void {
-    this.socket?.on("interview:feedback", callback);
+    this.socket?.on('interview:feedback', callback);
   }
 
   onError(callback: (data: { message: string }) => void): void {
-    this.socket?.on("interview:error", callback);
+    this.socket?.on('interview:error', callback);
   }
 
   onSessionLost(callback: (data: { message: string }) => void): void {
-    this.socket?.on("interview:session-lost", callback);
+    this.socket?.on('interview:session-lost', callback);
   }
 }

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   SignedIn,
@@ -6,8 +6,8 @@ import {
   SignOutButton,
   UserAvatar,
   useUser,
-} from "@clerk/nextjs";
-import { Button } from "@resume-builder/ui/components/button";
+} from '@clerk/nextjs';
+import { Button } from '@resume-builder/ui/components/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,9 +15,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@resume-builder/ui/components/dropdown-menu";
-import { cn } from "@resume-builder/ui/lib/utils";
-import { AnimatePresence, m } from "framer-motion";
+} from '@resume-builder/ui/components/dropdown-menu';
+import { cn } from '@resume-builder/ui/lib/utils';
+import { AnimatePresence, m } from 'framer-motion';
 import {
   CreditCard,
   FileText,
@@ -26,16 +26,16 @@ import {
   Menu,
   User,
   X,
-} from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+} from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useEffect, useState } from 'react';
 
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
-import { Link, usePathname } from "@/i18n/navigation";
+import { LanguageSwitcher } from '@/components/layout/language-switcher';
+import { Link, usePathname } from '@/i18n/navigation';
 
 const navLinks = [
-  { href: "/", labelKey: "home" as const, icon: Home },
-  { href: "/templates", labelKey: "templates" as const, icon: FileText },
+  { href: '/', labelKey: 'home' as const, icon: Home },
+  { href: '/templates', labelKey: 'templates' as const, icon: FileText },
 ];
 
 // Animation variants
@@ -44,7 +44,7 @@ const headerVariants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" as const },
+    transition: { duration: 0.6, ease: 'easeOut' as const },
   },
 };
 
@@ -56,7 +56,7 @@ const navItemVariants = {
     transition: {
       delay: 0.3 + i * 0.1,
       duration: 0.5,
-      ease: "easeOut" as const,
+      ease: 'easeOut' as const,
     },
   }),
 };
@@ -67,7 +67,7 @@ const logoVariants = {
     opacity: 1,
     scale: 1,
     rotate: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const },
+    transition: { duration: 0.6, ease: 'easeOut' as const },
   },
 };
 
@@ -75,13 +75,13 @@ const mobileMenuVariants = {
   hidden: { opacity: 0, height: 0 },
   visible: {
     opacity: 1,
-    height: "auto",
-    transition: { duration: 0.3, ease: "easeOut" as const },
+    height: 'auto',
+    transition: { duration: 0.3, ease: 'easeOut' as const },
   },
   exit: {
     opacity: 0,
     height: 0,
-    transition: { duration: 0.2, ease: "easeIn" as const },
+    transition: { duration: 0.2, ease: 'easeIn' as const },
   },
 };
 
@@ -96,7 +96,7 @@ const mobileItemVariants = {
 };
 
 const Header = () => {
-  const t = useTranslations("Nav");
+  const t = useTranslations('Nav');
   const { user, isLoaded } = useUser();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -105,8 +105,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const isActive = (path: string) => pathname === path;
@@ -114,76 +114,68 @@ const Header = () => {
   return (
     <m.nav
       className={cn(
-        "relative z-50 transition-all duration-300",
-        pathname === "/"
-          ? "fixed top-0 right-0 left-0"
-          : "bg-background border-b",
-        pathname === "/" &&
+        'relative z-50 transition-all duration-300',
+        pathname === '/'
+          ? 'fixed top-0 right-0 left-0'
+          : 'bg-background border-b',
+        pathname === '/' &&
           (isScrolled || isOpen) &&
-          "glass border-border/50 border-b shadow-md",
+          'glass border-border/50 border-b shadow-md',
       )}
       variants={headerVariants}
-      initial="hidden"
-      animate="visible"
+      initial='hidden'
+      animate='visible'
     >
-      <div className="container mx-auto overflow-x-hidden px-4">
-        <div className="flex h-16 items-center justify-between">
+      <div className='container mx-auto overflow-x-hidden px-4'>
+        <div className='flex h-16 items-center justify-between'>
           {/* Animated Logo */}
-          <m.div variants={logoVariants} initial="hidden" animate="visible">
+          <m.div variants={logoVariants} initial='hidden' animate='visible'>
             <Link
-              href="/"
-              className="group flex items-center gap-2 select-none"
+              href='/'
+              className='group flex items-center gap-2 select-none'
             >
               <m.div
-                className={`
-                  gradient-bg flex h-9 w-9 items-center justify-center
-                  rounded-lg shadow-md
-                `}
+                className={`gradient-bg flex h-9 w-9 items-center justify-center rounded-lg shadow-md`}
                 whileHover={{
                   scale: 1.1,
                   rotate: 5,
-                  boxShadow: "0 0 20px rgba(124, 58, 237, 0.5)",
+                  boxShadow: '0 0 20px rgba(124, 58, 237, 0.5)',
                 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
               >
                 <m.div>
-                  <FileText className="text-primary-foreground h-5 w-5" />
+                  <FileText className='text-primary-foreground h-5 w-5' />
                 </m.div>
               </m.div>
               <m.span
-                className="font-display text-xl font-bold"
+                className='font-display text-xl font-bold'
                 whileHover={{ scale: 1.05 }}
               >
-                CV<span className="gradient-text">Craft</span>
+                CV<span className='gradient-text'>Craft</span>
               </m.span>
             </Link>
           </m.div>
 
           {/* Desktop Navigation with staggered animation */}
-          <div
-            className={`
-              hidden items-center gap-4
-              md:flex
-            `}
-          >
+          <div className={`hidden items-center gap-4 md:flex`}>
             {navLinks.map((link, i) => (
               <m.div
                 key={link.href}
                 custom={i}
                 variants={navItemVariants}
-                initial="hidden"
-                animate="visible"
+                initial='hidden'
+                animate='visible'
               >
                 <Link href={link.href}>
                   <m.div
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                   >
                     <Button
-                      className={cn("relative gap-2 overflow-hidden")}
-                      variant={isActive(link.href) ? "default" : "ghost"}
+                      className={cn('relative gap-2 overflow-hidden')}
+                      variant={isActive(link.href) ? 'default' : 'ghost'}
                     >
                       <m.span
                         animate={
@@ -191,7 +183,7 @@ const Header = () => {
                         }
                         transition={{ duration: 0.5 }}
                       >
-                        <link.icon className="h-4 w-4" />
+                        <link.icon className='h-4 w-4' />
                       </m.span>
                       {t(link.labelKey)}
                     </Button>
@@ -202,64 +194,57 @@ const Header = () => {
           </div>
 
           {/* Auth Buttons with animation */}
-          <div
-            className={`
-              hidden items-center gap-2
-              md:flex
-            `}
-          >
+          <div className={`hidden items-center gap-2 md:flex`}>
             <LanguageSwitcher />
             {/* Loading placeholder handled by Clerk's internal loading state or we can use ClerkLoading if needed */}
             {!isLoaded ? (
-              <div className="h-10 w-24"></div>
+              <div className='h-10 w-24'></div>
             ) : (
               <>
                 <SignedIn>
                   <m.div
                     custom={navLinks.length}
                     variants={navItemVariants}
-                    initial="hidden"
-                    animate="visible"
+                    initial='hidden'
+                    animate='visible'
                   >
                     <DropdownMenu modal={false}>
-                      <DropdownMenuTrigger className="cursor-pointer">
+                      <DropdownMenuTrigger className='cursor-pointer'>
                         <UserAvatar />
                       </DropdownMenuTrigger>
                       <DropdownMenuContent
-                        className="w-56"
-                        align="end"
+                        className='w-56'
+                        align='end'
                         forceMount
                       >
-                        <DropdownMenuLabel className="font-normal">
-                          <div className="flex flex-col space-y-1">
-                            <p className="text-sm leading-none font-medium">
+                        <DropdownMenuLabel className='font-normal'>
+                          <div className='flex flex-col space-y-1'>
+                            <p className='text-sm leading-none font-medium'>
                               {user?.fullName}
                             </p>
                           </div>
                         </DropdownMenuLabel>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem asChild disabled>
-                          <Link href="/profile" className="cursor-pointer">
-                            <User className="mr-2 h-4 w-4" />
-                            {t("profile")}
+                          <Link href='/profile' className='cursor-pointer'>
+                            <User className='mr-2 h-4 w-4' />
+                            {t('profile')}
                           </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem asChild disabled>
-                          <Link href="/subscription" className="cursor-pointer">
-                            <CreditCard className="mr-2 h-4 w-4" />
-                            {t("subscription")}
+                          <Link href='/subscription' className='cursor-pointer'>
+                            <CreditCard className='mr-2 h-4 w-4' />
+                            {t('subscription')}
                           </Link>
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem asChild>
                           <SignOutButton>
                             <div
-                              className={`
-                                flex w-full cursor-pointer items-center
-                              `}
+                              className={`flex w-full cursor-pointer items-center`}
                             >
-                              <LogOut className="mr-2 h-4 w-4" />
-                              {t("signOut")}
+                              <LogOut className='mr-2 h-4 w-4' />
+                              {t('signOut')}
                             </div>
                           </SignOutButton>
                         </DropdownMenuItem>
@@ -272,37 +257,37 @@ const Header = () => {
                   <m.div
                     custom={navLinks.length}
                     variants={navItemVariants}
-                    initial="hidden"
-                    animate="visible"
+                    initial='hidden'
+                    animate='visible'
                   >
-                    <Link href="/auth/sign-in">
+                    <Link href='/auth/sign-in'>
                       <m.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Button variant="ghost">{t("signIn")}</Button>
+                        <Button variant='ghost'>{t('signIn')}</Button>
                       </m.div>
                     </Link>
                   </m.div>
                   <m.div
                     custom={navLinks.length + 1}
                     variants={navItemVariants}
-                    initial="hidden"
-                    animate="visible"
+                    initial='hidden'
+                    animate='visible'
                   >
-                    <Link href="/auth/sign-in">
+                    <Link href='/auth/sign-in'>
                       <m.div
                         whileHover={{
                           scale: 1.05,
                         }}
                         whileTap={{ scale: 0.95 }}
                         transition={{
-                          type: "spring",
+                          type: 'spring',
                           stiffness: 400,
                           damping: 17,
                         }}
                       >
-                        <Button variant="gradient">{t("getStarted")}</Button>
+                        <Button variant='gradient'>{t('getStarted')}</Button>
                       </m.div>
                     </Link>
                   </m.div>
@@ -312,32 +297,32 @@ const Header = () => {
           </div>
 
           {/* Animated Mobile Menu Button */}
-          <m.div className="md:hidden" whileTap={{ scale: 0.9 }}>
+          <m.div className='md:hidden' whileTap={{ scale: 0.9 }}>
             <Button
-              variant="ghost"
-              size="icon"
+              variant='ghost'
+              size='icon'
               onClick={() => setIsOpen(!isOpen)}
             >
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode='wait'>
                 {isOpen ? (
                   <m.div
-                    key="close"
+                    key='close'
                     initial={{ rotate: -90, opacity: 0 }}
                     animate={{ rotate: 0, opacity: 1 }}
                     exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <X className="h-5 w-5" />
+                    <X className='h-5 w-5' />
                   </m.div>
                 ) : (
                   <m.div
-                    key="menu"
+                    key='menu'
                     initial={{ rotate: 90, opacity: 0 }}
                     animate={{ rotate: 0, opacity: 1 }}
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Menu className="h-5 w-5" />
+                    <Menu className='h-5 w-5' />
                   </m.div>
                 )}
               </AnimatePresence>
@@ -349,18 +334,14 @@ const Header = () => {
         <AnimatePresence>
           {isOpen && (
             <m.div
-              className={`
-                fixed top-16 right-0 left-0 overflow-hidden rounded-b-lg
-                bg-white px-2 shadow
-                md:hidden
-              `}
+              className={`fixed top-16 right-0 left-0 overflow-hidden rounded-b-lg bg-white px-2 shadow md:hidden`}
               variants={mobileMenuVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+              initial='hidden'
+              animate='visible'
+              exit='exit'
             >
-              <div className="flex flex-col gap-1 py-4">
-                <div className="flex justify-center px-2 pb-3">
+              <div className='flex flex-col gap-1 py-4'>
+                <div className='flex justify-center px-2 pb-3'>
                   <LanguageSwitcher />
                 </div>
                 {navLinks.map((link, i) => (
@@ -368,17 +349,17 @@ const Header = () => {
                     key={link.href}
                     custom={i}
                     variants={mobileItemVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
+                    initial='hidden'
+                    animate='visible'
+                    exit='exit'
                   >
                     <Link href={link.href} onClick={() => setIsOpen(false)}>
                       <m.div whileTap={{ scale: 0.98, x: 5 }}>
                         <Button
-                          variant={isActive(link.href) ? "secondary" : "ghost"}
-                          className="w-full justify-start gap-3"
+                          variant={isActive(link.href) ? 'secondary' : 'ghost'}
+                          className='w-full justify-start gap-3'
                         >
-                          <link.icon className="h-4 w-4" />
+                          <link.icon className='h-4 w-4' />
                           {t(link.labelKey)}
                         </Button>
                       </m.div>
@@ -388,65 +369,62 @@ const Header = () => {
                 <m.div
                   custom={navLinks.length}
                   variants={mobileItemVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
+                  initial='hidden'
+                  animate='visible'
+                  exit='exit'
                 >
                   <SignedIn>
-                    <Link href="/subscription" onClick={() => setIsOpen(false)}>
+                    <Link href='/subscription' onClick={() => setIsOpen(false)}>
                       <Button
-                        variant="ghost"
-                        className="w-full justify-start gap-3"
+                        variant='ghost'
+                        className='w-full justify-start gap-3'
                       >
-                        <CreditCard className="h-4 w-4" />
-                        {t("subscription")}
+                        <CreditCard className='h-4 w-4' />
+                        {t('subscription')}
                       </Button>
                     </Link>
-                    <Link href="/profile" onClick={() => setIsOpen(false)}>
+                    <Link href='/profile' onClick={() => setIsOpen(false)}>
                       <Button
-                        variant="ghost"
-                        className="w-full justify-start gap-3"
+                        variant='ghost'
+                        className='w-full justify-start gap-3'
                       >
-                        <User className="h-4 w-4" />
-                        {t("profile")}
+                        <User className='h-4 w-4' />
+                        {t('profile')}
                       </Button>
                     </Link>
 
-                    <div className="border-border mt-2 flex border-t pt-2">
-                      <div className="border-border flex-1 border-r px-4 py-2">
-                        <div className="flex items-center gap-3">
+                    <div className='border-border mt-2 flex border-t pt-2'>
+                      <div className='border-border flex-1 border-r px-4 py-2'>
+                        <div className='flex items-center gap-3'>
                           <UserAvatar />
-                          <div className="flex flex-col">
-                            <p className="text-sm font-medium">
+                          <div className='flex flex-col'>
+                            <p className='text-sm font-medium'>
                               {user?.fullName ||
                                 user?.primaryEmailAddress?.emailAddress.split(
-                                  "@",
+                                  '@',
                                 )[0]}
                             </p>
                           </div>
                         </div>
                       </div>
-                      <div className="flex-1 px-4 py-2">
+                      <div className='flex-1 px-4 py-2'>
                         <SignOutButton>
                           <Button
-                            variant="ghost"
-                            className={`
-                              w-full justify-start gap-3 text-red-500
-                              hover:bg-red-50 hover:text-red-500
-                            `}
+                            variant='ghost'
+                            className={`w-full justify-start gap-3 text-red-500 hover:bg-red-50 hover:text-red-500`}
                           >
-                            <LogOut className="h-4 w-4" />
-                            {t("signOut")}
+                            <LogOut className='h-4 w-4' />
+                            {t('signOut')}
                           </Button>
                         </SignOutButton>
                       </div>
                     </div>
                   </SignedIn>
                   <SignedOut>
-                    <Link href="/auth/sign-in" onClick={() => setIsOpen(false)}>
+                    <Link href='/auth/sign-in' onClick={() => setIsOpen(false)}>
                       <m.div whileTap={{ scale: 0.98 }} whileHover={{}}>
-                        <Button variant="gradient" className="mt-2 w-full">
-                          {t("signInSignUp")}
+                        <Button variant='gradient' className='mt-2 w-full'>
+                          {t('signInSignUp')}
                         </Button>
                       </m.div>
                     </Link>

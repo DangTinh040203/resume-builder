@@ -1,1 +1,1 @@
-export { default } from "@resume-builder/ui/postcss.config";
+export { default } from '@resume-builder/ui/postcss.config';

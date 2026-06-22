@@ -33,13 +33,13 @@ export const staggerContainer = {
 
 // Premium animation presets
 export const springTransition = {
-  type: "spring",
+  type: 'spring',
   stiffness: 100,
   damping: 20,
 };
 
 export const slowSpringTransition = {
-  type: "spring",
+  type: 'spring',
   stiffness: 50,
   damping: 15,
 };
@@ -68,7 +68,7 @@ export const itemReveal = {
 };
 
 export const textReveal = {
-  hidden: { opacity: 0, y: "100%" },
+  hidden: { opacity: 0, y: '100%' },
   visible: {
     opacity: 1,
     y: 0,
@@ -108,7 +108,7 @@ export const formItemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 100,
       damping: 20,
     },
@@ -121,7 +121,7 @@ export const buttonScaleVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 100,
       damping: 20,
     },

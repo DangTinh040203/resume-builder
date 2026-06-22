@@ -1,30 +1,30 @@
-import dynamic from "next/dynamic";
-import { setRequestLocale } from "next-intl/server";
+import dynamic from 'next/dynamic';
+import { setRequestLocale } from 'next-intl/server';
 
-import HeroSection from "@/components/home-screen/hero";
+import HeroSection from '@/components/home-screen/hero';
 
-const Marquee = dynamic(() => import("@/components/home-screen/marquee"));
+const Marquee = dynamic(() => import('@/components/home-screen/marquee'));
 const FeaturesSection = dynamic(
-  () => import("@/components/home-screen/features-section"),
+  () => import('@/components/home-screen/features-section'),
 );
 const HowItWorksSection = dynamic(
-  () => import("@/components/home-screen/how-it-works"),
+  () => import('@/components/home-screen/how-it-works'),
 );
 const TemplatePreviewSection = dynamic(
-  () => import("@/components/home-screen/template-preview"),
+  () => import('@/components/home-screen/template-preview'),
 );
 const WhyChooseUsSection = dynamic(
-  () => import("@/components/home-screen/why-choose-us"),
+  () => import('@/components/home-screen/why-choose-us'),
 );
 const BenefitsSection = dynamic(
-  () => import("@/components/home-screen/benefits"),
+  () => import('@/components/home-screen/benefits'),
 );
-const StatsSection = dynamic(() => import("@/components/home-screen/stats"));
+const StatsSection = dynamic(() => import('@/components/home-screen/stats'));
 const TestimonialsSection = dynamic(
-  () => import("@/components/home-screen/testimonials"),
+  () => import('@/components/home-screen/testimonials'),
 );
-const FAQSection = dynamic(() => import("@/components/home-screen/faq"));
-const CTASection = dynamic(() => import("@/components/home-screen/cta"));
+const FAQSection = dynamic(() => import('@/components/home-screen/faq'));
+const CTASection = dynamic(() => import('@/components/home-screen/cta'));
 
 export default async function Page({
   params,

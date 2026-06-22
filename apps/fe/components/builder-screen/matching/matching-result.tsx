@@ -1,21 +1,21 @@
-"use client";
+'use client';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@resume-builder/ui/components/accordion";
-import { Badge } from "@resume-builder/ui/components/badge";
-import { Button } from "@resume-builder/ui/components/button";
-import { ScrollArea } from "@resume-builder/ui/components/scroll-area";
-import { toast } from "@resume-builder/ui/components/sonner";
+} from '@resume-builder/ui/components/accordion';
+import { Badge } from '@resume-builder/ui/components/badge';
+import { Button } from '@resume-builder/ui/components/button';
+import { ScrollArea } from '@resume-builder/ui/components/scroll-area';
+import { toast } from '@resume-builder/ui/components/sonner';
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@resume-builder/ui/components/tabs";
-import { AxiosError } from "axios";
+} from '@resume-builder/ui/components/tabs';
+import { AxiosError } from 'axios';
 import {
   AlertCircle,
   Check,
@@ -27,20 +27,20 @@ import {
   Search,
   Sparkles,
   TrendingUp,
-} from "lucide-react";
-import { useTranslations } from "next-intl";
-import React from "react";
+} from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import { EmailPreviewDialog } from "@/components/builder-screen/matching/email-preview-dialog";
-import { ScoreGauge } from "@/components/builder-screen/score-gauge";
-import { useService } from "@/hooks/use-http";
-import { ResumeService } from "@/services/resume.service";
-import { type ErrorResponse } from "@/types/error.response";
+import { EmailPreviewDialog } from '@/components/builder-screen/matching/email-preview-dialog';
+import { ScoreGauge } from '@/components/builder-screen/score-gauge';
+import { useService } from '@/hooks/use-http';
+import { ResumeService } from '@/services/resume.service';
+import { type ErrorResponse } from '@/types/error.response';
 import {
   type GenerateEmailResponse,
   type MatchResult,
-} from "@/types/resume.type";
-import { toastErrorMessage } from "@/utils/toast-error-message.util";
+} from '@/types/resume.type';
+import { toastErrorMessage } from '@/utils/toast-error-message.util';
 
 interface MatchingResultProps {
   matchResult: MatchResult;
@@ -55,7 +55,7 @@ export const MatchingResult = ({
   jdText,
   resumeId,
 }: MatchingResultProps) => {
-  const t = useTranslations("Matching");
+  const t = useTranslations('Matching');
   const [isGenerating, setIsGenerating] = React.useState(false);
   const [isCopied, setIsCopied] = React.useState(false);
   const [isSubjectCopied, setIsSubjectCopied] = React.useState(false);
@@ -67,17 +67,17 @@ export const MatchingResult = ({
 
   const getScoreLabel = (score: number) => {
     if (score >= 80) {
-      return { label: t("result.score.excellent"), color: "text-green-500" };
+      return { label: t('result.score.excellent'), color: 'text-green-500' };
     }
     if (score >= 60) {
-      return { label: t("result.score.good"), color: "text-blue-500" };
+      return { label: t('result.score.good'), color: 'text-blue-500' };
     }
     if (score >= 40) {
-      return { label: t("result.score.fair"), color: "text-yellow-500" };
+      return { label: t('result.score.fair'), color: 'text-yellow-500' };
     }
     return {
-      label: t("result.score.needsImprovement"),
-      color: "text-red-500",
+      label: t('result.score.needsImprovement'),
+      color: 'text-red-500',
     };
   };
 
@@ -99,7 +99,7 @@ export const MatchingResult = ({
         const error = e.response?.data as ErrorResponse;
         toastErrorMessage(error.message);
       } else {
-        toast.error(t("email.generateFailed"));
+        toast.error(t('email.generateFailed'));
       }
     } finally {
       setIsGenerating(false);
@@ -114,7 +114,7 @@ export const MatchingResult = ({
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000);
     } catch {
-      toast.error(t("email.copyFailed"));
+      toast.error(t('email.copyFailed'));
     }
   };
 
@@ -124,16 +124,16 @@ export const MatchingResult = ({
     try {
       await navigator.clipboard.writeText(emailResult.subject);
       setIsSubjectCopied(true);
-      toast.success(t("email.subjectCopied"));
+      toast.success(t('email.subjectCopied'));
       setTimeout(() => setIsSubjectCopied(false), 2000);
     } catch {
-      toast.error(t("email.copyFailed"));
+      toast.error(t('email.copyFailed'));
     }
   };
 
   return (
-    <ScrollArea className="scrollbar-thin max-h-[80vh] pr-4">
-      <div className="space-y-4 pb-4">
+    <ScrollArea className='max-h-[80vh] scrollbar-thin pr-4'>
+      <div className='space-y-4 pb-4'>
         {/* Overall Score Summary - Always visible */}
         <div
           className={`
@@ -141,10 +141,10 @@ export const MatchingResult = ({
             rounded-xl border p-5
           `}
         >
-          <div className="shrink-0">
+          <div className='shrink-0'>
             <ScoreGauge score={matchResult.overallScore} />
           </div>
-          <div className="flex-1 space-y-1.5">
+          <div className='flex-1 space-y-1.5'>
             <h3
               className={`
                 text-lg font-bold tracking-tight
@@ -160,47 +160,49 @@ export const MatchingResult = ({
         </div>
 
         {/* Tabbed Content */}
-        <Tabs defaultValue="breakdown" className="w-full">
-          <TabsList className="w-full">
-            <TabsTrigger value="breakdown" className="gap-1.5">
+        <Tabs defaultValue='breakdown' className='w-full'>
+          <TabsList className='w-full'>
+            <TabsTrigger value='breakdown' className='gap-1.5'>
               <TrendingUp size={15} />
-              {t("result.tabs.breakdown")}
+              {t('result.tabs.breakdown')}
             </TabsTrigger>
-            <TabsTrigger value="analysis" className="gap-1.5">
+            <TabsTrigger value='analysis' className='gap-1.5'>
               <Search size={15} />
-              {t("result.tabs.analysis")}
+              {t('result.tabs.analysis')}
             </TabsTrigger>
-            <TabsTrigger value="improve" className="gap-1.5">
+            <TabsTrigger value='improve' className='gap-1.5'>
               <Lightbulb size={15} />
-              {t("result.tabs.improve")}
+              {t('result.tabs.improve')}
             </TabsTrigger>
           </TabsList>
 
           {/* Tab 1: Score Breakdown */}
-          <TabsContent value="breakdown" className="space-y-3 pt-2">
-            <Accordion type="single" collapsible className="w-full space-y-3">
+          <TabsContent value='breakdown' className='space-y-3 pt-2'>
+            <Accordion type='single' collapsible className='w-full space-y-3'>
               {matchResult.criteria.map((criterion) => {
                 const scoreColor =
                   criterion.score < 50
-                    ? "border-l-red-500"
+                    ? 'border-l-red-500'
                     : criterion.score <= 80
-                      ? "border-l-yellow-500"
-                      : "border-l-green-500";
+                      ? 'border-l-yellow-500'
+                      : 'border-l-green-500';
                 const scoreBg =
                   criterion.score < 50
-                    ? "bg-red-500/10 text-red-600 dark:text-red-400"
+                    ? 'bg-red-500/10 text-red-600 dark:text-red-400'
                     : criterion.score <= 80
-                      ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400"
-                      : "bg-green-500/10 text-green-600 dark:text-green-400";
+                      ? 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400'
+                      : 'bg-green-500/10 text-green-600 dark:text-green-400';
 
                 return (
                   <AccordionItem
                     key={criterion.name}
                     value={criterion.name}
                     className={`
-                      border-primary/20 overflow-hidden rounded-xl border
-                      border-l-[3px] shadow-sm transition-all
-                      hover:border-primary/40 hover:shadow-md
+                      border-primary/20
+                      hover:border-primary/40
+                      overflow-hidden rounded-xl border border-l-[3px] shadow-sm
+                      transition-all
+                      hover:shadow-md
                       ${scoreColor}
                     `}
                   >
@@ -210,16 +212,16 @@ export const MatchingResult = ({
                         hover:no-underline
                       `}
                     >
-                      <div className="flex w-full flex-col gap-3 pr-4">
-                        <div className="flex items-center justify-between">
+                      <div className='flex w-full flex-col gap-3 pr-4'>
+                        <div className='flex items-center justify-between'>
                           <span
                             className={`text-foreground text-sm font-semibold`}
                           >
                             {criterion.name}
                           </span>
-                          <div className="flex items-center gap-2">
+                          <div className='flex items-center gap-2'>
                             <span className={`text-muted-foreground text-xs`}>
-                              {t("result.weight", {
+                              {t('result.weight', {
                                 weight: criterion.weight,
                               })}
                             </span>
@@ -248,16 +250,16 @@ export const MatchingResult = ({
                               width: `${criterion.score}%`,
                               backgroundColor:
                                 criterion.score < 50
-                                  ? "#ef4444"
+                                  ? '#ef4444'
                                   : criterion.score <= 80
-                                    ? "#eab308"
-                                    : "#22c55e",
+                                    ? '#eab308'
+                                    : '#22c55e',
                             }}
                           />
                         </div>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="px-4 pt-0 pb-4">
+                    <AccordionContent className='px-4 pt-0 pb-4'>
                       <p
                         className={`
                           text-muted-foreground border-primary/15 border-t pt-3
@@ -274,7 +276,7 @@ export const MatchingResult = ({
           </TabsContent>
 
           {/* Tab 2: Strengths & Missing Keywords */}
-          <TabsContent value="analysis" className="space-y-4 pt-2">
+          <TabsContent value='analysis' className='space-y-4 pt-2'>
             {/* Strengths */}
             <div
               className={`
@@ -282,7 +284,7 @@ export const MatchingResult = ({
                 dark:border-green-900/50 dark:bg-green-950/20
               `}
             >
-              <div className="flex items-center gap-2 pb-4">
+              <div className='flex items-center gap-2 pb-4'>
                 <CheckCircle2
                   size={18}
                   className={`
@@ -296,10 +298,10 @@ export const MatchingResult = ({
                     dark:text-green-400
                   `}
                 >
-                  {t("result.strengths")}
+                  {t('result.strengths')}
                 </h4>
               </div>
-              <ul className="space-y-3">
+              <ul className='space-y-3'>
                 {(matchResult.strengths || []).length > 0 ? (
                   matchResult.strengths!.map((strength, i) => (
                     <li
@@ -311,14 +313,14 @@ export const MatchingResult = ({
                     >
                       <Check
                         size={16}
-                        className="mt-0.5 shrink-0 text-green-500"
+                        className='mt-0.5 shrink-0 text-green-500'
                       />
-                      <span className="leading-tight">{strength}</span>
+                      <span className='leading-tight'>{strength}</span>
                     </li>
                   ))
                 ) : (
-                  <li className="text-sm text-green-700/70 italic">
-                    {t("result.noStrengths")}
+                  <li className='text-sm text-green-700/70 italic'>
+                    {t('result.noStrengths')}
                   </li>
                 )}
               </ul>
@@ -331,23 +333,23 @@ export const MatchingResult = ({
                 dark:border-red-900/50 dark:bg-red-950/20
               `}
             >
-              <div className="flex items-center gap-2 pb-4">
-                <AlertCircle size={18} className="text-red-500" />
+              <div className='flex items-center gap-2 pb-4'>
+                <AlertCircle size={18} className='text-red-500' />
                 <h4
                   className={`
                     text-xs font-bold tracking-wider text-red-700 uppercase
                     dark:text-red-400
                   `}
                 >
-                  {t("result.missingKeywords")}
+                  {t('result.missingKeywords')}
                 </h4>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className='flex flex-wrap gap-2'>
                 {matchResult.missingKeywords.length > 0 ? (
                   matchResult.missingKeywords.map((keyword) => (
                     <Badge
                       key={keyword}
-                      variant="secondary"
+                      variant='secondary'
                       className={`
                         border-transparent bg-red-100 font-normal text-red-700
                         hover:bg-red-200
@@ -359,10 +361,10 @@ export const MatchingResult = ({
                   ))
                 ) : (
                   <Badge
-                    variant="secondary"
-                    className="bg-red-100 font-normal text-red-700"
+                    variant='secondary'
+                    className='bg-red-100 font-normal text-red-700'
                   >
-                    {t("result.invalidJobDescription")}
+                    {t('result.invalidJobDescription')}
                   </Badge>
                 )}
               </div>
@@ -370,7 +372,7 @@ export const MatchingResult = ({
           </TabsContent>
 
           {/* Tab 3: Suggestions */}
-          <TabsContent value="improve" className="space-y-4 pt-2">
+          <TabsContent value='improve' className='space-y-4 pt-2'>
             {matchResult.suggestions.length > 0 ? (
               <div
                 className={`
@@ -378,18 +380,18 @@ export const MatchingResult = ({
                   dark:border-amber-900/50 dark:bg-amber-950/20
                 `}
               >
-                <div className="flex items-center gap-2 pb-4">
-                  <Lightbulb size={18} className="text-amber-500" />
+                <div className='flex items-center gap-2 pb-4'>
+                  <Lightbulb size={18} className='text-amber-500' />
                   <h4
                     className={`
                       text-xs font-bold tracking-wider text-amber-700 uppercase
                       dark:text-amber-400
                     `}
                   >
-                    {t("result.suggestionsToImprove")}
+                    {t('result.suggestionsToImprove')}
                   </h4>
                 </div>
-                <ul className="space-y-3">
+                <ul className='space-y-3'>
                   {matchResult.suggestions.map((suggestion, i) => (
                     <li
                       key={i}
@@ -408,7 +410,7 @@ export const MatchingResult = ({
                       >
                         {i + 1}
                       </div>
-                      <span className="pt-0.5 leading-relaxed">
+                      <span className='pt-0.5 leading-relaxed'>
                         {suggestion}
                       </span>
                     </li>
@@ -422,7 +424,7 @@ export const MatchingResult = ({
                   justify-center rounded-xl border p-8 text-sm italic
                 `}
               >
-                {t("result.noSuggestions")}
+                {t('result.noSuggestions')}
               </div>
             )}
           </TabsContent>
@@ -442,30 +444,31 @@ export const MatchingResult = ({
         />
 
         {/* Action Buttons */}
-        <div
-          className={`
-            flex flex-col gap-3 pt-2
-            sm:flex-row
-          `}
-        >
+        <div className={`
+          flex flex-col gap-3 pt-2
+          sm:flex-row
+        `}>
           <Button
-            variant="outline"
+            variant='outline'
             className={`
-              text-foreground group h-12 flex-1 gap-2.5 rounded-xl border
-              shadow-sm transition-all duration-200
-              hover:border-border hover:bg-muted/50 hover:shadow-md
+              text-foreground group
+              hover:border-border hover:bg-muted/50
+              h-12 flex-1 gap-2.5 rounded-xl border shadow-sm transition-all
+              duration-200
+              hover:shadow-md
             `}
             onClick={onReset}
           >
             <RefreshCw
               size={17}
               className={`
-                text-muted-foreground transition-colors
+                text-muted-foreground
                 group-hover:text-foreground
+                transition-colors
               `}
             />
-            <span className="text-sm font-medium">
-              {t("result.analyzeAnother")}
+            <span className='text-sm font-medium'>
+              {t('result.analyzeAnother')}
             </span>
           </Button>
 
@@ -497,9 +500,9 @@ export const MatchingResult = ({
             )}
             {isGenerating ? (
               <>
-                <Loader2 size={17} className="animate-spin" />
-                <span className="text-sm font-medium">
-                  {t("email.generating")}
+                <Loader2 size={17} className='animate-spin' />
+                <span className='text-sm font-medium'>
+                  {t('email.generating')}
                 </span>
               </>
             ) : emailResult ? (
@@ -511,13 +514,13 @@ export const MatchingResult = ({
                     group-hover:translate-x-0.5 group-hover:-translate-y-0.5
                   `}
                 />
-                <span className="text-sm font-medium">{t("email.view")}</span>
+                <span className='text-sm font-medium'>{t('email.view')}</span>
               </>
             ) : (
               <>
                 <Sparkles size={17} />
-                <span className="text-sm font-medium">
-                  {t("email.generate")}
+                <span className='text-sm font-medium'>
+                  {t('email.generate')}
                 </span>
               </>
             )}

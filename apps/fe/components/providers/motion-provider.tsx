@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { domAnimation, LazyMotion } from "framer-motion";
-import { type PropsWithChildren } from "react";
+import { domAnimation, LazyMotion } from 'framer-motion';
+import { type PropsWithChildren } from 'react';
 
 /**
  * LazyMotion provider that loads only the `domAnimation` feature set.

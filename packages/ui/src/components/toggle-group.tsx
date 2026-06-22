@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
-import { toggleVariants } from "@resume-builder/ui/components/toggle";
-import { cn } from "@resume-builder/ui/lib/utils";
-import { type VariantProps } from "class-variance-authority";
-import * as React from "react";
+import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
+import { toggleVariants } from '@resume-builder/ui/components/toggle';
+import { cn } from '@resume-builder/ui/lib/utils';
+import { type VariantProps } from 'class-variance-authority';
+import * as React from 'react';
 
 const ToggleGroupContext = React.createContext<
   VariantProps<typeof toggleVariants> & {
     spacing?: number;
   }
 >({
-  size: "default",
-  variant: "default",
+  size: 'default',
+  variant: 'default',
   spacing: 0,
 });
 
@@ -29,11 +29,11 @@ function ToggleGroup({
   }) {
   return (
     <ToggleGroupPrimitive.Root
-      data-slot="toggle-group"
+      data-slot='toggle-group'
       data-variant={variant}
       data-size={size}
       data-spacing={spacing}
-      style={{ "--gap": spacing } as React.CSSProperties}
+      style={{ '--gap': spacing } as React.CSSProperties}
       className={cn(
         `
           group/toggle-group flex w-fit items-center gap-[--spacing(var(--gap))]
@@ -63,7 +63,7 @@ function ToggleGroupItem({
 
   return (
     <ToggleGroupPrimitive.Item
-      data-slot="toggle-group-item"
+      data-slot='toggle-group-item'
       data-variant={context.variant || variant}
       data-size={context.size || size}
       data-spacing={context.spacing}

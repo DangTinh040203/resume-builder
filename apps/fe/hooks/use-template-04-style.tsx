@@ -1,8 +1,8 @@
-import { Text, View } from "@rawwee/react-pdf-html";
-import { StyleSheet } from "@react-pdf/renderer";
-import { useMemo } from "react";
+import { Text, View } from '@rawwee/react-pdf-html';
+import { StyleSheet } from '@react-pdf/renderer';
+import { useMemo } from 'react';
 
-import { type Format } from "@/stores/features/template.slice";
+import { type Format } from '@/stores/features/template.slice';
 
 export const useTemplate04Style = (templateFormat: Format) => {
   const styles = useMemo(() => {
@@ -31,37 +31,37 @@ export const useTemplate04Style = (templateFormat: Format) => {
     return StyleSheet.create({
       page: {
         padding: theme.margin - 2,
-        flexDirection: "column",
+        flexDirection: 'column',
         rowGap: theme.sectionSpacing - 2,
         fontSize: theme.fontSize - 0.5,
         lineHeight: theme.lineHeight - 0.1,
         letterSpacing: theme.letterSpacing,
         fontWeight: fontWeightValue,
         fontFamily: theme.fontFamily,
-        backgroundColor: "#ffffff",
+        backgroundColor: '#ffffff',
       },
 
       // ── Compact header: name + subtitle inline ──
       header: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "flex-end",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-end',
         borderBottom: `2px solid ${theme.color}`,
         paddingBottom: 6,
       },
 
       headerLeft: {
-        flexDirection: "column",
+        flexDirection: 'column',
       },
 
       section: {
-        flexDirection: "column",
-        width: "100%",
+        flexDirection: 'column',
+        width: '100%',
         gap: 2,
       },
 
       sectionContent: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 6,
         marginTop: 3,
       },
@@ -69,8 +69,8 @@ export const useTemplate04Style = (templateFormat: Format) => {
       // Dotted separator
       separator: {
         height: 0,
-        width: "100%",
-        borderBottom: "0.8px dotted #999999",
+        width: '100%',
+        borderBottom: '0.8px dotted #999999',
         marginTop: 1,
       },
 
@@ -103,14 +103,14 @@ export const useTemplate04Style = (templateFormat: Format) => {
         fontSize: theme.subTitleSize - 2,
         fontWeight: 500,
         lineHeight: 1.2,
-        color: "#555555",
+        color: '#555555',
       },
 
       sectionTitle: {
         fontSize: theme.sectionTitleSize - 1,
         fontWeight: 700,
         color: theme.color,
-        textTransform: "uppercase",
+        textTransform: 'uppercase',
         letterSpacing: 1.5,
       },
 
@@ -122,21 +122,21 @@ export const useTemplate04Style = (templateFormat: Format) => {
       itemTitle: {
         fontWeight: 700,
         fontSize: theme.fontSize,
-        color: "#333333",
+        color: '#333333',
       },
 
       // Compact: info displayed in a tight row
       informationGroup: {
-        flexDirection: "row",
-        justifyContent: "flex-start",
-        width: "100%",
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        width: '100%',
         gap: 12,
-        flexWrap: "wrap",
+        flexWrap: 'wrap',
       },
 
       informationItem: {
-        flexDirection: "row",
-        alignItems: "center",
+        flexDirection: 'row',
+        alignItems: 'center',
         gap: 3,
       },
 
@@ -147,57 +147,57 @@ export const useTemplate04Style = (templateFormat: Format) => {
       },
 
       row: {
-        flexDirection: "row",
+        flexDirection: 'row',
         gap: 8,
       },
 
       rowBetween: {
-        flexDirection: "row",
-        justifyContent: "space-between",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
       },
 
       col: {
-        flexDirection: "column",
+        flexDirection: 'column',
       },
 
       // Two-column grid for short sections
       twoColGrid: {
-        flexDirection: "row",
-        flexWrap: "wrap",
+        flexDirection: 'row',
+        flexWrap: 'wrap',
         gap: 4,
       },
 
       twoColItem: {
-        width: "48%",
-        flexDirection: "row",
+        width: '48%',
+        flexDirection: 'row',
         gap: 6,
         marginBottom: 2,
       },
 
       projectTable: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 0,
-        border: "0.5px solid #e0e0e0",
+        border: '0.5px solid #e0e0e0',
         borderRadius: 3,
         marginTop: 3,
       },
 
       projectTableRow: {
-        flexDirection: "row",
-        borderTop: "0.5px solid #e0e0e0",
+        flexDirection: 'row',
+        borderTop: '0.5px solid #e0e0e0',
       },
 
       projectTableFirstRow: {
-        flexDirection: "row",
+        flexDirection: 'row',
       },
 
       projectTableLabelCell: {
-        borderRight: "0.5px solid #e0e0e0",
+        borderRight: '0.5px solid #e0e0e0',
         paddingHorizontal: 6,
         paddingVertical: 3,
         width: 100,
         fontWeight: 600,
-        color: "#555555",
+        color: '#555555',
         fontSize: theme.fontSize - 1,
       },
 

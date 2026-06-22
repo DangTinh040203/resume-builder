@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
-import { cn } from "@resume-builder/ui/lib/utils";
-import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
-import * as React from "react";
+import * as ContextMenuPrimitive from '@radix-ui/react-context-menu';
+import { cn } from '@resume-builder/ui/lib/utils';
+import { CheckIcon, ChevronRightIcon, CircleIcon } from 'lucide-react';
+import * as React from 'react';
 
 function ContextMenu({
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.Root>) {
-  return <ContextMenuPrimitive.Root data-slot="context-menu" {...props} />;
+  return <ContextMenuPrimitive.Root data-slot='context-menu' {...props} />;
 }
 
 function ContextMenuTrigger({
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.Trigger>) {
   return (
-    <ContextMenuPrimitive.Trigger data-slot="context-menu-trigger" {...props} />
+    <ContextMenuPrimitive.Trigger data-slot='context-menu-trigger' {...props} />
   );
 }
 
@@ -23,7 +23,7 @@ function ContextMenuGroup({
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.Group>) {
   return (
-    <ContextMenuPrimitive.Group data-slot="context-menu-group" {...props} />
+    <ContextMenuPrimitive.Group data-slot='context-menu-group' {...props} />
   );
 }
 
@@ -31,14 +31,14 @@ function ContextMenuPortal({
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.Portal>) {
   return (
-    <ContextMenuPrimitive.Portal data-slot="context-menu-portal" {...props} />
+    <ContextMenuPrimitive.Portal data-slot='context-menu-portal' {...props} />
   );
 }
 
 function ContextMenuSub({
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.Sub>) {
-  return <ContextMenuPrimitive.Sub data-slot="context-menu-sub" {...props} />;
+  return <ContextMenuPrimitive.Sub data-slot='context-menu-sub' {...props} />;
 }
 
 function ContextMenuRadioGroup({
@@ -46,7 +46,7 @@ function ContextMenuRadioGroup({
 }: React.ComponentProps<typeof ContextMenuPrimitive.RadioGroup>) {
   return (
     <ContextMenuPrimitive.RadioGroup
-      data-slot="context-menu-radio-group"
+      data-slot='context-menu-radio-group'
       {...props}
     />
   );
@@ -62,7 +62,7 @@ function ContextMenuSubTrigger({
 }) {
   return (
     <ContextMenuPrimitive.SubTrigger
-      data-slot="context-menu-sub-trigger"
+      data-slot='context-menu-sub-trigger'
       data-inset={inset}
       className={cn(
         `
@@ -80,7 +80,7 @@ function ContextMenuSubTrigger({
       {...props}
     >
       {children}
-      <ChevronRightIcon className="ml-auto" />
+      <ChevronRightIcon className='ml-auto' />
     </ContextMenuPrimitive.SubTrigger>
   );
 }
@@ -91,7 +91,7 @@ function ContextMenuSubContent({
 }: React.ComponentProps<typeof ContextMenuPrimitive.SubContent>) {
   return (
     <ContextMenuPrimitive.SubContent
-      data-slot="context-menu-sub-content"
+      data-slot='context-menu-sub-content'
       className={cn(
         `
           bg-popover text-popover-foreground z-50 min-w-[8rem]
@@ -120,7 +120,7 @@ function ContextMenuContent({
   return (
     <ContextMenuPrimitive.Portal>
       <ContextMenuPrimitive.Content
-        data-slot="context-menu-content"
+        data-slot='context-menu-content'
         className={cn(
           `
             bg-popover text-popover-foreground z-50
@@ -147,15 +147,15 @@ function ContextMenuContent({
 function ContextMenuItem({
   className,
   inset,
-  variant = "default",
+  variant = 'default',
   ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.Item> & {
   inset?: boolean;
-  variant?: "default" | "destructive";
+  variant?: 'default' | 'destructive';
 }) {
   return (
     <ContextMenuPrimitive.Item
-      data-slot="context-menu-item"
+      data-slot='context-menu-item'
       data-inset={inset}
       data-variant={variant}
       className={cn(
@@ -189,7 +189,7 @@ function ContextMenuCheckboxItem({
 }: React.ComponentProps<typeof ContextMenuPrimitive.CheckboxItem>) {
   return (
     <ContextMenuPrimitive.CheckboxItem
-      data-slot="context-menu-checkbox-item"
+      data-slot='context-menu-checkbox-item'
       className={cn(
         `
           focus:bg-accent focus:text-accent-foreground
@@ -211,7 +211,7 @@ function ContextMenuCheckboxItem({
         `}
       >
         <ContextMenuPrimitive.ItemIndicator>
-          <CheckIcon className="size-4" />
+          <CheckIcon className='size-4' />
         </ContextMenuPrimitive.ItemIndicator>
       </span>
       {children}
@@ -226,7 +226,7 @@ function ContextMenuRadioItem({
 }: React.ComponentProps<typeof ContextMenuPrimitive.RadioItem>) {
   return (
     <ContextMenuPrimitive.RadioItem
-      data-slot="context-menu-radio-item"
+      data-slot='context-menu-radio-item'
       className={cn(
         `
           focus:bg-accent focus:text-accent-foreground
@@ -247,7 +247,7 @@ function ContextMenuRadioItem({
         `}
       >
         <ContextMenuPrimitive.ItemIndicator>
-          <CircleIcon className="size-2 fill-current" />
+          <CircleIcon className='size-2 fill-current' />
         </ContextMenuPrimitive.ItemIndicator>
       </span>
       {children}
@@ -264,7 +264,7 @@ function ContextMenuLabel({
 }) {
   return (
     <ContextMenuPrimitive.Label
-      data-slot="context-menu-label"
+      data-slot='context-menu-label'
       data-inset={inset}
       className={cn(
         `
@@ -284,8 +284,8 @@ function ContextMenuSeparator({
 }: React.ComponentProps<typeof ContextMenuPrimitive.Separator>) {
   return (
     <ContextMenuPrimitive.Separator
-      data-slot="context-menu-separator"
-      className={cn("bg-border -mx-1 my-1 h-px", className)}
+      data-slot='context-menu-separator'
+      className={cn('bg-border -mx-1 my-1 h-px', className)}
       {...props}
     />
   );
@@ -294,12 +294,12 @@ function ContextMenuSeparator({
 function ContextMenuShortcut({
   className,
   ...props
-}: React.ComponentProps<"span">) {
+}: React.ComponentProps<'span'>) {
   return (
     <span
-      data-slot="context-menu-shortcut"
+      data-slot='context-menu-shortcut'
       className={cn(
-        "text-muted-foreground ml-auto text-xs tracking-widest",
+        'text-muted-foreground ml-auto text-xs tracking-widest',
         className,
       )}
       {...props}

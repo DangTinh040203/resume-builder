@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Button } from "@resume-builder/ui/components/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useTranslations } from "next-intl";
-import React from "react";
+import { Button } from '@resume-builder/ui/components/button';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
 interface BuilderNavigationProps {
   onBack?: () => void;
@@ -22,33 +22,31 @@ const BuilderNavigation = ({
   loading,
   nextLabel,
 }: BuilderNavigationProps) => {
-  const t = useTranslations("Common");
+  const t = useTranslations('Common');
 
   return (
     <div
-      className={`
-        border-border/50 mt-6 flex items-center justify-between border-t pt-6
-      `}
+      className={`border-border/50 mt-6 flex items-center justify-between border-t pt-6`}
     >
       <Button
-        variant="outline"
+        variant='outline'
         onClick={onBack}
         disabled={disableBack || !onBack}
-        className="min-w-32 gap-2"
-        type="button"
+        className='min-w-32 gap-2'
+        type='button'
       >
-        <ChevronLeft className="h-4 w-4" />
-        {t("back")}
+        <ChevronLeft className='h-4 w-4' />
+        {t('back')}
       </Button>
 
       <Button
         onClick={onNext}
         disabled={disableNext || loading}
-        className="min-w-32 gap-2"
-        type="submit" // Default to submit for forms
+        className='min-w-32 gap-2'
+        type='submit' // Default to submit for forms
       >
-        {loading ? t("saving") : (nextLabel ?? t("next"))}
-        <ChevronRight className="h-4 w-4" />
+        {loading ? t('saving') : (nextLabel ?? t('next'))}
+        <ChevronRight className='h-4 w-4' />
       </Button>
     </div>
   );

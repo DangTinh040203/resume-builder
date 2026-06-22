@@ -1,14 +1,14 @@
-import { Button } from "@resume-builder/ui/components/button";
+import { Button } from '@resume-builder/ui/components/button';
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@resume-builder/ui/components/tabs";
-import { Textarea } from "@resume-builder/ui/components/textarea";
-import { ClipboardList, ScanSearch, Upload } from "lucide-react";
-import { useTranslations } from "next-intl";
-import React from "react";
+} from '@resume-builder/ui/components/tabs';
+import { Textarea } from '@resume-builder/ui/components/textarea';
+import { ClipboardList, ScanSearch, Upload } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
 interface MatchingFormProps {
   jdText: string;
@@ -25,7 +25,7 @@ export const MatchingForm = ({
   setJdFile,
   onAnalyze,
 }: MatchingFormProps) => {
-  const t = useTranslations("Matching");
+  const t = useTranslations('Matching');
   const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,42 +39,42 @@ export const MatchingForm = ({
 
   return (
     <>
-      <Tabs defaultValue="text" className="space-y-4 pt-4">
+      <Tabs defaultValue='text' className='space-y-4 pt-4'>
         <TabsList
           className={`mx-auto flex w-fit items-center justify-center border`}
         >
-          <TabsTrigger className="px-10" value="text">
-            <ClipboardList className="mr-2 h-4 w-4" /> {t("form.textTab")}
+          <TabsTrigger className='px-10' value='text'>
+            <ClipboardList className='mr-2 h-4 w-4' /> {t('form.textTab')}
           </TabsTrigger>
-          <TabsTrigger className="px-10" value="file">
-            <Upload className="mr-2 h-4 w-4" /> {t("form.fileTab")}
+          <TabsTrigger className='px-10' value='file'>
+            <Upload className='mr-2 h-4 w-4' /> {t('form.fileTab')}
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="text" className="mt-4">
+        <TabsContent value='text' className='mt-4'>
           <Textarea
-            className="scrollbar-thin h-64 resize-none overflow-y-auto"
-            placeholder={t("form.jdPlaceholder")}
+            className='h-64 resize-none scrollbar-thin overflow-y-auto'
+            placeholder={t('form.jdPlaceholder')}
             value={jdText}
             onChange={(e) => setJdText(e.target.value)}
           />
         </TabsContent>
 
-        <TabsContent value="file" className="mt-4">
+        <TabsContent value='file' className='mt-4'>
           <input
             ref={fileInputRef}
-            type="file"
-            accept=".pdf"
-            className="hidden"
+            type='file'
+            accept='.pdf'
+            className='hidden'
             onChange={handleFileChange}
           />
           <div
             onClick={() => fileInputRef.current?.click()}
             className={`
-              border-primary flex h-64 cursor-pointer flex-col items-center
-              justify-center gap-3 rounded-lg border-2 border-dashed px-3 py-2
-              transition-all
+              border-primary
               hover:bg-muted/50
+              flex h-64 cursor-pointer flex-col items-center justify-center
+              gap-3 rounded-lg border-2 border-dashed px-3 py-2 transition-all
             `}
           >
             <div
@@ -83,23 +83,23 @@ export const MatchingForm = ({
                 rounded-full
               `}
             >
-              <Upload className="text-primary h-6 w-6" />
+              <Upload className='text-primary h-6 w-6' />
             </div>
-            <div className="text-center">
+            <div className='text-center'>
               {jdFile ? (
                 <>
-                  <p className="text-primary text-sm font-medium">
+                  <p className='text-primary text-sm font-medium'>
                     {jdFile.name}
                   </p>
-                  <p className="text-muted-foreground mt-1 text-xs">
-                    {t("form.changeFile")}
+                  <p className='text-muted-foreground mt-1 text-xs'>
+                    {t('form.changeFile')}
                   </p>
                 </>
               ) : (
                 <>
-                  <p className="text-sm font-medium">{t("form.uploadFile")}</p>
-                  <p className="text-muted-foreground mt-1 text-xs">
-                    {t("form.fileHint")}
+                  <p className='text-sm font-medium'>{t('form.uploadFile')}</p>
+                  <p className='text-muted-foreground mt-1 text-xs'>
+                    {t('form.fileHint')}
                   </p>
                 </>
               )}
@@ -108,9 +108,9 @@ export const MatchingForm = ({
         </TabsContent>
       </Tabs>
 
-      <div className="pt-2">
-        <Button onClick={onAnalyze} disabled={!hasInput} className="w-full">
-          <ScanSearch className="mr-2" /> {t("form.analyze")}
+      <div className='pt-2'>
+        <Button onClick={onAnalyze} disabled={!hasInput} className='w-full'>
+          <ScanSearch className='mr-2' /> {t('form.analyze')}
         </Button>
       </div>
     </>

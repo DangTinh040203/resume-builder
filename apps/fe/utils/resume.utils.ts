@@ -1,4 +1,4 @@
-import type { Resume, UpdateResumeDto } from "@/types/resume.type";
+import type { Resume, UpdateResumeDto } from '@/types/resume.type';
 
 /**
  * Safely converts a date value to ISO string.
@@ -110,7 +110,7 @@ export function resumeToUpdateDto(resume: Resume): UpdateResumeDto {
         title,
         subTitle,
         details,
-        technologies: technologies ?? "",
+        technologies: technologies ?? '',
         position,
         responsibilities,
         domain,

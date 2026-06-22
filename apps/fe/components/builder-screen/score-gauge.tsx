@@ -1,5 +1,5 @@
-"use client";
-import React, { useEffect, useState } from "react";
+'use client';
+import React, { useEffect, useState } from 'react';
 
 interface ScoreGaugeProps {
   score: number;
@@ -8,16 +8,16 @@ interface ScoreGaugeProps {
 
 const getScoreColor = (score: number) => {
   if (score < 50) {
-    return { stroke: "#ef4444", text: "text-red-500", bg: "bg-red-500/10" };
+    return { stroke: '#ef4444', text: 'text-red-500', bg: 'bg-red-500/10' };
   }
   if (score <= 80) {
     return {
-      stroke: "#eab308",
-      text: "text-yellow-500",
-      bg: "bg-yellow-500/10",
+      stroke: '#eab308',
+      text: 'text-yellow-500',
+      bg: 'bg-yellow-500/10',
     };
   }
-  return { stroke: "#22c55e", text: "text-green-500", bg: "bg-green-500/10" };
+  return { stroke: '#22c55e', text: 'text-green-500', bg: 'bg-green-500/10' };
 };
 
 const ScoreGauge: React.FC<ScoreGaugeProps> = ({ score, size = 140 }) => {
@@ -50,55 +50,44 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({ score, size = 140 }) => {
   const offset = circumference - (animatedScore / 100) * circumference;
 
   const label =
-    score < 50 ? "Needs Work" : score <= 80 ? "Good Fit" : "Excellent";
+    score < 50 ? 'Needs Work' : score <= 80 ? 'Good Fit' : 'Excellent';
 
   return (
-    <div className="flex flex-col items-center gap-2">
-      <div className="relative" style={{ width: size, height: size }}>
-        <svg width={size} height={size} className="-rotate-90">
+    <div className='flex flex-col items-center gap-2'>
+      <div className='relative' style={{ width: size, height: size }}>
+        <svg width={size} height={size} className='-rotate-90'>
           <circle
             cx={center}
             cy={center}
             r={radius}
-            fill="none"
-            stroke="currentColor"
+            fill='none'
+            stroke='currentColor'
             strokeWidth={strokeWidth}
-            className="text-muted/30"
+            className='text-muted/30'
           />
           <circle
             cx={center}
             cy={center}
             r={radius}
-            fill="none"
+            fill='none'
             stroke={colors.stroke}
             strokeWidth={strokeWidth}
-            strokeLinecap="round"
+            strokeLinecap='round'
             strokeDasharray={circumference}
             strokeDashoffset={offset}
-            className="transition-all duration-300"
+            className='transition-all duration-300'
           />
         </svg>
         <div
-          className={`
-            absolute inset-0 flex flex-col items-center justify-center
-          `}
+          className={`absolute inset-0 flex flex-col items-center justify-center`}
         >
-          <span
-            className={`
-              text-3xl font-bold
-              ${colors.text}
-            `}
-          >
+          <span className={`text-3xl font-bold ${colors.text} `}>
             {animatedScore}%
           </span>
         </div>
       </div>
       <span
-        className={`
-          rounded-full px-3 py-1 text-xs font-semibold
-          ${colors.bg}
-          ${colors.text}
-        `}
+        className={`rounded-full px-3 py-1 text-xs font-semibold ${colors.bg} ${colors.text} `}
       >
         {label}
       </span>

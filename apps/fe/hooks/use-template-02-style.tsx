@@ -1,8 +1,8 @@
-import { Text, View } from "@rawwee/react-pdf-html";
-import { StyleSheet } from "@react-pdf/renderer";
-import { useMemo } from "react";
+import { Text, View } from '@rawwee/react-pdf-html';
+import { StyleSheet } from '@react-pdf/renderer';
+import { useMemo } from 'react';
 
-import { type Format } from "@/stores/features/template.slice";
+import { type Format } from '@/stores/features/template.slice';
 
 export const useTemplate02Style = (templateFormat: Format) => {
   const styles = useMemo(() => {
@@ -31,24 +31,24 @@ export const useTemplate02Style = (templateFormat: Format) => {
     return StyleSheet.create({
       page: {
         padding: theme.margin + 5,
-        flexDirection: "column",
+        flexDirection: 'column',
         rowGap: theme.sectionSpacing + 2,
         fontSize: theme.fontSize,
         lineHeight: theme.lineHeight,
         letterSpacing: theme.letterSpacing,
         fontWeight: fontWeightValue,
         fontFamily: theme.fontFamily,
-        backgroundColor: "#ffffff",
+        backgroundColor: '#ffffff',
       },
 
       section: {
-        flexDirection: "column",
-        width: "100%",
+        flexDirection: 'column',
+        width: '100%',
         gap: 4,
       },
 
       sectionContent: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 10,
         marginTop: 4,
       },
@@ -86,8 +86,8 @@ export const useTemplate02Style = (templateFormat: Format) => {
         fontWeight: 700,
         color: theme.color,
         lineHeight: 1.1,
-        textAlign: "center",
-        textTransform: "uppercase",
+        textAlign: 'center',
+        textTransform: 'uppercase',
         letterSpacing: 3,
       },
 
@@ -95,8 +95,8 @@ export const useTemplate02Style = (templateFormat: Format) => {
         fontSize: theme.subTitleSize,
         fontWeight: 500,
         lineHeight: 1.3,
-        textAlign: "center",
-        color: "#555555",
+        textAlign: 'center',
+        color: '#555555',
       },
 
       // Uppercase section titles with wide letter spacing
@@ -104,7 +104,7 @@ export const useTemplate02Style = (templateFormat: Format) => {
         fontSize: theme.sectionTitleSize - 1,
         fontWeight: 700,
         color: theme.color,
-        textTransform: "uppercase",
+        textTransform: 'uppercase',
         letterSpacing: 2,
       },
 
@@ -117,22 +117,22 @@ export const useTemplate02Style = (templateFormat: Format) => {
         fontWeight: 700,
         minWidth: 70,
         fontSize: theme.fontSize + 0.5,
-        color: "#333333",
+        color: '#333333',
       },
 
       // Centered single-row info with dot separators
       informationGroup: {
-        flexDirection: "row",
-        justifyContent: "center",
-        width: "100%",
+        flexDirection: 'row',
+        justifyContent: 'center',
+        width: '100%',
         gap: 20,
-        flexWrap: "wrap",
+        flexWrap: 'wrap',
       },
 
       informationItem: {
-        flexDirection: "row",
-        fontStyle: "normal",
-        alignItems: "center",
+        flexDirection: 'row',
+        fontStyle: 'normal',
+        alignItems: 'center',
       },
 
       informationLabel: {
@@ -142,37 +142,37 @@ export const useTemplate02Style = (templateFormat: Format) => {
       },
 
       row: {
-        flexDirection: "row",
+        flexDirection: 'row',
         gap: 10,
       },
 
       rowBetween: {
-        flexDirection: "row",
-        justifyContent: "space-between",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
       },
 
       col: {
-        flexDirection: "column",
+        flexDirection: 'column',
       },
 
       // Modern borderless project layout
       projectTable: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 0,
-        backgroundColor: "#fafafa",
+        backgroundColor: '#fafafa',
         borderRadius: 4,
         padding: 8,
         marginTop: 4,
       },
 
       projectTableRow: {
-        flexDirection: "row",
-        borderTop: "0.5px solid #e5e5e5",
+        flexDirection: 'row',
+        borderTop: '0.5px solid #e5e5e5',
         paddingTop: 4,
       },
 
       projectTableFirstRow: {
-        flexDirection: "row",
+        flexDirection: 'row',
       },
 
       projectTableLabelCell: {

@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-import { StorageSliceName } from "@/constants";
-import { type Resume } from "@/types/resume.type";
+import { StorageSliceName } from '@/constants';
+import { type Resume } from '@/types/resume.type';
 
 export interface ResumeState {
   resume: Resume | null;
@@ -20,7 +20,7 @@ const resumeSlice = createSlice({
     },
     updateResume: (
       state,
-      action: { payload: Partial<Omit<Resume, "_id">> },
+      action: { payload: Partial<Omit<Resume, '_id'>> },
     ) => {
       if (state.resume) {
         state.resume = { ...state.resume, ...action.payload };

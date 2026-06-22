@@ -1,13 +1,13 @@
-"use client";
+'use client';
 import axios, {
   type AxiosError,
   type AxiosInstance,
   type AxiosRequestConfig,
   type AxiosResponse,
   type InternalAxiosRequestConfig,
-} from "axios";
+} from 'axios';
 
-import { axiosConfig } from "@/configs/axios.config";
+import { axiosConfig } from '@/configs/axios.config';
 
 export type GetTokenFn = () => Promise<string | null>;
 

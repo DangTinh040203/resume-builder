@@ -1,6 +1,6 @@
-"use client";
-import { usePDFComponentsAreHTML } from "@rawwee/react-pdf-html";
-import { Html } from "react-pdf-html";
+'use client';
+import { usePDFComponentsAreHTML } from '@rawwee/react-pdf-html';
+import { Html } from 'react-pdf-html';
 
 export interface HtmlToPdf {
   content: string;
@@ -9,7 +9,7 @@ export interface HtmlToPdf {
 
 type HtmlToPdfProps = Partial<HtmlToPdf>;
 
-const HtmlToPdf = ({ content = "", style = {} }: HtmlToPdfProps) => {
+const HtmlToPdf = ({ content = '', style = {} }: HtmlToPdfProps) => {
   const { isHTML } = usePDFComponentsAreHTML();
 
   if (!content.trim()) return null;
@@ -20,29 +20,29 @@ const HtmlToPdf = ({ content = "", style = {} }: HtmlToPdfProps) => {
   let normalizedContent = content;
 
   // 1. Convert spaces around inline tags to &nbsp;
-  const inlineTags = "strong|b|i|em|u|span|a|code|s|strike";
+  const inlineTags = 'strong|b|i|em|u|span|a|code|s|strike';
 
   // Replace space AFTER tag: </strong> space -> </strong>&nbsp;
   normalizedContent = normalizedContent.replace(
-    new RegExp(`((?:<\\/?(?:${inlineTags})[^>]*>)) `, "gi"),
-    "$1&nbsp;",
+    new RegExp(`((?:<\\/?(?:${inlineTags})[^>]*>)) `, 'gi'),
+    '$1&nbsp;',
   );
 
   // Replace space BEFORE tag: space <strong> -> &nbsp;<strong>
   normalizedContent = normalizedContent.replace(
-    new RegExp(` ((?:<\\/?(?:${inlineTags})[^>]*>))`, "gi"),
-    "&nbsp;$1",
+    new RegExp(` ((?:<\\/?(?:${inlineTags})[^>]*>))`, 'gi'),
+    '&nbsp;$1',
   );
 
   // 2. Replace &nbsp; with regular space ONLY if it's surrounded by non-tag chars
   // (i.e. not >&nbsp; and not &nbsp;<)
-  normalizedContent = normalizedContent.replace(/([^>])&nbsp;([^<])/g, "$1 $2");
+  normalizedContent = normalizedContent.replace(/([^>])&nbsp;([^<])/g, '$1 $2');
 
   if (isHTML) {
     return (
       <div
-        style={{ fontFamily: "inherit", ...style }}
-        className="prose text-foreground m-0 max-w-full p-0"
+        style={{ fontFamily: 'inherit', ...style }}
+        className='prose text-foreground m-0 max-w-full p-0'
         dangerouslySetInnerHTML={{ __html: normalizedContent }}
       />
     );

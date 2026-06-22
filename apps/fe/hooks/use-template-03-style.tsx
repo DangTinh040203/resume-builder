@@ -1,8 +1,8 @@
-import { Text, View } from "@rawwee/react-pdf-html";
-import { StyleSheet } from "@react-pdf/renderer";
-import { useMemo } from "react";
+import { Text, View } from '@rawwee/react-pdf-html';
+import { StyleSheet } from '@react-pdf/renderer';
+import { useMemo } from 'react';
 
-import { type Format } from "@/stores/features/template.slice";
+import { type Format } from '@/stores/features/template.slice';
 
 export const useTemplate03Style = (templateFormat: Format) => {
   const styles = useMemo(() => {
@@ -30,36 +30,36 @@ export const useTemplate03Style = (templateFormat: Format) => {
 
     return StyleSheet.create({
       page: {
-        flexDirection: "row",
+        flexDirection: 'row',
         fontSize: theme.fontSize,
         lineHeight: theme.lineHeight,
         letterSpacing: theme.letterSpacing,
         fontWeight: fontWeightValue,
         fontFamily: theme.fontFamily,
-        backgroundColor: "#ffffff",
+        backgroundColor: '#ffffff',
       },
 
       // ── Sidebar (left column) ──
       sidebar: {
-        width: "32%",
+        width: '32%',
         backgroundColor: theme.color,
         paddingVertical: theme.margin + 5,
         paddingHorizontal: 16,
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: theme.sectionSpacing + 4,
-        color: "#ffffff",
+        color: '#ffffff',
       },
 
       sidebarSection: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 4,
       },
 
       sidebarSectionTitle: {
         fontSize: theme.sectionTitleSize - 1,
         fontWeight: 700,
-        color: "#ffffff",
-        textTransform: "uppercase",
+        color: '#ffffff',
+        textTransform: 'uppercase',
         letterSpacing: 1.5,
         opacity: 0.9,
         marginBottom: 2,
@@ -67,22 +67,22 @@ export const useTemplate03Style = (templateFormat: Format) => {
 
       sidebarSeparator: {
         height: 1,
-        width: "100%",
-        backgroundColor: "#ffffff",
+        width: '100%',
+        backgroundColor: '#ffffff',
         opacity: 0.3,
         marginBottom: 4,
       },
 
       sidebarText: {
         fontSize: theme.fontSize,
-        color: "#ffffff",
+        color: '#ffffff',
         lineHeight: theme.lineHeight,
         opacity: 0.95,
       },
 
       sidebarTextBold: {
         fontSize: theme.fontSize,
-        color: "#ffffff",
+        color: '#ffffff',
         lineHeight: theme.lineHeight,
         opacity: 0.95,
         fontWeight: 600,
@@ -90,49 +90,49 @@ export const useTemplate03Style = (templateFormat: Format) => {
 
       sidebarTextLight: {
         fontSize: theme.fontSize,
-        color: "#ffffff",
+        color: '#ffffff',
         lineHeight: theme.lineHeight,
         opacity: 0.85,
       },
 
       sidebarTextLighter: {
         fontSize: theme.fontSize,
-        color: "#ffffff",
+        color: '#ffffff',
         lineHeight: theme.lineHeight,
         opacity: 0.8,
       },
 
       sidebarTextSmMuted: {
         fontSize: theme.fontSize - 1,
-        color: "#ffffff",
+        color: '#ffffff',
         lineHeight: theme.lineHeight,
         opacity: 0.65,
       },
 
       sidebarTextSmMuted75: {
         fontSize: theme.fontSize - 1,
-        color: "#ffffff",
+        color: '#ffffff',
         lineHeight: theme.lineHeight,
         opacity: 0.75,
       },
 
       sidebarItemStack: {
         marginBottom: 2,
-        display: "flex",
-        flexDirection: "column",
+        display: 'flex',
+        flexDirection: 'column',
       },
 
       sidebarItemStackWithGap: {
         gap: 6,
         marginBottom: 2,
-        display: "flex",
-        flexDirection: "column",
+        display: 'flex',
+        flexDirection: 'column',
       },
 
       sidebarItemStackLg: {
         marginBottom: 4,
-        display: "flex",
-        flexDirection: "column",
+        display: 'flex',
+        flexDirection: 'column',
       },
 
       sidebarItemCompact: {
@@ -143,18 +143,18 @@ export const useTemplate03Style = (templateFormat: Format) => {
       main: {
         flex: 1,
         padding: theme.margin,
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: theme.sectionSpacing,
       },
 
       section: {
-        flexDirection: "column",
-        width: "100%",
+        flexDirection: 'column',
+        width: '100%',
         gap: 2,
       },
 
       sectionContent: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 10,
         marginTop: 4,
       },
@@ -188,7 +188,7 @@ export const useTemplate03Style = (templateFormat: Format) => {
       title: {
         fontSize: theme.titleSize + 2,
         fontWeight: 700,
-        color: "#ffffff",
+        color: '#ffffff',
         lineHeight: 1.1,
         letterSpacing: 1,
       },
@@ -197,7 +197,7 @@ export const useTemplate03Style = (templateFormat: Format) => {
         fontSize: theme.subTitleSize,
         fontWeight: 500,
         lineHeight: 1.3,
-        color: "#ffffff",
+        color: '#ffffff',
         opacity: 0.85,
       },
 
@@ -217,45 +217,45 @@ export const useTemplate03Style = (templateFormat: Format) => {
         fontWeight: 700,
         minWidth: 70,
         fontSize: theme.fontSize + 0.5,
-        color: "#333333",
+        color: '#333333',
       },
 
       informationGroup: {
-        flexDirection: "column",
-        width: "100%",
+        flexDirection: 'column',
+        width: '100%',
         gap: 6,
       },
 
       informationItem: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 1,
       },
 
       informationLabel: {
         fontWeight: 700,
         fontSize: theme.fontSize - 1,
-        color: "#ffffff",
+        color: '#ffffff',
         opacity: 0.7,
-        textTransform: "uppercase",
+        textTransform: 'uppercase',
         letterSpacing: 0.5,
       },
 
       row: {
-        flexDirection: "row",
+        flexDirection: 'row',
         gap: 10,
       },
 
       rowBetween: {
-        flexDirection: "row",
-        justifyContent: "space-between",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
       },
 
       col: {
-        flexDirection: "column",
+        flexDirection: 'column',
       },
 
       projectTable: {
-        flexDirection: "column",
+        flexDirection: 'column',
         gap: 0,
         borderLeft: `2px solid ${theme.color}`,
         paddingLeft: 10,
@@ -263,12 +263,12 @@ export const useTemplate03Style = (templateFormat: Format) => {
       },
 
       projectTableRow: {
-        flexDirection: "row",
+        flexDirection: 'row',
         marginTop: 4,
       },
 
       projectTableFirstRow: {
-        flexDirection: "row",
+        flexDirection: 'row',
       },
 
       projectTableLabelCell: {

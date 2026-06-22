@@ -1,33 +1,33 @@
-"use client";
+'use client';
 
-import { Button } from "@resume-builder/ui/components/button";
-import { toast } from "@resume-builder/ui/components/sonner";
-import { AxiosError } from "axios";
-import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import { Button } from '@resume-builder/ui/components/button';
+import { toast } from '@resume-builder/ui/components/sonner';
+import { AxiosError } from 'axios';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import React, { useState } from 'react';
 
-import BlurText from "@/components/common/blur-text";
-import FloatingParticles from "@/components/common/floating-particles";
-import { TemplateSelectionDialog } from "@/components/templates/template-selection-dialog";
-import TemplateWrapper from "@/components/templates/template-wrapper";
-import { TEMPLATES } from "@/configs/template.config";
-import { MOCK_RESUME } from "@/constants/resume.constant";
-import { useService } from "@/hooks/use-http";
-import { ResumeService } from "@/services/resume.service";
-import { setResume } from "@/stores/features/resume.slice";
+import BlurText from '@/components/common/blur-text';
+import FloatingParticles from '@/components/common/floating-particles';
+import { TemplateSelectionDialog } from '@/components/templates/template-selection-dialog';
+import TemplateWrapper from '@/components/templates/template-wrapper';
+import { TEMPLATES } from '@/configs/template.config';
+import { MOCK_RESUME } from '@/constants/resume.constant';
+import { useService } from '@/hooks/use-http';
+import { ResumeService } from '@/services/resume.service';
+import { setResume } from '@/stores/features/resume.slice';
 import {
   defaultFormat,
   setTemplateSelected,
-} from "@/stores/features/template.slice";
-import { useAppDispatch } from "@/stores/store";
-import { fadeInUp, staggerContainer } from "@/styles/animation";
-import { type ErrorResponse } from "@/types/error.response";
-import { toastErrorMessage } from "@/utils/toast-error-message.util";
+} from '@/stores/features/template.slice';
+import { useAppDispatch } from '@/stores/store';
+import { fadeInUp, staggerContainer } from '@/styles/animation';
+import { type ErrorResponse } from '@/types/error.response';
+import { toastErrorMessage } from '@/utils/toast-error-message.util';
 
 const Templates = () => {
-  const t = useTranslations("TemplatesPage");
+  const t = useTranslations('TemplatesPage');
   const [isSelectionOpen, setIsSelectionOpen] = useState(false);
   const [selectedTemplateForBuilder, setSelectedTemplateForBuilder] = useState<
     string | null
@@ -44,15 +44,15 @@ const Templates = () => {
   };
 
   const handleSelectionConfirm = async (
-    type: "upload" | "scratch",
+    type: 'upload' | 'scratch',
     file?: File,
   ) => {
     if (!selectedTemplateForBuilder) return;
 
-    if (type === "scratch") {
+    if (type === 'scratch') {
       dispatch(setTemplateSelected(selectedTemplateForBuilder));
-      router.push("/builder");
-    } else if (type === "upload" && file) {
+      router.push('/builder');
+    } else if (type === 'upload' && file) {
       try {
         setIsParsing(true);
         dispatch(setTemplateSelected(selectedTemplateForBuilder));
@@ -109,13 +109,13 @@ const Templates = () => {
         };
 
         dispatch(setResume(resume));
-        router.push("/builder");
+        router.push('/builder');
       } catch (e) {
         if (e instanceof AxiosError) {
           const error = e.response?.data as ErrorResponse;
           toastErrorMessage(error.message);
         } else {
-          toast.error(t("errors.generic"));
+          toast.error(t('errors.generic'));
         }
 
         return false;
@@ -135,7 +135,7 @@ const Templates = () => {
       <FloatingParticles />
 
       {/* Animated background elements */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div className='pointer-events-none absolute inset-0 overflow-hidden'>
         <motion.div
           className={`
             bg-primary/15 absolute top-20 right-[10%] h-96 w-96 rounded-full
@@ -145,7 +145,7 @@ const Templates = () => {
             scale: [1, 1.2, 1],
             opacity: [0.15, 0.25, 0.15],
           }}
-          transition={{ duration: 4, ease: "easeInOut" }}
+          transition={{ duration: 4, ease: 'easeInOut' }}
         />
         <motion.div
           className={`
@@ -156,22 +156,22 @@ const Templates = () => {
             scale: [1, 1.3, 1],
             x: [0, 20, 0],
           }}
-          transition={{ duration: 5, ease: "easeInOut" }}
+          transition={{ duration: 5, ease: 'easeInOut' }}
         />
       </div>
 
       <div className={`relative z-10 container pt-24 pb-12`}>
         <motion.div
-          initial="hidden"
-          animate="visible"
+          initial='hidden'
+          animate='visible'
           variants={staggerContainer}
-          className="mb-12 text-center"
+          className='mb-12 text-center'
         >
           <BlurText
-            text={t("title")}
+            text={t('title')}
             delay={80}
-            animateBy="words"
-            direction="top"
+            animateBy='words'
+            direction='top'
             className={`
               font-display mb-4 justify-center text-3xl font-bold
               md:text-5xl
@@ -179,16 +179,16 @@ const Templates = () => {
           />
           <motion.p
             variants={fadeInUp}
-            className="text-muted-foreground mx-auto max-w-2xl text-lg"
+            className='text-muted-foreground mx-auto max-w-2xl text-lg'
           >
-            {t("description")}
+            {t('description')}
           </motion.p>
         </motion.div>
 
         <motion.div
           variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
+          initial='hidden'
+          animate='visible'
           className={`
             grid grid-cols-2 gap-6
             lg:grid-cols-3
@@ -205,9 +205,10 @@ const Templates = () => {
               >
                 <div
                   className={`
-                    group-hover:border-primary/50 group-hover:shadow-xl
+                    group-hover:border-primary/50
                     bg-card/50 overflow-hidden rounded-xl border shadow-sm
                     transition-all
+                    group-hover:shadow-xl
                   `}
                 >
                   <div
@@ -225,7 +226,7 @@ const Templates = () => {
                           templateFormat={{
                             ...defaultFormat,
                             sectionOrder: profile.defaultSectionOrder,
-                            color: "#1e3a8a",
+                            color: '#1e3a8a',
                           }}
                         />
                       }
@@ -236,9 +237,10 @@ const Templates = () => {
                 {/* Desktop Button */}
                 <div
                   className={`
-                    group-hover:bg-muted/10 group-hover:shadow-2xl
+                    group-hover:bg-muted/10
                     absolute top-0 left-0 z-10 hidden size-full items-end
                     justify-center rounded-2xl bg-transparent px-6
+                    group-hover:shadow-2xl
                     lg:flex
                   `}
                 >
@@ -248,27 +250,28 @@ const Templates = () => {
                       mb-10 w-full rounded-full opacity-0 transition-opacity
                       group-hover:opacity-100
                     `}
-                    size={"lg"}
+                    size={'lg'}
                   >
-                    {t("useTemplate")}
+                    {t('useTemplate')}
                   </Button>
                 </div>
 
                 {/* Mobile button */}
                 <div
                   className={`
-                    group-hover:bg-muted/10 group-hover:shadow-2xl
+                    group-hover:bg-muted/10
                     absolute top-0 left-0 z-10 flex size-full items-end
                     justify-center rounded-2xl bg-transparent px-6
+                    group-hover:shadow-2xl
                     lg:hidden
                   `}
                 >
                   <Button
                     onClick={() => handleSelectTemplate(templateId)}
                     className={`mb-4 w-full rounded-full transition-opacity`}
-                    size={"sm"}
+                    size={'sm'}
                   >
-                    {t("useTemplate")}
+                    {t('useTemplate')}
                   </Button>
                 </div>
               </motion.div>

@@ -1,7 +1,7 @@
-"use client";
-import { useSignUp } from "@clerk/nextjs";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@resume-builder/ui/components/button";
+'use client';
+import { useSignUp } from '@clerk/nextjs';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Button } from '@resume-builder/ui/components/button';
 import {
   Form,
   FormControl,
@@ -9,28 +9,28 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@resume-builder/ui/components/form";
-import { Input } from "@resume-builder/ui/components/input";
-import { Separator } from "@resume-builder/ui/components/separator";
-import { motion } from "framer-motion";
-import { ArrowRight, Eye, EyeOff, Loader2 } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useRouter } from "nextjs-toploader/app";
-import React from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+} from '@resume-builder/ui/components/form';
+import { Input } from '@resume-builder/ui/components/input';
+import { Separator } from '@resume-builder/ui/components/separator';
+import { motion } from 'framer-motion';
+import { ArrowRight, Eye, EyeOff, Loader2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'nextjs-toploader/app';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
-import SSOButtons from "@/components/auth-screens/sso-buttons";
-import { Link } from "@/i18n/navigation";
-import { handleClerkError } from "@/libs/clerk-toast";
+import SSOButtons from '@/components/auth-screens/sso-buttons';
+import { Link } from '@/i18n/navigation';
+import { handleClerkError } from '@/libs/clerk-toast';
 import {
   buttonScaleVariants,
   formContainerVariants,
   formItemVariants,
-} from "@/styles/animation";
+} from '@/styles/animation';
 
 const SignUp = () => {
-  const t = useTranslations("Auth");
+  const t = useTranslations('Auth');
   const [isLoading, setIsLoading] = React.useState(false);
   const [showPassword, setShowPassword] = React.useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
@@ -44,20 +44,20 @@ const SignUp = () => {
         .object({
           email: z
             .string()
-            .min(1, t("validation.emailRequired"))
-            .email(t("validation.emailInvalid")),
+            .min(1, t('validation.emailRequired'))
+            .email(t('validation.emailInvalid')),
           password: z
             .string()
-            .min(1, t("validation.passwordRequired"))
-            .min(8, t("validation.passwordMin"))
-            .max(50, t("validation.passwordMax")),
+            .min(1, t('validation.passwordRequired'))
+            .min(8, t('validation.passwordMin'))
+            .max(50, t('validation.passwordMax')),
           confirmPassword: z
             .string()
-            .min(1, t("validation.confirmPasswordRequired")),
+            .min(1, t('validation.confirmPasswordRequired')),
         })
         .refine((data) => data.password === data.confirmPassword, {
-          message: t("validation.passwordsDoNotMatch"),
-          path: ["confirmPassword"],
+          message: t('validation.passwordsDoNotMatch'),
+          path: ['confirmPassword'],
         }),
     [t],
   );
@@ -65,9 +65,9 @@ const SignUp = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      email: "",
-      password: "",
-      confirmPassword: "",
+      email: '',
+      password: '',
+      confirmPassword: '',
     },
   });
 
@@ -84,14 +84,14 @@ const SignUp = () => {
 
       // Send OTP to email
       await signUp.prepareEmailAddressVerification({
-        strategy: "email_code",
+        strategy: 'email_code',
       });
 
       // Redirect to verify OTP page
       router.push(`/auth/verify-otp?email=${encodeURIComponent(values.email)}`);
     } catch (error) {
       handleClerkError(error, {
-        fallbackMessage: t("errors.generic"),
+        fallbackMessage: t('errors.generic'),
       });
     } finally {
       setIsLoading(false);
@@ -101,25 +101,25 @@ const SignUp = () => {
   return (
     <motion.div
       variants={formContainerVariants}
-      initial="hidden"
-      animate="visible"
+      initial='hidden'
+      animate='visible'
     >
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
           <motion.div variants={formItemVariants}>
             <FormField
               control={form.control}
-              name="email"
+              name='email'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("fields.email")}</FormLabel>
+                  <FormLabel>{t('fields.email')}</FormLabel>
                   <FormControl>
                     <motion.div
                       whileFocus={{ scale: 1.01 }}
-                      transition={{ type: "spring", stiffness: 300 }}
+                      transition={{ type: 'spring', stiffness: 300 }}
                     >
                       <Input
-                        placeholder={t("placeholders.email")}
+                        placeholder={t('placeholders.email')}
                         disabled={isLoading}
                         {...field}
                       />
@@ -134,28 +134,28 @@ const SignUp = () => {
           <motion.div variants={formItemVariants}>
             <FormField
               control={form.control}
-              name="password"
+              name='password'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("fields.password")}</FormLabel>
+                  <FormLabel>{t('fields.password')}</FormLabel>
                   <FormControl>
                     <motion.div
                       whileFocus={{ scale: 1.01 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                      className="relative"
+                      transition={{ type: 'spring', stiffness: 300 }}
+                      className='relative'
                     >
                       <Input
                         {...field}
-                        placeholder={t("placeholders.createPassword")}
-                        type={showPassword ? "text" : "password"}
+                        placeholder={t('placeholders.createPassword')}
+                        type={showPassword ? 'text' : 'password'}
                         disabled={isLoading}
-                        className="pr-10"
+                        className='pr-10'
                       />
                       <Button
-                        variant="ghost"
-                        size={"icon"}
-                        type="button"
-                        className="absolute top-1/2 right-2 -translate-y-1/2"
+                        variant='ghost'
+                        size={'icon'}
+                        type='button'
+                        className='absolute top-1/2 right-2 -translate-y-1/2'
                         onClick={() => setShowPassword(!showPassword)}
                       >
                         {showPassword ? <EyeOff /> : <Eye />}
@@ -171,28 +171,28 @@ const SignUp = () => {
           <motion.div variants={formItemVariants}>
             <FormField
               control={form.control}
-              name="confirmPassword"
+              name='confirmPassword'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("fields.confirmPassword")}</FormLabel>
+                  <FormLabel>{t('fields.confirmPassword')}</FormLabel>
                   <FormControl>
                     <motion.div
                       whileFocus={{ scale: 1.01 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                      className="relative"
+                      transition={{ type: 'spring', stiffness: 300 }}
+                      className='relative'
                     >
                       <Input
                         {...field}
-                        placeholder={t("placeholders.confirmPassword")}
-                        type={showConfirmPassword ? "text" : "password"}
+                        placeholder={t('placeholders.confirmPassword')}
+                        type={showConfirmPassword ? 'text' : 'password'}
                         disabled={isLoading}
-                        className="pr-10"
+                        className='pr-10'
                       />
                       <Button
-                        variant="ghost"
-                        size={"icon"}
-                        type="button"
-                        className="absolute top-1/2 right-2 -translate-y-1/2"
+                        variant='ghost'
+                        size={'icon'}
+                        type='button'
+                        className='absolute top-1/2 right-2 -translate-y-1/2'
                         onClick={() =>
                           setShowConfirmPassword(!showConfirmPassword)
                         }
@@ -217,28 +217,28 @@ const SignUp = () => {
                   }
             }
             whileTap={isLoading ? {} : { scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
             <Button
-              type="submit"
-              size="lg"
-              className="w-full rounded-full"
+              type='submit'
+              size='lg'
+              className='w-full rounded-full'
               disabled={isLoading}
             >
               {isLoading ? (
                 <>
-                  <Loader2 className="h-5 w-5 animate-spin" />
-                  {t("signUp.loading")}
+                  <Loader2 className='h-5 w-5 animate-spin' />
+                  {t('signUp.loading')}
                 </>
               ) : (
                 <>
-                  {t("signUp.submit")}
+                  {t('signUp.submit')}
                   <motion.span
                     initial={{ x: 0 }}
                     whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400 }}
+                    transition={{ type: 'spring', stiffness: 400 }}
                   >
-                    <ArrowRight className="h-5 w-5" />
+                    <ArrowRight className='h-5 w-5' />
                   </motion.span>
                 </>
               )}
@@ -247,34 +247,31 @@ const SignUp = () => {
 
           <motion.div
             variants={formItemVariants}
-            className="flex w-full items-center gap-2"
+            className='flex w-full items-center gap-2'
           >
-            <Separator className="my-2 flex-1" />
-            <p className="text-muted-foreground text-center text-xs">
-              {t("continueWith")}
+            <Separator className='my-2 flex-1' />
+            <p className='text-muted-foreground text-center text-xs'>
+              {t('continueWith')}
             </p>
-            <Separator className="my-2 flex-1" />
+            <Separator className='my-2 flex-1' />
           </motion.div>
 
           <SSOButtons />
 
           <motion.p
             variants={formItemVariants}
-            className="text-muted-foreground text-center text-sm"
+            className='text-muted-foreground text-center text-sm'
           >
-            {t("signUp.hasAccount")}{" "}
+            {t('signUp.hasAccount')}{' '}
             <Link
-              href="/auth/sign-in"
-              className={`
-                text-primary font-medium transition-all
-                hover:underline
-              `}
+              href='/auth/sign-in'
+              className={`text-primary font-medium transition-all hover:underline`}
             >
               <motion.span
                 whileHover={{ scale: 1.05 }}
-                className="inline-block"
+                className='inline-block'
               >
-                {t("signUp.signInLink")}
+                {t('signUp.signInLink')}
               </motion.span>
             </Link>
           </motion.p>

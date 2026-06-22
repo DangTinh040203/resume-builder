@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   closestCenter,
@@ -9,38 +9,38 @@ import {
   PointerSensor,
   useSensor,
   useSensors,
-} from "@dnd-kit/core";
+} from '@dnd-kit/core';
 import {
   arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
   useSortable,
   verticalListSortingStrategy,
-} from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
+} from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@resume-builder/ui/components/accordion";
-import { Button } from "@resume-builder/ui/components/button";
+} from '@resume-builder/ui/components/accordion';
+import { Button } from '@resume-builder/ui/components/button';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@resume-builder/ui/components/card";
-import { Label } from "@resume-builder/ui/components/label";
+} from '@resume-builder/ui/components/card';
+import { Label } from '@resume-builder/ui/components/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@resume-builder/ui/components/select";
-import { Slider } from "@resume-builder/ui/components/slider";
-import { cn } from "@resume-builder/ui/lib/utils";
+} from '@resume-builder/ui/components/select';
+import { Slider } from '@resume-builder/ui/components/slider';
+import { cn } from '@resume-builder/ui/lib/utils';
 import {
   ALargeSmall,
   Bold,
@@ -56,12 +56,12 @@ import {
   Palette,
   RotateCcw,
   Type,
-} from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useState } from "react";
-import { createPortal } from "react-dom";
+} from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
 
-import { FONT_OPTIONS } from "@/configs/font.config";
+import { FONT_OPTIONS } from '@/configs/font.config';
 import {
   defaultFormat,
   defaultSectionOrder,
@@ -70,36 +70,36 @@ import {
   type SectionType,
   templateFormatSelector,
   updateTemplateConfigFormat,
-} from "@/stores/features/template.slice";
-import { useAppDispatch, useAppSelector } from "@/stores/store";
+} from '@/stores/features/template.slice';
+import { useAppDispatch, useAppSelector } from '@/stores/store';
 
 const COLOR_OPTIONS = [
-  { value: "#3b82f6", labelKey: "colors.blue", color: "#3b82f6" },
-  { value: "#06b6d4", labelKey: "colors.cyan", color: "#06b6d4" },
-  { value: "#14b8a6", labelKey: "colors.teal", color: "#14b8a6" },
-  { value: "#10b981", labelKey: "colors.emerald", color: "#10b981" },
-  { value: "#22c55e", labelKey: "colors.green", color: "#22c55e" },
-  { value: "#84cc16", labelKey: "colors.lime", color: "#84cc16" },
-  { value: "#eab308", labelKey: "colors.yellow", color: "#eab308" },
-  { value: "#f59e0b", labelKey: "colors.amber", color: "#f59e0b" },
-  { value: "#f97316", labelKey: "colors.orange", color: "#f97316" },
-  { value: "#ef4444", labelKey: "colors.red", color: "#ef4444" },
-  { value: "#f43f5e", labelKey: "colors.rose", color: "#f43f5e" },
-  { value: "#ec4899", labelKey: "colors.pink", color: "#ec4899" },
-  { value: "#d946ef", labelKey: "colors.fuchsia", color: "#d946ef" },
-  { value: "#8b5cf6", labelKey: "colors.purple", color: "#8b5cf6" },
-  { value: "#7c3aed", labelKey: "colors.violet", color: "#7c3aed" },
-  { value: "#6366f1", labelKey: "colors.indigo", color: "#6366f1" },
-  { value: "#1e3a8a", labelKey: "colors.navy", color: "#1e3a8a" },
-  { value: "#64748b", labelKey: "colors.slate", color: "#64748b" },
-  { value: "#1f2937", labelKey: "colors.black", color: "#1f2937" },
+  { value: '#3b82f6', labelKey: 'colors.blue', color: '#3b82f6' },
+  { value: '#06b6d4', labelKey: 'colors.cyan', color: '#06b6d4' },
+  { value: '#14b8a6', labelKey: 'colors.teal', color: '#14b8a6' },
+  { value: '#10b981', labelKey: 'colors.emerald', color: '#10b981' },
+  { value: '#22c55e', labelKey: 'colors.green', color: '#22c55e' },
+  { value: '#84cc16', labelKey: 'colors.lime', color: '#84cc16' },
+  { value: '#eab308', labelKey: 'colors.yellow', color: '#eab308' },
+  { value: '#f59e0b', labelKey: 'colors.amber', color: '#f59e0b' },
+  { value: '#f97316', labelKey: 'colors.orange', color: '#f97316' },
+  { value: '#ef4444', labelKey: 'colors.red', color: '#ef4444' },
+  { value: '#f43f5e', labelKey: 'colors.rose', color: '#f43f5e' },
+  { value: '#ec4899', labelKey: 'colors.pink', color: '#ec4899' },
+  { value: '#d946ef', labelKey: 'colors.fuchsia', color: '#d946ef' },
+  { value: '#8b5cf6', labelKey: 'colors.purple', color: '#8b5cf6' },
+  { value: '#7c3aed', labelKey: 'colors.violet', color: '#7c3aed' },
+  { value: '#6366f1', labelKey: 'colors.indigo', color: '#6366f1' },
+  { value: '#1e3a8a', labelKey: 'colors.navy', color: '#1e3a8a' },
+  { value: '#64748b', labelKey: 'colors.slate', color: '#64748b' },
+  { value: '#1f2937', labelKey: 'colors.black', color: '#1f2937' },
 ];
 
 const FONT_WEIGHT_OPTIONS: { value: FontWeight; labelKey: string }[] = [
-  { value: "normal", labelKey: "fontWeights.normal" },
-  { value: "medium", labelKey: "fontWeights.medium" },
-  { value: "semibold", labelKey: "fontWeights.semibold" },
-  { value: "bold", labelKey: "fontWeights.bold" },
+  { value: 'normal', labelKey: 'fontWeights.normal' },
+  { value: 'medium', labelKey: 'fontWeights.medium' },
+  { value: 'semibold', labelKey: 'fontWeights.semibold' },
+  { value: 'bold', labelKey: 'fontWeights.bold' },
 ];
 
 interface FormatSliderProps {
@@ -120,24 +120,21 @@ const FormatSlider = ({
   min,
   max,
   step,
-  unit = "",
+  unit = '',
   onChange,
 }: FormatSliderProps) => {
   return (
-    <div className="space-y-3">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
+    <div className='space-y-3'>
+      <div className='flex items-center justify-between'>
+        <div className='flex items-center gap-2'>
           <div
-            className={`
-              flex h-7 w-7 items-center justify-center rounded-md
-              bg-linear-to-br from-purple-500 to-indigo-600 text-white
-            `}
+            className={`flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-indigo-600 text-white`}
           >
             {icon}
           </div>
-          <Label className="text-sm font-medium">{label}</Label>
+          <Label className='text-sm font-medium'>{label}</Label>
         </div>
-        <span className="text-muted-foreground text-sm font-medium">
+        <span className='text-muted-foreground text-sm font-medium'>
           {value}
           {unit}
         </span>
@@ -150,7 +147,7 @@ const FormatSlider = ({
         onValueChange={(values) =>
           values[0] !== undefined && onChange(values[0])
         }
-        className="cursor-pointer"
+        className='cursor-pointer'
       />
     </div>
   );
@@ -164,17 +161,14 @@ interface FormatSelectRowProps {
 
 const FormatSelectRow = ({ icon, label, children }: FormatSelectRowProps) => {
   return (
-    <div className="space-y-3">
-      <div className="flex items-center gap-2">
+    <div className='space-y-3'>
+      <div className='flex items-center gap-2'>
         <div
-          className={`
-            flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br
-            from-purple-500 to-indigo-600 text-white
-          `}
+          className={`flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-indigo-600 text-white`}
         >
           {icon}
         </div>
-        <Label className="text-sm font-medium">{label}</Label>
+        <Label className='text-sm font-medium'>{label}</Label>
       </div>
       {children}
     </div>
@@ -182,14 +176,14 @@ const FormatSelectRow = ({ icon, label, children }: FormatSelectRowProps) => {
 };
 
 const SECTION_LABEL_KEYS: Record<SectionType, string> = {
-  personal: "sections.personal",
-  summary: "sections.summary",
-  skills: "sections.skills",
-  education: "sections.education",
-  certifications: "sections.certifications",
-  languages: "sections.languages",
-  experience: "sections.experience",
-  projects: "sections.projects",
+  personal: 'sections.personal',
+  summary: 'sections.summary',
+  skills: 'sections.skills',
+  education: 'sections.education',
+  certifications: 'sections.certifications',
+  languages: 'sections.languages',
+  experience: 'sections.experience',
+  projects: 'sections.projects',
 };
 
 function SortableSectionItem({
@@ -201,7 +195,7 @@ function SortableSectionItem({
   isHidden: boolean;
   onToggleVisibility: (type: SectionType) => void;
 }) {
-  const t = useTranslations("TemplateFormat");
+  const t = useTranslations('TemplateFormat');
   const {
     attributes,
     listeners,
@@ -221,52 +215,46 @@ function SortableSectionItem({
       ref={setNodeRef}
       style={style}
       className={cn(
-        `
-          flex items-center gap-2 rounded-lg border px-3 py-2 text-sm
-          transition-all
-        `,
-        isDragging && "relative z-50 opacity-50",
+        `flex items-center gap-2 rounded-lg border px-3 py-2 text-sm transition-all`,
+        isDragging && 'relative z-50 opacity-50',
         isHidden
-          ? "border-dashed border-slate-200 bg-slate-50 text-slate-400 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-500"
-          : "border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800",
+          ? 'border-dashed border-slate-200 bg-slate-50 text-slate-400 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-500'
+          : 'border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800',
       )}
     >
       <button
-        type="button"
+        type='button'
         className={cn(
-          "cursor-grab touch-none rounded p-0.5 text-slate-400",
-          `
-            hover:text-slate-600
-            dark:hover:text-slate-300
-          `,
-          isDragging && "cursor-grabbing",
+          'cursor-grab touch-none rounded p-0.5 text-slate-400',
+          `hover:text-slate-600 dark:hover:text-slate-300`,
+          isDragging && 'cursor-grabbing',
         )}
         {...attributes}
         {...listeners}
       >
-        <GripVertical className="h-3.5 w-3.5" />
+        <GripVertical className='h-3.5 w-3.5' />
       </button>
 
       <span
-        className={cn("flex-1 text-sm font-medium", isHidden && "line-through")}
+        className={cn('flex-1 text-sm font-medium', isHidden && 'line-through')}
       >
         {t(SECTION_LABEL_KEYS[sectionType])}
       </span>
 
       <button
-        type="button"
+        type='button'
         onClick={() => onToggleVisibility(sectionType)}
         className={cn(
-          "rounded p-1 transition-colors",
+          'rounded p-1 transition-colors',
           isHidden
-            ? "text-slate-300 hover:text-slate-500 dark:text-slate-600 dark:hover:text-slate-400"
-            : "text-slate-500 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400",
+            ? 'text-slate-300 hover:text-slate-500 dark:text-slate-600 dark:hover:text-slate-400'
+            : 'text-slate-500 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400',
         )}
       >
         {isHidden ? (
-          <EyeOff className="h-3.5 w-3.5" />
+          <EyeOff className='h-3.5 w-3.5' />
         ) : (
-          <Eye className="h-3.5 w-3.5" />
+          <Eye className='h-3.5 w-3.5' />
         )}
       </button>
     </div>
@@ -280,7 +268,7 @@ const SectionOrderPanel = ({
   format: Format;
   updateFormat: (updates: Partial<Format>) => void;
 }) => {
-  const t = useTranslations("TemplateFormat");
+  const t = useTranslations('TemplateFormat');
   const [activeId, setActiveId] = useState<string | null>(null);
 
   const sensors = useSensors(
@@ -323,30 +311,27 @@ const SectionOrderPanel = ({
   const activeSection = activeId as SectionType | null;
 
   return (
-    <div className="space-y-3">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
+    <div className='space-y-3'>
+      <div className='flex items-center justify-between'>
+        <div className='flex items-center gap-2'>
           <div
-            className={`
-              flex h-7 w-7 items-center justify-center rounded-md
-              bg-linear-to-br from-purple-500 to-indigo-600 text-white
-            `}
+            className={`flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-indigo-600 text-white`}
           >
-            <List className="h-4 w-4" />
+            <List className='h-4 w-4' />
           </div>
-          <Label className="text-sm font-medium">Section Order</Label>
-          <Label className="text-sm font-medium">
-            {t("sectionOrder.title")}
+          <Label className='text-sm font-medium'>Section Order</Label>
+          <Label className='text-sm font-medium'>
+            {t('sectionOrder.title')}
           </Label>
         </div>
         <Button
-          variant="ghost"
-          size="sm"
+          variant='ghost'
+          size='sm'
           onClick={handleResetOrder}
-          className="h-7 px-2 text-xs"
+          className='h-7 px-2 text-xs'
         >
-          <RotateCcw className="mr-1 h-3 w-3" />
-          {t("reset")}
+          <RotateCcw className='mr-1 h-3 w-3' />
+          {t('reset')}
         </Button>
       </div>
 
@@ -360,7 +345,7 @@ const SectionOrderPanel = ({
           items={format.sectionOrder || []}
           strategy={verticalListSortingStrategy}
         >
-          <div className="space-y-1.5">
+          <div className='space-y-1.5'>
             {(format.sectionOrder || []).map((sectionType) => (
               <SortableSectionItem
                 key={sectionType}
@@ -371,27 +356,23 @@ const SectionOrderPanel = ({
             ))}
           </div>
         </SortableContext>
-        {typeof document !== "undefined" &&
+        {typeof document !== 'undefined' &&
           createPortal(
             <DragOverlay dropAnimation={null}>
               {activeSection ? (
                 <div
                   className={cn(
-                    `
-                      flex w-[200px] items-center gap-2 rounded-lg border
-                      border-purple-300 bg-white px-3 py-2 text-sm shadow-lg
-                      dark:border-purple-600 dark:bg-slate-800
-                    `,
+                    `flex w-[200px] items-center gap-2 rounded-lg border border-purple-300 bg-white px-3 py-2 text-sm shadow-lg dark:border-purple-600 dark:bg-slate-800`,
                   )}
                 >
-                  <GripVertical className="h-3.5 w-3.5 text-slate-400" />
-                  <span className="flex-1 text-sm font-medium">
+                  <GripVertical className='h-3.5 w-3.5 text-slate-400' />
+                  <span className='flex-1 text-sm font-medium'>
                     {t(SECTION_LABEL_KEYS[activeSection])}
                   </span>
                   {(format.hiddenSections || []).includes(activeSection) ? (
-                    <EyeOff className="h-3.5 w-3.5 text-slate-300" />
+                    <EyeOff className='h-3.5 w-3.5 text-slate-300' />
                   ) : (
-                    <Eye className="h-3.5 w-3.5 text-slate-500" />
+                    <Eye className='h-3.5 w-3.5 text-slate-500' />
                   )}
                 </div>
               ) : null}
@@ -417,48 +398,38 @@ const TemplateFormat = () => {
 
   return (
     <Card
-      className={`
-        sticky top-4 gap-0 bg-white/80 shadow-xl backdrop-blur-sm
-        dark:bg-gray-900/80
-      `}
+      className={`sticky top-4 gap-0 bg-white/80 shadow-xl backdrop-blur-sm dark:bg-gray-900/80`}
     >
-      <CardHeader className="pb-2">
-        <div className="flex items-center justify-between">
-          <CardTitle className="flex items-center gap-2 text-xl">
+      <CardHeader className='pb-2'>
+        <div className='flex items-center justify-between'>
+          <CardTitle className='flex items-center gap-2 text-xl'>
             <div
-              className={`
-                flex h-9 w-9 items-center justify-center rounded-lg
-                bg-linear-to-br from-purple-500 to-indigo-600
-              `}
+              className={`flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-br from-purple-500 to-indigo-600`}
             >
-              <Type className="h-5 w-5 text-white" />
+              <Type className='h-5 w-5 text-white' />
             </div>
             Settings
           </CardTitle>
-          <Button size="sm" onClick={handleReset}>
-            <RotateCcw className="h-4 w-4" />
+          <Button size='sm' onClick={handleReset}>
+            <RotateCcw className='h-4 w-4' />
             Reset
           </Button>
         </div>
       </CardHeader>
 
-      <CardContent className="px-4 pb-4">
-        <Accordion type="multiple" className="w-full">
+      <CardContent className='px-4 pb-4'>
+        <Accordion type='multiple' className='w-full'>
           {/* Typography Section */}
-          <AccordionItem value="typography" className="border-b-0">
+          <AccordionItem value='typography' className='border-b-0'>
             <AccordionTrigger
-              className={`
-                text-muted-foreground py-3 text-xs font-semibold tracking-wider
-                uppercase
-                hover:no-underline
-              `}
+              className={`text-muted-foreground py-3 text-xs font-semibold tracking-wider uppercase hover:no-underline`}
             >
               Typography
             </AccordionTrigger>
-            <AccordionContent className="space-y-4 pb-4">
+            <AccordionContent className='space-y-4 pb-4'>
               <FormatSelectRow
-                icon={<Type className="h-4 w-4" />}
-                label="Font Family"
+                icon={<Type className='h-4 w-4' />}
+                label='Font Family'
               >
                 <Select
                   value={format.fontFamily}
@@ -466,8 +437,8 @@ const TemplateFormat = () => {
                     updateFormat({ fontFamily: value })
                   }
                 >
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select font" />
+                  <SelectTrigger className='w-full'>
+                    <SelectValue placeholder='Select font' />
                   </SelectTrigger>
                   <SelectContent>
                     {FONT_OPTIONS.map((option) => (
@@ -482,52 +453,52 @@ const TemplateFormat = () => {
               </FormatSelectRow>
 
               <FormatSlider
-                icon={<ALargeSmall className="h-4 w-4" />}
-                label="Font Size"
+                icon={<ALargeSmall className='h-4 w-4' />}
+                label='Font Size'
                 value={format.fontSize}
                 min={8}
                 max={20}
                 step={0.5}
-                unit="px"
+                unit='px'
                 onChange={(value) => updateFormat({ fontSize: value })}
               />
 
               <FormatSlider
-                icon={<Heading1 className="h-4 w-4" />}
-                label="Title Size"
+                icon={<Heading1 className='h-4 w-4' />}
+                label='Title Size'
                 value={format.titleSize}
                 min={20}
                 max={52}
                 step={0.5}
-                unit="px"
+                unit='px'
                 onChange={(value) => updateFormat({ titleSize: value })}
               />
 
               <FormatSlider
-                icon={<Heading2 className="h-4 w-4" />}
-                label="Section Title Size"
+                icon={<Heading2 className='h-4 w-4' />}
+                label='Section Title Size'
                 value={format.sectionTitleSize}
                 min={10}
                 max={40}
                 step={0.5}
-                unit="px"
+                unit='px'
                 onChange={(value) => updateFormat({ sectionTitleSize: value })}
               />
 
               <FormatSlider
-                icon={<Heading2 className="h-4 w-4" />}
-                label="Subtitle Size"
+                icon={<Heading2 className='h-4 w-4' />}
+                label='Subtitle Size'
                 value={format.subTitleSize}
                 min={10}
                 max={30}
                 step={0.5}
-                unit="px"
+                unit='px'
                 onChange={(value) => updateFormat({ subTitleSize: value })}
               />
 
               <FormatSlider
-                icon={<MoveVertical className="h-4 w-4" />}
-                label="Line Height"
+                icon={<MoveVertical className='h-4 w-4' />}
+                label='Line Height'
                 value={format.lineHeight}
                 min={1.5}
                 max={2.5}
@@ -536,19 +507,19 @@ const TemplateFormat = () => {
               />
 
               <FormatSlider
-                icon={<LetterText className="h-4 w-4" />}
-                label="Letter Spacing"
+                icon={<LetterText className='h-4 w-4' />}
+                label='Letter Spacing'
                 value={format.letterSpacing}
                 min={-1}
                 max={3}
                 step={0.1}
-                unit="px"
+                unit='px'
                 onChange={(value) => updateFormat({ letterSpacing: value })}
               />
 
               <FormatSelectRow
-                icon={<Bold className="h-4 w-4" />}
-                label="Font Weight"
+                icon={<Bold className='h-4 w-4' />}
+                label='Font Weight'
               >
                 <Select
                   value={format.fontWeight}
@@ -556,8 +527,8 @@ const TemplateFormat = () => {
                     updateFormat({ fontWeight: value })
                   }
                 >
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select font weight" />
+                  <SelectTrigger className='w-full'>
+                    <SelectValue placeholder='Select font weight' />
                   </SelectTrigger>
                   <SelectContent>
                     {FONT_WEIGHT_OPTIONS.map((option) => (
@@ -572,36 +543,32 @@ const TemplateFormat = () => {
           </AccordionItem>
 
           {/* Layout Section */}
-          <AccordionItem value="layout" className="border-b-0">
+          <AccordionItem value='layout' className='border-b-0'>
             <AccordionTrigger
-              className={`
-                text-muted-foreground py-3 text-xs font-semibold tracking-wider
-                uppercase
-                hover:no-underline
-              `}
+              className={`text-muted-foreground py-3 text-xs font-semibold tracking-wider uppercase hover:no-underline`}
             >
               Layout
             </AccordionTrigger>
-            <AccordionContent className="space-y-4 pb-4">
+            <AccordionContent className='space-y-4 pb-4'>
               <FormatSlider
-                icon={<Maximize2 className="h-4 w-4" />}
-                label="Section Spacing"
+                icon={<Maximize2 className='h-4 w-4' />}
+                label='Section Spacing'
                 value={format.sectionSpacing}
                 min={4}
                 max={24}
                 step={2}
-                unit="px"
+                unit='px'
                 onChange={(value) => updateFormat({ sectionSpacing: value })}
               />
 
               <FormatSlider
-                icon={<Maximize2 className="h-4 w-4" />}
-                label="Page Margin"
+                icon={<Maximize2 className='h-4 w-4' />}
+                label='Page Margin'
                 value={format.margin}
                 min={10}
                 max={40}
                 step={2}
-                unit="px"
+                unit='px'
                 onChange={(value) => updateFormat({ margin: value })}
               />
 
@@ -611,49 +578,38 @@ const TemplateFormat = () => {
           </AccordionItem>
 
           {/* Appearance Section */}
-          <AccordionItem value="appearance" className="border-b-0">
+          <AccordionItem value='appearance' className='border-b-0'>
             <AccordionTrigger
-              className={`
-                text-muted-foreground py-3 text-xs font-semibold tracking-wider
-                uppercase
-                hover:no-underline
-              `}
+              className={`text-muted-foreground py-3 text-xs font-semibold tracking-wider uppercase hover:no-underline`}
             >
               Appearance
             </AccordionTrigger>
-            <AccordionContent className="space-y-4 pb-4">
-              <div className="space-y-3">
-                <div className="flex items-center gap-2">
+            <AccordionContent className='space-y-4 pb-4'>
+              <div className='space-y-3'>
+                <div className='flex items-center gap-2'>
                   <div
-                    className={`
-                      flex h-7 w-7 items-center justify-center rounded-md
-                      bg-linear-to-br from-purple-500 to-indigo-600 text-white
-                    `}
+                    className={`flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-indigo-600 text-white`}
                   >
-                    <Palette className="h-4 w-4" />
+                    <Palette className='h-4 w-4' />
                   </div>
-                  <Label className="text-sm font-medium">Accent Color</Label>
+                  <Label className='text-sm font-medium'>Accent Color</Label>
                 </div>
 
-                <div className="grid grid-cols-4 gap-3">
+                <div className='grid grid-cols-4 gap-3'>
                   {COLOR_OPTIONS.map((option) => (
                     <button
                       key={option.value}
                       onClick={() => updateFormat({ color: option.value })}
                       className={cn(
-                        `
-                          group relative flex h-10 w-full cursor-pointer
-                          items-center justify-center rounded-lg border-2
-                          transition-all duration-200
-                        `,
+                        `group relative flex h-10 w-full cursor-pointer items-center justify-center rounded-lg border-2 transition-all duration-200`,
                         format.color === option.value
-                          ? "border-primary"
-                          : "border-transparent",
+                          ? 'border-primary'
+                          : 'border-transparent',
                       )}
                       title={option.label}
                     >
                       <div
-                        className="h-6 w-6 rounded-full shadow-sm"
+                        className='h-6 w-6 rounded-full shadow-sm'
                         style={{ backgroundColor: option.color }}
                       />
                     </button>

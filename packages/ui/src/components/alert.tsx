@@ -1,6 +1,6 @@
-import { cn } from "@resume-builder/ui/lib/utils";
-import { cva, type VariantProps } from "class-variance-authority";
-import * as React from "react";
+import { cn } from '@resume-builder/ui/lib/utils';
+import { cva, type VariantProps } from 'class-variance-authority';
+import * as React from 'react';
 
 const alertVariants = cva(
   `
@@ -12,7 +12,7 @@ const alertVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-card text-card-foreground",
+        default: 'bg-card text-card-foreground',
         destructive: `
           text-destructive bg-card
           *:data-[slot=alert-description]:text-destructive/90
@@ -21,7 +21,7 @@ const alertVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: 'default',
     },
   },
 );
@@ -30,23 +30,23 @@ function Alert({
   className,
   variant,
   ...props
-}: React.ComponentProps<"div"> & VariantProps<typeof alertVariants>) {
+}: React.ComponentProps<'div'> & VariantProps<typeof alertVariants>) {
   return (
     <div
-      data-slot="alert"
-      role="alert"
+      data-slot='alert'
+      role='alert'
       className={cn(alertVariants({ variant }), className)}
       {...props}
     />
   );
 }
 
-function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
+function AlertTitle({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
-      data-slot="alert-title"
+      data-slot='alert-title'
       className={cn(
-        "col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight",
+        'col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight',
         className,
       )}
       {...props}
@@ -57,10 +57,10 @@ function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
 function AlertDescription({
   className,
   ...props
-}: React.ComponentProps<"div">) {
+}: React.ComponentProps<'div'>) {
   return (
     <div
-      data-slot="alert-description"
+      data-slot='alert-description'
       className={cn(
         `
           text-muted-foreground col-start-2 grid justify-items-start gap-1

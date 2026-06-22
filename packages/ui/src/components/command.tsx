@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Dialog,
@@ -6,11 +6,11 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@resume-builder/ui/components/dialog";
-import { cn } from "@resume-builder/ui/lib/utils";
-import { Command as CommandPrimitive } from "cmdk";
-import { SearchIcon } from "lucide-react";
-import * as React from "react";
+} from '@resume-builder/ui/components/dialog';
+import { cn } from '@resume-builder/ui/lib/utils';
+import { Command as CommandPrimitive } from 'cmdk';
+import { SearchIcon } from 'lucide-react';
+import * as React from 'react';
 
 function Command({
   className,
@@ -18,7 +18,7 @@ function Command({
 }: React.ComponentProps<typeof CommandPrimitive>) {
   return (
     <CommandPrimitive
-      data-slot="command"
+      data-slot='command'
       className={cn(
         `
           bg-popover text-popover-foreground flex h-full w-full flex-col
@@ -32,8 +32,8 @@ function Command({
 }
 
 function CommandDialog({
-  title = "Command Palette",
-  description = "Search for a command to run...",
+  title = 'Command Palette',
+  description = 'Search for a command to run...',
   children,
   className,
   showCloseButton = true,
@@ -46,12 +46,12 @@ function CommandDialog({
 }) {
   return (
     <Dialog {...props}>
-      <DialogHeader className="sr-only">
+      <DialogHeader className='sr-only'>
         <DialogTitle>{title}</DialogTitle>
         <DialogDescription>{description}</DialogDescription>
       </DialogHeader>
       <DialogContent
-        className={cn("overflow-hidden p-0", className)}
+        className={cn('overflow-hidden p-0', className)}
         showCloseButton={showCloseButton}
       >
         <Command
@@ -80,12 +80,12 @@ function CommandInput({
 }: React.ComponentProps<typeof CommandPrimitive.Input>) {
   return (
     <div
-      data-slot="command-input-wrapper"
-      className="flex h-9 items-center gap-2 border-b px-3"
+      data-slot='command-input-wrapper'
+      className='flex h-9 items-center gap-2 border-b px-3'
     >
-      <SearchIcon className="size-4 shrink-0 opacity-50" />
+      <SearchIcon className='size-4 shrink-0 opacity-50' />
       <CommandPrimitive.Input
-        data-slot="command-input"
+        data-slot='command-input'
         className={cn(
           `
             placeholder:text-muted-foreground
@@ -107,9 +107,9 @@ function CommandList({
 }: React.ComponentProps<typeof CommandPrimitive.List>) {
   return (
     <CommandPrimitive.List
-      data-slot="command-list"
+      data-slot='command-list'
       className={cn(
-        "max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto",
+        'max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto',
         className,
       )}
       {...props}
@@ -122,8 +122,8 @@ function CommandEmpty({
 }: React.ComponentProps<typeof CommandPrimitive.Empty>) {
   return (
     <CommandPrimitive.Empty
-      data-slot="command-empty"
-      className="py-6 text-center text-sm"
+      data-slot='command-empty'
+      className='py-6 text-center text-sm'
       {...props}
     />
   );
@@ -135,7 +135,7 @@ function CommandGroup({
 }: React.ComponentProps<typeof CommandPrimitive.Group>) {
   return (
     <CommandPrimitive.Group
-      data-slot="command-group"
+      data-slot='command-group'
       className={cn(
         `
           text-foreground overflow-hidden p-1
@@ -156,8 +156,8 @@ function CommandSeparator({
 }: React.ComponentProps<typeof CommandPrimitive.Separator>) {
   return (
     <CommandPrimitive.Separator
-      data-slot="command-separator"
-      className={cn("bg-border -mx-1 h-px", className)}
+      data-slot='command-separator'
+      className={cn('bg-border -mx-1 h-px', className)}
       {...props}
     />
   );
@@ -169,7 +169,7 @@ function CommandItem({
 }: React.ComponentProps<typeof CommandPrimitive.Item>) {
   return (
     <CommandPrimitive.Item
-      data-slot="command-item"
+      data-slot='command-item'
       className={cn(
         `
           data-[selected=true]:bg-accent
@@ -192,12 +192,12 @@ function CommandItem({
 function CommandShortcut({
   className,
   ...props
-}: React.ComponentProps<"span">) {
+}: React.ComponentProps<'span'>) {
   return (
     <span
-      data-slot="command-shortcut"
+      data-slot='command-shortcut'
       className={cn(
-        "text-muted-foreground ml-auto text-xs tracking-widest",
+        'text-muted-foreground ml-auto text-xs tracking-widest',
         className,
       )}
       {...props}

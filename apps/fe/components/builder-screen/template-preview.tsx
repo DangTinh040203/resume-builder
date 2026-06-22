@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { Button } from "@resume-builder/ui/components/button";
-import React, { useMemo } from "react";
+import { Button } from '@resume-builder/ui/components/button';
+import React, { useMemo } from 'react';
 
-import TemplateWrapper from "@/components/templates/template-wrapper";
-import { TEMPLATES } from "@/configs/template.config";
-import { useSyncResume } from "@/hooks/use-sync-resume";
+import TemplateWrapper from '@/components/templates/template-wrapper';
+import { TEMPLATES } from '@/configs/template.config';
+import { useSyncResume } from '@/hooks/use-sync-resume';
 import {
   templateConfigSelector,
   templateFormatSelector,
   templateSelectedSelector,
   updatePreviewMode,
-} from "@/stores/features/template.slice";
-import { useAppDispatch, useAppSelector } from "@/stores/store";
+} from '@/stores/features/template.slice';
+import { useAppDispatch, useAppSelector } from '@/stores/store';
 
 const TemplatePreview = () => {
   const templateSelected = useAppSelector(templateSelectedSelector);
@@ -28,7 +28,7 @@ const TemplatePreview = () => {
   return (
     Template &&
     resume && (
-      <div className="sticky top-4 z-10 flex flex-col items-center gap-4">
+      <div className='sticky top-4 z-10 flex flex-col items-center gap-4'>
         <TemplateWrapper
           selectable={false}
           fontFamily={templateFormat.fontFamily}
@@ -38,10 +38,10 @@ const TemplatePreview = () => {
         />
 
         <Button
-          className="rounded-full px-6"
+          className='rounded-full px-6'
           onClick={() => dispatch(updatePreviewMode(!previewMode))}
         >
-          {!previewMode ? "Preview" : "Back to Edit"}
+          {!previewMode ? 'Preview' : 'Back to Edit'}
         </Button>
       </div>
     )
