@@ -5,6 +5,8 @@ AI-powered resume builder: a pnpm + Turborepo monorepo with a Next.js 16 fronten
 ## Contents
 
 - [Project Overview](resume-builder.md) — monorepo, frontend, backend, shared packages
+- [Architecture](architecture.md) — system diagrams, request lifecycle, AI integration
+- **Features** — [Resume Editor](features/resume-editor.md) · [PDF Export](features/pdf-export.md) · [Resume Parsing](features/resume-parsing.md) · [Job Matching](features/job-matching.md) · [Email Generation](features/email-generation.md) · [Live Interview](features/live-interview.md) · [Auth & Webhooks](features/auth-and-webhooks.md) · [i18n](features/i18n.md)
 - [API Reference](api-reference.md) — REST endpoints, WebSocket events, DTOs
 - [Database Schema](database.md) — Prisma models and relationships
 - [Dev Setup](dev-setup.md) — local environment setup

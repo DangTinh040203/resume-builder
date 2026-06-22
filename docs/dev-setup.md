@@ -148,13 +148,27 @@ pnpm docs     # docsify-cli serve docs --port 3333  → http://localhost:3333
 
 ## Run in Docker (production-style)
 
+Build from the **repo root** (the build context is the whole monorepo; `.dockerignore` trims it):
+
 ```bash
-# from repo root
+# Backend — runtime env is passed at `docker run` time
 docker build -f docker/Dockerfile.be -t resume-builder-be .
-docker build -f docker/Dockerfile.fe -t resume-builder-fe .
+docker run --env-file apps/be/.env -p 4000:4000 resume-builder-be
+
+# Frontend — NEXT_PUBLIC_* are inlined at BUILD time, so pass them as build args
+docker build -f docker/Dockerfile.fe -t resume-builder-fe \
+  --build-arg NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_xxx \
+  --build-arg NEXT_PUBLIC_BASE_URL=http://localhost:4000/api/v1 \
+  --build-arg NEXT_PUBLIC_WS_URL=ws://localhost:4000 .
+docker run -p 3001:3001 resume-builder-fe
 ```
 
-Both Dockerfiles are multi-stage (`deps → builder → runner`) on `node:20-alpine`. BE runs `node dist/main` on `:4000`; FE runs the Next.js standalone server on `:3001`.
+Both Dockerfiles are multi-stage (`base → build → runner`) on `node:20-alpine`, pin pnpm via corepack, and run as the built-in non-root `node` user.
+
+- **FE** uses Next.js `output: 'standalone'` — the runner only carries `.next/standalone`, `.next/static`, and `public`; it serves on `:3001`. Because the env schema is validated during `next build` and `NEXT_PUBLIC_*` values are baked into the client bundle, they **must** be supplied as `--build-arg` (not at run time).
+- **BE** regenerates the Prisma client, compiles with `nest build`, and the runner copies the root + app `node_modules` (so pnpm's symlinks resolve) plus `dist`; it runs `node dist/main` on `:4000`. Runtime env comes from `--env-file` / `-e`.
+
+> Note: these were authored and statically reviewed but not build-tested in this environment (no Docker daemon available).
 
 ---
 
