@@ -198,10 +198,10 @@ const HeroSection = () => {
               <m.div
                 key={idx}
                 className={`
-                  bg-card/50 border-border/50 group
+                  bg-card/50 border-border/50 group relative cursor-pointer
+                  overflow-hidden rounded-2xl border p-4 backdrop-blur-md
+                  transition-all duration-500
                   hover:border-primary/30 hover:shadow-primary/10
-                  relative cursor-pointer overflow-hidden rounded-2xl border p-4
-                  backdrop-blur-md transition-all duration-500
                   hover:-translate-y-2 hover:shadow-2xl
                 `}
                 variants={fadeInUp}

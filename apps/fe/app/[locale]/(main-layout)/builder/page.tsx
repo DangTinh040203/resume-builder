@@ -156,15 +156,24 @@ const BuilderScreen = () => {
     <div className='container mb-10'>
       <ResumeControl />
 
-      <div className={`grid grid-cols-1 gap-6 lg:grid-cols-12`}>
-        <div className={`col-span-1 lg:col-span-2`}>
+      <div className={`
+        grid grid-cols-1 gap-6
+        lg:grid-cols-12
+      `}>
+        <div className={`
+          col-span-1
+          lg:col-span-2
+        `}>
           <ResumeBuilderSidebar
             activeSection={activeSection}
             onSectionChange={handleSectionChange}
           />
         </div>
 
-        <div className={`col-span-1 lg:col-span-7`}>
+        <div className={`
+          col-span-1
+          lg:col-span-7
+        `}>
           {isFetching ? (
             <div className='flex h-[400px] w-full items-center justify-center'>
               <Loader2 className='text-primary h-8 w-8 animate-spin' />
@@ -214,7 +223,10 @@ const BuilderScreen = () => {
           )}
         </div>
 
-        <div className={cn(`col-span-1 lg:col-span-3`)}>
+        <div className={cn(`
+          col-span-1
+          lg:col-span-3
+        `)}>
           <AnimatePresence mode='wait'>
             {!previewMode ? (
               <motion.div

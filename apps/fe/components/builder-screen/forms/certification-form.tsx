@@ -145,7 +145,10 @@ function SortableCertificationItem({
           )}
         </div>
 
-        <div className={`grid gap-3 sm:grid-cols-2`}>
+        <div className={`
+          grid gap-3
+          sm:grid-cols-2
+        `}>
           <div className='space-y-1'>
             <Input
               value={item.issuer}
@@ -305,7 +308,10 @@ const CertificationForm = ({
       >
         <Card className={cn('relative gap-0 py-0 shadow-xl')}>
           <CardHeader
-            className={`border-b border-slate-100 pt-6 pb-5 dark:border-slate-800`}
+            className={`
+              border-b border-slate-100 pt-6 pb-5
+              dark:border-slate-800
+            `}
           >
             <CardTitle className='flex items-center gap-3'>
               <div
@@ -319,12 +325,18 @@ const CertificationForm = ({
               </div>
               <div className='flex flex-col'>
                 <span
-                  className={`text-lg font-bold text-slate-900 dark:text-white`}
+                  className={`
+                    text-lg font-bold text-slate-900
+                    dark:text-white
+                  `}
                 >
                   {t('certifications.title')}
                 </span>
                 <span
-                  className={`text-sm font-normal text-slate-500 dark:text-slate-400`}
+                  className={`
+                    text-sm font-normal text-slate-500
+                    dark:text-slate-400
+                  `}
                 >
                   {t('certifications.subtitle')}
                 </span>
@@ -343,13 +355,20 @@ const CertificationForm = ({
                 <div className='flex items-center gap-2'>
                   <div className='h-1 w-1 rounded-full bg-blue-500' />
                   <Label
-                    className={`text-xs font-semibold tracking-wider text-slate-500 uppercase`}
+                    className={`
+                      text-xs font-semibold tracking-wider text-slate-500
+                      uppercase
+                    `}
                   >
                     {t('certifications.list')}
                   </Label>
                   {certificationItems.length > 0 && (
                     <span
-                      className={`rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-600 dark:bg-blue-900/30 dark:text-blue-400`}
+                      className={`
+                        rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium
+                        text-blue-600
+                        dark:bg-blue-900/30 dark:text-blue-400
+                      `}
                     >
                       {certificationItems.length}
                     </span>
@@ -365,7 +384,9 @@ const CertificationForm = ({
               >
                 {certificationItems.length === 0 ? (
                   <div
-                    className={`flex flex-col items-center justify-center py-8 text-center`}
+                    className={`
+                      flex flex-col items-center justify-center py-8 text-center
+                    `}
                   >
                     <Award className='mb-2 h-8 w-8 text-slate-300' />
                     <p className='text-sm font-medium text-slate-500'>

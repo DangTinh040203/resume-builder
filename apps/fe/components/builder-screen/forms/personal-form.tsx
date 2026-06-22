@@ -113,7 +113,10 @@ function SortableContactItem({
         onChange={(e) => onUpdate(item.id, 'label', e.target.value)}
         placeholder={t('personal.placeholders.contactLabel')}
         className={cn(
-          `h-9 w-32 shrink-0 rounded-md border-0 bg-slate-50 text-sm font-medium`,
+          `
+            h-9 w-32 shrink-0 rounded-md border-0 bg-slate-50 text-sm
+            font-medium
+          `,
           'focus:bg-white focus:ring-2 focus:ring-blue-500/20',
           'dark:bg-slate-700',
         )}
@@ -249,7 +252,10 @@ const PersonalForm = ({ onNext, onBack }: PersonalFormProps) => {
       >
         <Card className={cn('relative gap-0 overflow-hidden py-0 shadow-xl')}>
           <CardHeader
-            className={`border-b border-slate-100 pt-6 pb-5 dark:border-slate-800`}
+            className={`
+              border-b border-slate-100 pt-6 pb-5
+              dark:border-slate-800
+            `}
           >
             <CardTitle className='flex items-center gap-3'>
               <div
@@ -263,12 +269,18 @@ const PersonalForm = ({ onNext, onBack }: PersonalFormProps) => {
               </div>
               <div className='flex flex-col'>
                 <span
-                  className={`text-lg font-bold text-slate-900 dark:text-white`}
+                  className={`
+                    text-lg font-bold text-slate-900
+                    dark:text-white
+                  `}
                 >
                   {t('personal.title')}
                 </span>
                 <span
-                  className={`text-sm font-normal text-slate-500 dark:text-slate-400`}
+                  className={`
+                    text-sm font-normal text-slate-500
+                    dark:text-slate-400
+                  `}
                 >
                   {t('personal.subtitle')}
                 </span>
@@ -291,19 +303,28 @@ const PersonalForm = ({ onNext, onBack }: PersonalFormProps) => {
                   <div className='mb-3 flex items-center gap-2'>
                     <div className='h-1 w-1 rounded-full bg-blue-500' />
                     <span
-                      className={`text-xs font-semibold tracking-wider text-slate-500 uppercase`}
+                      className={`
+                        text-xs font-semibold tracking-wider text-slate-500
+                        uppercase
+                      `}
                     >
                       {t('personal.basicDetails')}
                     </span>
                   </div>
-                  <div className={`grid gap-4 sm:grid-cols-2`}>
+                  <div className={`
+                    grid gap-4
+                    sm:grid-cols-2
+                  `}>
                     <FormField
                       control={form.control}
                       name='title'
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel
-                            className={`text-sm font-medium text-slate-700 dark:text-slate-300`}
+                            className={`
+                              text-sm font-medium text-slate-700
+                              dark:text-slate-300
+                            `}
                           >
                             {t('personal.nameLabel')}
                           </FormLabel>
@@ -314,7 +335,10 @@ const PersonalForm = ({ onNext, onBack }: PersonalFormProps) => {
                                 'h-11 rounded-lg border-slate-200 bg-slate-50',
                                 'transition-all duration-200',
                                 'hover:border-slate-300 hover:bg-white',
-                                `focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20`,
+                                `
+                                  focus:border-blue-500 focus:bg-white
+                                  focus:ring-2 focus:ring-blue-500/20
+                                `,
                                 'dark:border-slate-700 dark:bg-slate-800',
                               )}
                               {...field}
@@ -335,7 +359,10 @@ const PersonalForm = ({ onNext, onBack }: PersonalFormProps) => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel
-                            className={`text-sm font-medium text-slate-700 dark:text-slate-300`}
+                            className={`
+                              text-sm font-medium text-slate-700
+                              dark:text-slate-300
+                            `}
                           >
                             {t('personal.headlineLabel')}
                           </FormLabel>
@@ -346,7 +373,10 @@ const PersonalForm = ({ onNext, onBack }: PersonalFormProps) => {
                                 'h-11 rounded-lg border-slate-200 bg-slate-50',
                                 'transition-all duration-200',
                                 'hover:border-slate-300 hover:bg-white',
-                                `focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20`,
+                                `
+                                  focus:border-blue-500 focus:bg-white
+                                  focus:ring-2 focus:ring-blue-500/20
+                                `,
                                 'dark:border-slate-700 dark:bg-slate-800',
                               )}
                               {...field}
@@ -375,13 +405,20 @@ const PersonalForm = ({ onNext, onBack }: PersonalFormProps) => {
                     <div className='flex items-center gap-2'>
                       <div className='h-1 w-1 rounded-full bg-emerald-500' />
                       <Label
-                        className={`text-xs font-semibold tracking-wider text-slate-500 uppercase`}
+                        className={`
+                          text-xs font-semibold tracking-wider text-slate-500
+                          uppercase
+                        `}
                       >
                         {t('personal.contactInformation')}
                       </Label>
                       {contactItems.length > 0 && (
                         <span
-                          className={`rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-400`}
+                          className={`
+                            rounded-full bg-slate-100 px-2 py-0.5 text-xs
+                            font-medium text-slate-600
+                            dark:bg-slate-800 dark:text-slate-400
+                          `}
                         >
                           {contactItems.length}
                         </span>
@@ -394,7 +431,10 @@ const PersonalForm = ({ onNext, onBack }: PersonalFormProps) => {
                       className={cn(
                         'h-8 gap-1.5 rounded-lg border-dashed',
                         'border-slate-300 text-slate-600',
-                        `hover:border-blue-500 hover:bg-blue-50 hover:text-blue-600`,
+                        `
+                          hover:border-blue-500 hover:bg-blue-50
+                          hover:text-blue-600
+                        `,
                         'dark:border-slate-600 dark:text-slate-400',
                       )}
                       type='button'
@@ -412,7 +452,10 @@ const PersonalForm = ({ onNext, onBack }: PersonalFormProps) => {
                   >
                     {contactItems.length === 0 ? (
                       <div
-                        className={`flex flex-col items-center justify-center py-8 text-center`}
+                        className={`
+                          flex flex-col items-center justify-center py-8
+                          text-center
+                        `}
                       >
                         <p className='text-sm font-medium text-slate-500'>
                           {t('personal.emptyTitle')}

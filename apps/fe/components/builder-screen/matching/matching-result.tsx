@@ -198,11 +198,9 @@ export const MatchingResult = ({
                     key={criterion.name}
                     value={criterion.name}
                     className={`
-                      border-primary/20
-                      hover:border-primary/40
-                      overflow-hidden rounded-xl border border-l-[3px] shadow-sm
-                      transition-all
-                      hover:shadow-md
+                      border-primary/20 overflow-hidden rounded-xl border
+                      border-l-[3px] shadow-sm transition-all
+                      hover:border-primary/40 hover:shadow-md
                       ${scoreColor}
                     `}
                   >
@@ -451,20 +449,17 @@ export const MatchingResult = ({
           <Button
             variant='outline'
             className={`
-              text-foreground group
-              hover:border-border hover:bg-muted/50
-              h-12 flex-1 gap-2.5 rounded-xl border shadow-sm transition-all
-              duration-200
-              hover:shadow-md
+              text-foreground group h-12 flex-1 gap-2.5 rounded-xl border
+              shadow-sm transition-all duration-200
+              hover:border-border hover:bg-muted/50 hover:shadow-md
             `}
             onClick={onReset}
           >
             <RefreshCw
               size={17}
               className={`
-                text-muted-foreground
+                text-muted-foreground transition-colors
                 group-hover:text-foreground
-                transition-colors
               `}
             />
             <span className='text-sm font-medium'>

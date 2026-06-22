@@ -101,12 +101,10 @@ const HowItWorksSection = () => {
               <div className='relative mb-10 inline-block'>
                 <div
                   className={`
-                    from-primary to-accent shadow-primary/30
-                    group-hover:shadow-primary/50
-                    relative z-10 flex h-20 w-20 items-center justify-center
-                    rounded-[24px] bg-linear-to-br shadow-xl transition-all
-                    duration-500
-                    group-hover:rotate-6
+                    from-primary to-accent shadow-primary/30 relative z-10 flex
+                    h-20 w-20 items-center justify-center rounded-[24px]
+                    bg-linear-to-br shadow-xl transition-all duration-500
+                    group-hover:shadow-primary/50 group-hover:rotate-6
                   `}
                 >
                   <item.icon className='text-primary-foreground h-10 w-10' />
@@ -114,10 +112,9 @@ const HowItWorksSection = () => {
 
                 <m.div
                   className={`
-                    text-primary/10
-                    group-hover:text-primary/20
-                    absolute -top-6 -right-6 text-4xl font-black
+                    text-primary/10 absolute -top-6 -right-6 text-4xl font-black
                     transition-colors select-none
+                    group-hover:text-primary/20
                     md:text-6xl
                   `}
                   initial={{ opacity: 0, x: 20 }}
@@ -131,9 +128,8 @@ const HowItWorksSection = () => {
 
               <h3
                 className={`
-                  font-display
+                  font-display mb-4 text-xl font-bold transition-colors
                   group-hover:text-primary
-                  mb-4 text-xl font-bold transition-colors
                   md:text-2xl
                 `}
               >
@@ -151,10 +147,9 @@ const HowItWorksSection = () => {
 
               <div
                 className={`
-                  bg-primary/20
-                  group-hover:bg-primary/40
-                  mx-auto mt-8 h-1 w-12 rounded-full transition-all
-                  group-hover:w-20
+                  bg-primary/20 mx-auto mt-8 h-1 w-12 rounded-full
+                  transition-all
+                  group-hover:bg-primary/40 group-hover:w-20
                 `}
               />
             </m.div>

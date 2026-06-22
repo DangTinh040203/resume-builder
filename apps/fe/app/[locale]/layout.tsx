@@ -149,7 +149,12 @@ export default async function LocaleLayout({
         className='overflow-x-hidden'
       >
         <body
-          className={` ${fontSans.variable} ${fontMono.variable} w-full max-w-screen scrollbar-thin overflow-x-hidden font-sans antialiased`}
+          className={`
+            ${fontSans.variable}
+            ${fontMono.variable}
+            w-full max-w-screen scrollbar-thin overflow-x-hidden font-sans
+            antialiased
+          `}
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
             <StoreProvider>

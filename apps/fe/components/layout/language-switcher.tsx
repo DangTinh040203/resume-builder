@@ -24,7 +24,10 @@ export function LanguageSwitcher() {
       <DropdownMenuTrigger asChild>
         <Button variant='ghost' size='sm' className='gap-2'>
           <Languages className='h-4 w-4' />
-          <span className={`hidden sm:inline`}>{t(locale)}</span>
+          <span className={`
+            hidden
+            sm:inline
+          `}>{t(locale)}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>

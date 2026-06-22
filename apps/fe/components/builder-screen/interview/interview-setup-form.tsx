@@ -129,19 +129,29 @@ export const InterviewSetupForm = ({
         {/* Error Banner */}
         {error && (
           <div
-            className={`flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 p-3 dark:border-red-900/50 dark:bg-red-950/20`}
+            className={`
+              flex items-start gap-3 rounded-lg border border-red-200 bg-red-50
+              p-3
+              dark:border-red-900/50 dark:bg-red-950/20
+            `}
           >
             <AlertCircle className='mt-0.5 h-4 w-4 shrink-0 text-red-500' />
             <div className='flex-1'>
               <p
-                className={`text-sm font-medium text-red-800 dark:text-red-200`}
+                className={`
+                  text-sm font-medium text-red-800
+                  dark:text-red-200
+                `}
               >
                 {error}
               </p>
               <Button
                 variant='link'
                 size='sm'
-                className={`mt-1 h-auto p-0 text-red-600 dark:text-red-400`}
+                className={`
+                  mt-1 h-auto p-0 text-red-600
+                  dark:text-red-400
+                `}
                 onClick={onRetry}
               >
                 {t('setup.tryAgain')}
@@ -185,7 +195,10 @@ export const InterviewSetupForm = ({
                   disabled={isLoading}
                   onClick={() => setInterviewType(card.value)}
                   className={cn(
-                    `flex flex-col items-center gap-1.5 rounded-lg border-2 px-3 py-3 transition-all`,
+                    `
+                      flex flex-col items-center gap-1.5 rounded-lg border-2
+                      px-3 py-3 transition-all
+                    `,
                     'hover:border-primary/50 hover:bg-primary/5',
                     'disabled:pointer-events-none disabled:opacity-50',
                     isSelected
@@ -227,7 +240,10 @@ export const InterviewSetupForm = ({
                 {t('setup.questions')}
               </Label>
               <span
-                className={`bg-primary/10 text-primary rounded-full px-2 py-0.5 text-xs font-bold tabular-nums`}
+                className={`
+                  bg-primary/10 text-primary rounded-full px-2 py-0.5 text-xs
+                  font-bold tabular-nums
+                `}
               >
                 {questionCount}
               </span>
@@ -243,7 +259,9 @@ export const InterviewSetupForm = ({
               disabled={isLoading}
             />
             <div
-              className={`text-muted-foreground flex justify-between text-[10px]`}
+              className={`
+                text-muted-foreground flex justify-between text-[10px]
+              `}
             >
               <span>{QUESTION_COUNT_MIN}</span>
               <span>{QUESTION_COUNT_MAX}</span>
@@ -267,7 +285,10 @@ export const InterviewSetupForm = ({
                 </Tooltip>
               </div>
               <span
-                className={`bg-primary/10 text-primary rounded-full px-2 py-0.5 text-xs font-bold tabular-nums`}
+                className={`
+                  bg-primary/10 text-primary rounded-full px-2 py-0.5 text-xs
+                  font-bold tabular-nums
+                `}
               >
                 {speechRate.toFixed(1)}x
               </span>
@@ -283,7 +304,9 @@ export const InterviewSetupForm = ({
               disabled={isLoading}
             />
             <div
-              className={`text-muted-foreground flex justify-between text-[10px]`}
+              className={`
+                text-muted-foreground flex justify-between text-[10px]
+              `}
             >
               <span>{t('setup.slow')}</span>
               <span>{t('setup.fast')}</span>
@@ -309,7 +332,10 @@ export const InterviewSetupForm = ({
               disabled={isLoading}
             >
               <SelectTrigger
-                className={`focus:border-primary focus:ring-primary/50 h-9 w-full text-sm`}
+                className={`
+                  focus:border-primary focus:ring-primary/50
+                  h-9 w-full text-sm
+                `}
               >
                 <SelectValue placeholder={t('setup.selectLanguage')} />
               </SelectTrigger>
@@ -339,7 +365,10 @@ export const InterviewSetupForm = ({
               disabled={isLoading}
             >
               <SelectTrigger
-                className={`focus:border-primary focus:ring-primary/50 h-9 w-full text-sm`}
+                className={`
+                  focus:border-primary focus:ring-primary/50
+                  h-9 w-full text-sm
+                `}
               >
                 <SelectValue placeholder={t('setup.selectVoice')} />
               </SelectTrigger>

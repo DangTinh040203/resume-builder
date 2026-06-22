@@ -61,9 +61,8 @@ const Footer = () => {
                     <m.a
                       href='#'
                       className={`
-                        text-muted-foreground
+                        text-muted-foreground text-sm transition-colors
                         hover:text-foreground
-                        text-sm transition-colors
                       `}
                       whileHover={{ x: 5 }}
                     >

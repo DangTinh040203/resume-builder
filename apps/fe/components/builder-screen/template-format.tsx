@@ -128,7 +128,10 @@ const FormatSlider = ({
       <div className='flex items-center justify-between'>
         <div className='flex items-center gap-2'>
           <div
-            className={`flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-indigo-600 text-white`}
+            className={`
+              flex h-7 w-7 items-center justify-center rounded-md
+              bg-linear-to-br from-purple-500 to-indigo-600 text-white
+            `}
           >
             {icon}
           </div>
@@ -164,7 +167,10 @@ const FormatSelectRow = ({ icon, label, children }: FormatSelectRowProps) => {
     <div className='space-y-3'>
       <div className='flex items-center gap-2'>
         <div
-          className={`flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-indigo-600 text-white`}
+          className={`
+            flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br
+            from-purple-500 to-indigo-600 text-white
+          `}
         >
           {icon}
         </div>
@@ -215,7 +221,10 @@ function SortableSectionItem({
       ref={setNodeRef}
       style={style}
       className={cn(
-        `flex items-center gap-2 rounded-lg border px-3 py-2 text-sm transition-all`,
+        `
+          flex items-center gap-2 rounded-lg border px-3 py-2 text-sm
+          transition-all
+        `,
         isDragging && 'relative z-50 opacity-50',
         isHidden
           ? 'border-dashed border-slate-200 bg-slate-50 text-slate-400 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-500'
@@ -226,7 +235,10 @@ function SortableSectionItem({
         type='button'
         className={cn(
           'cursor-grab touch-none rounded p-0.5 text-slate-400',
-          `hover:text-slate-600 dark:hover:text-slate-300`,
+          `
+            hover:text-slate-600
+            dark:hover:text-slate-300
+          `,
           isDragging && 'cursor-grabbing',
         )}
         {...attributes}
@@ -315,7 +327,10 @@ const SectionOrderPanel = ({
       <div className='flex items-center justify-between'>
         <div className='flex items-center gap-2'>
           <div
-            className={`flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-indigo-600 text-white`}
+            className={`
+              flex h-7 w-7 items-center justify-center rounded-md
+              bg-linear-to-br from-purple-500 to-indigo-600 text-white
+            `}
           >
             <List className='h-4 w-4' />
           </div>
@@ -362,7 +377,11 @@ const SectionOrderPanel = ({
               {activeSection ? (
                 <div
                   className={cn(
-                    `flex w-[200px] items-center gap-2 rounded-lg border border-purple-300 bg-white px-3 py-2 text-sm shadow-lg dark:border-purple-600 dark:bg-slate-800`,
+                    `
+                      flex w-[200px] items-center gap-2 rounded-lg border
+                      border-purple-300 bg-white px-3 py-2 text-sm shadow-lg
+                      dark:border-purple-600 dark:bg-slate-800
+                    `,
                   )}
                 >
                   <GripVertical className='h-3.5 w-3.5 text-slate-400' />
@@ -398,13 +417,19 @@ const TemplateFormat = () => {
 
   return (
     <Card
-      className={`sticky top-4 gap-0 bg-white/80 shadow-xl backdrop-blur-sm dark:bg-gray-900/80`}
+      className={`
+        sticky top-4 gap-0 bg-white/80 shadow-xl backdrop-blur-sm
+        dark:bg-gray-900/80
+      `}
     >
       <CardHeader className='pb-2'>
         <div className='flex items-center justify-between'>
           <CardTitle className='flex items-center gap-2 text-xl'>
             <div
-              className={`flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-br from-purple-500 to-indigo-600`}
+              className={`
+                flex h-9 w-9 items-center justify-center rounded-lg
+                bg-linear-to-br from-purple-500 to-indigo-600
+              `}
             >
               <Type className='h-5 w-5 text-white' />
             </div>
@@ -422,7 +447,11 @@ const TemplateFormat = () => {
           {/* Typography Section */}
           <AccordionItem value='typography' className='border-b-0'>
             <AccordionTrigger
-              className={`text-muted-foreground py-3 text-xs font-semibold tracking-wider uppercase hover:no-underline`}
+              className={`
+                text-muted-foreground py-3 text-xs font-semibold tracking-wider
+                uppercase
+                hover:no-underline
+              `}
             >
               Typography
             </AccordionTrigger>
@@ -545,7 +574,11 @@ const TemplateFormat = () => {
           {/* Layout Section */}
           <AccordionItem value='layout' className='border-b-0'>
             <AccordionTrigger
-              className={`text-muted-foreground py-3 text-xs font-semibold tracking-wider uppercase hover:no-underline`}
+              className={`
+                text-muted-foreground py-3 text-xs font-semibold tracking-wider
+                uppercase
+                hover:no-underline
+              `}
             >
               Layout
             </AccordionTrigger>
@@ -580,7 +613,11 @@ const TemplateFormat = () => {
           {/* Appearance Section */}
           <AccordionItem value='appearance' className='border-b-0'>
             <AccordionTrigger
-              className={`text-muted-foreground py-3 text-xs font-semibold tracking-wider uppercase hover:no-underline`}
+              className={`
+                text-muted-foreground py-3 text-xs font-semibold tracking-wider
+                uppercase
+                hover:no-underline
+              `}
             >
               Appearance
             </AccordionTrigger>
@@ -588,7 +625,10 @@ const TemplateFormat = () => {
               <div className='space-y-3'>
                 <div className='flex items-center gap-2'>
                   <div
-                    className={`flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-indigo-600 text-white`}
+                    className={`
+                      flex h-7 w-7 items-center justify-center rounded-md
+                      bg-linear-to-br from-purple-500 to-indigo-600 text-white
+                    `}
                   >
                     <Palette className='h-4 w-4' />
                   </div>
@@ -601,7 +641,11 @@ const TemplateFormat = () => {
                       key={option.value}
                       onClick={() => updateFormat({ color: option.value })}
                       className={cn(
-                        `group relative flex h-10 w-full cursor-pointer items-center justify-center rounded-lg border-2 transition-all duration-200`,
+                        `
+                          group relative flex h-10 w-full cursor-pointer
+                          items-center justify-center rounded-lg border-2
+                          transition-all duration-200
+                        `,
                         format.color === option.value
                           ? 'border-primary'
                           : 'border-transparent',

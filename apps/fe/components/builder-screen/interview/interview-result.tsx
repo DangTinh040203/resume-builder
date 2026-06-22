@@ -410,9 +410,8 @@ export const InterviewResult = ({
           <Button
             variant='outline'
             className={`
-              text-foreground
+              text-foreground w-full py-6 shadow-sm
               hover:bg-muted/50
-              w-full py-6 shadow-sm
             `}
             onClick={onReset}
           >

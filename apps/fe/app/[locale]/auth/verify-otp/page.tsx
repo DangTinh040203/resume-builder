@@ -124,7 +124,10 @@ function VerifyOTPContent() {
         transition={{ delay: 0.2 }}
       >
         <motion.div
-          className={`bg-primary/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full`}
+          className={`
+            bg-primary/10 mx-auto mb-4 flex h-16 w-16 items-center
+            justify-center rounded-full
+          `}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', stiffness: 200, delay: 0.3 }}
@@ -145,7 +148,10 @@ function VerifyOTPContent() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className={`bg-destructive/10 text-destructive mb-6 rounded-lg p-3 text-center text-sm`}
+          className={`
+            bg-destructive/10 text-destructive mb-6 rounded-lg p-3 text-center
+            text-sm
+          `}
         >
           {error}
         </motion.div>
@@ -225,10 +231,17 @@ function VerifyOTPContent() {
                 type='button'
                 onClick={handleResendCode}
                 disabled={isResending || resendCooldown > 0}
-                className={`text-primary inline-flex items-center gap-1 font-medium hover:underline disabled:cursor-not-allowed disabled:opacity-50`}
+                className={`
+                  text-primary inline-flex items-center gap-1 font-medium
+                  hover:underline
+                  disabled:cursor-not-allowed disabled:opacity-50
+                `}
               >
                 <RefreshCw
-                  className={`h-4 w-4 ${isResending ? 'animate-spin' : ''} `}
+                  className={`
+                    h-4 w-4
+                    ${isResending ? 'animate-spin' : ''}
+                  `}
                 />
                 {resendCooldown > 0
                   ? t('verify.resendIn', { seconds: resendCooldown })

@@ -71,10 +71,10 @@ export const MatchingForm = ({
           <div
             onClick={() => fileInputRef.current?.click()}
             className={`
-              border-primary
+              border-primary flex h-64 cursor-pointer flex-col items-center
+              justify-center gap-3 rounded-lg border-2 border-dashed px-3 py-2
+              transition-all
               hover:bg-muted/50
-              flex h-64 cursor-pointer flex-col items-center justify-center
-              gap-3 rounded-lg border-2 border-dashed px-3 py-2 transition-all
             `}
           >
             <div

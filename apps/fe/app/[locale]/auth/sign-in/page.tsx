@@ -213,7 +213,10 @@ const SignIn = () => {
           {t('signIn.noAccount')}{' '}
           <Link
             href='/auth/sign-up'
-            className={`text-primary font-medium transition-all hover:underline`}
+            className={`
+              text-primary font-medium transition-all
+              hover:underline
+            `}
           >
             <motion.span whileHover={{ scale: 1.05 }} className='inline-block'>
               {t('signIn.signUpLink')}

@@ -205,10 +205,9 @@ const Templates = () => {
               >
                 <div
                   className={`
-                    group-hover:border-primary/50
+                    group-hover:border-primary/50 group-hover:shadow-xl
                     bg-card/50 overflow-hidden rounded-xl border shadow-sm
                     transition-all
-                    group-hover:shadow-xl
                   `}
                 >
                   <div
@@ -237,10 +236,9 @@ const Templates = () => {
                 {/* Desktop Button */}
                 <div
                   className={`
-                    group-hover:bg-muted/10
+                    group-hover:bg-muted/10 group-hover:shadow-2xl
                     absolute top-0 left-0 z-10 hidden size-full items-end
                     justify-center rounded-2xl bg-transparent px-6
-                    group-hover:shadow-2xl
                     lg:flex
                   `}
                 >
@@ -259,10 +257,9 @@ const Templates = () => {
                 {/* Mobile button */}
                 <div
                   className={`
-                    group-hover:bg-muted/10
+                    group-hover:bg-muted/10 group-hover:shadow-2xl
                     absolute top-0 left-0 z-10 flex size-full items-end
                     justify-center rounded-2xl bg-transparent px-6
-                    group-hover:shadow-2xl
                     lg:hidden
                   `}
                 >

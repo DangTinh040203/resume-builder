@@ -88,11 +88,9 @@ const FeaturesSection = () => {
               >
                 <SpotlightCard
                   className={`
-                    group bg-card border-border/50 shadow-card
-                    hover:border-primary/20
-                    relative h-full rounded-3xl border p-10 transition-all
-                    duration-500
-                    hover:shadow-2xl
+                    group bg-card border-border/50 shadow-card relative h-full
+                    rounded-3xl border p-10 transition-all duration-500
+                    hover:border-primary/20 hover:shadow-2xl
                   `}
                   spotlightColor='rgba(var(--primary-rgb, 124 58 237) / 0.15)'
                 >

@@ -135,7 +135,10 @@ const Header = () => {
               className='group flex items-center gap-2 select-none'
             >
               <m.div
-                className={`gradient-bg flex h-9 w-9 items-center justify-center rounded-lg shadow-md`}
+                className={`
+                  gradient-bg flex h-9 w-9 items-center justify-center
+                  rounded-lg shadow-md
+                `}
                 whileHover={{
                   scale: 1.1,
                   rotate: 5,
@@ -158,7 +161,10 @@ const Header = () => {
           </m.div>
 
           {/* Desktop Navigation with staggered animation */}
-          <div className={`hidden items-center gap-4 md:flex`}>
+          <div className={`
+            hidden items-center gap-4
+            md:flex
+          `}>
             {navLinks.map((link, i) => (
               <m.div
                 key={link.href}
@@ -194,7 +200,10 @@ const Header = () => {
           </div>
 
           {/* Auth Buttons with animation */}
-          <div className={`hidden items-center gap-2 md:flex`}>
+          <div className={`
+            hidden items-center gap-2
+            md:flex
+          `}>
             <LanguageSwitcher />
             {/* Loading placeholder handled by Clerk's internal loading state or we can use ClerkLoading if needed */}
             {!isLoaded ? (
@@ -241,7 +250,9 @@ const Header = () => {
                         <DropdownMenuItem asChild>
                           <SignOutButton>
                             <div
-                              className={`flex w-full cursor-pointer items-center`}
+                              className={`
+                                flex w-full cursor-pointer items-center
+                              `}
                             >
                               <LogOut className='mr-2 h-4 w-4' />
                               {t('signOut')}
@@ -334,7 +345,11 @@ const Header = () => {
         <AnimatePresence>
           {isOpen && (
             <m.div
-              className={`fixed top-16 right-0 left-0 overflow-hidden rounded-b-lg bg-white px-2 shadow md:hidden`}
+              className={`
+                fixed top-16 right-0 left-0 overflow-hidden rounded-b-lg
+                bg-white px-2 shadow
+                md:hidden
+              `}
               variants={mobileMenuVariants}
               initial='hidden'
               animate='visible'
@@ -411,7 +426,10 @@ const Header = () => {
                         <SignOutButton>
                           <Button
                             variant='ghost'
-                            className={`w-full justify-start gap-3 text-red-500 hover:bg-red-50 hover:text-red-500`}
+                            className={`
+                              w-full justify-start gap-3 text-red-500
+                              hover:bg-red-50 hover:text-red-500
+                            `}
                           >
                             <LogOut className='h-4 w-4' />
                             {t('signOut')}

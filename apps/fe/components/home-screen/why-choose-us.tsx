@@ -98,11 +98,9 @@ const WhyChooseUsSection = () => {
               <m.div key={idx} variants={fadeInUp}>
                 <SpotlightCard
                   className={`
-                    border-border/50 group bg-card/40
-                    hover:border-primary/20
-                    h-full rounded-3xl backdrop-blur-sm transition-all
-                    duration-500
-                    hover:shadow-2xl
+                    border-border/50 group bg-card/40 h-full rounded-3xl
+                    backdrop-blur-sm transition-all duration-500
+                    hover:border-primary/20 hover:shadow-2xl
                   `}
                   spotlightColor='rgba(var(--primary-rgb, 124 58 237) / 0.12)'
                 >

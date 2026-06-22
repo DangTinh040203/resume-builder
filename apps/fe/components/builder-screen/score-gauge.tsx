@@ -79,15 +79,24 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({ score, size = 140 }) => {
           />
         </svg>
         <div
-          className={`absolute inset-0 flex flex-col items-center justify-center`}
+          className={`
+            absolute inset-0 flex flex-col items-center justify-center
+          `}
         >
-          <span className={`text-3xl font-bold ${colors.text} `}>
+          <span className={`
+            text-3xl font-bold
+            ${colors.text}
+          `}>
             {animatedScore}%
           </span>
         </div>
       </div>
       <span
-        className={`rounded-full px-3 py-1 text-xs font-semibold ${colors.bg} ${colors.text} `}
+        className={`
+          rounded-full px-3 py-1 text-xs font-semibold
+          ${colors.bg}
+          ${colors.text}
+        `}
       >
         {label}
       </span>

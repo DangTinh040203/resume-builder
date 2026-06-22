@@ -132,33 +132,57 @@ const ResumeControl = () => {
 
       <div className='my-4 flex items-center gap-4'>
         <div
-          className={`from-primary to-primary/70 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-linear-to-br md:h-12 md:w-12`}
+          className={`
+            from-primary to-primary/70 flex h-10 w-10 shrink-0 items-center
+            justify-center rounded-xl bg-linear-to-br
+            md:h-12 md:w-12
+          `}
         >
           <FileText
-            className={`text-primary-foreground h-5 w-5 md:h-6 md:w-6`}
+            className={`
+              text-primary-foreground h-5 w-5
+              md:h-6 md:w-6
+            `}
           />
         </div>
         <div>
           <h1
-            className={`font-display from-foreground to-foreground/70 bg-linear-to-br bg-clip-text text-xl font-bold text-transparent md:text-2xl lg:text-3xl`}
+            className={`
+              font-display from-foreground to-foreground/70 bg-linear-to-br
+              bg-clip-text text-xl font-bold text-transparent
+              md:text-2xl
+              lg:text-3xl
+            `}
           >
             {t('resumeControl.title')}
           </h1>
-          <p className={`text-muted-foreground text-xs md:text-sm`}>
+          <p className={`
+            text-muted-foreground text-xs
+            md:text-sm
+          `}>
             {t('resumeControl.subtitle')}
           </p>
         </div>
       </div>
 
-      <div className={`grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-4`}>
-        <motion.div className={`w-full sm:w-auto`}>
+      <div className={`
+        grid grid-cols-2 gap-2
+        sm:flex sm:flex-wrap sm:gap-4
+      `}>
+        <motion.div className={`
+          w-full
+          sm:w-auto
+        `}>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
                   variant='gradient'
                   className={cn(
-                    `w-full shrink-0 gap-2 transition-all duration-200 sm:w-auto`,
+                    `
+                      w-full shrink-0 gap-2 transition-all duration-200
+                      sm:w-auto
+                    `,
                   )}
                   onClick={sync}
                   disabled={isSyncing}
@@ -179,14 +203,20 @@ const ResumeControl = () => {
         </motion.div>
 
         <motion.div
-          className={`w-full sm:w-auto`}
+          className={`
+            w-full
+            sm:w-auto
+          `}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
           <Button
             variant='secondary'
             className={cn(
-              `w-full shrink-0 gap-2 transition-colors duration-200 sm:w-auto`,
+              `
+                w-full shrink-0 gap-2 transition-colors duration-200
+                sm:w-auto
+              `,
             )}
             onClick={handleTogglePreviewMode}
           >
@@ -208,18 +238,27 @@ const ResumeControl = () => {
         </motion.div>
 
         {resume && (
-          <div className={`w-full sm:w-auto`}>
+          <div className={`
+            w-full
+            sm:w-auto
+          `}>
             <DownloadPdf resume={resume} />
           </div>
         )}
 
-        <div className={`w-full sm:w-auto`}>
+        <div className={`
+          w-full
+          sm:w-auto
+        `}>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
                   variant='secondary'
-                  className={`border-primary w-full border shadow-xl sm:w-auto`}
+                  className={`
+                    border-primary w-full border shadow-xl
+                    sm:w-auto
+                  `}
                   onClick={() => parseFileInputRef.current?.click()}
                   disabled={isParsing || !resume}
                 >
@@ -240,14 +279,23 @@ const ResumeControl = () => {
           </TooltipProvider>
         </div>
 
-        <div className={`w-full sm:w-auto`}>
+        <div className={`
+          w-full
+          sm:w-auto
+        `}>
           <MatchingDialog />
         </div>
 
-        <div className={`w-full sm:w-auto`}>
+        <div className={`
+          w-full
+          sm:w-auto
+        `}>
           <Button
             variant='secondary'
-            className={`border-primary w-full border shadow-xl sm:w-auto`}
+            className={`
+              border-primary w-full border shadow-xl
+              sm:w-auto
+            `}
             onClick={() => setShowInterview(true)}
           >
             <Mic className='mr-2 h-4 w-4' /> {t('resumeControl.mockInterview')}

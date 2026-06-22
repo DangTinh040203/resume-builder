@@ -12,7 +12,10 @@ const NotFound = () => {
 
   return (
     <div
-      className={`from-background via-muted/50 to-background flex min-h-screen items-center justify-center bg-linear-to-br p-4`}
+      className={`
+        from-background via-muted/50 to-background flex min-h-screen
+        items-center justify-center bg-linear-to-br p-4
+      `}
     >
       <div className='max-w-md text-center'>
         <motion.div
@@ -38,7 +41,10 @@ const NotFound = () => {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className={`flex flex-col justify-center gap-3 sm:flex-row`}
+          className={`
+            flex flex-col justify-center gap-3
+            sm:flex-row
+          `}
         >
           <Button variant='outline' onClick={() => window.history.back()}>
             <ArrowLeft className='mr-2 h-4 w-4' />

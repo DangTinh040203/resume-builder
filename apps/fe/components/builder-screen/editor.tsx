@@ -61,11 +61,11 @@ const Editor = ({
           [&_.ql-container]:bg-white/80 [&_.ql-container]:backdrop-blur-sm
           dark:[&_.ql-container]:border-gray-700/50
           dark:[&_.ql-container]:bg-gray-800/50
+          dark:[&_.ql-toolbar]:border-gray-700/50
+          dark:[&_.ql-toolbar]:bg-gray-800/50
           [&_.ql-editor]:min-h-[140px]
           [&_.ql-toolbar]:rounded-t-xl [&_.ql-toolbar]:border-gray-200/80
           [&_.ql-toolbar]:bg-gray-50/80 [&_.ql-toolbar]:backdrop-blur-sm
-          dark:[&_.ql-toolbar]:border-gray-700/50
-          dark:[&_.ql-toolbar]:bg-gray-800/50
         `,
         className,
       )}

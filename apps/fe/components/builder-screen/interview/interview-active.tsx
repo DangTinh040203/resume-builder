@@ -159,7 +159,11 @@ export const InterviewActive = ({
       {/* Voice Wave */}
       <div className='relative w-full'>
         <div
-          className={`border-border/50 to-muted/30 relative flex items-center justify-center overflow-hidden rounded-2xl border bg-gradient-to-b from-transparent p-6`}
+          className={`
+            border-border/50 to-muted/30 relative flex items-center
+            justify-center overflow-hidden rounded-2xl border bg-gradient-to-b
+            from-transparent p-6
+          `}
         >
           <canvas
             ref={canvasRef}
@@ -177,13 +181,16 @@ export const InterviewActive = ({
       >
         <div className='flex items-center gap-2'>
           <span
-            className={`h-2 w-2 rounded-full ${
+            className={`
+              h-2 w-2 rounded-full
+              ${
               isAISpeaking
                 ? 'bg-amber-500'
                 : isMuted
                   ? 'bg-gray-400'
                   : 'bg-green-500'
-            } `}
+            }
+            `}
           />
           <span className='text-sm font-medium'>
             {isAISpeaking
@@ -211,7 +218,9 @@ export const InterviewActive = ({
 
       {/* Timer */}
       <div
-        className={`text-muted-foreground font-mono text-2xl font-light tracking-wider`}
+        className={`
+          text-muted-foreground font-mono text-2xl font-light tracking-wider
+        `}
       >
         {formatTime(elapsedTime)}
       </div>

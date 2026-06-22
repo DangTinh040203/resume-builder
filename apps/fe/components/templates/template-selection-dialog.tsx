@@ -58,7 +58,10 @@ export const TemplateSelectionDialog = ({
     <>
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
         <DialogContent
-          className={`w-[90vw] overflow-hidden rounded-xl sm:max-w-4xl`}
+          className={`
+            w-[90vw] overflow-hidden rounded-xl
+            sm:max-w-4xl
+          `}
         >
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -77,12 +80,16 @@ export const TemplateSelectionDialog = ({
 
           {isLoading ? (
             <div
-              className={`flex min-h-[400px] flex-col items-center justify-center py-8`}
+              className={`
+                flex min-h-[400px] flex-col items-center justify-center py-8
+              `}
             >
               <div className='relative mb-8 h-32 w-32'>
                 {/* Glowing background effect */}
                 <motion.div
-                  className={`absolute inset-0 rounded-full bg-blue-500/20 blur-2xl`}
+                  className={`
+                    absolute inset-0 rounded-full bg-blue-500/20 blur-2xl
+                  `}
                   animate={{
                     scale: [1, 1.2, 1],
                     opacity: [0.3, 0.6, 0.3],
@@ -95,18 +102,28 @@ export const TemplateSelectionDialog = ({
                 />
 
                 <div
-                  className={`relative flex h-full w-full items-center justify-center`}
+                  className={`
+                    relative flex h-full w-full items-center justify-center
+                  `}
                 >
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className={`relative flex h-24 w-20 items-center justify-center rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm`}
+                    className={`
+                      relative flex h-24 w-20 items-center justify-center
+                      rounded-xl border border-white/10 bg-white/5
+                      backdrop-blur-sm
+                    `}
                   >
                     <Upload className='text-primary/50 h-10 w-10' />
 
                     {/* Scanning Line */}
                     <motion.div
-                      className={`absolute right-0 left-0 h-[2px] bg-linear-to-r from-transparent via-blue-500 to-transparent shadow-[0_0_15px_rgba(59,130,246,0.5)]`}
+                      className={`
+                        absolute right-0 left-0 h-[2px] bg-linear-to-r
+                        from-transparent via-blue-500 to-transparent
+                        shadow-[0_0_15px_rgba(59,130,246,0.5)]
+                      `}
                       animate={{
                         top: ['10%', '90%', '10%'],
                         opacity: [0, 1, 0],
@@ -124,7 +141,11 @@ export const TemplateSelectionDialog = ({
                 {[0, 1, 2].map((i) => (
                   <motion.div
                     key={i}
-                    className={`absolute top-1/2 left-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-500/10`}
+                    className={`
+                      absolute top-1/2 left-1/2 h-[120%] w-[120%]
+                      -translate-x-1/2 -translate-y-1/2 rounded-full border
+                      border-blue-500/10
+                    `}
                     animate={{ rotate: 360 }}
                     transition={{
                       duration: 8 - i * 2,
@@ -134,7 +155,10 @@ export const TemplateSelectionDialog = ({
                     }}
                   >
                     <motion.div
-                      className={`absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-blue-400`}
+                      className={`
+                        absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2
+                        rounded-full bg-blue-400
+                      `}
                       animate={{
                         scale: [1, 1.5, 1],
                         opacity: [0.5, 1, 0.5],
@@ -170,7 +194,10 @@ export const TemplateSelectionDialog = ({
                     {loadingSteps.map((text, i) => (
                       <h3
                         key={i}
-                        className={`h-8 bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-xl font-bold text-transparent`}
+                        className={`
+                          h-8 bg-linear-to-r from-blue-400 to-purple-400
+                          bg-clip-text text-xl font-bold text-transparent
+                        `}
                       >
                         {text}
                       </h3>
@@ -179,24 +206,38 @@ export const TemplateSelectionDialog = ({
                 </div>
 
                 <p
-                  className={`text-muted-foreground mx-auto max-w-[300px] text-sm`}
+                  className={`
+                    text-muted-foreground mx-auto max-w-[300px] text-sm
+                  `}
                 >
                   {t('loading.description')}
                 </p>
               </motion.div>
             </div>
           ) : (
-            <div className={`grid grid-cols-1 gap-6 py-8 md:grid-cols-2`}>
+            <div className={`
+              grid grid-cols-1 gap-6 py-8
+              md:grid-cols-2
+            `}>
               <div>
                 <Card
-                  className={`hover:border-primary hover:bg-muted/50 cursor-pointer transition-all`}
+                  className={`
+                    hover:border-primary hover:bg-muted/50
+                    cursor-pointer transition-all
+                  `}
                   onClick={handleUploadClick}
                 >
                   <CardContent
-                    className={`flex flex-col items-center justify-center gap-4 p-8 text-center`}
+                    className={`
+                      flex flex-col items-center justify-center gap-4 p-8
+                      text-center
+                    `}
                   >
                     <div
-                      className={`bg-primary/10 flex h-16 w-16 items-center justify-center rounded-full`}
+                      className={`
+                        bg-primary/10 flex h-16 w-16 items-center justify-center
+                        rounded-full
+                      `}
                     >
                       <Upload className='text-primary h-8 w-8' />
                     </div>
@@ -212,14 +253,23 @@ export const TemplateSelectionDialog = ({
 
               <div>
                 <Card
-                  className={`hover:border-primary hover:bg-muted/50 cursor-pointer transition-all`}
+                  className={`
+                    hover:border-primary hover:bg-muted/50
+                    cursor-pointer transition-all
+                  `}
                   onClick={handleScratchClick}
                 >
                   <CardContent
-                    className={`flex flex-col items-center justify-center gap-4 p-8 text-center`}
+                    className={`
+                      flex flex-col items-center justify-center gap-4 p-8
+                      text-center
+                    `}
                   >
                     <div
-                      className={`bg-primary/10 flex h-16 w-16 items-center justify-center rounded-full`}
+                      className={`
+                        bg-primary/10 flex h-16 w-16 items-center justify-center
+                        rounded-full
+                      `}
                     >
                       <PenLine className='text-primary h-8 w-8' />
                     </div>

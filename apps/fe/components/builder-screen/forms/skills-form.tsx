@@ -103,7 +103,10 @@ function SortableSkillItem({
         onChange={(e) => onUpdate(item.id, 'label', e.target.value)}
         placeholder={t('skills.placeholders.name')}
         className={cn(
-          `h-9 w-52 shrink-0 rounded-md border-0 bg-slate-50 text-sm font-medium`,
+          `
+            h-9 w-52 shrink-0 rounded-md border-0 bg-slate-50 text-sm
+            font-medium
+          `,
           'focus:bg-white focus:ring-2 focus:ring-emerald-500/20',
           'dark:bg-slate-700',
         )}
@@ -217,7 +220,10 @@ const SkillsForm = ({ onNext, onBack }: SkillsFormProps) => {
       >
         <Card className={cn('relative gap-0 border py-0 shadow-xl')}>
           <CardHeader
-            className={`border-b border-slate-100 pt-6 pb-5 dark:border-slate-800`}
+            className={`
+              border-b border-slate-100 pt-6 pb-5
+              dark:border-slate-800
+            `}
           >
             <CardTitle className='flex items-center gap-3'>
               <div
@@ -231,12 +237,18 @@ const SkillsForm = ({ onNext, onBack }: SkillsFormProps) => {
               </div>
               <div className='flex flex-col'>
                 <span
-                  className={`text-lg font-bold text-slate-900 dark:text-white`}
+                  className={`
+                    text-lg font-bold text-slate-900
+                    dark:text-white
+                  `}
                 >
                   {t('skills.title')}
                 </span>
                 <span
-                  className={`text-sm font-normal text-slate-500 dark:text-slate-400`}
+                  className={`
+                    text-sm font-normal text-slate-500
+                    dark:text-slate-400
+                  `}
                 >
                   {t('skills.subtitle')}
                 </span>
@@ -255,13 +267,20 @@ const SkillsForm = ({ onNext, onBack }: SkillsFormProps) => {
                 <div className='flex items-center gap-2'>
                   <div className='h-1 w-1 rounded-full bg-emerald-500' />
                   <Label
-                    className={`text-xs font-semibold tracking-wider text-slate-500 uppercase`}
+                    className={`
+                      text-xs font-semibold tracking-wider text-slate-500
+                      uppercase
+                    `}
                   >
                     {t('skills.list')}
                   </Label>
                   {skillItems.length > 0 && (
                     <span
-                      className={`rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400`}
+                      className={`
+                        rounded-full bg-emerald-100 px-2 py-0.5 text-xs
+                        font-medium text-emerald-600
+                        dark:bg-emerald-900/30 dark:text-emerald-400
+                      `}
                     >
                       {skillItems.length}
                     </span>
@@ -277,7 +296,9 @@ const SkillsForm = ({ onNext, onBack }: SkillsFormProps) => {
               >
                 {skillItems.length === 0 ? (
                   <div
-                    className={`flex flex-col items-center justify-center py-8 text-center`}
+                    className={`
+                      flex flex-col items-center justify-center py-8 text-center
+                    `}
                   >
                     <Cpu className='mb-2 h-8 w-8 text-slate-300' />
                     <p className='text-sm font-medium text-slate-500'>
@@ -329,7 +350,10 @@ const SkillsForm = ({ onNext, onBack }: SkillsFormProps) => {
                 className={cn(
                   'h-9 w-full gap-1.5 rounded-lg border-dashed',
                   'border-slate-300 text-slate-600',
-                  `hover:border-emerald-500 hover:bg-emerald-50 hover:text-emerald-600`,
+                  `
+                    hover:border-emerald-500 hover:bg-emerald-50
+                    hover:text-emerald-600
+                  `,
                   'dark:border-slate-600 dark:text-slate-400',
                 )}
                 type='button'

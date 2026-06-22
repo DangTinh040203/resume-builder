@@ -145,7 +145,10 @@ function SortableExperienceItem({
       </div>
 
       <div className='grid gap-3'>
-        <div className={`grid gap-3 sm:grid-cols-2`}>
+        <div className={`
+          grid gap-3
+          sm:grid-cols-2
+        `}>
           <div className='space-y-1'>
             <Input
               value={item.company}
@@ -185,7 +188,10 @@ function SortableExperienceItem({
             )}
           </div>
         </div>
-        <div className={`grid gap-3 sm:grid-cols-2`}>
+        <div className={`
+          grid gap-3
+          sm:grid-cols-2
+        `}>
           <div>
             <Label className='mb-1.5 block text-xs text-slate-500'>
               {t('fields.startDate')}
@@ -345,7 +351,10 @@ const ExperienceForm = ({ onNext, onBack }: ExperienceFormProps) => {
       >
         <Card className={cn('relative gap-0 py-0 shadow-xl')}>
           <CardHeader
-            className={`border-b border-slate-100 pt-6 pb-5 dark:border-slate-800`}
+            className={`
+              border-b border-slate-100 pt-6 pb-5
+              dark:border-slate-800
+            `}
           >
             <CardTitle className='flex items-center gap-3'>
               <div
@@ -359,12 +368,18 @@ const ExperienceForm = ({ onNext, onBack }: ExperienceFormProps) => {
               </div>
               <div className='flex flex-col'>
                 <span
-                  className={`text-lg font-bold text-slate-900 dark:text-white`}
+                  className={`
+                    text-lg font-bold text-slate-900
+                    dark:text-white
+                  `}
                 >
                   {t('experience.title')}
                 </span>
                 <span
-                  className={`text-sm font-normal text-slate-500 dark:text-slate-400`}
+                  className={`
+                    text-sm font-normal text-slate-500
+                    dark:text-slate-400
+                  `}
                 >
                   {t('experience.subtitle')}
                 </span>
@@ -383,13 +398,20 @@ const ExperienceForm = ({ onNext, onBack }: ExperienceFormProps) => {
                 <div className='flex items-center gap-2'>
                   <div className='h-1 w-1 rounded-full bg-orange-500' />
                   <Label
-                    className={`text-xs font-semibold tracking-wider text-slate-500 uppercase`}
+                    className={`
+                      text-xs font-semibold tracking-wider text-slate-500
+                      uppercase
+                    `}
                   >
                     {t('experience.history')}
                   </Label>
                   {experienceItems.length > 0 && (
                     <span
-                      className={`rounded-full bg-orange-100 px-2 py-0.5 text-xs font-medium text-orange-600 dark:bg-orange-900/30 dark:text-orange-400`}
+                      className={`
+                        rounded-full bg-orange-100 px-2 py-0.5 text-xs
+                        font-medium text-orange-600
+                        dark:bg-orange-900/30 dark:text-orange-400
+                      `}
                     >
                       {experienceItems.length}
                     </span>
@@ -405,7 +427,9 @@ const ExperienceForm = ({ onNext, onBack }: ExperienceFormProps) => {
               >
                 {experienceItems.length === 0 ? (
                   <div
-                    className={`flex flex-col items-center justify-center py-8 text-center`}
+                    className={`
+                      flex flex-col items-center justify-center py-8 text-center
+                    `}
                   >
                     <Briefcase className='mb-2 h-8 w-8 text-slate-300' />
                     <p className='text-sm font-medium text-slate-500'>
@@ -459,7 +483,10 @@ const ExperienceForm = ({ onNext, onBack }: ExperienceFormProps) => {
                 className={cn(
                   'h-9 w-full gap-1.5 rounded-lg border-dashed',
                   'border-slate-300 text-slate-600',
-                  `hover:border-orange-500 hover:bg-orange-50 hover:text-orange-600`,
+                  `
+                    hover:border-orange-500 hover:bg-orange-50
+                    hover:text-orange-600
+                  `,
                   'dark:border-slate-600 dark:text-slate-400',
                 )}
                 type='button'

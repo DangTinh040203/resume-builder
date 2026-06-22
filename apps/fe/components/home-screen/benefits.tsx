@@ -95,9 +95,8 @@ const BenefitsSection = () => {
                       damping: 12,
                     }}
                     className={`
-                      bg-primary/10
+                      bg-primary/10 rounded-lg p-2 transition-colors
                       group-hover:bg-primary/20
-                      rounded-lg p-2 transition-colors
                     `}
                   >
                     <CheckCircle2 className='text-primary h-6 w-6 shrink-0' />

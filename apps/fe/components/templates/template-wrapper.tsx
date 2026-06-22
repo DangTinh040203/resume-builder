@@ -63,9 +63,14 @@ const TemplateWrapper = ({
   return (
     <div
       ref={ref}
-      className={`border/10 bg-background relative z-10 w-full scrollbar-none overflow-hidden rounded-lg border shadow-xl ${
+      className={`
+        border/10 bg-background relative z-10 w-full scrollbar-none
+        overflow-hidden rounded-lg border shadow-xl
+        ${
         scrollable ? `overflow-y-auto` : ''
-      } ${!selectable ? `select-none` : ''} `}
+      }
+        ${!selectable ? `select-none` : ''}
+      `}
       style={{ aspectRatio: '210 / 297' }}
     >
       {!ready ? (

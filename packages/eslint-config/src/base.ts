@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import importPlugin from "eslint-plugin-import";
-import prettier from "eslint-plugin-prettier";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import turboPlugin from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
@@ -33,7 +32,6 @@ export const config = [
   },
   {
     plugins: {
-      prettier,
       "simple-import-sort": simpleImportSort,
       import: importPlugin,
     },
@@ -46,9 +44,6 @@ export const config = [
         "error",
         { fixStyle: "inline-type-imports" },
       ],
-
-      // Prettier
-      "prettier/prettier": "warn",
 
       // Import sorting
       "simple-import-sort/imports": "error",

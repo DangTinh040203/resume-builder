@@ -27,10 +27,16 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <div className='bg-background flex min-h-screen'>
-      <div className={`relative hidden overflow-hidden lg:flex lg:w-1/2`}>
+      <div className={`
+        relative hidden overflow-hidden
+        lg:flex lg:w-1/2
+      `}>
         {/* Gradient background */}
         <div
-          className={`from-primary via-primary/90 to-primary absolute inset-0 bg-gradient-to-br`}
+          className={`
+            from-primary via-primary/90 to-primary absolute inset-0
+            bg-gradient-to-br
+          `}
         />
 
         {/* Animated mesh gradient overlay */}
@@ -55,20 +61,29 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
 
         {/* Glowing orbs */}
         <motion.div
-          className={`absolute -top-20 -right-20 h-96 w-96 rounded-full bg-white/10 blur-3xl`}
+          className={`
+            absolute -top-20 -right-20 h-96 w-96 rounded-full bg-white/10
+            blur-3xl
+          `}
           animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 8, repeat: Infinity }}
         />
 
         <motion.div
-          className={`bg-accent/20 absolute -bottom-20 -left-20 h-80 w-80 rounded-full blur-3xl`}
+          className={`
+            bg-accent/20 absolute -bottom-20 -left-20 h-80 w-80 rounded-full
+            blur-3xl
+          `}
           animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.1, 0.2] }}
           transition={{ duration: 6, repeat: Infinity }}
         />
 
         {/* Content */}
         <div
-          className={`relative z-10 flex flex-col justify-center p-12 text-white lg:p-16`}
+          className={`
+            relative z-10 flex flex-col justify-center p-12 text-white
+            lg:p-16
+          `}
         >
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -77,7 +92,10 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
           >
             <Link href='/' className='mb-10 flex items-center gap-3'>
               <motion.div
-                className={`flex h-12 w-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm`}
+                className={`
+                  flex h-12 w-12 items-center justify-center rounded-xl border
+                  border-white/20 bg-white/10 backdrop-blur-sm
+                `}
                 whileHover={{ scale: 1.05, rotate: 5 }}
               >
                 <FileText className='h-6 w-6 text-white' />
@@ -92,7 +110,10 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h1
-              className={`font-display mb-6 text-4xl leading-tight font-bold lg:text-5xl`}
+              className={`
+                font-display mb-6 text-4xl leading-tight font-bold
+                lg:text-5xl
+              `}
             >
               {t('layout.heroLine1')}
               <br />
@@ -119,7 +140,12 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
                 transition={{ duration: 0.5, delay: 0.4 + feature.delay }}
               >
                 <motion.div
-                  className={`flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/10 backdrop-blur-sm transition-colors group-hover:bg-white/20`}
+                  className={`
+                    flex h-12 w-12 items-center justify-center rounded-xl border
+                    border-white/10 bg-white/10 backdrop-blur-sm
+                    transition-colors
+                    group-hover:bg-white/20
+                  `}
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
                   <feature.icon className='h-5 w-5 text-white' />
@@ -155,7 +181,10 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
         </div>
       </div>
 
-      <div className={`flex flex-1 items-center justify-center px-4 lg:p-8`}>
+      <div className={`
+        flex flex-1 items-center justify-center px-4
+        lg:p-8
+      `}>
         <motion.div
           className='w-full max-w-md'
           initial={{ opacity: 0, x: 20 }}
@@ -165,10 +194,16 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
           {/* Mobile Logo */}
           <Link
             href='/'
-            className={`mb-8 flex items-center justify-center gap-2 lg:hidden lg:justify-start`}
+            className={`
+              mb-8 flex items-center justify-center gap-2
+              lg:hidden lg:justify-start
+            `}
           >
             <div
-              className={`gradient-bg flex h-10 w-10 items-center justify-center rounded-lg shadow-md`}
+              className={`
+                gradient-bg flex h-10 w-10 items-center justify-center
+                rounded-lg shadow-md
+              `}
             >
               <FileText className='text-primary-foreground h-5 w-5' />
             </div>
@@ -198,11 +233,17 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
             transition={{ delay: 0.6 }}
           >
             {t('layout.termsPrefix')} <br />
-            <span className={`text-primary cursor-pointer hover:underline`}>
+            <span className={`
+              text-primary cursor-pointer
+              hover:underline
+            `}>
               {t('layout.terms')}
             </span>{' '}
             {t('layout.and')}{' '}
-            <span className={`text-primary cursor-pointer hover:underline`}>
+            <span className={`
+              text-primary cursor-pointer
+              hover:underline
+            `}>
               {t('layout.privacy')}
             </span>
           </motion.p>

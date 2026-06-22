@@ -163,11 +163,10 @@ const TemplatePreviewSection = () => {
                 <m.div
                   key={i}
                   className={`
-                    bg-card border-border/60 group
-                    hover:border-primary/30
-                    relative aspect-square overflow-hidden rounded-[24px] border
-                    p-5 shadow-xl transition-all duration-500
-                    hover:shadow-2xl
+                    bg-card border-border/60 group relative aspect-square
+                    overflow-hidden rounded-[24px] border p-5 shadow-xl
+                    transition-all duration-500
+                    hover:border-primary/30 hover:shadow-2xl
                   `}
                   variants={fadeInUp}
                 >
@@ -197,9 +196,9 @@ const TemplatePreviewSection = () => {
                       <div className='flex-1'>
                         <div
                           className={`
-                            bg-foreground/15
+                            bg-foreground/15 h-2.5 w-3/4 rounded-full
+                            transition-colors
                             group-hover:bg-primary/20
-                            h-2.5 w-3/4 rounded-full transition-colors
                           `}
                         />
                         <div

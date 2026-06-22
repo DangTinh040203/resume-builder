@@ -28,11 +28,17 @@ export const InterviewLoading = ({ text }: InterviewLoadingProps) => {
           style={{ animationDuration: '2s', animationDelay: '1s' }}
         />
         <div
-          className={`border-primary/30 bg-background/90 shadow-primary/20 relative z-10 flex h-20 w-20 items-center justify-center rounded-full border-2 shadow-[0_0_40px_hsl(var(--primary)/0.4)] backdrop-blur-xl`}
+          className={`
+            border-primary/30 bg-background/90 shadow-primary/20 relative z-10
+            flex h-20 w-20 items-center justify-center rounded-full border-2
+            shadow-[0_0_40px_hsl(var(--primary)/0.4)] backdrop-blur-xl
+          `}
         >
           <Mic className='text-primary h-10 w-10 animate-pulse' />
           <Sparkles
-            className={`absolute -top-2 -right-2 h-6 w-6 animate-bounce text-amber-500`}
+            className={`
+              absolute -top-2 -right-2 h-6 w-6 animate-bounce text-amber-500
+            `}
           />
         </div>
       </div>
@@ -40,7 +46,10 @@ export const InterviewLoading = ({ text }: InterviewLoadingProps) => {
       {/* Text */}
       <div className='flex flex-col items-center gap-3 text-center'>
         <h3
-          className={`from-primary to-primary/50 bg-linear-to-r bg-clip-text text-2xl font-bold tracking-tight text-transparent`}
+          className={`
+            from-primary to-primary/50 bg-linear-to-r bg-clip-text text-2xl
+            font-bold tracking-tight text-transparent
+          `}
         >
           {t('loading.title')}
         </h3>

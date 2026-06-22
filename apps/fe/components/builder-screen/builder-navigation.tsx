@@ -26,7 +26,9 @@ const BuilderNavigation = ({
 
   return (
     <div
-      className={`border-border/50 mt-6 flex items-center justify-between border-t pt-6`}
+      className={`
+        border-border/50 mt-6 flex items-center justify-between border-t pt-6
+      `}
     >
       <Button
         variant='outline'

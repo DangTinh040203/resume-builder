@@ -64,21 +64,38 @@ const SummaryForm = ({ onNext, onBack }: SummaryFormProps) => {
             <div
               className={cn(
                 'relative flex h-10 w-10 items-center justify-center rounded-xl',
-                `bg-linear-to-br from-purple-500 to-purple-600 shadow-lg shadow-purple-500/25`,
-                `transition-all duration-300 hover:scale-110 hover:shadow-purple-500/40`,
+                `
+                  bg-linear-to-br from-purple-500 to-purple-600 shadow-lg
+                  shadow-purple-500/25
+                `,
+                `
+                  transition-all duration-300
+                  hover:scale-110 hover:shadow-purple-500/40
+                `,
                 'group',
               )}
             >
               <FileText
-                className={`h-5 w-5 text-white transition-transform duration-300 group-hover:scale-110`}
+                className={`
+                  h-5 w-5 text-white transition-transform duration-300
+                  group-hover:scale-110
+                `}
               />
               <Sparkles
-                className={`absolute -top-1 -right-1 h-3 w-3 text-yellow-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
+                className={`
+                  absolute -top-1 -right-1 h-3 w-3 text-yellow-400 opacity-0
+                  transition-opacity duration-300
+                  group-hover:opacity-100
+                `}
               />
             </div>
             <div className='flex flex-col gap-0.5'>
               <span
-                className={`bg-linear-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent dark:from-white dark:to-gray-400`}
+                className={`
+                  bg-linear-to-r from-gray-900 to-gray-600 bg-clip-text
+                  text-transparent
+                  dark:from-white dark:to-gray-400
+                `}
               >
                 {t('summary.title')}
               </span>
@@ -99,14 +116,23 @@ const SummaryForm = ({ onNext, onBack }: SummaryFormProps) => {
             <div className='flex items-center justify-between'>
               <Label
                 className={cn(
-                  `flex items-center gap-2 text-xs font-semibold tracking-wider uppercase`,
-                  `text-gray-500 transition-colors duration-300 dark:text-gray-400`,
+                  `
+                    flex items-center gap-2 text-xs font-semibold tracking-wider
+                    uppercase
+                  `,
+                  `
+                    text-gray-500 transition-colors duration-300
+                    dark:text-gray-400
+                  `,
                   isFocused && 'text-purple-600 dark:text-purple-400',
                 )}
               >
                 <span
                   className={cn(
-                    `inline-block h-1.5 w-1.5 rounded-full bg-gray-300 transition-all duration-300`,
+                    `
+                      inline-block h-1.5 w-1.5 rounded-full bg-gray-300
+                      transition-all duration-300
+                    `,
                     isFocused && 'bg-purple-500 shadow-sm shadow-purple-500/50',
                   )}
                 />
@@ -134,7 +160,11 @@ const SummaryForm = ({ onNext, onBack }: SummaryFormProps) => {
             >
               <div
                 className={cn(
-                  `absolute inset-0 rounded-xl bg-linear-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 opacity-0 transition-opacity duration-300`,
+                  `
+                    absolute inset-0 rounded-xl bg-linear-to-r
+                    from-purple-500/10 via-pink-500/10 to-blue-500/10 opacity-0
+                    transition-opacity duration-300
+                  `,
                   isFocused && 'opacity-100',
                 )}
               />
@@ -147,14 +177,24 @@ const SummaryForm = ({ onNext, onBack }: SummaryFormProps) => {
 
             <div
               className={cn(
-                `flex items-start gap-2 rounded-lg bg-linear-to-r from-amber-50 to-orange-50 p-3 dark:from-amber-950/30 dark:to-orange-950/30`,
-                `border border-amber-200/50 dark:border-amber-800/30`,
+                `
+                  flex items-start gap-2 rounded-lg bg-linear-to-r from-amber-50
+                  to-orange-50 p-3
+                  dark:from-amber-950/30 dark:to-orange-950/30
+                `,
+                `
+                  border border-amber-200/50
+                  dark:border-amber-800/30
+                `,
                 'transition-all delay-200 duration-500',
               )}
             >
               <span className='mt-0.5 text-amber-500'>💡</span>
               <p
-                className={`text-xs leading-relaxed text-amber-700 dark:text-amber-300`}
+                className={`
+                  text-xs leading-relaxed text-amber-700
+                  dark:text-amber-300
+                `}
               >
                 <span className='font-medium'>{t('summary.proTipLabel')}</span>{' '}
                 {t('summary.proTip')}

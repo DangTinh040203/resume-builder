@@ -89,13 +89,19 @@ const MatchingDialog = () => {
       <DialogTrigger asChild>
         <Button
           variant={'secondary'}
-          className={`border-primary w-full border shadow-xl sm:w-auto`}
+          className={`
+            border-primary w-full border shadow-xl
+            sm:w-auto
+          `}
         >
           <Brain className='mr-2 h-4 w-4' /> {t('trigger')}
         </Button>
       </DialogTrigger>
 
-      <DialogContent className={`w-[90vw] space-y-2 sm:max-w-4xl`}>
+      <DialogContent className={`
+        w-[90vw] space-y-2
+        sm:max-w-4xl
+      `}>
         <div className='space-y-2'>
           <DialogTitle className='flex items-center gap-2'>
             <Sparkles size={20} /> {t('title')}

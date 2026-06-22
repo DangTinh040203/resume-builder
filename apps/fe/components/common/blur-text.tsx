@@ -114,7 +114,10 @@ const BlurText = ({
 
         return (
           <m.span
-            className={`inline-block will-change-[transform,filter,opacity] ${spanClassName} `}
+            className={`
+              inline-block will-change-[transform,filter,opacity]
+              ${spanClassName}
+            `}
             key={index}
             initial={fromSnapshot}
             animate={inView ? animateKeyframes : fromSnapshot}

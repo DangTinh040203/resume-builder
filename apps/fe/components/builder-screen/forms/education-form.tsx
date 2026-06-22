@@ -172,7 +172,10 @@ function SortableEducationItem({
       </div>
 
       <div className='grid gap-3'>
-        <div className={`grid gap-3 sm:grid-cols-2`}>
+        <div className={`
+          grid gap-3
+          sm:grid-cols-2
+        `}>
           <div className='space-y-1'>
             <Input
               value={item.school}
@@ -209,7 +212,11 @@ function SortableEducationItem({
                 <Button
                   variant='ghost'
                   size='icon'
-                  className={`absolute top-1 right-1 h-8 w-8 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300`}
+                  className={`
+                    absolute top-1 right-1 h-8 w-8 text-slate-400
+                    hover:text-slate-600
+                    dark:hover:text-slate-300
+                  `}
                   onClick={() => {
                     setIsCustomDegree(false);
                     onUpdate(item.id, 'degree', '');
@@ -232,7 +239,10 @@ function SortableEducationItem({
               >
                 <SelectTrigger
                   className={cn(
-                    `h-10 w-full rounded-lg border-slate-200 bg-slate-50 text-sm`,
+                    `
+                      h-10 w-full rounded-lg border-slate-200 bg-slate-50
+                      text-sm
+                    `,
                     'focus:bg-white focus:ring-2 focus:ring-violet-500/20',
                     'dark:border-slate-700 dark:bg-slate-700',
                     errors?.degree && 'border-red-400 focus:ring-red-500/20',
@@ -272,7 +282,10 @@ function SortableEducationItem({
             'dark:border-slate-700 dark:bg-slate-700',
           )}
         />
-        <div className={`grid gap-3 sm:grid-cols-2`}>
+        <div className={`
+          grid gap-3
+          sm:grid-cols-2
+        `}>
           <div>
             <Label className='mb-1.5 block text-xs text-slate-500'>
               {t('fields.startDate')}
@@ -421,7 +434,10 @@ const EducationForm = ({ onNext, onBack }: EducationFormProps) => {
       >
         <Card className={cn('relative gap-0 py-0 shadow-xl')}>
           <CardHeader
-            className={`border-b border-slate-100 pt-6 pb-5 dark:border-slate-800`}
+            className={`
+              border-b border-slate-100 pt-6 pb-5
+              dark:border-slate-800
+            `}
           >
             <CardTitle className='flex items-center gap-3'>
               <div
@@ -435,12 +451,18 @@ const EducationForm = ({ onNext, onBack }: EducationFormProps) => {
               </div>
               <div className='flex flex-col'>
                 <span
-                  className={`text-lg font-bold text-slate-900 dark:text-white`}
+                  className={`
+                    text-lg font-bold text-slate-900
+                    dark:text-white
+                  `}
                 >
                   {t('education.title')}
                 </span>
                 <span
-                  className={`text-sm font-normal text-slate-500 dark:text-slate-400`}
+                  className={`
+                    text-sm font-normal text-slate-500
+                    dark:text-slate-400
+                  `}
                 >
                   {t('education.subtitle')}
                 </span>
@@ -459,13 +481,20 @@ const EducationForm = ({ onNext, onBack }: EducationFormProps) => {
                 <div className='flex items-center gap-2'>
                   <div className='h-1 w-1 rounded-full bg-violet-500' />
                   <Label
-                    className={`text-xs font-semibold tracking-wider text-slate-500 uppercase`}
+                    className={`
+                      text-xs font-semibold tracking-wider text-slate-500
+                      uppercase
+                    `}
                   >
                     {t('education.history')}
                   </Label>
                   {educationItems.length > 0 && (
                     <span
-                      className={`rounded-full bg-violet-100 px-2 py-0.5 text-xs font-medium text-violet-600 dark:bg-violet-900/30 dark:text-violet-400`}
+                      className={`
+                        rounded-full bg-violet-100 px-2 py-0.5 text-xs
+                        font-medium text-violet-600
+                        dark:bg-violet-900/30 dark:text-violet-400
+                      `}
                     >
                       {educationItems.length}
                     </span>
@@ -481,7 +510,9 @@ const EducationForm = ({ onNext, onBack }: EducationFormProps) => {
               >
                 {educationItems.length === 0 ? (
                   <div
-                    className={`flex flex-col items-center justify-center py-8 text-center`}
+                    className={`
+                      flex flex-col items-center justify-center py-8 text-center
+                    `}
                   >
                     <GraduationCap className='mb-2 h-8 w-8 text-slate-300' />
                     <p className='text-sm font-medium text-slate-500'>
@@ -535,7 +566,10 @@ const EducationForm = ({ onNext, onBack }: EducationFormProps) => {
                 className={cn(
                   'h-9 w-full gap-1.5 rounded-lg border-dashed',
                   'border-slate-300 text-slate-600',
-                  `hover:border-violet-500 hover:bg-violet-50 hover:text-violet-600`,
+                  `
+                    hover:border-violet-500 hover:bg-violet-50
+                    hover:text-violet-600
+                  `,
                   'dark:border-slate-600 dark:text-slate-400',
                 )}
                 type='button'

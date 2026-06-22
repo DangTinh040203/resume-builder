@@ -83,11 +83,9 @@ const TestimonialsSection = () => {
             >
               <Card
                 className={`
-                  border-border/50 bg-card/60
-                  hover:border-primary/20
-                  h-full rounded-3xl backdrop-blur-sm transition-all
-                  duration-500
-                  hover:shadow-2xl
+                  border-border/50 bg-card/60 h-full rounded-3xl
+                  backdrop-blur-sm transition-all duration-500
+                  hover:border-primary/20 hover:shadow-2xl
                 `}
               >
                 <CardContent className='p-8'>

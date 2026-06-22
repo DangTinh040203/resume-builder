@@ -265,7 +265,10 @@ const SignUp = () => {
             {t('signUp.hasAccount')}{' '}
             <Link
               href='/auth/sign-in'
-              className={`text-primary font-medium transition-all hover:underline`}
+              className={`
+                text-primary font-medium transition-all
+                hover:underline
+              `}
             >
               <motion.span
                 whileHover={{ scale: 1.05 }}
