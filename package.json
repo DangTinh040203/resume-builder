@@ -6,11 +6,16 @@
     "build:fe": "turbo run build --filter=@resume-builder/fe",
     "build:be": "turbo run build --filter=@resume-builder/be",
     "dev": "turbo run dev --parallel",
+    "dev:fe": "turbo run dev --filter=@resume-builder/fe",
+    "dev:be": "turbo run dev --filter=@resume-builder/be",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
-    "format": "prettier --write \"**/*.{ts,tsx,js,mjs,json,md,css}\""
+    "format": "prettier --write \"**/*.{ts,tsx,js,mjs,json,md,css}\"",
+    "docs": "npx docsify-cli serve docs --port 3333",
+    "docker:dev": "docker compose -f docker/docker-compose.dev.yml up -d",
+    "docker:dev:down": "docker compose -f docker/docker-compose.dev.yml down"
   },
   "devDependencies": {
     "@resume-builder/prettier-config": "workspace:*",
