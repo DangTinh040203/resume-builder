@@ -16,13 +16,6 @@ export default [
     },
   },
   {
-    // NestJS modules use relative imports between files in the same app
-    rules: {
-      "no-restricted-imports": "off",
-      "import/no-relative-parent-imports": "off",
-    },
-  },
-  {
     ignores: ["dist/**", "node_modules/**"],
   },
 ];
