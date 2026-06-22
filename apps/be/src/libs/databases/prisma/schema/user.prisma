@@ -10,7 +10,6 @@ model User {
   updatedAt  DateTime @updatedAt
 
   resume Resume?
-  feedbacks Feedback[]
 
   @@map("users")
 }
