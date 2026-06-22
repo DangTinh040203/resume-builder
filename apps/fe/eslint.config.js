@@ -11,6 +11,42 @@ export default [
     },
   },
   {
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            // Inherited from base: no relative imports
+            {
+              group: ['../*', '../**/*', './*', './**/*'],
+              message: 'Relative imports are not allowed. Use path aliases instead.',
+            },
+            // Inherited from base: no importing apps into shared packages
+            {
+              group: ['**/apps/**', '@/apps/**', 'apps/**'],
+              message:
+                'Cannot import from apps into shared packages. Only import from shared into apps.',
+            },
+            // Cross-app boundary: FE must not import from BE
+            {
+              group: ['**/apps/be/**', '*/be/**', '../be/**', '../../be/**'],
+              message:
+                'Cross-app import: FE must not import from BE. Move shared code to packages/shared.',
+            },
+          ],
+          paths: [
+            // Also block direct workspace package import
+            {
+              name: '@resume-builder/be',
+              message:
+                'Cross-app import: FE must not import from the BE package. Move shared code to packages/shared.',
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
     ignores: [
       '**/*.d.ts',
       'eslint.config.js',
