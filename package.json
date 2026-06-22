@@ -7,7 +7,7 @@
     "build:be": "turbo run build --filter=@resume-builder/be",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "lint:fix": "turbo run lint --filter=@resume-builder/fe -- --fix && turbo run lint --filter=@resume-builder/be -- --fix",
+    "lint:fix": "turbo run lint:fix",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
     "format": "prettier --write \"**/*.{ts,tsx,js,mjs,json,md,css}\""
