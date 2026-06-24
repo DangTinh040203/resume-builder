@@ -53,7 +53,6 @@ export const AnyNull = runtime.AnyNull
 export const ModelName = {
   Certification: 'Certification',
   Education: 'Education',
-  Feedback: 'Feedback',
   Language: 'Language',
   Project: 'Project',
   Resume: 'Resume',
@@ -101,17 +100,6 @@ export const EducationScalarFieldEnum = {
 } as const
 
 export type EducationScalarFieldEnum = (typeof EducationScalarFieldEnum)[keyof typeof EducationScalarFieldEnum]
-
-
-export const FeedbackScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  type: 'type',
-  message: 'message',
-  createdAt: 'createdAt'
-} as const
-
-export type FeedbackScalarFieldEnum = (typeof FeedbackScalarFieldEnum)[keyof typeof FeedbackScalarFieldEnum]
 
 
 export const LanguageScalarFieldEnum = {

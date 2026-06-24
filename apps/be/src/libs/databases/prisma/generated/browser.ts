@@ -28,11 +28,6 @@ export type Certification = Prisma.CertificationModel
  */
 export type Education = Prisma.EducationModel
 /**
- * Model Feedback
- * 
- */
-export type Feedback = Prisma.FeedbackModel
-/**
  * Model Language
  * 
  */

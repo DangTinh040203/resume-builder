@@ -10,7 +10,6 @@
  */
 export type * from './models/Certification'
 export type * from './models/Education'
-export type * from './models/Feedback'
 export type * from './models/Language'
 export type * from './models/Project'
 export type * from './models/Resume'
