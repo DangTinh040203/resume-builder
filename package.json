@@ -5,7 +5,7 @@
     "build": "turbo run build",
     "build:fe": "turbo run build --filter=@resume-builder/fe",
     "build:be": "turbo run build --filter=@resume-builder/be",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev --parallel --filter=@resume-builder/fe --filter=@resume-builder/be",
     "dev:fe": "turbo run dev --filter=@resume-builder/fe",
     "dev:be": "turbo run dev --filter=@resume-builder/be",
     "lint": "turbo run lint",
