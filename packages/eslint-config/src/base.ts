@@ -51,8 +51,8 @@ export const config = [
       "import/first": "error",
       "import/newline-after-import": "error",
       "import/no-duplicates": "error",
-      "import/no-unresolved": "error",
-      "import/extensions": 0,
+      "import/no-unresolved": "off",
+      "import/extensions":  "off",
       "import/no-relative-parent-imports": "error",
 
       // General
