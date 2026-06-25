@@ -1,4 +1,5 @@
 import { Logger, UsePipes, ValidationPipe } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import {
   ConnectedSocket,
   MessageBody,
@@ -11,10 +12,11 @@ import {
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
 
+import { Env } from '@/libs/configs';
 import { type StartInterviewCommand } from '@/modules/interview/application/commands';
 import { InterviewService } from '@/modules/interview/application/services/interview.service';
 import { InterviewEvaluationService } from '@/modules/interview/application/services/interview-evaluation.service';
-import { StartInterviewDto } from '@/modules/interview/presentation/DTOs';
+import { type StartInterviewDto } from '@/modules/interview/presentation/DTOs';
 import { WsAuthGuard } from '@/modules/interview/presentation/guards/ws-auth.guard';
 import { ResumeService } from '@/modules/resume/application/services/resume.service';
 
@@ -41,7 +43,12 @@ export class InterviewGateway
    * Falls back to ConfigService at runtime via afterInit.
    */
   private static getCorsOrigin(): string {
-    return process.env.FRONTEND_ORIGIN || 'http://localhost:3001';
+    const FE_ORIGIN = process.env[Env.FRONTEND_ORIGIN];
+    if (!FE_ORIGIN) {
+      throw new Error('FRONTEND_ORIGIN is not set');
+    }
+
+    return FE_ORIGIN;
   }
 
   constructor(
@@ -49,6 +56,7 @@ export class InterviewGateway
     private readonly evaluationService: InterviewEvaluationService,
     private readonly resumeService: ResumeService,
     private readonly wsAuthGuard: WsAuthGuard,
+    private readonly configService: ConfigService,
   ) {}
 
   // ─── Lifecycle ──────────────────────────────────────────────
