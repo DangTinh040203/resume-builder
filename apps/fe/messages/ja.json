@@ -1,4 +1,10 @@
 {
+  "Common": {
+    "scrollToTop": "トップへ戻る",
+    "back": "戻る",
+    "next": "次へ",
+    "saving": "保存しています..."
+  },
   "Nav": {
     "home": "ホーム",
     "templates": "テンプレート",
@@ -10,7 +16,18 @@
     "signInSignUp": "ログイン / 新規登録"
   },
   "Language": {
-    "label": "言語"
+    "label": "言語",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "zh": "中文",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "ar": "العربية",
+    "ko": "한국어",
+    "de": "Deutsch"
   },
   "Footer": {
     "tagline": "AIで理想の仕事につながるプロフェッショナルな履歴書ビルダー。",
@@ -224,5 +241,569 @@
     "title": "理想の仕事の準備はできましたか？",
     "description": "1万人以上のプロがAIツールキットでキャリアを変えました。",
     "button": "無料で始める"
+  },
+  "Auth": {
+    "continueWith": "または次で続行",
+    "errors": {
+      "generic": "問題が発生しました。もう一度お試しください。"
+    },
+    "fields": {
+      "confirmPassword": "パスワードの確認",
+      "email": "メールアドレス",
+      "password": "パスワード"
+    },
+    "layout": {
+      "and": "および",
+      "formSubtitle": "数分で目を引く履歴書を作成しましょう",
+      "formTitle": "CVCraftへようこそ",
+      "heroDescription": "AIの力で、ATSに最適化された魅力的な履歴書を作成。より多くの面接を獲得し、数分でキャリアを加速させましょう。",
+      "heroLine1": "あなたを採用に導く",
+      "heroLine2": "履歴書を作成しよう。",
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約",
+      "termsPrefix": "続行することで、以下に同意したものとみなされます:",
+      "features": {
+        "0": "採用担当者にすぐ使える、プロ品質のテンプレート",
+        "1": "AIによるコンテンツ提案",
+        "2": "あらゆる求人内容に合わせて最適化",
+        "3": "数時間ではなく、数分で完成"
+      },
+      "stats": {
+        "0": {
+          "value": "50K+",
+          "label": "作成された履歴書数"
+        },
+        "1": {
+          "value": "10K+",
+          "label": "採用されたユーザー数"
+        },
+        "2": {
+          "value": "95%",
+          "label": "成功率"
+        }
+      }
+    },
+    "placeholders": {
+      "confirmPassword": "パスワードを再入力してください",
+      "createPassword": "パスワードを作成してください",
+      "email": "you@example.com",
+      "password": "パスワードを入力してください"
+    },
+    "signIn": {
+      "invalidCredentials": "メールアドレスまたはパスワードが正しくありません。もう一度お試しください。",
+      "loading": "サインインしています...",
+      "noAccount": "アカウントをお持ちでないですか?",
+      "signUpLink": "新規登録",
+      "submit": "サインイン",
+      "success": "サインインに成功しました。おかえりなさい!"
+    },
+    "signUp": {
+      "hasAccount": "すでにアカウントをお持ちですか?",
+      "loading": "アカウントを作成しています...",
+      "signInLink": "サインイン",
+      "submit": "アカウントを作成"
+    },
+    "sso": {
+      "almostThere": "もう少しです。サインインしています..."
+    },
+    "validation": {
+      "codeIncomplete": "6桁すべてを入力してください。",
+      "codeSixDigits": "コードは正確に6桁である必要があります。",
+      "confirmPasswordRequired": "パスワードを確認してください。",
+      "emailInvalid": "有効なメールアドレスを入力してください。",
+      "emailRequired": "メールアドレスは必須です。",
+      "passwordMax": "パスワードは50文字以内で入力してください。",
+      "passwordMin": "パスワードは8文字以上で入力してください。",
+      "passwordRequired": "パスワードは必須です。",
+      "passwordsDoNotMatch": "パスワードが一致しません。"
+    },
+    "verify": {
+      "didNotReceive": "コードが届きませんでしたか?",
+      "emailFallback": "あなたのメールアドレス",
+      "incomplete": "認証を完了できませんでした。もう一度お試しください。",
+      "resendCode": "コードを再送信",
+      "resendFailed": "コードの再送信に失敗しました。もう一度お試しください。",
+      "resendIn": "{seconds}秒後に再送信",
+      "resendSuccess": "新しいコードをメールに送信しました。",
+      "sentTo": "6桁の認証コードを以下に送信しました:",
+      "submit": "認証する",
+      "success": "アカウントが認証されました。CVCraftへようこそ!",
+      "title": "メールアドレスを認証",
+      "verifying": "認証しています..."
+    }
+  },
+  "Matching": {
+    "trigger": "求人とマッチング",
+    "title": "求人マッチング分析",
+    "description": {
+      "form": "求人内容を貼り付けるか、PDFでアップロードすると、あなたの履歴書との適合度を確認できます。",
+      "result": "あなたの履歴書が求人内容とどの程度マッチしているかをご紹介します。"
+    },
+    "form": {
+      "textTab": "テキストを貼り付け",
+      "fileTab": "ファイルをアップロード",
+      "jdPlaceholder": "求人内容をここに貼り付けてください...",
+      "uploadFile": "クリックして求人内容をアップロード",
+      "changeFile": "クリックして別のファイルを選択",
+      "fileHint": "PDF（10MBまで）",
+      "analyze": "マッチングを分析"
+    },
+    "loading": {
+      "title": "マッチングを分析中",
+      "description": "あなたの履歴書と求人内容を比較しています..."
+    },
+    "result": {
+      "score": {
+        "excellent": "非常に高い適合度",
+        "good": "高い適合度",
+        "fair": "まずまずの適合度",
+        "needsImprovement": "改善の余地あり"
+      },
+      "tabs": {
+        "breakdown": "内訳",
+        "analysis": "分析",
+        "improve": "改善"
+      },
+      "weight": "重み {weight}%",
+      "strengths": "強み",
+      "noStrengths": "特筆すべき強みはまだ見つかっていません。",
+      "missingKeywords": "不足しているキーワード",
+      "invalidJobDescription": "有効な求人内容を読み取れませんでした。",
+      "suggestionsToImprove": "改善のための提案",
+      "noSuggestions": "提案はありません。あなたの履歴書は非常によく適合しています。",
+      "analyzeAnother": "別の求人を分析"
+    },
+    "email": {
+      "view": "メールを表示",
+      "generate": "アプローチメールを生成",
+      "generating": "生成しています...",
+      "generateFailed": "メールを生成できませんでした。もう一度お試しください。",
+      "regenerate": "再生成",
+      "ready": "送信準備完了",
+      "dialogTitle": "アプローチメール",
+      "dialogDescription": "あなたの履歴書と求人内容をもとに生成された、パーソナライズされたアプローチメールです。",
+      "subject": "件名",
+      "subjectPlaceholder": "メールの件名",
+      "subjectCopied": "件名をクリップボードにコピーしました",
+      "bodyPlaceholder": "メール本文",
+      "edit": "編集",
+      "saveChanges": "変更を保存",
+      "cancel": "キャンセル",
+      "close": "閉じる",
+      "copyToClipboard": "クリップボードにコピー",
+      "copySubject": "件名をコピー",
+      "copied": "コピーしました",
+      "copyFailed": "クリップボードにコピーできませんでした。",
+      "displayFailed": "メールを表示できませんでした。もう一度お試しください。"
+    },
+    "errors": {
+      "noResume": "まず履歴書を選択してください。",
+      "noJobDescription": "続行するには求人内容を追加してください。",
+      "generic": "問題が発生しました。もう一度お試しください。"
+    }
+  },
+  "Builder": {
+    "title": "履歴書ビルダー",
+    "subtitle": "AIの力で、目を引く履歴書を作成しましょう。",
+    "selectTemplateWarning": "作成を始める前にテンプレートを選択してください。",
+    "sections": {
+      "personal": "基本情報",
+      "summary": "概要",
+      "skills": "スキル",
+      "education": "学歴",
+      "experience": "職歴",
+      "projects": "プロジェクト",
+      "extra": "追加情報"
+    },
+    "downloadPdf": {
+      "export": "PDFをエクスポート",
+      "failed": "PDFの生成に失敗しました。もう一度お試しください。",
+      "selectTemplate": "まずテンプレートを選択してください。"
+    },
+    "resumeControl": {
+      "title": "履歴書ビルダー",
+      "subtitle": "AIの力で、目を引く履歴書を作成しましょう。",
+      "customize": "カスタマイズ",
+      "edit": "編集",
+      "mockInterview": "模擬面接",
+      "parseResume": "履歴書をインポート",
+      "parsing": "インポートしています...",
+      "parseSuccess": "履歴書を正常にインポートしました!",
+      "parseFailed": "履歴書を読み取れませんでした。別のファイルでお試しください。",
+      "parseTooltip": "PDFの履歴書をアップロードすると、AIが自動で情報を入力します。",
+      "save": "保存",
+      "saveTooltip": "変更を保存する（Ctrl+S）"
+    }
+  },
+  "TemplatesPage": {
+    "title": "テンプレートを選択",
+    "description": "プロがデザインした、ATSに最適化されたテンプレートのコレクションから、あなたに最も合うものをお選びください。",
+    "useTemplate": "このテンプレートを使用",
+    "errors": {
+      "generic": "問題が発生しました。もう一度お試しください。"
+    }
+  },
+  "TemplateSelectionDialog": {
+    "title": "履歴書を作成しましょう",
+    "description": "どのように始めますか?",
+    "cancel": "キャンセル",
+    "scratch": {
+      "title": "ゼロから始める",
+      "description": "空白の履歴書から始めて、ステップごとに情報を入力していきます。"
+    },
+    "upload": {
+      "title": "履歴書をアップロード",
+      "description": "既存の履歴書をアップロードすると、AIが自動で情報を入力します。"
+    },
+    "loading": {
+      "description": "通常は数秒で完了します。処理中はそのままお待ちください。",
+      "steps": {
+        "0": "履歴書を読み取っています...",
+        "1": "職務経歴を抽出しています...",
+        "2": "情報を整理しています...",
+        "3": "もう少しです..."
+      }
+    }
+  },
+  "TemplateFormat": {
+    "reset": "リセット",
+    "sectionOrder": {
+      "title": "セクションの並び順"
+    },
+    "sections": {
+      "personal": "基本情報",
+      "summary": "概要",
+      "skills": "スキル",
+      "education": "学歴",
+      "certifications": "資格",
+      "languages": "語学",
+      "experience": "職歴",
+      "projects": "プロジェクト"
+    },
+    "typography": "タイポグラフィ",
+    "layout": "レイアウト",
+    "fontFamily": "フォントファミリー",
+    "selectFont": "フォントを選択",
+    "fontSize": "フォントサイズ",
+    "titleSize": "タイトルサイズ",
+    "sectionTitleSize": "セクションタイトルサイズ",
+    "subtitleSize": "サブタイトルサイズ",
+    "lineHeight": "行の高さ",
+    "letterSpacing": "文字間隔",
+    "fontWeight": "フォントの太さ",
+    "selectFontWeight": "フォントの太さを選択",
+    "sectionSpacing": "セクション間隔",
+    "pageMargin": "ページ余白",
+    "accentColor": "アクセントカラー",
+    "fontWeights": {
+      "normal": "標準",
+      "medium": "ミディアム",
+      "semibold": "セミボールド",
+      "bold": "ボールド"
+    },
+    "colors": {
+      "blue": "ブルー",
+      "cyan": "シアン",
+      "teal": "ティール",
+      "emerald": "エメラルド",
+      "green": "グリーン",
+      "lime": "ライム",
+      "yellow": "イエロー",
+      "amber": "アンバー",
+      "orange": "オレンジ",
+      "red": "レッド",
+      "rose": "ローズ",
+      "pink": "ピンク",
+      "fuchsia": "フクシア",
+      "purple": "パープル",
+      "violet": "バイオレット",
+      "indigo": "インディゴ",
+      "navy": "ネイビー",
+      "slate": "スレート",
+      "black": "ブラック"
+    }
+  },
+  "Interview": {
+    "dialog": {
+      "title": "AI模擬面接",
+      "states": {
+        "setup": "面接を設定し、準備ができたら開始してください。",
+        "connecting": "AI面接官に接続しています...",
+        "active": "面接が進行中です。声に出して、自然に答えてください。",
+        "evaluating": "あなたの回答を分析し、フィードバックを準備しています...",
+        "result": "結果はこちらです。以下のフィードバックをご確認ください。",
+        "error": "問題が発生しました。もう一度お試しください。"
+      },
+      "endTitle": "面接を終了しますか?",
+      "endDescription": "面接はまだ進行中です。今ここで退出すると、セッションは終了し、保存されません。",
+      "continue": "続ける",
+      "end": "面接を終了"
+    },
+    "setup": {
+      "jobDescription": "求人内容",
+      "jobDescriptionPlaceholder": "準備している職種の求人内容を貼り付けてください...",
+      "jobDescriptionHelp": "この職種に合わせて面接の質問を調整します。",
+      "interviewType": "面接の種類",
+      "types": {
+        "all": {
+          "label": "ミックス",
+          "description": "両方のタイプを組み合わせ"
+        },
+        "behavioral": {
+          "label": "行動面接",
+          "description": "ソフトスキルと経験"
+        },
+        "technical": {
+          "label": "技術面接",
+          "description": "職種特有のスキル"
+        }
+      },
+      "questions": "質問数",
+      "speed": "速度",
+      "speedTooltip": "AI面接官が話す速さを調整します。",
+      "slow": "遅い",
+      "fast": "速い",
+      "language": "言語",
+      "selectLanguage": "言語を選択",
+      "languages": {
+        "English": "英語",
+        "Vietnamese": "ベトナム語",
+        "Japanese": "日本語",
+        "Korean": "韓国語",
+        "Chinese": "中国語（標準）",
+        "French": "フランス語",
+        "German": "ドイツ語",
+        "Spanish": "スペイン語",
+        "Portuguese": "ポルトガル語",
+        "Thai": "タイ語",
+        "Indonesian": "インドネシア語",
+        "Hindi": "ヒンディー語"
+      },
+      "voice": "音声",
+      "selectVoice": "音声を選択",
+      "voices": {
+        "Zephyr": "Zephyr — 明るい",
+        "Puck": "Puck — 陽気な",
+        "Charon": "Charon — 説明的な",
+        "Kore": "Kore — 力強い",
+        "Fenrir": "Fenrir — 活発な",
+        "Leda": "Leda — 若々しい",
+        "Orus": "Orus — 力強い"
+      },
+      "start": "面接を開始",
+      "starting": "開始しています...",
+      "savingResume": "履歴書を保存しています...",
+      "tryAgain": "もう一度お試しください"
+    },
+    "active": {
+      "aiSpeaking": "面接官が話しています",
+      "listening": "聞き取り中...",
+      "muted": "マイクがミュートされています",
+      "mute": "ミュート",
+      "unmute": "ミュート解除",
+      "progress": "進捗",
+      "questionProgress": "質問 {current} / {total}",
+      "stopInterview": "面接を終了",
+      "stopTitle": "面接を途中で終了しますか?",
+      "stopDescription": "面接を中止し、ここまでの回答を評価します。その後、このセッションを続けることはできません。",
+      "continue": "続ける",
+      "stopAndEvaluate": "終了して評価"
+    },
+    "loading": {
+      "title": "もう少しです",
+      "connecting": "面接官に接続しています...",
+      "evaluating": "あなたのパフォーマンスを評価しています..."
+    },
+    "result": {
+      "score": {
+        "excellent": "非常に良い",
+        "good": "良い",
+        "fair": "まずまず",
+        "needsImprovement": "改善の余地あり"
+      },
+      "verdict": {
+        "PASS": "合格",
+        "BORDERLINE": "ボーダーライン",
+        "FAIL": "不合格"
+      },
+      "evaluationCriteria": "評価基準",
+      "criteria": {
+        "technicalKnowledge": "技術的知識",
+        "communicationSkills": "コミュニケーション能力",
+        "problemSolving": "問題解決力",
+        "relevanceToRole": "職種との関連性",
+        "interviewConduct": "面接での態度"
+      },
+      "perQuestionFeedback": "質問ごとのフィードバック",
+      "suggestion": "提案",
+      "strengths": "強み",
+      "noStrengths": "特筆すべき強みは見つかりませんでした。",
+      "areasForImprovement": "改善すべき点",
+      "noImprovements": "改善すべき点は見つかりませんでした。",
+      "interviewAgain": "もう一度練習"
+    }
+  },
+  "BuilderForms": {
+    "actions": {
+      "add": "追加"
+    },
+    "fields": {
+      "startDate": "開始日",
+      "date": "日付",
+      "present": "現在"
+    },
+    "personal": {
+      "title": "基本情報",
+      "subtitle": "あなたが誰で、どのように連絡できるかを教えてください",
+      "basicDetails": "基本詳細",
+      "contactInformation": "連絡先情報",
+      "nameLabel": "氏名",
+      "headlineLabel": "プロフェッショナルな見出し",
+      "emptyTitle": "連絡先情報がまだありません",
+      "emptyDescription": "採用担当者が連絡できるよう、メールアドレス、電話番号、またはリンクを追加してください。",
+      "placeholders": {
+        "name": "例: 山田 花子",
+        "headline": "例: シニアプロダクトデザイナー",
+        "contactLabel": "ラベル",
+        "contactValue": "値"
+      }
+    },
+    "summary": {
+      "title": "職務概要",
+      "subtitle": "あなたの経験と目標を端的に伝える短いアピール文を書きましょう",
+      "placeholder": "あなたの経歴、主な強み、そして職務にもたらせる価値をまとめてください...",
+      "characters": "{count, plural, one {# 文字} other {# 文字}}",
+      "proTipLabel": "ワンポイントアドバイス:",
+      "proTip": "3〜5文にまとめ、最も誇れる実績を冒頭に書きましょう。"
+    },
+    "experience": {
+      "title": "職務経歴",
+      "subtitle": "あなたの役職と生み出した成果をアピールしましょう",
+      "history": "職務経歴",
+      "add": "職歴を追加",
+      "endDate": "終了日",
+      "descriptionAchievements": "説明と実績",
+      "emptyTitle": "職務経歴がまだありません",
+      "emptyDescription": "役職を追加して、あなたのキャリアの経歴と実績を際立たせましょう。",
+      "placeholders": {
+        "company": "会社名",
+        "position": "役職名"
+      },
+      "validation": {
+        "companyRequired": "会社名は必須です",
+        "positionRequired": "役職名は必須です"
+      }
+    },
+    "education": {
+      "title": "学歴",
+      "subtitle": "学位、学校、専攻分野を記載しましょう",
+      "history": "学歴",
+      "add": "学歴を追加",
+      "endDate": "終了日",
+      "customDegree": "学位を自由入力で追加",
+      "emptyTitle": "学歴がまだ追加されていません",
+      "emptyDescription": "学校や学位を追加して、プロフィールを充実させましょう。",
+      "placeholders": {
+        "school": "学校または大学",
+        "degree": "学位を選択",
+        "major": "専攻分野"
+      },
+      "validation": {
+        "schoolRequired": "学校名は必須です",
+        "degreeRequired": "学位は必須です"
+      },
+      "degrees": {
+        "highSchool": "高等学校卒業",
+        "ged": "GED",
+        "associateArts": "準学士（文学）",
+        "associateScience": "準学士（理学）",
+        "associateAppliedScience": "準学士（応用科学）",
+        "bachelorArts": "学士（文学）",
+        "bachelorScience": "学士（理学）",
+        "bba": "BBA",
+        "masterArts": "修士（文学）",
+        "masterScience": "修士（理学）",
+        "mba": "MBA",
+        "jd": "J.D.",
+        "md": "M.D.",
+        "phd": "Ph.D",
+        "noDegree": "学位なし"
+      }
+    },
+    "skills": {
+      "title": "スキル",
+      "subtitle": "あなたを際立たせる能力をアピールしましょう",
+      "list": "スキル一覧",
+      "add": "スキルを追加",
+      "emptyTitle": "スキルがまだ追加されていません",
+      "emptyDescription": "主なスキルとその習熟度を追加しましょう。",
+      "placeholders": {
+        "name": "スキル名",
+        "level": "習熟度"
+      }
+    },
+    "projects": {
+      "title": "プロジェクト",
+      "subtitle": "最も誇れる仕事をアピールしましょう",
+      "list": "プロジェクト一覧",
+      "add": "プロジェクトを追加",
+      "description": "説明",
+      "responsibilities": "担当業務",
+      "emptyTitle": "プロジェクトがまだ追加されていません",
+      "emptyDescription": "プロジェクトを追加して、あなたの実践的な経験を示しましょう。",
+      "placeholders": {
+        "name": "プロジェクト名",
+        "subtitle": "サブタイトルまたはキャッチコピー",
+        "position": "あなたの役割",
+        "domain": "分野または業界",
+        "technologies": "使用技術",
+        "demo": "デモまたは公開URL"
+      },
+      "validation": {
+        "nameRequired": "プロジェクト名は必須です"
+      }
+    },
+    "certifications": {
+      "title": "資格",
+      "subtitle": "あなたの専門性を証明する資格を追加しましょう",
+      "list": "資格一覧",
+      "add": "資格を追加",
+      "emptyTitle": "資格がまだ追加されていません",
+      "emptyDescription": "資格を追加して、あなたの能力をアピールしましょう。",
+      "placeholders": {
+        "name": "資格名",
+        "issuer": "発行団体"
+      },
+      "validation": {
+        "nameRequired": "資格名は必須です",
+        "issuerRequired": "発行団体は必須です"
+      }
+    },
+    "languages": {
+      "title": "語学",
+      "subtitle": "話せる言語とその習熟度を記載しましょう",
+      "list": "語学一覧",
+      "add": "言語を追加",
+      "emptyTitle": "言語がまだ追加されていません",
+      "emptyDescription": "話せる言語とその習熟度を追加しましょう。",
+      "placeholders": {
+        "name": "言語",
+        "level": "習熟度を選択"
+      },
+      "validation": {
+        "nameRequired": "言語は必須です",
+        "levelRequired": "習熟度は必須です"
+      },
+      "levels": {
+        "elementary": "初級",
+        "limitedWorking": "限定的な業務レベル",
+        "professionalWorking": "業務レベル",
+        "fullProfessional": "高度な業務レベル",
+        "nativeOrBilingual": "ネイティブまたはバイリンガル"
+      }
+    },
+    "extra": {
+      "finished": "完了"
+    }
   }
 }

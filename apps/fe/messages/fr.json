@@ -1,4 +1,10 @@
 {
+  "Common": {
+    "scrollToTop": "Retour en haut",
+    "back": "Retour",
+    "next": "Suivant",
+    "saving": "Enregistrement..."
+  },
   "Nav": {
     "home": "Accueil",
     "templates": "Modèles",
@@ -65,7 +71,7 @@
       "0": "Professionnels",
       "1": "Relations",
       "2": "Offres d'emploi",
-      "3": "Applications"
+      "3": "Candidatures"
     },
     "scrollHint": "Faites défiler pour explorer"
   },
@@ -235,5 +241,569 @@
     "title": "Prêt à décrocher l’emploi de vos rêves ?",
     "description": "Rejoignez plus de 10 000 professionnels qui ont déjà transformé leur carrière grâce à notre boîte à outils basée sur l'IA.",
     "button": "Commencez gratuitement"
+  },
+  "Auth": {
+    "continueWith": "Ou continuer avec",
+    "errors": {
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "fields": {
+      "confirmPassword": "Confirmer le mot de passe",
+      "email": "E-mail",
+      "password": "Mot de passe"
+    },
+    "layout": {
+      "and": "et",
+      "formSubtitle": "Créez votre CV remarquable en quelques minutes",
+      "formTitle": "Bienvenue sur CVCraft",
+      "heroDescription": "Créez des CV époustouflants et compatibles ATS grâce à l'IA. Décrochez plus d'entretiens et accélérez votre carrière en quelques minutes.",
+      "heroLine1": "Créez un CV qui",
+      "heroLine2": "vous fait embaucher.",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "termsPrefix": "En continuant, vous acceptez nos",
+      "features": {
+        "0": "Modèles professionnels, prêts pour les recruteurs",
+        "1": "Suggestions de contenu propulsées par l'IA",
+        "2": "Adaptés à chaque offre d'emploi",
+        "3": "Prêts en quelques minutes, pas en quelques heures"
+      },
+      "stats": {
+        "0": {
+          "value": "50K+",
+          "label": "CV créés"
+        },
+        "1": {
+          "value": "10K+",
+          "label": "Utilisateurs embauchés"
+        },
+        "2": {
+          "value": "95%",
+          "label": "Taux de réussite"
+        }
+      }
+    },
+    "placeholders": {
+      "confirmPassword": "Saisissez à nouveau votre mot de passe",
+      "createPassword": "Créez un mot de passe",
+      "email": "you@example.com",
+      "password": "Saisissez votre mot de passe"
+    },
+    "signIn": {
+      "invalidCredentials": "E-mail ou mot de passe invalide. Veuillez réessayer.",
+      "loading": "Connexion en cours...",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "signUpLink": "S'inscrire",
+      "submit": "Se connecter",
+      "success": "Connexion réussie. Bon retour parmi nous !"
+    },
+    "signUp": {
+      "hasAccount": "Vous avez déjà un compte ?",
+      "loading": "Création du compte...",
+      "signInLink": "Se connecter",
+      "submit": "Créer un compte"
+    },
+    "sso": {
+      "almostThere": "Presque terminé, connexion en cours..."
+    },
+    "validation": {
+      "codeIncomplete": "Veuillez saisir les 6 chiffres.",
+      "codeSixDigits": "Le code doit contenir exactement 6 chiffres.",
+      "confirmPasswordRequired": "Veuillez confirmer votre mot de passe.",
+      "emailInvalid": "Veuillez saisir une adresse e-mail valide.",
+      "emailRequired": "L'e-mail est obligatoire.",
+      "passwordMax": "Le mot de passe ne doit pas dépasser 50 caractères.",
+      "passwordMin": "Le mot de passe doit comporter au moins 8 caractères.",
+      "passwordRequired": "Le mot de passe est obligatoire.",
+      "passwordsDoNotMatch": "Les mots de passe ne correspondent pas."
+    },
+    "verify": {
+      "didNotReceive": "Vous n'avez pas reçu le code ?",
+      "emailFallback": "votre adresse e-mail",
+      "incomplete": "La vérification n'a pas pu être effectuée. Veuillez réessayer.",
+      "resendCode": "Renvoyer le code",
+      "resendFailed": "Échec de l'envoi du code. Veuillez réessayer.",
+      "resendIn": "Renvoyer dans {seconds}s",
+      "resendSuccess": "Un nouveau code a été envoyé à votre adresse e-mail.",
+      "sentTo": "Nous avons envoyé un code de vérification à 6 chiffres à",
+      "submit": "Vérifier",
+      "success": "Votre compte a été vérifié. Bienvenue sur CVCraft !",
+      "title": "Vérifiez votre e-mail",
+      "verifying": "Vérification en cours..."
+    }
+  },
+  "Matching": {
+    "trigger": "Comparer à l'offre",
+    "title": "Analyse de correspondance avec l'offre",
+    "description": {
+      "form": "Collez une offre d'emploi ou importez-la au format PDF, et nous verrons dans quelle mesure votre CV correspond.",
+      "result": "Voici comment votre CV se positionne par rapport à l'offre d'emploi."
+    },
+    "form": {
+      "textTab": "Coller le texte",
+      "fileTab": "Importer un fichier",
+      "jdPlaceholder": "Collez l'offre d'emploi ici...",
+      "uploadFile": "Cliquez pour importer une offre d'emploi",
+      "changeFile": "Cliquez pour choisir un autre fichier",
+      "fileHint": "PDF jusqu'à 10MB",
+      "analyze": "Analyser la correspondance"
+    },
+    "loading": {
+      "title": "Analyse de votre correspondance",
+      "description": "Comparaison de votre CV avec l'offre d'emploi..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Excellente correspondance",
+        "good": "Bonne correspondance",
+        "fair": "Correspondance correcte",
+        "needsImprovement": "À améliorer"
+      },
+      "tabs": {
+        "breakdown": "Détail",
+        "analysis": "Analyse",
+        "improve": "Améliorer"
+      },
+      "weight": "Pondération {weight}%",
+      "strengths": "Points forts",
+      "noStrengths": "Aucun point fort notable identifié pour l'instant.",
+      "missingKeywords": "Mots-clés manquants",
+      "invalidJobDescription": "Impossible de lire une offre d'emploi valide.",
+      "suggestionsToImprove": "Suggestions d'amélioration",
+      "noSuggestions": "Aucune suggestion — votre CV correspond parfaitement.",
+      "analyzeAnother": "Analyser une autre offre"
+    },
+    "email": {
+      "view": "Voir l'e-mail",
+      "generate": "Générer un e-mail de prospection",
+      "generating": "Génération en cours...",
+      "generateFailed": "Impossible de générer l'e-mail. Veuillez réessayer.",
+      "regenerate": "Régénérer",
+      "ready": "Prêt à envoyer",
+      "dialogTitle": "Votre e-mail de prospection",
+      "dialogDescription": "Un e-mail de prospection personnalisé généré à partir de votre CV et de l'offre d'emploi.",
+      "subject": "Objet",
+      "subjectPlaceholder": "Objet de l'e-mail",
+      "subjectCopied": "Objet copié dans le presse-papiers",
+      "bodyPlaceholder": "Corps de l'e-mail",
+      "edit": "Modifier",
+      "saveChanges": "Enregistrer les modifications",
+      "cancel": "Annuler",
+      "close": "Fermer",
+      "copyToClipboard": "Copier dans le presse-papiers",
+      "copySubject": "Copier l'objet",
+      "copied": "Copié",
+      "copyFailed": "Impossible de copier dans le presse-papiers.",
+      "displayFailed": "Impossible d'afficher l'e-mail. Veuillez réessayer."
+    },
+    "errors": {
+      "noResume": "Veuillez d'abord sélectionner un CV.",
+      "noJobDescription": "Veuillez ajouter une offre d'emploi pour continuer.",
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    }
+  },
+  "Builder": {
+    "title": "Créateur de CV",
+    "subtitle": "Créez un CV remarquable grâce à l'IA.",
+    "selectTemplateWarning": "Veuillez choisir un modèle avant de commencer la création.",
+    "sections": {
+      "personal": "Personnel",
+      "summary": "Résumé",
+      "skills": "Compétences",
+      "education": "Formation",
+      "experience": "Expérience",
+      "projects": "Projets",
+      "extra": "Informations complémentaires"
+    },
+    "downloadPdf": {
+      "export": "Exporter en PDF",
+      "failed": "Échec de la génération du PDF. Veuillez réessayer.",
+      "selectTemplate": "Veuillez d'abord sélectionner un modèle."
+    },
+    "resumeControl": {
+      "title": "Créateur de CV",
+      "subtitle": "Créez un CV remarquable grâce à l'IA.",
+      "customize": "Personnaliser",
+      "edit": "Modifier",
+      "mockInterview": "Entretien blanc",
+      "parseResume": "Importer un CV",
+      "parsing": "Importation en cours...",
+      "parseSuccess": "CV importé avec succès !",
+      "parseFailed": "Nous n'avons pas pu lire votre CV. Veuillez essayer un autre fichier.",
+      "parseTooltip": "Importez un CV au format PDF et laissez l'IA remplir automatiquement vos informations.",
+      "save": "Enregistrer",
+      "saveTooltip": "Enregistrez vos modifications (Ctrl+S)"
+    }
+  },
+  "TemplatesPage": {
+    "title": "Choisissez votre modèle",
+    "description": "Parcourez notre collection de modèles au design professionnel et compatibles ATS, puis choisissez celui qui vous correspond le mieux.",
+    "useTemplate": "Utiliser ce modèle",
+    "errors": {
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    }
+  },
+  "TemplateSelectionDialog": {
+    "title": "Créons votre CV",
+    "description": "Comment souhaitez-vous commencer ?",
+    "cancel": "Annuler",
+    "scratch": {
+      "title": "Partir de zéro",
+      "description": "Commencez avec un CV vierge et remplissez vos informations étape par étape."
+    },
+    "upload": {
+      "title": "Importer un CV",
+      "description": "Importez un CV existant et laissez l'IA remplir automatiquement vos informations."
+    },
+    "loading": {
+      "description": "Cela ne prend généralement que quelques secondes. Patientez pendant que nous opérons notre magie.",
+      "steps": {
+        "0": "Lecture de votre CV...",
+        "1": "Extraction de votre expérience...",
+        "2": "Organisation de vos informations...",
+        "3": "Presque terminé..."
+      }
+    }
+  },
+  "TemplateFormat": {
+    "reset": "Réinitialiser",
+    "sectionOrder": {
+      "title": "Ordre des sections"
+    },
+    "sections": {
+      "personal": "Personnel",
+      "summary": "Résumé",
+      "skills": "Compétences",
+      "education": "Formation",
+      "certifications": "Certifications",
+      "languages": "Langues",
+      "experience": "Expérience",
+      "projects": "Projets"
+    },
+    "typography": "Typographie",
+    "layout": "Mise en page",
+    "fontFamily": "Police de caractères",
+    "selectFont": "Sélectionner une police",
+    "fontSize": "Taille de police",
+    "titleSize": "Taille du titre",
+    "sectionTitleSize": "Taille des titres de section",
+    "subtitleSize": "Taille du sous-titre",
+    "lineHeight": "Interligne",
+    "letterSpacing": "Espacement des lettres",
+    "fontWeight": "Graisse de la police",
+    "selectFontWeight": "Sélectionner la graisse",
+    "sectionSpacing": "Espacement des sections",
+    "pageMargin": "Marge de page",
+    "accentColor": "Couleur d'accentuation",
+    "fontWeights": {
+      "normal": "Normal",
+      "medium": "Moyen",
+      "semibold": "Demi-gras",
+      "bold": "Gras"
+    },
+    "colors": {
+      "blue": "Bleu",
+      "cyan": "Cyan",
+      "teal": "Sarcelle",
+      "emerald": "Émeraude",
+      "green": "Vert",
+      "lime": "Citron vert",
+      "yellow": "Jaune",
+      "amber": "Ambre",
+      "orange": "Orange",
+      "red": "Rouge",
+      "rose": "Rose",
+      "pink": "Rose vif",
+      "fuchsia": "Fuchsia",
+      "purple": "Pourpre",
+      "violet": "Violet",
+      "indigo": "Indigo",
+      "navy": "Bleu marine",
+      "slate": "Ardoise",
+      "black": "Noir"
+    }
+  },
+  "Interview": {
+    "dialog": {
+      "title": "Entretien blanc avec l'IA",
+      "states": {
+        "setup": "Configurez votre entretien et commencez lorsque vous êtes prêt.",
+        "connecting": "Connexion à votre intervieweur IA...",
+        "active": "Entretien en cours. Répondez à voix haute et parlez naturellement.",
+        "evaluating": "Analyse de vos réponses et préparation des commentaires...",
+        "result": "Voici vos résultats. Consultez vos commentaires ci-dessous.",
+        "error": "Une erreur s'est produite. Veuillez réessayer."
+      },
+      "endTitle": "Terminer l'entretien ?",
+      "endDescription": "Votre entretien est toujours en cours. Si vous quittez maintenant, votre session prendra fin et ne sera pas enregistrée.",
+      "continue": "Continuer",
+      "end": "Terminer l'entretien"
+    },
+    "setup": {
+      "jobDescription": "Offre d'emploi",
+      "jobDescriptionPlaceholder": "Collez l'offre d'emploi du poste pour lequel vous vous préparez...",
+      "jobDescriptionHelp": "Nous adapterons les questions d'entretien à ce poste.",
+      "interviewType": "Type d'entretien",
+      "types": {
+        "all": {
+          "label": "Mixte",
+          "description": "Un mélange des deux types"
+        },
+        "behavioral": {
+          "label": "Comportemental",
+          "description": "Compétences relationnelles et expérience"
+        },
+        "technical": {
+          "label": "Technique",
+          "description": "Compétences propres au poste"
+        }
+      },
+      "questions": "Questions",
+      "speed": "Vitesse",
+      "speedTooltip": "Réglez la vitesse à laquelle l'intervieweur IA parle.",
+      "slow": "Lent",
+      "fast": "Rapide",
+      "language": "Langue",
+      "selectLanguage": "Sélectionner une langue",
+      "languages": {
+        "English": "Anglais",
+        "Vietnamese": "Vietnamien",
+        "Japanese": "Japonais",
+        "Korean": "Coréen",
+        "Chinese": "Chinois (mandarin)",
+        "French": "Français",
+        "German": "Allemand",
+        "Spanish": "Espagnol",
+        "Portuguese": "Portugais",
+        "Thai": "Thaïlandais",
+        "Indonesian": "Indonésien",
+        "Hindi": "Hindi"
+      },
+      "voice": "Voix",
+      "selectVoice": "Sélectionner une voix",
+      "voices": {
+        "Zephyr": "Zephyr — Lumineuse",
+        "Puck": "Puck — Enjouée",
+        "Charon": "Charon — Informative",
+        "Kore": "Kore — Ferme",
+        "Fenrir": "Fenrir — Exaltée",
+        "Leda": "Leda — Juvénile",
+        "Orus": "Orus — Ferme"
+      },
+      "start": "Démarrer l'entretien",
+      "starting": "Démarrage en cours...",
+      "savingResume": "Enregistrement du CV...",
+      "tryAgain": "Réessayer"
+    },
+    "active": {
+      "aiSpeaking": "L'intervieweur parle",
+      "listening": "Écoute en cours...",
+      "muted": "Microphone désactivé",
+      "mute": "Désactiver le micro",
+      "unmute": "Activer le micro",
+      "progress": "Progression",
+      "questionProgress": "Question {current} sur {total}",
+      "stopInterview": "Terminer l'entretien",
+      "stopTitle": "Terminer l'entretien plus tôt ?",
+      "stopDescription": "Nous arrêterons l'entretien et évaluerons vos réponses jusqu'à présent. Vous ne pourrez pas poursuivre cette session par la suite.",
+      "continue": "Continuer",
+      "stopAndEvaluate": "Terminer et évaluer"
+    },
+    "loading": {
+      "title": "Presque terminé",
+      "connecting": "Connexion à votre intervieweur...",
+      "evaluating": "Évaluation de votre performance..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Excellent",
+        "good": "Bien",
+        "fair": "Correct",
+        "needsImprovement": "À améliorer"
+      },
+      "verdict": {
+        "PASS": "Réussi",
+        "BORDERLINE": "Limite",
+        "FAIL": "Échoué"
+      },
+      "evaluationCriteria": "Critères d'évaluation",
+      "criteria": {
+        "technicalKnowledge": "Connaissances techniques",
+        "communicationSkills": "Compétences en communication",
+        "problemSolving": "Résolution de problèmes",
+        "relevanceToRole": "Pertinence par rapport au poste",
+        "interviewConduct": "Comportement en entretien"
+      },
+      "perQuestionFeedback": "Commentaires par question",
+      "suggestion": "Suggestion",
+      "strengths": "Points forts",
+      "noStrengths": "Aucun point fort notable identifié.",
+      "areasForImprovement": "Points à améliorer",
+      "noImprovements": "Aucun point à améliorer identifié.",
+      "interviewAgain": "S'entraîner à nouveau"
+    }
+  },
+  "BuilderForms": {
+    "actions": {
+      "add": "Ajouter"
+    },
+    "fields": {
+      "startDate": "Date de début",
+      "date": "Date",
+      "present": "Présent"
+    },
+    "personal": {
+      "title": "Informations personnelles",
+      "subtitle": "Dites-nous qui vous êtes et comment vous joindre",
+      "basicDetails": "Informations de base",
+      "contactInformation": "Coordonnées",
+      "nameLabel": "Nom complet",
+      "headlineLabel": "Titre professionnel",
+      "emptyTitle": "Aucune coordonnée pour l'instant",
+      "emptyDescription": "Ajoutez un e-mail, un numéro de téléphone ou des liens pour que les recruteurs puissent vous joindre.",
+      "placeholders": {
+        "name": "ex. Jeanne Dupont",
+        "headline": "ex. Designer produit senior",
+        "contactLabel": "Libellé",
+        "contactValue": "Valeur"
+      }
+    },
+    "summary": {
+      "title": "Résumé professionnel",
+      "subtitle": "Rédigez un court argumentaire qui résume votre expérience et vos objectifs",
+      "placeholder": "Résumez votre parcours, vos principaux atouts et ce que vous apportez à un poste...",
+      "characters": "{count, plural, one {# caractère} other {# caractères}}",
+      "proTipLabel": "Astuce de pro :",
+      "proTip": "Limitez-vous à 3 à 5 phrases et commencez par vos réalisations les plus marquantes."
+    },
+    "experience": {
+      "title": "Expérience professionnelle",
+      "subtitle": "Mettez en valeur vos postes et l'impact que vous avez eu",
+      "history": "Historique d'expérience",
+      "add": "Ajouter une expérience",
+      "endDate": "Date de fin",
+      "descriptionAchievements": "Description et réalisations",
+      "emptyTitle": "Aucune expérience professionnelle pour l'instant",
+      "emptyDescription": "Ajoutez vos postes pour mettre en avant votre parcours professionnel et vos réalisations.",
+      "placeholders": {
+        "company": "Nom de l'entreprise",
+        "position": "Intitulé du poste"
+      },
+      "validation": {
+        "companyRequired": "Le nom de l'entreprise est obligatoire",
+        "positionRequired": "L'intitulé du poste est obligatoire"
+      }
+    },
+    "education": {
+      "title": "Formation",
+      "subtitle": "Indiquez vos diplômes, vos établissements et vos domaines d'études",
+      "history": "Historique de formation",
+      "add": "Ajouter une formation",
+      "endDate": "Date de fin",
+      "customDegree": "Ajouter un diplôme personnalisé",
+      "emptyTitle": "Aucune formation ajoutée pour l'instant",
+      "emptyDescription": "Ajoutez vos établissements et vos diplômes pour compléter votre profil.",
+      "placeholders": {
+        "school": "École ou université",
+        "degree": "Sélectionnez un diplôme",
+        "major": "Domaine d'études"
+      },
+      "validation": {
+        "schoolRequired": "Le nom de l'établissement est obligatoire",
+        "degreeRequired": "Le diplôme est obligatoire"
+      },
+      "degrees": {
+        "highSchool": "Diplôme de fin d'études secondaires",
+        "ged": "GED",
+        "associateArts": "Diplôme d'associé en arts",
+        "associateScience": "Diplôme d'associé en sciences",
+        "associateAppliedScience": "Diplôme d'associé en sciences appliquées",
+        "bachelorArts": "Licence en arts",
+        "bachelorScience": "Licence en sciences",
+        "bba": "BBA",
+        "masterArts": "Master en arts",
+        "masterScience": "Master en sciences",
+        "mba": "MBA",
+        "jd": "J.D.",
+        "md": "M.D.",
+        "phd": "Ph.D",
+        "noDegree": "Aucun diplôme"
+      }
+    },
+    "skills": {
+      "title": "Compétences",
+      "subtitle": "Mettez en avant les aptitudes qui vous distinguent",
+      "list": "Liste des compétences",
+      "add": "Ajouter une compétence",
+      "emptyTitle": "Aucune compétence ajoutée pour l'instant",
+      "emptyDescription": "Ajoutez vos compétences clés ainsi que votre niveau de maîtrise.",
+      "placeholders": {
+        "name": "Nom de la compétence",
+        "level": "Niveau de maîtrise"
+      }
+    },
+    "projects": {
+      "title": "Projets",
+      "subtitle": "Mettez en avant les travaux dont vous êtes le plus fier",
+      "list": "Liste des projets",
+      "add": "Ajouter un projet",
+      "description": "Description",
+      "responsibilities": "Responsabilités",
+      "emptyTitle": "Aucun projet ajouté pour l'instant",
+      "emptyDescription": "Ajoutez des projets pour démontrer votre expérience pratique.",
+      "placeholders": {
+        "name": "Nom du projet",
+        "subtitle": "Sous-titre ou slogan",
+        "position": "Votre rôle",
+        "domain": "Domaine ou secteur",
+        "technologies": "Technologies utilisées",
+        "demo": "URL de démonstration ou en ligne"
+      },
+      "validation": {
+        "nameRequired": "Le nom du projet est obligatoire"
+      }
+    },
+    "certifications": {
+      "title": "Certifications",
+      "subtitle": "Ajoutez des accréditations qui valident votre expertise",
+      "list": "Liste des certifications",
+      "add": "Ajouter une certification",
+      "emptyTitle": "Aucune certification ajoutée pour l'instant",
+      "emptyDescription": "Ajoutez des certifications pour mettre en valeur vos qualifications.",
+      "placeholders": {
+        "name": "Nom de la certification",
+        "issuer": "Organisme émetteur"
+      },
+      "validation": {
+        "nameRequired": "Le nom de la certification est obligatoire",
+        "issuerRequired": "L'organisme émetteur est obligatoire"
+      }
+    },
+    "languages": {
+      "title": "Langues",
+      "subtitle": "Indiquez les langues que vous parlez et votre niveau de maîtrise",
+      "list": "Liste des langues",
+      "add": "Ajouter une langue",
+      "emptyTitle": "Aucune langue ajoutée pour l'instant",
+      "emptyDescription": "Ajoutez les langues que vous parlez et votre niveau de maîtrise.",
+      "placeholders": {
+        "name": "Langue",
+        "level": "Sélectionnez le niveau de maîtrise"
+      },
+      "validation": {
+        "nameRequired": "La langue est obligatoire",
+        "levelRequired": "Le niveau de maîtrise est obligatoire"
+      },
+      "levels": {
+        "elementary": "Élémentaire",
+        "limitedWorking": "Professionnel limité",
+        "professionalWorking": "Professionnel",
+        "fullProfessional": "Professionnel complet",
+        "nativeOrBilingual": "Langue maternelle ou bilingue"
+      }
+    },
+    "extra": {
+      "finished": "Terminer"
+    }
   }
 }

@@ -1,4 +1,10 @@
 {
+  "Common": {
+    "scrollToTop": "Nach oben scrollen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "saving": "Wird gespeichert..."
+  },
   "Nav": {
     "home": "Startseite",
     "templates": "Vorlagen",
@@ -118,7 +124,7 @@
     "description": "Unsere Sammlung leistungsstarker Vorlagen wurde sorgfältig erstellt, um den Standards erstklassiger Unternehmen und Personalvermittlungsagenturen gerecht zu werden.",
     "explore": "Entdecken Sie alle Vorlagen",
     "categories": {
-      "professional": "Professional",
+      "professional": "Professionell",
       "modern": "Modern",
       "creative": "Kreativ",
       "minimal": "Minimal"
@@ -235,5 +241,569 @@
     "title": "Sind Sie bereit, Ihren Traumjob zu bekommen?",
     "description": "Schließen Sie sich über 10.000 Fachleuten an, die ihre Karriere bereits mit unserem KI-gestützten Toolkit verändert haben.",
     "button": "Starten Sie kostenlos durch"
+  },
+  "Auth": {
+    "continueWith": "Oder fortfahren mit",
+    "errors": {
+      "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    },
+    "fields": {
+      "confirmPassword": "Passwort bestätigen",
+      "email": "E-Mail",
+      "password": "Passwort"
+    },
+    "layout": {
+      "and": "und",
+      "formSubtitle": "Erstellen Sie Ihren herausragenden Lebenslauf in wenigen Minuten",
+      "formTitle": "Willkommen bei CVCraft",
+      "heroDescription": "Erstellen Sie beeindruckende, ATS-freundliche Lebensläufe mit Hilfe von KI. Sichern Sie sich mehr Vorstellungsgespräche und beschleunigen Sie Ihre Karriere in wenigen Minuten.",
+      "heroLine1": "Erstellen Sie einen Lebenslauf,",
+      "heroLine2": "der Sie einstellen lässt.",
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen",
+      "termsPrefix": "Indem Sie fortfahren, stimmen Sie unseren",
+      "features": {
+        "0": "Professionelle, recruiter-fertige Vorlagen",
+        "1": "KI-gestützte Inhaltsvorschläge",
+        "2": "Auf jede Stellenbeschreibung zugeschnitten",
+        "3": "In Minuten fertig, nicht in Stunden"
+      },
+      "stats": {
+        "0": {
+          "value": "50K+",
+          "label": "Erstellte Lebensläufe"
+        },
+        "1": {
+          "value": "10K+",
+          "label": "Eingestellte Nutzer"
+        },
+        "2": {
+          "value": "95%",
+          "label": "Erfolgsquote"
+        }
+      }
+    },
+    "placeholders": {
+      "confirmPassword": "Geben Sie Ihr Passwort erneut ein",
+      "createPassword": "Erstellen Sie ein Passwort",
+      "email": "you@example.com",
+      "password": "Geben Sie Ihr Passwort ein"
+    },
+    "signIn": {
+      "invalidCredentials": "Ungültige E-Mail oder ungültiges Passwort. Bitte versuchen Sie es erneut.",
+      "loading": "Anmeldung läuft...",
+      "noAccount": "Sie haben noch kein Konto?",
+      "signUpLink": "Registrieren",
+      "submit": "Anmelden",
+      "success": "Erfolgreich angemeldet. Willkommen zurück!"
+    },
+    "signUp": {
+      "hasAccount": "Sie haben bereits ein Konto?",
+      "loading": "Konto wird erstellt...",
+      "signInLink": "Anmelden",
+      "submit": "Konto erstellen"
+    },
+    "sso": {
+      "almostThere": "Fast geschafft, Sie werden angemeldet..."
+    },
+    "validation": {
+      "codeIncomplete": "Bitte geben Sie alle 6 Ziffern ein.",
+      "codeSixDigits": "Der Code muss genau 6 Ziffern lang sein.",
+      "confirmPasswordRequired": "Bitte bestätigen Sie Ihr Passwort.",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailRequired": "E-Mail ist erforderlich.",
+      "passwordMax": "Das Passwort darf höchstens 50 Zeichen lang sein.",
+      "passwordMin": "Das Passwort muss mindestens 8 Zeichen lang sein.",
+      "passwordRequired": "Passwort ist erforderlich.",
+      "passwordsDoNotMatch": "Die Passwörter stimmen nicht überein."
+    },
+    "verify": {
+      "didNotReceive": "Keinen Code erhalten?",
+      "emailFallback": "Ihre E-Mail-Adresse",
+      "incomplete": "Die Verifizierung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
+      "resendCode": "Code erneut senden",
+      "resendFailed": "Der Code konnte nicht erneut gesendet werden. Bitte versuchen Sie es erneut.",
+      "resendIn": "Erneut senden in {seconds}s",
+      "resendSuccess": "Ein neuer Code wurde an Ihre E-Mail-Adresse gesendet.",
+      "sentTo": "Wir haben einen 6-stelligen Verifizierungscode gesendet an",
+      "submit": "Verifizieren",
+      "success": "Ihr Konto wurde verifiziert. Willkommen bei CVCraft!",
+      "title": "Verifizieren Sie Ihre E-Mail-Adresse",
+      "verifying": "Verifizierung läuft..."
+    }
+  },
+  "Matching": {
+    "trigger": "Mit Stelle abgleichen",
+    "title": "Stellen-Abgleichsanalyse",
+    "description": {
+      "form": "Fügen Sie eine Stellenbeschreibung ein oder laden Sie sie als PDF hoch, und wir prüfen, wie gut Ihr Lebenslauf dazu passt.",
+      "result": "So schneidet Ihr Lebenslauf im Vergleich zur Stellenbeschreibung ab."
+    },
+    "form": {
+      "textTab": "Text einfügen",
+      "fileTab": "Datei hochladen",
+      "jdPlaceholder": "Fügen Sie hier die Stellenbeschreibung ein...",
+      "uploadFile": "Klicken Sie, um eine Stellenbeschreibung hochzuladen",
+      "changeFile": "Klicken Sie, um eine andere Datei auszuwählen",
+      "fileHint": "PDF bis zu 10MB",
+      "analyze": "Übereinstimmung analysieren"
+    },
+    "loading": {
+      "title": "Ihre Übereinstimmung wird analysiert",
+      "description": "Ihr Lebenslauf wird mit der Stellenbeschreibung verglichen..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Ausgezeichnete Übereinstimmung",
+        "good": "Gute Übereinstimmung",
+        "fair": "Mäßige Übereinstimmung",
+        "needsImprovement": "Verbesserungsbedarf"
+      },
+      "tabs": {
+        "breakdown": "Aufschlüsselung",
+        "analysis": "Analyse",
+        "improve": "Verbessern"
+      },
+      "weight": "Gewichtung {weight}%",
+      "strengths": "Stärken",
+      "noStrengths": "Noch keine nennenswerten Stärken erkannt.",
+      "missingKeywords": "Fehlende Schlüsselwörter",
+      "invalidJobDescription": "Es konnte keine gültige Stellenbeschreibung gelesen werden.",
+      "suggestionsToImprove": "Verbesserungsvorschläge",
+      "noSuggestions": "Keine Vorschläge – Ihr Lebenslauf passt hervorragend.",
+      "analyzeAnother": "Weitere analysieren"
+    },
+    "email": {
+      "view": "E-Mail ansehen",
+      "generate": "Anschreiben-E-Mail generieren",
+      "generating": "Wird generiert...",
+      "generateFailed": "Die E-Mail konnte nicht generiert werden. Bitte versuchen Sie es erneut.",
+      "regenerate": "Neu generieren",
+      "ready": "Bereit zum Versenden",
+      "dialogTitle": "Ihre Anschreiben-E-Mail",
+      "dialogDescription": "Eine personalisierte Anschreiben-E-Mail, generiert aus Ihrem Lebenslauf und der Stellenbeschreibung.",
+      "subject": "Betreff",
+      "subjectPlaceholder": "E-Mail-Betreff",
+      "subjectCopied": "Betreff in die Zwischenablage kopiert",
+      "bodyPlaceholder": "E-Mail-Text",
+      "edit": "Bearbeiten",
+      "saveChanges": "Änderungen speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "copyToClipboard": "In die Zwischenablage kopieren",
+      "copySubject": "Betreff kopieren",
+      "copied": "Kopiert",
+      "copyFailed": "Kopieren in die Zwischenablage nicht möglich.",
+      "displayFailed": "Die E-Mail konnte nicht angezeigt werden. Bitte versuchen Sie es erneut."
+    },
+    "errors": {
+      "noResume": "Bitte wählen Sie zuerst einen Lebenslauf aus.",
+      "noJobDescription": "Bitte fügen Sie eine Stellenbeschreibung hinzu, um fortzufahren.",
+      "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "Builder": {
+    "title": "Lebenslauf-Generator",
+    "subtitle": "Erstellen Sie einen herausragenden Lebenslauf mit Hilfe von KI.",
+    "selectTemplateWarning": "Bitte wählen Sie eine Vorlage aus, bevor Sie mit dem Erstellen beginnen.",
+    "sections": {
+      "personal": "Persönlich",
+      "summary": "Zusammenfassung",
+      "skills": "Fähigkeiten",
+      "education": "Ausbildung",
+      "experience": "Berufserfahrung",
+      "projects": "Projekte",
+      "extra": "Zusätzliches"
+    },
+    "downloadPdf": {
+      "export": "PDF exportieren",
+      "failed": "Die PDF konnte nicht generiert werden. Bitte versuchen Sie es erneut.",
+      "selectTemplate": "Bitte wählen Sie zuerst eine Vorlage aus."
+    },
+    "resumeControl": {
+      "title": "Lebenslauf-Generator",
+      "subtitle": "Erstellen Sie einen herausragenden Lebenslauf mit Hilfe von KI.",
+      "customize": "Anpassen",
+      "edit": "Bearbeiten",
+      "mockInterview": "Übungs-Interview",
+      "parseResume": "Lebenslauf importieren",
+      "parsing": "Wird importiert...",
+      "parseSuccess": "Lebenslauf erfolgreich importiert!",
+      "parseFailed": "Wir konnten Ihren Lebenslauf nicht lesen. Bitte versuchen Sie eine andere Datei.",
+      "parseTooltip": "Laden Sie einen PDF-Lebenslauf hoch und lassen Sie die KI Ihre Angaben automatisch ausfüllen.",
+      "save": "Speichern",
+      "saveTooltip": "Speichern Sie Ihre Änderungen (Ctrl+S)"
+    }
+  },
+  "TemplatesPage": {
+    "title": "Wählen Sie Ihre Vorlage",
+    "description": "Durchstöbern Sie unsere Sammlung professionell gestalteter, ATS-freundlicher Vorlagen und wählen Sie die aus, die am besten zu Ihnen passt.",
+    "useTemplate": "Diese Vorlage verwenden",
+    "errors": {
+      "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "TemplateSelectionDialog": {
+    "title": "Lassen Sie uns Ihren Lebenslauf erstellen",
+    "description": "Wie möchten Sie beginnen?",
+    "cancel": "Abbrechen",
+    "scratch": {
+      "title": "Von Grund auf beginnen",
+      "description": "Beginnen Sie mit einem leeren Lebenslauf und füllen Sie Ihre Angaben Schritt für Schritt aus."
+    },
+    "upload": {
+      "title": "Lebenslauf hochladen",
+      "description": "Laden Sie einen vorhandenen Lebenslauf hoch und lassen Sie die KI Ihre Angaben automatisch ausfüllen."
+    },
+    "loading": {
+      "description": "Dies dauert in der Regel nur wenige Sekunden. Bitte haben Sie etwas Geduld, während wir unsere Magie wirken lassen.",
+      "steps": {
+        "0": "Ihr Lebenslauf wird gelesen...",
+        "1": "Ihre Erfahrung wird extrahiert...",
+        "2": "Ihre Angaben werden organisiert...",
+        "3": "Fast geschafft..."
+      }
+    }
+  },
+  "TemplateFormat": {
+    "reset": "Zurücksetzen",
+    "sectionOrder": {
+      "title": "Abschnittsreihenfolge"
+    },
+    "sections": {
+      "personal": "Persönlich",
+      "summary": "Zusammenfassung",
+      "skills": "Fähigkeiten",
+      "education": "Ausbildung",
+      "certifications": "Zertifizierungen",
+      "languages": "Sprachen",
+      "experience": "Berufserfahrung",
+      "projects": "Projekte"
+    },
+    "typography": "Typografie",
+    "layout": "Layout",
+    "fontFamily": "Schriftart",
+    "selectFont": "Schrift auswählen",
+    "fontSize": "Schriftgröße",
+    "titleSize": "Titelgröße",
+    "sectionTitleSize": "Abschnittstitelgröße",
+    "subtitleSize": "Untertitelgröße",
+    "lineHeight": "Zeilenhöhe",
+    "letterSpacing": "Zeichenabstand",
+    "fontWeight": "Schriftstärke",
+    "selectFontWeight": "Schriftstärke auswählen",
+    "sectionSpacing": "Abschnittsabstand",
+    "pageMargin": "Seitenrand",
+    "accentColor": "Akzentfarbe",
+    "fontWeights": {
+      "normal": "Normal",
+      "medium": "Mittel",
+      "semibold": "Halbfett",
+      "bold": "Fett"
+    },
+    "colors": {
+      "blue": "Blau",
+      "cyan": "Cyan",
+      "teal": "Petrol",
+      "emerald": "Smaragd",
+      "green": "Grün",
+      "lime": "Limette",
+      "yellow": "Gelb",
+      "amber": "Bernstein",
+      "orange": "Orange",
+      "red": "Rot",
+      "rose": "Rosé",
+      "pink": "Pink",
+      "fuchsia": "Fuchsia",
+      "purple": "Violett",
+      "violet": "Veilchen",
+      "indigo": "Indigo",
+      "navy": "Marineblau",
+      "slate": "Schiefer",
+      "black": "Schwarz"
+    }
+  },
+  "Interview": {
+    "dialog": {
+      "title": "KI-Übungs-Interview",
+      "states": {
+        "setup": "Richten Sie Ihr Interview ein und starten Sie, wenn Sie bereit sind.",
+        "connecting": "Verbindung zu Ihrem KI-Interviewer wird hergestellt...",
+        "active": "Interview läuft. Antworten Sie laut und sprechen Sie natürlich.",
+        "evaluating": "Ihre Antworten werden analysiert und das Feedback wird vorbereitet...",
+        "result": "So haben Sie abgeschnitten. Sehen Sie sich Ihr Feedback unten an.",
+        "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+      },
+      "endTitle": "Interview beenden?",
+      "endDescription": "Ihr Interview läuft noch. Wenn Sie jetzt gehen, wird Ihre Sitzung beendet und nicht gespeichert.",
+      "continue": "Weitermachen",
+      "end": "Interview beenden"
+    },
+    "setup": {
+      "jobDescription": "Stellenbeschreibung",
+      "jobDescriptionPlaceholder": "Fügen Sie die Stellenbeschreibung für die Position ein, auf die Sie sich vorbereiten...",
+      "jobDescriptionHelp": "Wir passen die Interviewfragen an diese Position an.",
+      "interviewType": "Interviewtyp",
+      "types": {
+        "all": {
+          "label": "Gemischt",
+          "description": "Eine Mischung aus beiden Typen"
+        },
+        "behavioral": {
+          "label": "Verhaltensbezogen",
+          "description": "Soft Skills & Erfahrung"
+        },
+        "technical": {
+          "label": "Technisch",
+          "description": "Positionsspezifische Fähigkeiten"
+        }
+      },
+      "questions": "Fragen",
+      "speed": "Geschwindigkeit",
+      "speedTooltip": "Passen Sie an, wie schnell der KI-Interviewer spricht.",
+      "slow": "Langsam",
+      "fast": "Schnell",
+      "language": "Sprache",
+      "selectLanguage": "Sprache auswählen",
+      "languages": {
+        "English": "Englisch",
+        "Vietnamese": "Vietnamesisch",
+        "Japanese": "Japanisch",
+        "Korean": "Koreanisch",
+        "Chinese": "Chinesisch (Mandarin)",
+        "French": "Französisch",
+        "German": "Deutsch",
+        "Spanish": "Spanisch",
+        "Portuguese": "Portugiesisch",
+        "Thai": "Thailändisch",
+        "Indonesian": "Indonesisch",
+        "Hindi": "Hindi"
+      },
+      "voice": "Stimme",
+      "selectVoice": "Stimme auswählen",
+      "voices": {
+        "Zephyr": "Zephyr — Hell",
+        "Puck": "Puck — Schwungvoll",
+        "Charon": "Charon — Informativ",
+        "Kore": "Kore — Bestimmt",
+        "Fenrir": "Fenrir — Lebhaft",
+        "Leda": "Leda — Jugendlich",
+        "Orus": "Orus — Bestimmt"
+      },
+      "start": "Interview starten",
+      "starting": "Wird gestartet...",
+      "savingResume": "Lebenslauf wird gespeichert...",
+      "tryAgain": "Erneut versuchen"
+    },
+    "active": {
+      "aiSpeaking": "Interviewer spricht",
+      "listening": "Hört zu...",
+      "muted": "Mikrofon stummgeschaltet",
+      "mute": "Stummschalten",
+      "unmute": "Stummschaltung aufheben",
+      "progress": "Fortschritt",
+      "questionProgress": "Frage {current} von {total}",
+      "stopInterview": "Interview beenden",
+      "stopTitle": "Interview vorzeitig beenden?",
+      "stopDescription": "Wir beenden das Interview und bewerten Ihre bisherigen Antworten. Sie können diese Sitzung danach nicht fortsetzen.",
+      "continue": "Weitermachen",
+      "stopAndEvaluate": "Beenden & bewerten"
+    },
+    "loading": {
+      "title": "Fast geschafft",
+      "connecting": "Verbindung zu Ihrem Interviewer wird hergestellt...",
+      "evaluating": "Ihre Leistung wird bewertet..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Ausgezeichnet",
+        "good": "Gut",
+        "fair": "Mäßig",
+        "needsImprovement": "Verbesserungsbedarf"
+      },
+      "verdict": {
+        "PASS": "Bestanden",
+        "BORDERLINE": "Grenzwertig",
+        "FAIL": "Nicht bestanden"
+      },
+      "evaluationCriteria": "Bewertungskriterien",
+      "criteria": {
+        "technicalKnowledge": "Fachwissen",
+        "communicationSkills": "Kommunikationsfähigkeiten",
+        "problemSolving": "Problemlösung",
+        "relevanceToRole": "Relevanz für die Position",
+        "interviewConduct": "Interviewverhalten"
+      },
+      "perQuestionFeedback": "Feedback pro Frage",
+      "suggestion": "Vorschlag",
+      "strengths": "Stärken",
+      "noStrengths": "Keine nennenswerten Stärken erkannt.",
+      "areasForImprovement": "Verbesserungsbereiche",
+      "noImprovements": "Keine Verbesserungsbereiche erkannt.",
+      "interviewAgain": "Erneut üben"
+    }
+  },
+  "BuilderForms": {
+    "actions": {
+      "add": "Hinzufügen"
+    },
+    "fields": {
+      "startDate": "Startdatum",
+      "date": "Datum",
+      "present": "Aktuell"
+    },
+    "personal": {
+      "title": "Persönliche Informationen",
+      "subtitle": "Sagen Sie uns, wer Sie sind und wie man Sie erreichen kann",
+      "basicDetails": "Grunddaten",
+      "contactInformation": "Kontaktinformationen",
+      "nameLabel": "Vollständiger Name",
+      "headlineLabel": "Berufliche Überschrift",
+      "emptyTitle": "Noch keine Kontaktdaten",
+      "emptyDescription": "Fügen Sie eine E-Mail-Adresse, Telefonnummer oder Links hinzu, damit Recruiter Sie erreichen können.",
+      "placeholders": {
+        "name": "z. B. Jane Doe",
+        "headline": "z. B. Senior Product Designer",
+        "contactLabel": "Bezeichnung",
+        "contactValue": "Wert"
+      }
+    },
+    "summary": {
+      "title": "Berufliche Zusammenfassung",
+      "subtitle": "Schreiben Sie eine kurze Vorstellung, die Ihre Erfahrung und Ihre Ziele erfasst",
+      "placeholder": "Fassen Sie Ihren Werdegang, Ihre wichtigsten Stärken und das, was Sie in eine Position einbringen, zusammen...",
+      "characters": "{count, plural, one {# Zeichen} other {# Zeichen}}",
+      "proTipLabel": "Profi-Tipp:",
+      "proTip": "Beschränken Sie sich auf 3-5 Sätze und beginnen Sie mit Ihren stärksten Erfolgen."
+    },
+    "experience": {
+      "title": "Berufserfahrung",
+      "subtitle": "Präsentieren Sie Ihre Positionen und die Wirkung, die Sie erzielt haben",
+      "history": "Berufsverlauf",
+      "add": "Berufserfahrung hinzufügen",
+      "endDate": "Enddatum",
+      "descriptionAchievements": "Beschreibung & Erfolge",
+      "emptyTitle": "Noch keine Berufserfahrung",
+      "emptyDescription": "Fügen Sie Ihre Positionen hinzu, um Ihren Werdegang und Ihre Erfolge hervorzuheben.",
+      "placeholders": {
+        "company": "Firmenname",
+        "position": "Berufsbezeichnung"
+      },
+      "validation": {
+        "companyRequired": "Firmenname ist erforderlich",
+        "positionRequired": "Berufsbezeichnung ist erforderlich"
+      }
+    },
+    "education": {
+      "title": "Ausbildung",
+      "subtitle": "Listen Sie Ihre Abschlüsse, Schulen und Studienfächer auf",
+      "history": "Ausbildungsverlauf",
+      "add": "Ausbildung hinzufügen",
+      "endDate": "Enddatum",
+      "customDegree": "Benutzerdefinierten Abschluss hinzufügen",
+      "emptyTitle": "Noch keine Ausbildung hinzugefügt",
+      "emptyDescription": "Fügen Sie Ihre Schulen und Abschlüsse hinzu, um Ihr Profil abzurunden.",
+      "placeholders": {
+        "school": "Schule oder Universität",
+        "degree": "Abschluss auswählen",
+        "major": "Studienfach"
+      },
+      "validation": {
+        "schoolRequired": "Name der Schule ist erforderlich",
+        "degreeRequired": "Abschluss ist erforderlich"
+      },
+      "degrees": {
+        "highSchool": "Hochschulreife",
+        "ged": "GED",
+        "associateArts": "Associate of Arts",
+        "associateScience": "Associate of Science",
+        "associateAppliedScience": "Associate of Applied Science",
+        "bachelorArts": "Bachelor of Arts",
+        "bachelorScience": "Bachelor of Science",
+        "bba": "BBA",
+        "masterArts": "Master of Arts",
+        "masterScience": "Master of Science",
+        "mba": "MBA",
+        "jd": "J.D.",
+        "md": "M.D.",
+        "phd": "Ph.D",
+        "noDegree": "Kein Abschluss"
+      }
+    },
+    "skills": {
+      "title": "Fähigkeiten",
+      "subtitle": "Heben Sie die Fähigkeiten hervor, die Sie auszeichnen",
+      "list": "Liste der Fähigkeiten",
+      "add": "Fähigkeit hinzufügen",
+      "emptyTitle": "Noch keine Fähigkeiten hinzugefügt",
+      "emptyDescription": "Fügen Sie Ihre wichtigsten Fähigkeiten zusammen mit Ihrem Kenntnisstand hinzu.",
+      "placeholders": {
+        "name": "Name der Fähigkeit",
+        "level": "Kenntnisstand"
+      }
+    },
+    "projects": {
+      "title": "Projekte",
+      "subtitle": "Heben Sie die Arbeit hervor, auf die Sie am stolzesten sind",
+      "list": "Projektliste",
+      "add": "Projekt hinzufügen",
+      "description": "Beschreibung",
+      "responsibilities": "Verantwortlichkeiten",
+      "emptyTitle": "Noch keine Projekte hinzugefügt",
+      "emptyDescription": "Fügen Sie Projekte hinzu, um Ihre praktische Erfahrung zu demonstrieren.",
+      "placeholders": {
+        "name": "Projektname",
+        "subtitle": "Untertitel oder Slogan",
+        "position": "Ihre Rolle",
+        "domain": "Bereich oder Branche",
+        "technologies": "Verwendete Technologien",
+        "demo": "Demo- oder Live-URL"
+      },
+      "validation": {
+        "nameRequired": "Projektname ist erforderlich"
+      }
+    },
+    "certifications": {
+      "title": "Zertifizierungen",
+      "subtitle": "Fügen Sie Nachweise hinzu, die Ihre Expertise belegen",
+      "list": "Liste der Zertifizierungen",
+      "add": "Zertifizierung hinzufügen",
+      "emptyTitle": "Noch keine Zertifizierungen hinzugefügt",
+      "emptyDescription": "Fügen Sie Zertifizierungen hinzu, um Ihre Qualifikationen zu präsentieren.",
+      "placeholders": {
+        "name": "Name der Zertifizierung",
+        "issuer": "Ausstellende Organisation"
+      },
+      "validation": {
+        "nameRequired": "Name der Zertifizierung ist erforderlich",
+        "issuerRequired": "Ausstellende Organisation ist erforderlich"
+      }
+    },
+    "languages": {
+      "title": "Sprachen",
+      "subtitle": "Listen Sie die Sprachen auf, die Sie sprechen, und Ihre Sprachkenntnisse",
+      "list": "Sprachenliste",
+      "add": "Sprache hinzufügen",
+      "emptyTitle": "Noch keine Sprachen hinzugefügt",
+      "emptyDescription": "Fügen Sie die Sprachen, die Sie sprechen, und Ihren Kenntnisstand hinzu.",
+      "placeholders": {
+        "name": "Sprache",
+        "level": "Kenntnisstand auswählen"
+      },
+      "validation": {
+        "nameRequired": "Sprache ist erforderlich",
+        "levelRequired": "Kenntnisstand ist erforderlich"
+      },
+      "levels": {
+        "elementary": "Grundkenntnisse",
+        "limitedWorking": "Eingeschränkte Arbeitskenntnisse",
+        "professionalWorking": "Verhandlungssichere Arbeitskenntnisse",
+        "fullProfessional": "Fließende Kenntnisse",
+        "nativeOrBilingual": "Muttersprache oder zweisprachig"
+      }
+    },
+    "extra": {
+      "finished": "Fertigstellen"
+    }
   }
 }

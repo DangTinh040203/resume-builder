@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@resume-builder/ui/components/dropdown-menu';
-import { Languages } from 'lucide-react';
+import { ChevronDown, Languages } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { usePathname, useRouter } from '@/i18n/navigation';
@@ -24,10 +24,8 @@ export function LanguageSwitcher() {
       <DropdownMenuTrigger asChild>
         <Button variant='ghost' size='sm' className='gap-2'>
           <Languages className='h-4 w-4' />
-          <span className={`
-            hidden
-            sm:inline
-          `}>{t(locale)}</span>
+          <span className={`hidden sm:inline`}>{t(locale)}</span>
+          <ChevronDown />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>

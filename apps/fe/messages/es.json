@@ -1,4 +1,10 @@
 {
+  "Common": {
+    "scrollToTop": "Volver arriba",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "saving": "Guardando..."
+  },
   "Nav": {
     "home": "Inicio",
     "templates": "Plantillas",
@@ -235,5 +241,569 @@
     "title": "¿Listo para conseguir el trabajo de tus sueños?",
     "description": "Únase a más de 10 000 profesionales que ya han transformado sus carreras con nuestro conjunto de herramientas impulsado por IA.",
     "button": "Comience gratis"
+  },
+  "Auth": {
+    "continueWith": "O continúa con",
+    "errors": {
+      "generic": "Algo salió mal. Inténtalo de nuevo."
+    },
+    "fields": {
+      "confirmPassword": "Confirmar contraseña",
+      "email": "Correo electrónico",
+      "password": "Contraseña"
+    },
+    "layout": {
+      "and": "y",
+      "formSubtitle": "Crea tu CV destacado en minutos",
+      "formTitle": "Bienvenido a CVCraft",
+      "heroDescription": "Crea currículums impactantes y compatibles con ATS con la ayuda de la IA. Consigue más entrevistas y acelera tu carrera en minutos.",
+      "heroLine1": "Crea un CV que",
+      "heroLine2": "te consiga el trabajo.",
+      "privacy": "Política de privacidad",
+      "terms": "Términos del servicio",
+      "termsPrefix": "Al continuar, aceptas nuestros",
+      "features": {
+        "0": "Plantillas profesionales y listas para reclutadores",
+        "1": "Sugerencias de contenido impulsadas por IA",
+        "2": "Adaptado a cada descripción de puesto",
+        "3": "Listo en minutos, no en horas"
+      },
+      "stats": {
+        "0": {
+          "value": "50K+",
+          "label": "CV creados"
+        },
+        "1": {
+          "value": "10K+",
+          "label": "Usuarios contratados"
+        },
+        "2": {
+          "value": "95%",
+          "label": "Tasa de éxito"
+        }
+      }
+    },
+    "placeholders": {
+      "confirmPassword": "Vuelve a introducir tu contraseña",
+      "createPassword": "Crea una contraseña",
+      "email": "you@example.com",
+      "password": "Introduce tu contraseña"
+    },
+    "signIn": {
+      "invalidCredentials": "Correo electrónico o contraseña no válidos. Inténtalo de nuevo.",
+      "loading": "Iniciando sesión...",
+      "noAccount": "¿No tienes una cuenta?",
+      "signUpLink": "Regístrate",
+      "submit": "Iniciar sesión",
+      "success": "Sesión iniciada correctamente. ¡Bienvenido de nuevo!"
+    },
+    "signUp": {
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "loading": "Creando cuenta...",
+      "signInLink": "Inicia sesión",
+      "submit": "Crear cuenta"
+    },
+    "sso": {
+      "almostThere": "Ya casi está, iniciando tu sesión..."
+    },
+    "validation": {
+      "codeIncomplete": "Introduce los 6 dígitos.",
+      "codeSixDigits": "El código debe tener exactamente 6 dígitos.",
+      "confirmPasswordRequired": "Confirma tu contraseña.",
+      "emailInvalid": "Introduce una dirección de correo electrónico válida.",
+      "emailRequired": "El correo electrónico es obligatorio.",
+      "passwordMax": "La contraseña no debe tener más de 50 caracteres.",
+      "passwordMin": "La contraseña debe tener al menos 8 caracteres.",
+      "passwordRequired": "La contraseña es obligatoria.",
+      "passwordsDoNotMatch": "Las contraseñas no coinciden."
+    },
+    "verify": {
+      "didNotReceive": "¿No recibiste el código?",
+      "emailFallback": "tu dirección de correo electrónico",
+      "incomplete": "No se pudo completar la verificación. Inténtalo de nuevo.",
+      "resendCode": "Reenviar código",
+      "resendFailed": "No se pudo reenviar el código. Inténtalo de nuevo.",
+      "resendIn": "Reenviar en {seconds}s",
+      "resendSuccess": "Se ha enviado un nuevo código a tu correo electrónico.",
+      "sentTo": "Hemos enviado un código de verificación de 6 dígitos a",
+      "submit": "Verificar",
+      "success": "Tu cuenta ha sido verificada. ¡Bienvenido a CVCraft!",
+      "title": "Verifica tu correo electrónico",
+      "verifying": "Verificando..."
+    }
+  },
+  "Matching": {
+    "trigger": "Comparar con el puesto",
+    "title": "Análisis de coincidencia con el puesto",
+    "description": {
+      "form": "Pega una descripción de puesto o súbela como PDF, y veremos qué tan bien coincide tu currículum.",
+      "result": "Así es como se compara tu currículum con la descripción del puesto."
+    },
+    "form": {
+      "textTab": "Pegar texto",
+      "fileTab": "Subir archivo",
+      "jdPlaceholder": "Pega aquí la descripción del puesto...",
+      "uploadFile": "Haz clic para subir una descripción de puesto",
+      "changeFile": "Haz clic para elegir un archivo diferente",
+      "fileHint": "PDF de hasta 10MB",
+      "analyze": "Analizar coincidencia"
+    },
+    "loading": {
+      "title": "Analizando tu coincidencia",
+      "description": "Comparando tu currículum con la descripción del puesto..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Coincidencia excelente",
+        "good": "Buena coincidencia",
+        "fair": "Coincidencia aceptable",
+        "needsImprovement": "Necesita mejorar"
+      },
+      "tabs": {
+        "breakdown": "Desglose",
+        "analysis": "Análisis",
+        "improve": "Mejorar"
+      },
+      "weight": "Peso {weight}%",
+      "strengths": "Fortalezas",
+      "noStrengths": "Aún no se han identificado fortalezas destacables.",
+      "missingKeywords": "Palabras clave faltantes",
+      "invalidJobDescription": "No se pudo leer una descripción de puesto válida.",
+      "suggestionsToImprove": "Sugerencias para mejorar",
+      "noSuggestions": "Sin sugerencias: tu currículum encaja perfectamente.",
+      "analyzeAnother": "Analizar otro"
+    },
+    "email": {
+      "view": "Ver correo",
+      "generate": "Generar correo de contacto",
+      "generating": "Generando...",
+      "generateFailed": "No se pudo generar el correo. Inténtalo de nuevo.",
+      "regenerate": "Regenerar",
+      "ready": "Listo para enviar",
+      "dialogTitle": "Tu correo de contacto",
+      "dialogDescription": "Un correo de contacto personalizado generado a partir de tu currículum y la descripción del puesto.",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Asunto del correo",
+      "subjectCopied": "Asunto copiado al portapapeles",
+      "bodyPlaceholder": "Cuerpo del correo",
+      "edit": "Editar",
+      "saveChanges": "Guardar cambios",
+      "cancel": "Cancelar",
+      "close": "Cerrar",
+      "copyToClipboard": "Copiar al portapapeles",
+      "copySubject": "Copiar asunto",
+      "copied": "Copiado",
+      "copyFailed": "No se pudo copiar al portapapeles.",
+      "displayFailed": "No se pudo mostrar el correo. Inténtalo de nuevo."
+    },
+    "errors": {
+      "noResume": "Selecciona primero un currículum.",
+      "noJobDescription": "Añade una descripción de puesto para continuar.",
+      "generic": "Algo salió mal. Inténtalo de nuevo."
+    }
+  },
+  "Builder": {
+    "title": "Creador de currículums",
+    "subtitle": "Crea un currículum destacado con la ayuda de la IA.",
+    "selectTemplateWarning": "Elige una plantilla antes de empezar a crear.",
+    "sections": {
+      "personal": "Personal",
+      "summary": "Resumen",
+      "skills": "Habilidades",
+      "education": "Educación",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "extra": "Adicional"
+    },
+    "downloadPdf": {
+      "export": "Exportar PDF",
+      "failed": "No se pudo generar el PDF. Inténtalo de nuevo.",
+      "selectTemplate": "Selecciona primero una plantilla."
+    },
+    "resumeControl": {
+      "title": "Creador de currículums",
+      "subtitle": "Crea un currículum destacado con la ayuda de la IA.",
+      "customize": "Personalizar",
+      "edit": "Editar",
+      "mockInterview": "Entrevista simulada",
+      "parseResume": "Importar currículum",
+      "parsing": "Importando...",
+      "parseSuccess": "¡Currículum importado correctamente!",
+      "parseFailed": "No pudimos leer tu currículum. Prueba con un archivo diferente.",
+      "parseTooltip": "Sube un currículum en PDF y deja que la IA complete tus datos automáticamente.",
+      "save": "Guardar",
+      "saveTooltip": "Guarda tus cambios (Ctrl+S)"
+    }
+  },
+  "TemplatesPage": {
+    "title": "Elige tu plantilla",
+    "description": "Explora nuestra colección de plantillas diseñadas profesionalmente y compatibles con ATS, y elige la que mejor se adapte a ti.",
+    "useTemplate": "Usar esta plantilla",
+    "errors": {
+      "generic": "Algo salió mal. Inténtalo de nuevo."
+    }
+  },
+  "TemplateSelectionDialog": {
+    "title": "Vamos a crear tu currículum",
+    "description": "¿Cómo te gustaría empezar?",
+    "cancel": "Cancelar",
+    "scratch": {
+      "title": "Empezar desde cero",
+      "description": "Comienza con un currículum en blanco y completa tus datos paso a paso."
+    },
+    "upload": {
+      "title": "Subir un currículum",
+      "description": "Sube un currículum existente y deja que la IA complete tus datos automáticamente."
+    },
+    "loading": {
+      "description": "Esto suele tardar solo unos segundos. Espera un momento mientras hacemos nuestra magia.",
+      "steps": {
+        "0": "Leyendo tu currículum...",
+        "1": "Extrayendo tu experiencia...",
+        "2": "Organizando tus datos...",
+        "3": "Ya casi está..."
+      }
+    }
+  },
+  "TemplateFormat": {
+    "reset": "Restablecer",
+    "sectionOrder": {
+      "title": "Orden de las secciones"
+    },
+    "sections": {
+      "personal": "Personal",
+      "summary": "Resumen",
+      "skills": "Habilidades",
+      "education": "Educación",
+      "certifications": "Certificaciones",
+      "languages": "Idiomas",
+      "experience": "Experiencia",
+      "projects": "Proyectos"
+    },
+    "typography": "Tipografía",
+    "layout": "Diseño",
+    "fontFamily": "Familia de fuentes",
+    "selectFont": "Seleccionar fuente",
+    "fontSize": "Tamaño de fuente",
+    "titleSize": "Tamaño del título",
+    "sectionTitleSize": "Tamaño del título de sección",
+    "subtitleSize": "Tamaño del subtítulo",
+    "lineHeight": "Altura de línea",
+    "letterSpacing": "Espaciado entre letras",
+    "fontWeight": "Grosor de fuente",
+    "selectFontWeight": "Seleccionar grosor de fuente",
+    "sectionSpacing": "Espaciado entre secciones",
+    "pageMargin": "Margen de página",
+    "accentColor": "Color de acento",
+    "fontWeights": {
+      "normal": "Normal",
+      "medium": "Medio",
+      "semibold": "Seminegrita",
+      "bold": "Negrita"
+    },
+    "colors": {
+      "blue": "Azul",
+      "cyan": "Cian",
+      "teal": "Verde azulado",
+      "emerald": "Esmeralda",
+      "green": "Verde",
+      "lime": "Lima",
+      "yellow": "Amarillo",
+      "amber": "Ámbar",
+      "orange": "Naranja",
+      "red": "Rojo",
+      "rose": "Rosa",
+      "pink": "Rosado",
+      "fuchsia": "Fucsia",
+      "purple": "Púrpura",
+      "violet": "Violeta",
+      "indigo": "Índigo",
+      "navy": "Azul marino",
+      "slate": "Pizarra",
+      "black": "Negro"
+    }
+  },
+  "Interview": {
+    "dialog": {
+      "title": "Entrevista simulada con IA",
+      "states": {
+        "setup": "Configura tu entrevista y empieza cuando estés listo.",
+        "connecting": "Conectando con tu entrevistador de IA...",
+        "active": "Entrevista en curso. Responde en voz alta y habla con naturalidad.",
+        "evaluating": "Analizando tus respuestas y preparando los comentarios...",
+        "result": "Esto es lo que lograste. Revisa tus comentarios a continuación.",
+        "error": "Algo salió mal. Inténtalo de nuevo."
+      },
+      "endTitle": "¿Finalizar la entrevista?",
+      "endDescription": "Tu entrevista sigue en curso. Si te vas ahora, tu sesión finalizará y no se guardará.",
+      "continue": "Seguir",
+      "end": "Finalizar entrevista"
+    },
+    "setup": {
+      "jobDescription": "Descripción del puesto",
+      "jobDescriptionPlaceholder": "Pega la descripción del puesto para el que te estás preparando...",
+      "jobDescriptionHelp": "Adaptaremos las preguntas de la entrevista a este puesto.",
+      "interviewType": "Tipo de entrevista",
+      "types": {
+        "all": {
+          "label": "Mixta",
+          "description": "Una combinación de ambos tipos"
+        },
+        "behavioral": {
+          "label": "Conductual",
+          "description": "Habilidades blandas y experiencia"
+        },
+        "technical": {
+          "label": "Técnica",
+          "description": "Habilidades específicas del puesto"
+        }
+      },
+      "questions": "Preguntas",
+      "speed": "Velocidad",
+      "speedTooltip": "Ajusta la rapidez con la que habla el entrevistador de IA.",
+      "slow": "Lenta",
+      "fast": "Rápida",
+      "language": "Idioma",
+      "selectLanguage": "Selecciona el idioma",
+      "languages": {
+        "English": "Inglés",
+        "Vietnamese": "Vietnamita",
+        "Japanese": "Japonés",
+        "Korean": "Coreano",
+        "Chinese": "Chino (mandarín)",
+        "French": "Francés",
+        "German": "Alemán",
+        "Spanish": "Español",
+        "Portuguese": "Portugués",
+        "Thai": "Tailandés",
+        "Indonesian": "Indonesio",
+        "Hindi": "Hindi"
+      },
+      "voice": "Voz",
+      "selectVoice": "Selecciona la voz",
+      "voices": {
+        "Zephyr": "Zephyr — Brillante",
+        "Puck": "Puck — Animada",
+        "Charon": "Charon — Informativa",
+        "Kore": "Kore — Firme",
+        "Fenrir": "Fenrir — Entusiasta",
+        "Leda": "Leda — Juvenil",
+        "Orus": "Orus — Firme"
+      },
+      "start": "Iniciar entrevista",
+      "starting": "Iniciando...",
+      "savingResume": "Guardando currículum...",
+      "tryAgain": "Inténtalo de nuevo"
+    },
+    "active": {
+      "aiSpeaking": "El entrevistador está hablando",
+      "listening": "Escuchando...",
+      "muted": "Micrófono silenciado",
+      "mute": "Silenciar",
+      "unmute": "Activar sonido",
+      "progress": "Progreso",
+      "questionProgress": "Pregunta {current} de {total}",
+      "stopInterview": "Finalizar entrevista",
+      "stopTitle": "¿Finalizar la entrevista antes de tiempo?",
+      "stopDescription": "Detendremos la entrevista y evaluaremos tus respuestas hasta ahora. Después no podrás continuar esta sesión.",
+      "continue": "Seguir",
+      "stopAndEvaluate": "Finalizar y evaluar"
+    },
+    "loading": {
+      "title": "Ya casi está",
+      "connecting": "Conectando con tu entrevistador...",
+      "evaluating": "Evaluando tu desempeño..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Excelente",
+        "good": "Bueno",
+        "fair": "Aceptable",
+        "needsImprovement": "Necesita mejorar"
+      },
+      "verdict": {
+        "PASS": "Aprobado",
+        "BORDERLINE": "En el límite",
+        "FAIL": "Reprobado"
+      },
+      "evaluationCriteria": "Criterios de evaluación",
+      "criteria": {
+        "technicalKnowledge": "Conocimientos técnicos",
+        "communicationSkills": "Habilidades de comunicación",
+        "problemSolving": "Resolución de problemas",
+        "relevanceToRole": "Relevancia para el puesto",
+        "interviewConduct": "Comportamiento en la entrevista"
+      },
+      "perQuestionFeedback": "Comentarios por pregunta",
+      "suggestion": "Sugerencia",
+      "strengths": "Fortalezas",
+      "noStrengths": "No se identificaron fortalezas destacables.",
+      "areasForImprovement": "Áreas de mejora",
+      "noImprovements": "No se identificaron áreas de mejora.",
+      "interviewAgain": "Practicar de nuevo"
+    }
+  },
+  "BuilderForms": {
+    "actions": {
+      "add": "Añadir"
+    },
+    "fields": {
+      "startDate": "Fecha de inicio",
+      "date": "Fecha",
+      "present": "Actualidad"
+    },
+    "personal": {
+      "title": "Información personal",
+      "subtitle": "Cuéntanos quién eres y cómo contactarte",
+      "basicDetails": "Datos básicos",
+      "contactInformation": "Información de contacto",
+      "nameLabel": "Nombre completo",
+      "headlineLabel": "Titular profesional",
+      "emptyTitle": "Aún no hay datos de contacto",
+      "emptyDescription": "Añade un correo electrónico, número de teléfono o enlaces para que los reclutadores puedan contactarte.",
+      "placeholders": {
+        "name": "p. ej. Jane Doe",
+        "headline": "p. ej. Diseñadora de producto sénior",
+        "contactLabel": "Etiqueta",
+        "contactValue": "Valor"
+      }
+    },
+    "summary": {
+      "title": "Resumen profesional",
+      "subtitle": "Escribe una breve presentación que refleje tu experiencia y objetivos",
+      "placeholder": "Resume tu trayectoria, tus fortalezas clave y lo que aportas a un puesto...",
+      "characters": "{count, plural, one {# carácter} other {# caracteres}}",
+      "proTipLabel": "Consejo:",
+      "proTip": "Mantenlo en 3-5 frases y empieza con tus logros más destacados."
+    },
+    "experience": {
+      "title": "Experiencia laboral",
+      "subtitle": "Muestra tus puestos y el impacto que lograste",
+      "history": "Historial de experiencia",
+      "add": "Añadir experiencia",
+      "endDate": "Fecha de finalización",
+      "descriptionAchievements": "Descripción y logros",
+      "emptyTitle": "Aún no hay experiencia laboral",
+      "emptyDescription": "Añade tus puestos para destacar tu trayectoria profesional y tus logros.",
+      "placeholders": {
+        "company": "Nombre de la empresa",
+        "position": "Cargo"
+      },
+      "validation": {
+        "companyRequired": "El nombre de la empresa es obligatorio",
+        "positionRequired": "El cargo es obligatorio"
+      }
+    },
+    "education": {
+      "title": "Educación",
+      "subtitle": "Enumera tus títulos, centros y áreas de estudio",
+      "history": "Historial educativo",
+      "add": "Añadir educación",
+      "endDate": "Fecha de finalización",
+      "customDegree": "Añadir título personalizado",
+      "emptyTitle": "Aún no se ha añadido educación",
+      "emptyDescription": "Añade tus centros y títulos para completar tu perfil.",
+      "placeholders": {
+        "school": "Centro o universidad",
+        "degree": "Selecciona un título",
+        "major": "Área de estudio"
+      },
+      "validation": {
+        "schoolRequired": "El nombre del centro es obligatorio",
+        "degreeRequired": "El título es obligatorio"
+      },
+      "degrees": {
+        "highSchool": "Bachillerato",
+        "ged": "GED",
+        "associateArts": "Técnico en Artes",
+        "associateScience": "Técnico en Ciencias",
+        "associateAppliedScience": "Técnico en Ciencias Aplicadas",
+        "bachelorArts": "Licenciatura en Artes",
+        "bachelorScience": "Licenciatura en Ciencias",
+        "bba": "BBA",
+        "masterArts": "Máster en Artes",
+        "masterScience": "Máster en Ciencias",
+        "mba": "MBA",
+        "jd": "J.D.",
+        "md": "M.D.",
+        "phd": "Ph.D",
+        "noDegree": "Sin título"
+      }
+    },
+    "skills": {
+      "title": "Habilidades",
+      "subtitle": "Destaca las aptitudes que te diferencian",
+      "list": "Lista de habilidades",
+      "add": "Añadir habilidad",
+      "emptyTitle": "Aún no se han añadido habilidades",
+      "emptyDescription": "Añade tus habilidades clave junto con tu nivel de competencia.",
+      "placeholders": {
+        "name": "Nombre de la habilidad",
+        "level": "Nivel de competencia"
+      }
+    },
+    "projects": {
+      "title": "Proyectos",
+      "subtitle": "Destaca el trabajo del que te sientes más orgulloso",
+      "list": "Lista de proyectos",
+      "add": "Añadir proyecto",
+      "description": "Descripción",
+      "responsibilities": "Responsabilidades",
+      "emptyTitle": "Aún no se han añadido proyectos",
+      "emptyDescription": "Añade proyectos para demostrar tu experiencia práctica.",
+      "placeholders": {
+        "name": "Nombre del proyecto",
+        "subtitle": "Subtítulo o eslogan",
+        "position": "Tu rol",
+        "domain": "Ámbito o sector",
+        "technologies": "Tecnologías utilizadas",
+        "demo": "URL de demostración o en vivo"
+      },
+      "validation": {
+        "nameRequired": "El nombre del proyecto es obligatorio"
+      }
+    },
+    "certifications": {
+      "title": "Certificaciones",
+      "subtitle": "Añade credenciales que validen tu experiencia",
+      "list": "Lista de certificaciones",
+      "add": "Añadir certificación",
+      "emptyTitle": "Aún no se han añadido certificaciones",
+      "emptyDescription": "Añade certificaciones para mostrar tus cualificaciones.",
+      "placeholders": {
+        "name": "Nombre de la certificación",
+        "issuer": "Organización emisora"
+      },
+      "validation": {
+        "nameRequired": "El nombre de la certificación es obligatorio",
+        "issuerRequired": "La organización emisora es obligatoria"
+      }
+    },
+    "languages": {
+      "title": "Idiomas",
+      "subtitle": "Enumera los idiomas que hablas y tu fluidez",
+      "list": "Lista de idiomas",
+      "add": "Añadir idioma",
+      "emptyTitle": "Aún no se han añadido idiomas",
+      "emptyDescription": "Añade los idiomas que hablas y tu nivel de competencia.",
+      "placeholders": {
+        "name": "Idioma",
+        "level": "Selecciona el nivel de competencia"
+      },
+      "validation": {
+        "nameRequired": "El idioma es obligatorio",
+        "levelRequired": "El nivel de competencia es obligatorio"
+      },
+      "levels": {
+        "elementary": "Elemental",
+        "limitedWorking": "Laboral limitado",
+        "professionalWorking": "Laboral profesional",
+        "fullProfessional": "Profesional pleno",
+        "nativeOrBilingual": "Nativo o bilingüe"
+      }
+    },
+    "extra": {
+      "finished": "Finalizar"
+    }
   }
 }

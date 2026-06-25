@@ -1,4 +1,10 @@
 {
+  "Common": {
+    "scrollToTop": "Lên đầu trang",
+    "back": "Quay lại",
+    "next": "Tiếp theo",
+    "saving": "Đang lưu..."
+  },
   "Nav": {
     "home": "Trang chủ",
     "templates": "Mẫu CV",
@@ -10,7 +16,18 @@
     "signInSignUp": "Đăng nhập / Đăng ký"
   },
   "Language": {
-    "label": "Ngôn ngữ"
+    "label": "Ngôn ngữ",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "zh": "中文",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "ar": "العربية",
+    "ko": "한국어",
+    "de": "Deutsch"
   },
   "Footer": {
     "tagline": "Trình tạo CV bằng AI giúp bạn đạt được công việc mơ ước.",
@@ -224,5 +241,569 @@
     "title": "Sẵn sàng cho công việc mơ ước?",
     "description": "Tham gia cùng hơn 10.000 chuyên gia đã thay đổi sự nghiệp với bộ công cụ AI của chúng tôi.",
     "button": "Bắt đầu miễn phí"
+  },
+  "Auth": {
+    "continueWith": "Hoặc tiếp tục với",
+    "errors": {
+      "generic": "Đã xảy ra lỗi. Vui lòng thử lại."
+    },
+    "fields": {
+      "confirmPassword": "Xác nhận mật khẩu",
+      "email": "Email",
+      "password": "Mật khẩu"
+    },
+    "layout": {
+      "and": "và",
+      "formSubtitle": "Tạo CV nổi bật chỉ trong vài phút",
+      "formTitle": "Chào mừng đến với CVCraft",
+      "heroDescription": "Tạo những bản CV ấn tượng, thân thiện với ATS nhờ sự hỗ trợ của AI. Nhận được nhiều lời mời phỏng vấn hơn và thúc đẩy sự nghiệp của bạn chỉ trong vài phút.",
+      "heroLine1": "Tạo một CV giúp bạn",
+      "heroLine2": "được tuyển dụng.",
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản dịch vụ",
+      "termsPrefix": "Bằng việc tiếp tục, bạn đồng ý với",
+      "features": {
+        "0": "Mẫu CV chuyên nghiệp, sẵn sàng cho nhà tuyển dụng",
+        "1": "Gợi ý nội dung được hỗ trợ bởi AI",
+        "2": "Tùy chỉnh theo từng mô tả công việc",
+        "3": "Hoàn thành trong vài phút, không phải vài giờ"
+      },
+      "stats": {
+        "0": {
+          "value": "50K+",
+          "label": "CV đã tạo"
+        },
+        "1": {
+          "value": "10K+",
+          "label": "Người dùng được tuyển dụng"
+        },
+        "2": {
+          "value": "95%",
+          "label": "Tỷ lệ thành công"
+        }
+      }
+    },
+    "placeholders": {
+      "confirmPassword": "Nhập lại mật khẩu của bạn",
+      "createPassword": "Tạo mật khẩu",
+      "email": "you@example.com",
+      "password": "Nhập mật khẩu của bạn"
+    },
+    "signIn": {
+      "invalidCredentials": "Email hoặc mật khẩu không hợp lệ. Vui lòng thử lại.",
+      "loading": "Đang đăng nhập...",
+      "noAccount": "Chưa có tài khoản?",
+      "signUpLink": "Đăng ký",
+      "submit": "Đăng nhập",
+      "success": "Đăng nhập thành công. Chào mừng bạn quay lại!"
+    },
+    "signUp": {
+      "hasAccount": "Đã có tài khoản?",
+      "loading": "Đang tạo tài khoản...",
+      "signInLink": "Đăng nhập",
+      "submit": "Tạo tài khoản"
+    },
+    "sso": {
+      "almostThere": "Sắp xong rồi, đang đăng nhập cho bạn..."
+    },
+    "validation": {
+      "codeIncomplete": "Vui lòng nhập đủ 6 chữ số.",
+      "codeSixDigits": "Mã phải có chính xác 6 chữ số.",
+      "confirmPasswordRequired": "Vui lòng xác nhận mật khẩu của bạn.",
+      "emailInvalid": "Vui lòng nhập địa chỉ email hợp lệ.",
+      "emailRequired": "Email là bắt buộc.",
+      "passwordMax": "Mật khẩu không được vượt quá 50 ký tự.",
+      "passwordMin": "Mật khẩu phải có ít nhất 8 ký tự.",
+      "passwordRequired": "Mật khẩu là bắt buộc.",
+      "passwordsDoNotMatch": "Mật khẩu không khớp."
+    },
+    "verify": {
+      "didNotReceive": "Bạn chưa nhận được mã?",
+      "emailFallback": "địa chỉ email của bạn",
+      "incomplete": "Không thể hoàn tất việc xác minh. Vui lòng thử lại.",
+      "resendCode": "Gửi lại mã",
+      "resendFailed": "Gửi lại mã thất bại. Vui lòng thử lại.",
+      "resendIn": "Gửi lại sau {seconds}s",
+      "resendSuccess": "Một mã mới đã được gửi đến email của bạn.",
+      "sentTo": "Chúng tôi đã gửi mã xác minh gồm 6 chữ số đến",
+      "submit": "Xác minh",
+      "success": "Tài khoản của bạn đã được xác minh. Chào mừng đến với CVCraft!",
+      "title": "Xác minh email của bạn",
+      "verifying": "Đang xác minh..."
+    }
+  },
+  "Matching": {
+    "trigger": "Đối chiếu với công việc",
+    "title": "Phân tích độ phù hợp công việc",
+    "description": {
+      "form": "Dán mô tả công việc hoặc tải lên dưới dạng PDF, và chúng tôi sẽ xem CV của bạn phù hợp đến mức nào.",
+      "result": "Đây là mức độ phù hợp của CV của bạn so với mô tả công việc."
+    },
+    "form": {
+      "textTab": "Dán văn bản",
+      "fileTab": "Tải tệp lên",
+      "jdPlaceholder": "Dán mô tả công việc vào đây...",
+      "uploadFile": "Nhấp để tải lên mô tả công việc",
+      "changeFile": "Nhấp để chọn tệp khác",
+      "fileHint": "PDF tối đa 10MB",
+      "analyze": "Phân tích độ phù hợp"
+    },
+    "loading": {
+      "title": "Đang phân tích độ phù hợp của bạn",
+      "description": "Đang so sánh CV của bạn với mô tả công việc..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Rất phù hợp",
+        "good": "Phù hợp tốt",
+        "fair": "Phù hợp khá",
+        "needsImprovement": "Cần cải thiện"
+      },
+      "tabs": {
+        "breakdown": "Phân tích chi tiết",
+        "analysis": "Phân tích",
+        "improve": "Cải thiện"
+      },
+      "weight": "Trọng số {weight}%",
+      "strengths": "Điểm mạnh",
+      "noStrengths": "Chưa xác định được điểm mạnh nổi bật nào.",
+      "missingKeywords": "Từ khóa còn thiếu",
+      "invalidJobDescription": "Không thể đọc được mô tả công việc hợp lệ.",
+      "suggestionsToImprove": "Gợi ý cải thiện",
+      "noSuggestions": "Không có gợi ý nào—CV của bạn rất phù hợp.",
+      "analyzeAnother": "Phân tích công việc khác"
+    },
+    "email": {
+      "view": "Xem email",
+      "generate": "Tạo email tiếp cận",
+      "generating": "Đang tạo...",
+      "generateFailed": "Không thể tạo email. Vui lòng thử lại.",
+      "regenerate": "Tạo lại",
+      "ready": "Sẵn sàng gửi",
+      "dialogTitle": "Email tiếp cận của bạn",
+      "dialogDescription": "Một email tiếp cận được cá nhân hóa, tạo từ CV của bạn và mô tả công việc.",
+      "subject": "Tiêu đề",
+      "subjectPlaceholder": "Tiêu đề email",
+      "subjectCopied": "Đã sao chép tiêu đề vào bộ nhớ tạm",
+      "bodyPlaceholder": "Nội dung email",
+      "edit": "Chỉnh sửa",
+      "saveChanges": "Lưu thay đổi",
+      "cancel": "Hủy",
+      "close": "Đóng",
+      "copyToClipboard": "Sao chép vào bộ nhớ tạm",
+      "copySubject": "Sao chép tiêu đề",
+      "copied": "Đã sao chép",
+      "copyFailed": "Không thể sao chép vào bộ nhớ tạm.",
+      "displayFailed": "Không thể hiển thị email. Vui lòng thử lại."
+    },
+    "errors": {
+      "noResume": "Vui lòng chọn một CV trước.",
+      "noJobDescription": "Vui lòng thêm mô tả công việc để tiếp tục.",
+      "generic": "Đã xảy ra lỗi. Vui lòng thử lại."
+    }
+  },
+  "Builder": {
+    "title": "Trình tạo CV",
+    "subtitle": "Tạo một CV nổi bật với sự hỗ trợ của AI.",
+    "selectTemplateWarning": "Vui lòng chọn một mẫu trước khi bắt đầu tạo.",
+    "sections": {
+      "personal": "Cá nhân",
+      "summary": "Tóm tắt",
+      "skills": "Kỹ năng",
+      "education": "Học vấn",
+      "experience": "Kinh nghiệm",
+      "projects": "Dự án",
+      "extra": "Bổ sung"
+    },
+    "downloadPdf": {
+      "export": "Xuất PDF",
+      "failed": "Tạo PDF thất bại. Vui lòng thử lại.",
+      "selectTemplate": "Vui lòng chọn một mẫu trước."
+    },
+    "resumeControl": {
+      "title": "Trình tạo CV",
+      "subtitle": "Tạo một CV nổi bật với sự hỗ trợ của AI.",
+      "customize": "Tùy chỉnh",
+      "edit": "Chỉnh sửa",
+      "mockInterview": "Phỏng vấn thử",
+      "parseResume": "Nhập CV",
+      "parsing": "Đang nhập...",
+      "parseSuccess": "Đã nhập CV thành công!",
+      "parseFailed": "Chúng tôi không thể đọc CV của bạn. Vui lòng thử một tệp khác.",
+      "parseTooltip": "Tải lên CV dạng PDF và để AI tự động điền thông tin của bạn.",
+      "save": "Lưu",
+      "saveTooltip": "Lưu các thay đổi của bạn (Ctrl+S)"
+    }
+  },
+  "TemplatesPage": {
+    "title": "Chọn mẫu của bạn",
+    "description": "Khám phá bộ sưu tập các mẫu được thiết kế chuyên nghiệp, thân thiện với ATS và chọn mẫu phù hợp nhất với bạn.",
+    "useTemplate": "Dùng mẫu này",
+    "errors": {
+      "generic": "Đã xảy ra lỗi. Vui lòng thử lại."
+    }
+  },
+  "TemplateSelectionDialog": {
+    "title": "Hãy cùng tạo CV của bạn",
+    "description": "Bạn muốn bắt đầu như thế nào?",
+    "cancel": "Hủy",
+    "scratch": {
+      "title": "Bắt đầu từ đầu",
+      "description": "Bắt đầu với một CV trống và điền thông tin của bạn theo từng bước."
+    },
+    "upload": {
+      "title": "Tải lên một CV",
+      "description": "Tải lên một CV hiện có và để AI tự động điền thông tin của bạn."
+    },
+    "loading": {
+      "description": "Việc này thường chỉ mất vài giây. Hãy chờ một chút trong khi chúng tôi xử lý.",
+      "steps": {
+        "0": "Đang đọc CV của bạn...",
+        "1": "Đang trích xuất kinh nghiệm của bạn...",
+        "2": "Đang sắp xếp thông tin của bạn...",
+        "3": "Sắp xong rồi..."
+      }
+    }
+  },
+  "TemplateFormat": {
+    "reset": "Đặt lại",
+    "sectionOrder": {
+      "title": "Thứ tự mục"
+    },
+    "sections": {
+      "personal": "Cá nhân",
+      "summary": "Tóm tắt",
+      "skills": "Kỹ năng",
+      "education": "Học vấn",
+      "certifications": "Chứng chỉ",
+      "languages": "Ngôn ngữ",
+      "experience": "Kinh nghiệm",
+      "projects": "Dự án"
+    },
+    "typography": "Kiểu chữ",
+    "layout": "Bố cục",
+    "fontFamily": "Phông chữ",
+    "selectFont": "Chọn phông chữ",
+    "fontSize": "Cỡ chữ",
+    "titleSize": "Cỡ tiêu đề",
+    "sectionTitleSize": "Cỡ tiêu đề mục",
+    "subtitleSize": "Cỡ tiêu đề phụ",
+    "lineHeight": "Chiều cao dòng",
+    "letterSpacing": "Khoảng cách chữ",
+    "fontWeight": "Độ đậm chữ",
+    "selectFontWeight": "Chọn độ đậm chữ",
+    "sectionSpacing": "Khoảng cách giữa các mục",
+    "pageMargin": "Lề trang",
+    "accentColor": "Màu nhấn",
+    "fontWeights": {
+      "normal": "Thường",
+      "medium": "Vừa",
+      "semibold": "Hơi đậm",
+      "bold": "Đậm"
+    },
+    "colors": {
+      "blue": "Xanh dương",
+      "cyan": "Xanh lơ",
+      "teal": "Xanh mòng két",
+      "emerald": "Xanh ngọc lục bảo",
+      "green": "Xanh lá",
+      "lime": "Xanh chanh",
+      "yellow": "Vàng",
+      "amber": "Hổ phách",
+      "orange": "Cam",
+      "red": "Đỏ",
+      "rose": "Hồng phấn",
+      "pink": "Hồng",
+      "fuchsia": "Hồng tím",
+      "purple": "Tím",
+      "violet": "Tím violet",
+      "indigo": "Chàm",
+      "navy": "Xanh navy",
+      "slate": "Xám đá",
+      "black": "Đen"
+    }
+  },
+  "Interview": {
+    "dialog": {
+      "title": "Phỏng vấn thử với AI",
+      "states": {
+        "setup": "Thiết lập buổi phỏng vấn và bắt đầu khi bạn đã sẵn sàng.",
+        "connecting": "Đang kết nối với người phỏng vấn AI của bạn...",
+        "active": "Buổi phỏng vấn đang diễn ra. Hãy trả lời thành tiếng và nói một cách tự nhiên.",
+        "evaluating": "Đang phân tích câu trả lời của bạn và chuẩn bị nhận xét...",
+        "result": "Đây là kết quả của bạn. Hãy xem nhận xét bên dưới.",
+        "error": "Đã xảy ra lỗi. Vui lòng thử lại."
+      },
+      "endTitle": "Kết thúc phỏng vấn?",
+      "endDescription": "Buổi phỏng vấn của bạn vẫn đang diễn ra. Nếu bạn rời đi bây giờ, phiên làm việc sẽ kết thúc và không được lưu lại.",
+      "continue": "Tiếp tục",
+      "end": "Kết thúc phỏng vấn"
+    },
+    "setup": {
+      "jobDescription": "Mô tả công việc",
+      "jobDescriptionPlaceholder": "Dán mô tả công việc cho vị trí bạn đang chuẩn bị...",
+      "jobDescriptionHelp": "Chúng tôi sẽ điều chỉnh các câu hỏi phỏng vấn phù hợp với vị trí này.",
+      "interviewType": "Loại phỏng vấn",
+      "types": {
+        "all": {
+          "label": "Kết hợp",
+          "description": "Sự pha trộn của cả hai loại"
+        },
+        "behavioral": {
+          "label": "Hành vi",
+          "description": "Kỹ năng mềm & kinh nghiệm"
+        },
+        "technical": {
+          "label": "Kỹ thuật",
+          "description": "Kỹ năng đặc thù theo vị trí"
+        }
+      },
+      "questions": "Câu hỏi",
+      "speed": "Tốc độ",
+      "speedTooltip": "Điều chỉnh tốc độ nói của người phỏng vấn AI.",
+      "slow": "Chậm",
+      "fast": "Nhanh",
+      "language": "Ngôn ngữ",
+      "selectLanguage": "Chọn ngôn ngữ",
+      "languages": {
+        "English": "Tiếng Anh",
+        "Vietnamese": "Tiếng Việt",
+        "Japanese": "Tiếng Nhật",
+        "Korean": "Tiếng Hàn",
+        "Chinese": "Tiếng Trung (Quan thoại)",
+        "French": "Tiếng Pháp",
+        "German": "Tiếng Đức",
+        "Spanish": "Tiếng Tây Ban Nha",
+        "Portuguese": "Tiếng Bồ Đào Nha",
+        "Thai": "Tiếng Thái",
+        "Indonesian": "Tiếng Indonesia",
+        "Hindi": "Tiếng Hindi"
+      },
+      "voice": "Giọng nói",
+      "selectVoice": "Chọn giọng nói",
+      "voices": {
+        "Zephyr": "Zephyr — Tươi sáng",
+        "Puck": "Puck — Lạc quan",
+        "Charon": "Charon — Cung cấp thông tin",
+        "Kore": "Kore — Chắc chắn",
+        "Fenrir": "Fenrir — Sôi nổi",
+        "Leda": "Leda — Trẻ trung",
+        "Orus": "Orus — Chắc chắn"
+      },
+      "start": "Bắt đầu phỏng vấn",
+      "starting": "Đang bắt đầu...",
+      "savingResume": "Đang lưu CV...",
+      "tryAgain": "Thử lại"
+    },
+    "active": {
+      "aiSpeaking": "Người phỏng vấn đang nói",
+      "listening": "Đang lắng nghe...",
+      "muted": "Đã tắt micrô",
+      "mute": "Tắt tiếng",
+      "unmute": "Bật tiếng",
+      "progress": "Tiến độ",
+      "questionProgress": "Câu hỏi {current} trên {total}",
+      "stopInterview": "Kết thúc phỏng vấn",
+      "stopTitle": "Kết thúc phỏng vấn sớm?",
+      "stopDescription": "Chúng tôi sẽ dừng buổi phỏng vấn và đánh giá những câu trả lời của bạn cho đến thời điểm này. Bạn sẽ không thể tiếp tục phiên này sau đó.",
+      "continue": "Tiếp tục",
+      "stopAndEvaluate": "Kết thúc & đánh giá"
+    },
+    "loading": {
+      "title": "Sắp xong rồi",
+      "connecting": "Đang kết nối với người phỏng vấn của bạn...",
+      "evaluating": "Đang đánh giá phần thể hiện của bạn..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Xuất sắc",
+        "good": "Tốt",
+        "fair": "Khá",
+        "needsImprovement": "Cần cải thiện"
+      },
+      "verdict": {
+        "PASS": "Đạt",
+        "BORDERLINE": "Giáp ranh",
+        "FAIL": "Không đạt"
+      },
+      "evaluationCriteria": "Tiêu chí đánh giá",
+      "criteria": {
+        "technicalKnowledge": "Kiến thức chuyên môn",
+        "communicationSkills": "Kỹ năng giao tiếp",
+        "problemSolving": "Giải quyết vấn đề",
+        "relevanceToRole": "Mức độ phù hợp với vị trí",
+        "interviewConduct": "Phong thái phỏng vấn"
+      },
+      "perQuestionFeedback": "Nhận xét theo từng câu hỏi",
+      "suggestion": "Gợi ý",
+      "strengths": "Điểm mạnh",
+      "noStrengths": "Không xác định được điểm mạnh nổi bật nào.",
+      "areasForImprovement": "Những điểm cần cải thiện",
+      "noImprovements": "Không xác định được điểm nào cần cải thiện.",
+      "interviewAgain": "Luyện tập lại"
+    }
+  },
+  "BuilderForms": {
+    "actions": {
+      "add": "Thêm"
+    },
+    "fields": {
+      "startDate": "Ngày bắt đầu",
+      "date": "Ngày",
+      "present": "Hiện tại"
+    },
+    "personal": {
+      "title": "Thông tin cá nhân",
+      "subtitle": "Cho chúng tôi biết bạn là ai và cách liên hệ với bạn",
+      "basicDetails": "Thông tin cơ bản",
+      "contactInformation": "Thông tin liên hệ",
+      "nameLabel": "Họ và tên",
+      "headlineLabel": "Tiêu đề nghề nghiệp",
+      "emptyTitle": "Chưa có thông tin liên hệ nào",
+      "emptyDescription": "Thêm email, số điện thoại hoặc liên kết để nhà tuyển dụng có thể liên hệ với bạn.",
+      "placeholders": {
+        "name": "ví dụ: Nguyễn Văn A",
+        "headline": "ví dụ: Nhà thiết kế sản phẩm cấp cao",
+        "contactLabel": "Nhãn",
+        "contactValue": "Giá trị"
+      }
+    },
+    "summary": {
+      "title": "Tóm tắt nghề nghiệp",
+      "subtitle": "Viết một đoạn giới thiệu ngắn thể hiện kinh nghiệm và mục tiêu của bạn",
+      "placeholder": "Tóm tắt về xuất thân, điểm mạnh chính và những gì bạn mang lại cho vị trí...",
+      "characters": "{count, plural, one {# ký tự} other {# ký tự}}",
+      "proTipLabel": "Mẹo hay:",
+      "proTip": "Giữ trong khoảng 3-5 câu và bắt đầu bằng những thành tựu nổi bật nhất của bạn."
+    },
+    "experience": {
+      "title": "Kinh nghiệm làm việc",
+      "subtitle": "Thể hiện các vị trí và tác động bạn đã tạo ra",
+      "history": "Lịch sử kinh nghiệm",
+      "add": "Thêm kinh nghiệm",
+      "endDate": "Ngày kết thúc",
+      "descriptionAchievements": "Mô tả & thành tựu",
+      "emptyTitle": "Chưa có kinh nghiệm làm việc nào",
+      "emptyDescription": "Thêm các vị trí của bạn để làm nổi bật lịch sử và thành tựu sự nghiệp.",
+      "placeholders": {
+        "company": "Tên công ty",
+        "position": "Chức danh công việc"
+      },
+      "validation": {
+        "companyRequired": "Tên công ty là bắt buộc",
+        "positionRequired": "Chức danh công việc là bắt buộc"
+      }
+    },
+    "education": {
+      "title": "Học vấn",
+      "subtitle": "Liệt kê các bằng cấp, trường học và chuyên ngành của bạn",
+      "history": "Lịch sử học vấn",
+      "add": "Thêm học vấn",
+      "endDate": "Ngày kết thúc",
+      "customDegree": "Thêm bằng cấp tùy chỉnh",
+      "emptyTitle": "Chưa thêm thông tin học vấn nào",
+      "emptyDescription": "Thêm trường học và bằng cấp của bạn để hoàn thiện hồ sơ.",
+      "placeholders": {
+        "school": "Trường học hoặc đại học",
+        "degree": "Chọn một bằng cấp",
+        "major": "Chuyên ngành"
+      },
+      "validation": {
+        "schoolRequired": "Tên trường là bắt buộc",
+        "degreeRequired": "Bằng cấp là bắt buộc"
+      },
+      "degrees": {
+        "highSchool": "Bằng tốt nghiệp trung học phổ thông",
+        "ged": "GED",
+        "associateArts": "Cao đẳng Khoa học Xã hội",
+        "associateScience": "Cao đẳng Khoa học",
+        "associateAppliedScience": "Cao đẳng Khoa học Ứng dụng",
+        "bachelorArts": "Cử nhân Khoa học Xã hội",
+        "bachelorScience": "Cử nhân Khoa học",
+        "bba": "BBA",
+        "masterArts": "Thạc sĩ Khoa học Xã hội",
+        "masterScience": "Thạc sĩ Khoa học",
+        "mba": "MBA",
+        "jd": "J.D.",
+        "md": "M.D.",
+        "phd": "Ph.D",
+        "noDegree": "Không có bằng cấp"
+      }
+    },
+    "skills": {
+      "title": "Kỹ năng",
+      "subtitle": "Làm nổi bật những khả năng khiến bạn khác biệt",
+      "list": "Danh sách kỹ năng",
+      "add": "Thêm kỹ năng",
+      "emptyTitle": "Chưa thêm kỹ năng nào",
+      "emptyDescription": "Thêm các kỹ năng chính cùng với trình độ thành thạo của bạn.",
+      "placeholders": {
+        "name": "Tên kỹ năng",
+        "level": "Trình độ thành thạo"
+      }
+    },
+    "projects": {
+      "title": "Dự án",
+      "subtitle": "Làm nổi bật những công việc bạn tự hào nhất",
+      "list": "Danh sách dự án",
+      "add": "Thêm dự án",
+      "description": "Mô tả",
+      "responsibilities": "Trách nhiệm",
+      "emptyTitle": "Chưa thêm dự án nào",
+      "emptyDescription": "Thêm các dự án để thể hiện kinh nghiệm thực tế của bạn.",
+      "placeholders": {
+        "name": "Tên dự án",
+        "subtitle": "Phụ đề hoặc khẩu hiệu",
+        "position": "Vai trò của bạn",
+        "domain": "Lĩnh vực hoặc ngành",
+        "technologies": "Công nghệ đã sử dụng",
+        "demo": "URL demo hoặc trực tiếp"
+      },
+      "validation": {
+        "nameRequired": "Tên dự án là bắt buộc"
+      }
+    },
+    "certifications": {
+      "title": "Chứng chỉ",
+      "subtitle": "Thêm các chứng chỉ xác thực chuyên môn của bạn",
+      "list": "Danh sách chứng chỉ",
+      "add": "Thêm chứng chỉ",
+      "emptyTitle": "Chưa thêm chứng chỉ nào",
+      "emptyDescription": "Thêm chứng chỉ để thể hiện trình độ của bạn.",
+      "placeholders": {
+        "name": "Tên chứng chỉ",
+        "issuer": "Tổ chức cấp"
+      },
+      "validation": {
+        "nameRequired": "Tên chứng chỉ là bắt buộc",
+        "issuerRequired": "Tổ chức cấp là bắt buộc"
+      }
+    },
+    "languages": {
+      "title": "Ngôn ngữ",
+      "subtitle": "Liệt kê các ngôn ngữ bạn nói và mức độ thành thạo",
+      "list": "Danh sách ngôn ngữ",
+      "add": "Thêm ngôn ngữ",
+      "emptyTitle": "Chưa thêm ngôn ngữ nào",
+      "emptyDescription": "Thêm các ngôn ngữ bạn nói và mức độ thành thạo của bạn.",
+      "placeholders": {
+        "name": "Ngôn ngữ",
+        "level": "Chọn mức độ thành thạo"
+      },
+      "validation": {
+        "nameRequired": "Ngôn ngữ là bắt buộc",
+        "levelRequired": "Mức độ thành thạo là bắt buộc"
+      },
+      "levels": {
+        "elementary": "Sơ cấp",
+        "limitedWorking": "Giao tiếp công việc cơ bản",
+        "professionalWorking": "Giao tiếp công việc chuyên nghiệp",
+        "fullProfessional": "Thành thạo chuyên nghiệp",
+        "nativeOrBilingual": "Bản ngữ hoặc song ngữ"
+      }
+    },
+    "extra": {
+      "finished": "Hoàn thành"
+    }
   }
 }

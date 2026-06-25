@@ -334,7 +334,6 @@ const SectionOrderPanel = ({
           >
             <List className='h-4 w-4' />
           </div>
-          <Label className='text-sm font-medium'>Section Order</Label>
           <Label className='text-sm font-medium'>
             {t('sectionOrder.title')}
           </Label>
@@ -404,6 +403,7 @@ const SectionOrderPanel = ({
 };
 
 const TemplateFormat = () => {
+  const t = useTranslations('TemplateFormat');
   const dispatch = useAppDispatch();
   const format = useAppSelector(templateFormatSelector);
 
@@ -453,12 +453,12 @@ const TemplateFormat = () => {
                 hover:no-underline
               `}
             >
-              Typography
+              {t('typography')}
             </AccordionTrigger>
             <AccordionContent className='space-y-4 pb-4'>
               <FormatSelectRow
                 icon={<Type className='h-4 w-4' />}
-                label='Font Family'
+                label={t('fontFamily')}
               >
                 <Select
                   value={format.fontFamily}
@@ -467,7 +467,7 @@ const TemplateFormat = () => {
                   }
                 >
                   <SelectTrigger className='w-full'>
-                    <SelectValue placeholder='Select font' />
+                    <SelectValue placeholder={t('selectFont')} />
                   </SelectTrigger>
                   <SelectContent>
                     {FONT_OPTIONS.map((option) => (
@@ -483,7 +483,7 @@ const TemplateFormat = () => {
 
               <FormatSlider
                 icon={<ALargeSmall className='h-4 w-4' />}
-                label='Font Size'
+                label={t('fontSize')}
                 value={format.fontSize}
                 min={8}
                 max={20}
@@ -494,7 +494,7 @@ const TemplateFormat = () => {
 
               <FormatSlider
                 icon={<Heading1 className='h-4 w-4' />}
-                label='Title Size'
+                label={t('titleSize')}
                 value={format.titleSize}
                 min={20}
                 max={52}
@@ -505,7 +505,7 @@ const TemplateFormat = () => {
 
               <FormatSlider
                 icon={<Heading2 className='h-4 w-4' />}
-                label='Section Title Size'
+                label={t('sectionTitleSize')}
                 value={format.sectionTitleSize}
                 min={10}
                 max={40}
@@ -516,7 +516,7 @@ const TemplateFormat = () => {
 
               <FormatSlider
                 icon={<Heading2 className='h-4 w-4' />}
-                label='Subtitle Size'
+                label={t('subtitleSize')}
                 value={format.subTitleSize}
                 min={10}
                 max={30}
@@ -527,7 +527,7 @@ const TemplateFormat = () => {
 
               <FormatSlider
                 icon={<MoveVertical className='h-4 w-4' />}
-                label='Line Height'
+                label={t('lineHeight')}
                 value={format.lineHeight}
                 min={1.5}
                 max={2.5}
@@ -537,7 +537,7 @@ const TemplateFormat = () => {
 
               <FormatSlider
                 icon={<LetterText className='h-4 w-4' />}
-                label='Letter Spacing'
+                label={t('letterSpacing')}
                 value={format.letterSpacing}
                 min={-1}
                 max={3}
@@ -548,7 +548,7 @@ const TemplateFormat = () => {
 
               <FormatSelectRow
                 icon={<Bold className='h-4 w-4' />}
-                label='Font Weight'
+                label={t('fontWeight')}
               >
                 <Select
                   value={format.fontWeight}
@@ -557,12 +557,12 @@ const TemplateFormat = () => {
                   }
                 >
                   <SelectTrigger className='w-full'>
-                    <SelectValue placeholder='Select font weight' />
+                    <SelectValue placeholder={t('selectFontWeight')} />
                   </SelectTrigger>
                   <SelectContent>
                     {FONT_WEIGHT_OPTIONS.map((option) => (
                       <SelectItem key={option.value} value={option.value}>
-                        {option.label}
+                        {t(option.labelKey)}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -580,12 +580,12 @@ const TemplateFormat = () => {
                 hover:no-underline
               `}
             >
-              Layout
+              {t('layout')}
             </AccordionTrigger>
             <AccordionContent className='space-y-4 pb-4'>
               <FormatSlider
                 icon={<Maximize2 className='h-4 w-4' />}
-                label='Section Spacing'
+                label={t('sectionSpacing')}
                 value={format.sectionSpacing}
                 min={4}
                 max={24}
@@ -596,7 +596,7 @@ const TemplateFormat = () => {
 
               <FormatSlider
                 icon={<Maximize2 className='h-4 w-4' />}
-                label='Page Margin'
+                label={t('pageMargin')}
                 value={format.margin}
                 min={10}
                 max={40}
@@ -632,7 +632,9 @@ const TemplateFormat = () => {
                   >
                     <Palette className='h-4 w-4' />
                   </div>
-                  <Label className='text-sm font-medium'>Accent Color</Label>
+                  <Label className='text-sm font-medium'>
+                    {t('accentColor')}
+                  </Label>
                 </div>
 
                 <div className='grid grid-cols-4 gap-3'>
@@ -650,7 +652,7 @@ const TemplateFormat = () => {
                           ? 'border-primary'
                           : 'border-transparent',
                       )}
-                      title={option.label}
+                      title={t(option.labelKey)}
                     >
                       <div
                         className='h-6 w-6 rounded-full shadow-sm'

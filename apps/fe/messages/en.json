@@ -1,4 +1,10 @@
 {
+  "Common": {
+    "scrollToTop": "Scroll to top",
+    "back": "Back",
+    "next": "Next",
+    "saving": "Saving..."
+  },
   "Nav": {
     "home": "Home",
     "templates": "Templates",
@@ -235,5 +241,569 @@
     "title": "Ready to Land Your Dream Job?",
     "description": "Join 10,000+ professionals who have already transformed their careers with our AI-powered toolkit.",
     "button": "Get Started Free"
+  },
+  "Auth": {
+    "continueWith": "Or continue with",
+    "errors": {
+      "generic": "Something went wrong. Please try again."
+    },
+    "fields": {
+      "confirmPassword": "Confirm Password",
+      "email": "Email",
+      "password": "Password"
+    },
+    "layout": {
+      "and": "and",
+      "formSubtitle": "Build your standout CV in minutes",
+      "formTitle": "Welcome to CVCraft",
+      "heroDescription": "Create stunning, ATS-friendly resumes with the help of AI. Land more interviews and accelerate your career in minutes.",
+      "heroLine1": "Build a CV that",
+      "heroLine2": "gets you hired.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "termsPrefix": "By continuing, you agree to our",
+      "features": {
+        "0": "Professional, recruiter-ready templates",
+        "1": "AI-powered content suggestions",
+        "2": "Tailored to every job description",
+        "3": "Ready in minutes, not hours"
+      },
+      "stats": {
+        "0": {
+          "value": "50K+",
+          "label": "CVs Created"
+        },
+        "1": {
+          "value": "10K+",
+          "label": "Users Hired"
+        },
+        "2": {
+          "value": "95%",
+          "label": "Success Rate"
+        }
+      }
+    },
+    "placeholders": {
+      "confirmPassword": "Re-enter your password",
+      "createPassword": "Create a password",
+      "email": "you@example.com",
+      "password": "Enter your password"
+    },
+    "signIn": {
+      "invalidCredentials": "Invalid email or password. Please try again.",
+      "loading": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "submit": "Sign In",
+      "success": "Signed in successfully. Welcome back!"
+    },
+    "signUp": {
+      "hasAccount": "Already have an account?",
+      "loading": "Creating account...",
+      "signInLink": "Sign in",
+      "submit": "Create Account"
+    },
+    "sso": {
+      "almostThere": "Almost there, signing you in..."
+    },
+    "validation": {
+      "codeIncomplete": "Please enter all 6 digits.",
+      "codeSixDigits": "The code must be exactly 6 digits.",
+      "confirmPasswordRequired": "Please confirm your password.",
+      "emailInvalid": "Please enter a valid email address.",
+      "emailRequired": "Email is required.",
+      "passwordMax": "Password must be no more than 50 characters.",
+      "passwordMin": "Password must be at least 8 characters.",
+      "passwordRequired": "Password is required.",
+      "passwordsDoNotMatch": "Passwords do not match."
+    },
+    "verify": {
+      "didNotReceive": "Didn't receive the code?",
+      "emailFallback": "your email address",
+      "incomplete": "Verification could not be completed. Please try again.",
+      "resendCode": "Resend code",
+      "resendFailed": "Failed to resend the code. Please try again.",
+      "resendIn": "Resend in {seconds}s",
+      "resendSuccess": "A new code has been sent to your email.",
+      "sentTo": "We sent a 6-digit verification code to",
+      "submit": "Verify",
+      "success": "Your account has been verified. Welcome to CVCraft!",
+      "title": "Verify your email",
+      "verifying": "Verifying..."
+    }
+  },
+  "Matching": {
+    "trigger": "Match to Job",
+    "title": "Job Match Analysis",
+    "description": {
+      "form": "Paste a job description or upload it as a PDF, and we'll see how well your resume matches.",
+      "result": "Here's how your resume stacks up against the job description."
+    },
+    "form": {
+      "textTab": "Paste Text",
+      "fileTab": "Upload File",
+      "jdPlaceholder": "Paste the job description here...",
+      "uploadFile": "Click to upload a job description",
+      "changeFile": "Click to choose a different file",
+      "fileHint": "PDF up to 10MB",
+      "analyze": "Analyze Match"
+    },
+    "loading": {
+      "title": "Analyzing Your Match",
+      "description": "Comparing your resume against the job description..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Excellent Match",
+        "good": "Good Match",
+        "fair": "Fair Match",
+        "needsImprovement": "Needs Improvement"
+      },
+      "tabs": {
+        "breakdown": "Breakdown",
+        "analysis": "Analysis",
+        "improve": "Improve"
+      },
+      "weight": "Weight {weight}%",
+      "strengths": "Strengths",
+      "noStrengths": "No notable strengths identified yet.",
+      "missingKeywords": "Missing Keywords",
+      "invalidJobDescription": "Couldn't read a valid job description.",
+      "suggestionsToImprove": "Suggestions to Improve",
+      "noSuggestions": "No suggestions—your resume is a strong fit.",
+      "analyzeAnother": "Analyze Another"
+    },
+    "email": {
+      "view": "View Email",
+      "generate": "Generate Outreach Email",
+      "generating": "Generating...",
+      "generateFailed": "Couldn't generate the email. Please try again.",
+      "regenerate": "Regenerate",
+      "ready": "Ready to send",
+      "dialogTitle": "Your Outreach Email",
+      "dialogDescription": "A personalized outreach email generated from your resume and the job description.",
+      "subject": "Subject",
+      "subjectPlaceholder": "Email subject",
+      "subjectCopied": "Subject copied to clipboard",
+      "bodyPlaceholder": "Email body",
+      "edit": "Edit",
+      "saveChanges": "Save Changes",
+      "cancel": "Cancel",
+      "close": "Close",
+      "copyToClipboard": "Copy to Clipboard",
+      "copySubject": "Copy subject",
+      "copied": "Copied",
+      "copyFailed": "Couldn't copy to clipboard.",
+      "displayFailed": "Couldn't display the email. Please try again."
+    },
+    "errors": {
+      "noResume": "Please select a resume first.",
+      "noJobDescription": "Please add a job description to continue.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "Builder": {
+    "title": "Resume Builder",
+    "subtitle": "Build a standout resume with the help of AI.",
+    "selectTemplateWarning": "Please choose a template before you start building.",
+    "sections": {
+      "personal": "Personal",
+      "summary": "Summary",
+      "skills": "Skills",
+      "education": "Education",
+      "experience": "Experience",
+      "projects": "Projects",
+      "extra": "Additional"
+    },
+    "downloadPdf": {
+      "export": "Export PDF",
+      "failed": "Failed to generate the PDF. Please try again.",
+      "selectTemplate": "Please select a template first."
+    },
+    "resumeControl": {
+      "title": "Resume Builder",
+      "subtitle": "Build a standout resume with the help of AI.",
+      "customize": "Customize",
+      "edit": "Edit",
+      "mockInterview": "Mock Interview",
+      "parseResume": "Import Resume",
+      "parsing": "Importing...",
+      "parseSuccess": "Resume imported successfully!",
+      "parseFailed": "We couldn't read your resume. Please try a different file.",
+      "parseTooltip": "Upload a PDF resume and let AI fill in your details automatically.",
+      "save": "Save",
+      "saveTooltip": "Save your changes (Ctrl+S)"
+    }
+  },
+  "TemplatesPage": {
+    "title": "Choose Your Template",
+    "description": "Browse our collection of professionally designed, ATS-friendly templates and pick the one that fits you best.",
+    "useTemplate": "Use This Template",
+    "errors": {
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "TemplateSelectionDialog": {
+    "title": "Let's Build Your Resume",
+    "description": "How would you like to get started?",
+    "cancel": "Cancel",
+    "scratch": {
+      "title": "Start from Scratch",
+      "description": "Begin with a blank resume and fill in your details step by step."
+    },
+    "upload": {
+      "title": "Upload a Resume",
+      "description": "Upload an existing resume and let AI fill in your details automatically."
+    },
+    "loading": {
+      "description": "This usually takes just a few seconds. Hang tight while we work our magic.",
+      "steps": {
+        "0": "Reading your resume...",
+        "1": "Extracting your experience...",
+        "2": "Organizing your details...",
+        "3": "Almost there..."
+      }
+    }
+  },
+  "TemplateFormat": {
+    "reset": "Reset",
+    "sectionOrder": {
+      "title": "Section Order"
+    },
+    "sections": {
+      "personal": "Personal",
+      "summary": "Summary",
+      "skills": "Skills",
+      "education": "Education",
+      "certifications": "Certifications",
+      "languages": "Languages",
+      "experience": "Experience",
+      "projects": "Projects"
+    },
+    "typography": "Typography",
+    "layout": "Layout",
+    "fontFamily": "Font Family",
+    "selectFont": "Select font",
+    "fontSize": "Font Size",
+    "titleSize": "Title Size",
+    "sectionTitleSize": "Section Title Size",
+    "subtitleSize": "Subtitle Size",
+    "lineHeight": "Line Height",
+    "letterSpacing": "Letter Spacing",
+    "fontWeight": "Font Weight",
+    "selectFontWeight": "Select font weight",
+    "sectionSpacing": "Section Spacing",
+    "pageMargin": "Page Margin",
+    "accentColor": "Accent Color",
+    "fontWeights": {
+      "normal": "Normal",
+      "medium": "Medium",
+      "semibold": "Semibold",
+      "bold": "Bold"
+    },
+    "colors": {
+      "blue": "Blue",
+      "cyan": "Cyan",
+      "teal": "Teal",
+      "emerald": "Emerald",
+      "green": "Green",
+      "lime": "Lime",
+      "yellow": "Yellow",
+      "amber": "Amber",
+      "orange": "Orange",
+      "red": "Red",
+      "rose": "Rose",
+      "pink": "Pink",
+      "fuchsia": "Fuchsia",
+      "purple": "Purple",
+      "violet": "Violet",
+      "indigo": "Indigo",
+      "navy": "Navy",
+      "slate": "Slate",
+      "black": "Black"
+    }
+  },
+  "Interview": {
+    "dialog": {
+      "title": "AI Mock Interview",
+      "states": {
+        "setup": "Set up your interview and start when you're ready.",
+        "connecting": "Connecting to your AI interviewer...",
+        "active": "Interview in progress. Answer out loud and speak naturally.",
+        "evaluating": "Analyzing your responses and preparing feedback...",
+        "result": "Here's how you did. Review your feedback below.",
+        "error": "Something went wrong. Please try again."
+      },
+      "endTitle": "End interview?",
+      "endDescription": "Your interview is still in progress. If you leave now, your session will end and won't be saved.",
+      "continue": "Keep going",
+      "end": "End interview"
+    },
+    "setup": {
+      "jobDescription": "Job Description",
+      "jobDescriptionPlaceholder": "Paste the job description for the role you're preparing for...",
+      "jobDescriptionHelp": "We'll tailor the interview questions to this role.",
+      "interviewType": "Interview Type",
+      "types": {
+        "all": {
+          "label": "Mixed",
+          "description": "A blend of both types"
+        },
+        "behavioral": {
+          "label": "Behavioral",
+          "description": "Soft skills & experience"
+        },
+        "technical": {
+          "label": "Technical",
+          "description": "Role-specific skills"
+        }
+      },
+      "questions": "Questions",
+      "speed": "Speed",
+      "speedTooltip": "Adjust how fast the AI interviewer speaks.",
+      "slow": "Slow",
+      "fast": "Fast",
+      "language": "Language",
+      "selectLanguage": "Select language",
+      "languages": {
+        "English": "English",
+        "Vietnamese": "Vietnamese",
+        "Japanese": "Japanese",
+        "Korean": "Korean",
+        "Chinese": "Chinese (Mandarin)",
+        "French": "French",
+        "German": "German",
+        "Spanish": "Spanish",
+        "Portuguese": "Portuguese",
+        "Thai": "Thai",
+        "Indonesian": "Indonesian",
+        "Hindi": "Hindi"
+      },
+      "voice": "Voice",
+      "selectVoice": "Select voice",
+      "voices": {
+        "Zephyr": "Zephyr — Bright",
+        "Puck": "Puck — Upbeat",
+        "Charon": "Charon — Informative",
+        "Kore": "Kore — Firm",
+        "Fenrir": "Fenrir — Excitable",
+        "Leda": "Leda — Youthful",
+        "Orus": "Orus — Firm"
+      },
+      "start": "Start Interview",
+      "starting": "Starting...",
+      "savingResume": "Saving resume...",
+      "tryAgain": "Try again"
+    },
+    "active": {
+      "aiSpeaking": "Interviewer speaking",
+      "listening": "Listening...",
+      "muted": "Microphone muted",
+      "mute": "Mute",
+      "unmute": "Unmute",
+      "progress": "Progress",
+      "questionProgress": "Question {current} of {total}",
+      "stopInterview": "End Interview",
+      "stopTitle": "End interview early?",
+      "stopDescription": "We'll stop the interview and evaluate your answers so far. You won't be able to continue this session afterward.",
+      "continue": "Keep going",
+      "stopAndEvaluate": "End & evaluate"
+    },
+    "loading": {
+      "title": "Almost there",
+      "connecting": "Connecting to your interviewer...",
+      "evaluating": "Evaluating your performance..."
+    },
+    "result": {
+      "score": {
+        "excellent": "Excellent",
+        "good": "Good",
+        "fair": "Fair",
+        "needsImprovement": "Needs Improvement"
+      },
+      "verdict": {
+        "PASS": "Pass",
+        "BORDERLINE": "Borderline",
+        "FAIL": "Fail"
+      },
+      "evaluationCriteria": "Evaluation Criteria",
+      "criteria": {
+        "technicalKnowledge": "Technical Knowledge",
+        "communicationSkills": "Communication Skills",
+        "problemSolving": "Problem Solving",
+        "relevanceToRole": "Relevance to Role",
+        "interviewConduct": "Interview Conduct"
+      },
+      "perQuestionFeedback": "Per-Question Feedback",
+      "suggestion": "Suggestion",
+      "strengths": "Strengths",
+      "noStrengths": "No notable strengths identified.",
+      "areasForImprovement": "Areas for Improvement",
+      "noImprovements": "No areas for improvement identified.",
+      "interviewAgain": "Practice Again"
+    }
+  },
+  "BuilderForms": {
+    "actions": {
+      "add": "Add"
+    },
+    "fields": {
+      "startDate": "Start date",
+      "date": "Date",
+      "present": "Present"
+    },
+    "personal": {
+      "title": "Personal Information",
+      "subtitle": "Tell us who you are and how to reach you",
+      "basicDetails": "Basic Details",
+      "contactInformation": "Contact Information",
+      "nameLabel": "Full Name",
+      "headlineLabel": "Professional Headline",
+      "emptyTitle": "No contact details yet",
+      "emptyDescription": "Add an email, phone number, or links so recruiters can reach you.",
+      "placeholders": {
+        "name": "e.g. Jane Doe",
+        "headline": "e.g. Senior Product Designer",
+        "contactLabel": "Label",
+        "contactValue": "Value"
+      }
+    },
+    "summary": {
+      "title": "Professional Summary",
+      "subtitle": "Write a short pitch that captures your experience and goals",
+      "placeholder": "Summarize your background, key strengths, and what you bring to a role...",
+      "characters": "{count, plural, one {# character} other {# characters}}",
+      "proTipLabel": "Pro tip:",
+      "proTip": "Keep it to 3-5 sentences and lead with your strongest achievements."
+    },
+    "experience": {
+      "title": "Work Experience",
+      "subtitle": "Showcase your roles and the impact you made",
+      "history": "Experience History",
+      "add": "Add Experience",
+      "endDate": "End date",
+      "descriptionAchievements": "Description & Achievements",
+      "emptyTitle": "No work experience yet",
+      "emptyDescription": "Add your roles to highlight your career history and achievements.",
+      "placeholders": {
+        "company": "Company name",
+        "position": "Job title"
+      },
+      "validation": {
+        "companyRequired": "Company name is required",
+        "positionRequired": "Job title is required"
+      }
+    },
+    "education": {
+      "title": "Education",
+      "subtitle": "List your degrees, schools, and fields of study",
+      "history": "Education History",
+      "add": "Add Education",
+      "endDate": "End date",
+      "customDegree": "Add custom degree",
+      "emptyTitle": "No education added yet",
+      "emptyDescription": "Add your schools and degrees to round out your profile.",
+      "placeholders": {
+        "school": "School or university",
+        "degree": "Select a degree",
+        "major": "Field of study"
+      },
+      "validation": {
+        "schoolRequired": "School name is required",
+        "degreeRequired": "Degree is required"
+      },
+      "degrees": {
+        "highSchool": "High School Diploma",
+        "ged": "GED",
+        "associateArts": "Associate of Arts",
+        "associateScience": "Associate of Science",
+        "associateAppliedScience": "Associate of Applied Science",
+        "bachelorArts": "Bachelor of Arts",
+        "bachelorScience": "Bachelor of Science",
+        "bba": "BBA",
+        "masterArts": "Master of Arts",
+        "masterScience": "Master of Science",
+        "mba": "MBA",
+        "jd": "J.D.",
+        "md": "M.D.",
+        "phd": "Ph.D",
+        "noDegree": "No Degree"
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "Highlight the abilities that set you apart",
+      "list": "Skills List",
+      "add": "Add Skill",
+      "emptyTitle": "No skills added yet",
+      "emptyDescription": "Add your key skills along with your proficiency level.",
+      "placeholders": {
+        "name": "Skill name",
+        "level": "Proficiency level"
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "Highlight the work you're most proud of",
+      "list": "Projects List",
+      "add": "Add Project",
+      "description": "Description",
+      "responsibilities": "Responsibilities",
+      "emptyTitle": "No projects added yet",
+      "emptyDescription": "Add projects to demonstrate your hands-on experience.",
+      "placeholders": {
+        "name": "Project name",
+        "subtitle": "Subtitle or tagline",
+        "position": "Your role",
+        "domain": "Domain or industry",
+        "technologies": "Technologies used",
+        "demo": "Demo or live URL"
+      },
+      "validation": {
+        "nameRequired": "Project name is required"
+      }
+    },
+    "certifications": {
+      "title": "Certifications",
+      "subtitle": "Add credentials that validate your expertise",
+      "list": "Certifications List",
+      "add": "Add Certification",
+      "emptyTitle": "No certifications added yet",
+      "emptyDescription": "Add certifications to showcase your qualifications.",
+      "placeholders": {
+        "name": "Certification name",
+        "issuer": "Issuing organization"
+      },
+      "validation": {
+        "nameRequired": "Certification name is required",
+        "issuerRequired": "Issuing organization is required"
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "subtitle": "List the languages you speak and your fluency",
+      "list": "Languages List",
+      "add": "Add Language",
+      "emptyTitle": "No languages added yet",
+      "emptyDescription": "Add the languages you speak and your level of proficiency.",
+      "placeholders": {
+        "name": "Language",
+        "level": "Select proficiency"
+      },
+      "validation": {
+        "nameRequired": "Language is required",
+        "levelRequired": "Proficiency level is required"
+      },
+      "levels": {
+        "elementary": "Elementary",
+        "limitedWorking": "Limited Working",
+        "professionalWorking": "Professional Working",
+        "fullProfessional": "Full Professional",
+        "nativeOrBilingual": "Native or Bilingual"
+      }
+    },
+    "extra": {
+      "finished": "Finish"
+    }
   }
 }

@@ -1,4 +1,10 @@
 {
+  "Common": {
+    "scrollToTop": "返回顶部",
+    "back": "返回",
+    "next": "下一步",
+    "saving": "正在保存..."
+  },
   "Nav": {
     "home": "首页",
     "templates": "模板",
@@ -10,7 +16,18 @@
     "signInSignUp": "登录 / 注册"
   },
   "Language": {
-    "label": "语言"
+    "label": "语言",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "zh": "中文",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "ar": "العربية",
+    "ko": "한국어",
+    "de": "Deutsch"
   },
   "Footer": {
     "tagline": "AI驱动的简历工具，助你拿下心仪工作。",
@@ -224,5 +241,569 @@
     "title": "准备好拿下 dream job 了吗？",
     "description": "已有超过一万名专业人士用我们的 AI 工具改变职业轨迹。",
     "button": "免费开始"
+  },
+  "Auth": {
+    "continueWith": "或继续使用",
+    "errors": {
+      "generic": "出了点问题，请重试。"
+    },
+    "fields": {
+      "confirmPassword": "确认密码",
+      "email": "邮箱",
+      "password": "密码"
+    },
+    "layout": {
+      "and": "和",
+      "formSubtitle": "几分钟内打造出色的简历",
+      "formTitle": "欢迎使用 CVCraft",
+      "heroDescription": "借助 AI 制作精美且兼容 ATS 的简历。在几分钟内获得更多面试机会，加速你的职业发展。",
+      "heroLine1": "打造一份让你",
+      "heroLine2": "成功入职的简历。",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "termsPrefix": "继续即表示你同意我们的",
+      "features": {
+        "0": "专业、随时可投递给招聘方的模板",
+        "1": "AI 驱动的内容建议",
+        "2": "针对每份职位描述量身定制",
+        "3": "几分钟即可完成，无需数小时"
+      },
+      "stats": {
+        "0": {
+          "value": "50K+",
+          "label": "已创建简历"
+        },
+        "1": {
+          "value": "10K+",
+          "label": "成功入职用户"
+        },
+        "2": {
+          "value": "95%",
+          "label": "成功率"
+        }
+      }
+    },
+    "placeholders": {
+      "confirmPassword": "再次输入你的密码",
+      "createPassword": "创建一个密码",
+      "email": "you@example.com",
+      "password": "输入你的密码"
+    },
+    "signIn": {
+      "invalidCredentials": "邮箱或密码无效，请重试。",
+      "loading": "正在登录...",
+      "noAccount": "还没有账号？",
+      "signUpLink": "注册",
+      "submit": "登录",
+      "success": "登录成功，欢迎回来！"
+    },
+    "signUp": {
+      "hasAccount": "已经有账号了？",
+      "loading": "正在创建账号...",
+      "signInLink": "登录",
+      "submit": "创建账号"
+    },
+    "sso": {
+      "almostThere": "马上就好，正在为你登录..."
+    },
+    "validation": {
+      "codeIncomplete": "请输入全部 6 位数字。",
+      "codeSixDigits": "验证码必须为 6 位数字。",
+      "confirmPasswordRequired": "请确认你的密码。",
+      "emailInvalid": "请输入有效的邮箱地址。",
+      "emailRequired": "邮箱为必填项。",
+      "passwordMax": "密码不能超过 50 个字符。",
+      "passwordMin": "密码至少需要 8 个字符。",
+      "passwordRequired": "密码为必填项。",
+      "passwordsDoNotMatch": "两次输入的密码不一致。"
+    },
+    "verify": {
+      "didNotReceive": "没有收到验证码？",
+      "emailFallback": "你的邮箱地址",
+      "incomplete": "验证未能完成，请重试。",
+      "resendCode": "重新发送验证码",
+      "resendFailed": "重新发送验证码失败，请重试。",
+      "resendIn": "{seconds} 秒后可重新发送",
+      "resendSuccess": "新的验证码已发送至你的邮箱。",
+      "sentTo": "我们已将 6 位验证码发送至",
+      "submit": "验证",
+      "success": "你的账号已通过验证，欢迎使用 CVCraft！",
+      "title": "验证你的邮箱",
+      "verifying": "正在验证..."
+    }
+  },
+  "Matching": {
+    "trigger": "匹配职位",
+    "title": "职位匹配分析",
+    "description": {
+      "form": "粘贴职位描述或以 PDF 形式上传，我们会分析你的简历与之的匹配程度。",
+      "result": "以下是你的简历与该职位描述的匹配情况。"
+    },
+    "form": {
+      "textTab": "粘贴文本",
+      "fileTab": "上传文件",
+      "jdPlaceholder": "在此粘贴职位描述...",
+      "uploadFile": "点击上传职位描述",
+      "changeFile": "点击选择其他文件",
+      "fileHint": "PDF，最大 10MB",
+      "analyze": "分析匹配度"
+    },
+    "loading": {
+      "title": "正在分析匹配度",
+      "description": "正在将你的简历与职位描述进行对比..."
+    },
+    "result": {
+      "score": {
+        "excellent": "非常匹配",
+        "good": "匹配良好",
+        "fair": "基本匹配",
+        "needsImprovement": "有待改进"
+      },
+      "tabs": {
+        "breakdown": "明细",
+        "analysis": "分析",
+        "improve": "改进"
+      },
+      "weight": "权重 {weight}%",
+      "strengths": "优势",
+      "noStrengths": "暂未发现明显优势。",
+      "missingKeywords": "缺失的关键词",
+      "invalidJobDescription": "无法读取有效的职位描述。",
+      "suggestionsToImprove": "改进建议",
+      "noSuggestions": "没有改进建议——你的简历非常契合该职位。",
+      "analyzeAnother": "再分析一份"
+    },
+    "email": {
+      "view": "查看邮件",
+      "generate": "生成求职邮件",
+      "generating": "正在生成...",
+      "generateFailed": "无法生成邮件，请重试。",
+      "regenerate": "重新生成",
+      "ready": "可以发送了",
+      "dialogTitle": "你的求职邮件",
+      "dialogDescription": "根据你的简历和职位描述生成的个性化求职邮件。",
+      "subject": "主题",
+      "subjectPlaceholder": "邮件主题",
+      "subjectCopied": "主题已复制到剪贴板",
+      "bodyPlaceholder": "邮件正文",
+      "edit": "编辑",
+      "saveChanges": "保存更改",
+      "cancel": "取消",
+      "close": "关闭",
+      "copyToClipboard": "复制到剪贴板",
+      "copySubject": "复制主题",
+      "copied": "已复制",
+      "copyFailed": "无法复制到剪贴板。",
+      "displayFailed": "无法显示邮件，请重试。"
+    },
+    "errors": {
+      "noResume": "请先选择一份简历。",
+      "noJobDescription": "请添加职位描述以继续。",
+      "generic": "出了点问题，请重试。"
+    }
+  },
+  "Builder": {
+    "title": "简历生成器",
+    "subtitle": "借助 AI 打造一份出色的简历。",
+    "selectTemplateWarning": "请先选择一个模板，然后再开始制作。",
+    "sections": {
+      "personal": "个人信息",
+      "summary": "概述",
+      "skills": "技能",
+      "education": "教育经历",
+      "experience": "工作经历",
+      "projects": "项目经历",
+      "extra": "其他"
+    },
+    "downloadPdf": {
+      "export": "导出 PDF",
+      "failed": "生成 PDF 失败，请重试。",
+      "selectTemplate": "请先选择一个模板。"
+    },
+    "resumeControl": {
+      "title": "简历生成器",
+      "subtitle": "借助 AI 打造一份出色的简历。",
+      "customize": "自定义",
+      "edit": "编辑",
+      "mockInterview": "模拟面试",
+      "parseResume": "导入简历",
+      "parsing": "正在导入...",
+      "parseSuccess": "简历导入成功！",
+      "parseFailed": "我们无法读取你的简历，请尝试其他文件。",
+      "parseTooltip": "上传 PDF 简历，让 AI 自动填写你的信息。",
+      "save": "保存",
+      "saveTooltip": "保存你的更改（Ctrl+S）"
+    }
+  },
+  "TemplatesPage": {
+    "title": "选择你的模板",
+    "description": "浏览我们由专业人士设计、兼容 ATS 的模板系列，挑选最适合你的一款。",
+    "useTemplate": "使用此模板",
+    "errors": {
+      "generic": "出了点问题，请重试。"
+    }
+  },
+  "TemplateSelectionDialog": {
+    "title": "开始制作你的简历",
+    "description": "你希望如何开始？",
+    "cancel": "取消",
+    "scratch": {
+      "title": "从头开始",
+      "description": "从空白简历开始，逐步填写你的信息。"
+    },
+    "upload": {
+      "title": "上传简历",
+      "description": "上传一份现有简历，让 AI 自动填写你的信息。"
+    },
+    "loading": {
+      "description": "通常只需几秒钟，请稍候，我们正在施展魔法。",
+      "steps": {
+        "0": "正在读取你的简历...",
+        "1": "正在提取你的工作经历...",
+        "2": "正在整理你的信息...",
+        "3": "马上就好..."
+      }
+    }
+  },
+  "TemplateFormat": {
+    "reset": "重置",
+    "sectionOrder": {
+      "title": "板块顺序"
+    },
+    "sections": {
+      "personal": "个人信息",
+      "summary": "概述",
+      "skills": "技能",
+      "education": "教育经历",
+      "certifications": "证书",
+      "languages": "语言",
+      "experience": "工作经历",
+      "projects": "项目经历"
+    },
+    "typography": "排版",
+    "layout": "布局",
+    "fontFamily": "字体",
+    "selectFont": "选择字体",
+    "fontSize": "字号",
+    "titleSize": "标题字号",
+    "sectionTitleSize": "章节标题字号",
+    "subtitleSize": "副标题字号",
+    "lineHeight": "行高",
+    "letterSpacing": "字间距",
+    "fontWeight": "字重",
+    "selectFontWeight": "选择字重",
+    "sectionSpacing": "章节间距",
+    "pageMargin": "页边距",
+    "accentColor": "强调色",
+    "fontWeights": {
+      "normal": "常规",
+      "medium": "中等",
+      "semibold": "半粗",
+      "bold": "粗体"
+    },
+    "colors": {
+      "blue": "蓝色",
+      "cyan": "青色",
+      "teal": "蓝绿色",
+      "emerald": "祖母绿",
+      "green": "绿色",
+      "lime": "青柠色",
+      "yellow": "黄色",
+      "amber": "琥珀色",
+      "orange": "橙色",
+      "red": "红色",
+      "rose": "玫红色",
+      "pink": "粉色",
+      "fuchsia": "紫红色",
+      "purple": "紫色",
+      "violet": "紫罗兰色",
+      "indigo": "靛蓝色",
+      "navy": "藏青色",
+      "slate": "石板灰",
+      "black": "黑色"
+    }
+  },
+  "Interview": {
+    "dialog": {
+      "title": "AI 模拟面试",
+      "states": {
+        "setup": "设置你的面试，准备好后即可开始。",
+        "connecting": "正在连接你的 AI 面试官...",
+        "active": "面试进行中。请大声作答，自然地表达。",
+        "evaluating": "正在分析你的回答并准备反馈...",
+        "result": "以下是你的表现，请查看下方的反馈。",
+        "error": "出了点问题，请重试。"
+      },
+      "endTitle": "结束面试？",
+      "endDescription": "你的面试仍在进行中。如果现在离开，本次会话将结束且不会被保存。",
+      "continue": "继续",
+      "end": "结束面试"
+    },
+    "setup": {
+      "jobDescription": "职位描述",
+      "jobDescriptionPlaceholder": "粘贴你准备应聘职位的职位描述...",
+      "jobDescriptionHelp": "我们会根据该职位定制面试问题。",
+      "interviewType": "面试类型",
+      "types": {
+        "all": {
+          "label": "混合",
+          "description": "两种类型的结合"
+        },
+        "behavioral": {
+          "label": "行为面试",
+          "description": "软技能与经验"
+        },
+        "technical": {
+          "label": "技术面试",
+          "description": "与职位相关的技能"
+        }
+      },
+      "questions": "问题数量",
+      "speed": "语速",
+      "speedTooltip": "调整 AI 面试官的说话速度。",
+      "slow": "慢",
+      "fast": "快",
+      "language": "语言",
+      "selectLanguage": "选择语言",
+      "languages": {
+        "English": "英语",
+        "Vietnamese": "越南语",
+        "Japanese": "日语",
+        "Korean": "韩语",
+        "Chinese": "中文（普通话）",
+        "French": "法语",
+        "German": "德语",
+        "Spanish": "西班牙语",
+        "Portuguese": "葡萄牙语",
+        "Thai": "泰语",
+        "Indonesian": "印尼语",
+        "Hindi": "印地语"
+      },
+      "voice": "声音",
+      "selectVoice": "选择声音",
+      "voices": {
+        "Zephyr": "Zephyr — 明亮",
+        "Puck": "Puck — 活泼",
+        "Charon": "Charon — 知性",
+        "Kore": "Kore — 坚定",
+        "Fenrir": "Fenrir — 热情",
+        "Leda": "Leda — 年轻",
+        "Orus": "Orus — 坚定"
+      },
+      "start": "开始面试",
+      "starting": "正在开始...",
+      "savingResume": "正在保存简历...",
+      "tryAgain": "重试"
+    },
+    "active": {
+      "aiSpeaking": "面试官正在讲话",
+      "listening": "正在聆听...",
+      "muted": "麦克风已静音",
+      "mute": "静音",
+      "unmute": "取消静音",
+      "progress": "进度",
+      "questionProgress": "第 {current} 题，共 {total} 题",
+      "stopInterview": "结束面试",
+      "stopTitle": "提前结束面试？",
+      "stopDescription": "我们将停止面试并评估你目前为止的回答。之后你将无法继续本次会话。",
+      "continue": "继续",
+      "stopAndEvaluate": "结束并评估"
+    },
+    "loading": {
+      "title": "马上就好",
+      "connecting": "正在连接你的面试官...",
+      "evaluating": "正在评估你的表现..."
+    },
+    "result": {
+      "score": {
+        "excellent": "优秀",
+        "good": "良好",
+        "fair": "一般",
+        "needsImprovement": "有待改进"
+      },
+      "verdict": {
+        "PASS": "通过",
+        "BORDERLINE": "勉强通过",
+        "FAIL": "未通过"
+      },
+      "evaluationCriteria": "评估标准",
+      "criteria": {
+        "technicalKnowledge": "技术知识",
+        "communicationSkills": "沟通能力",
+        "problemSolving": "问题解决能力",
+        "relevanceToRole": "与职位的契合度",
+        "interviewConduct": "面试表现"
+      },
+      "perQuestionFeedback": "逐题反馈",
+      "suggestion": "建议",
+      "strengths": "优势",
+      "noStrengths": "未发现明显优势。",
+      "areasForImprovement": "待改进之处",
+      "noImprovements": "未发现需要改进的地方。",
+      "interviewAgain": "再次练习"
+    }
+  },
+  "BuilderForms": {
+    "actions": {
+      "add": "添加"
+    },
+    "fields": {
+      "startDate": "开始日期",
+      "date": "日期",
+      "present": "至今"
+    },
+    "personal": {
+      "title": "个人信息",
+      "subtitle": "告诉我们你是谁，以及如何联系你",
+      "basicDetails": "基本信息",
+      "contactInformation": "联系方式",
+      "nameLabel": "姓名",
+      "headlineLabel": "职业头衔",
+      "emptyTitle": "尚无联系方式",
+      "emptyDescription": "添加邮箱、电话号码或链接，方便招聘方联系你。",
+      "placeholders": {
+        "name": "例如：张三",
+        "headline": "例如：高级产品设计师",
+        "contactLabel": "标签",
+        "contactValue": "内容"
+      }
+    },
+    "summary": {
+      "title": "职业概述",
+      "subtitle": "撰写一段简短的自我介绍，概括你的经验与目标",
+      "placeholder": "概述你的背景、核心优势，以及你能为该职位带来的价值...",
+      "characters": "{count, plural, one {# 个字符} other {# 个字符}}",
+      "proTipLabel": "专业提示：",
+      "proTip": "控制在 3-5 句话以内，并以你最突出的成就开头。"
+    },
+    "experience": {
+      "title": "工作经历",
+      "subtitle": "展示你担任的职位以及所创造的影响",
+      "history": "工作经历记录",
+      "add": "添加工作经历",
+      "endDate": "结束日期",
+      "descriptionAchievements": "描述与成就",
+      "emptyTitle": "尚无工作经历",
+      "emptyDescription": "添加你担任过的职位，以突出你的职业历程和成就。",
+      "placeholders": {
+        "company": "公司名称",
+        "position": "职位名称"
+      },
+      "validation": {
+        "companyRequired": "公司名称为必填项",
+        "positionRequired": "职位名称为必填项"
+      }
+    },
+    "education": {
+      "title": "教育经历",
+      "subtitle": "列出你的学位、学校和专业",
+      "history": "教育经历记录",
+      "add": "添加教育经历",
+      "endDate": "结束日期",
+      "customDegree": "添加自定义学位",
+      "emptyTitle": "尚无教育经历",
+      "emptyDescription": "添加你的学校和学位，让你的资料更加完整。",
+      "placeholders": {
+        "school": "学校或大学",
+        "degree": "选择学位",
+        "major": "专业"
+      },
+      "validation": {
+        "schoolRequired": "学校名称为必填项",
+        "degreeRequired": "学位为必填项"
+      },
+      "degrees": {
+        "highSchool": "高中文凭",
+        "ged": "GED",
+        "associateArts": "文科副学士",
+        "associateScience": "理科副学士",
+        "associateAppliedScience": "应用科学副学士",
+        "bachelorArts": "文学学士",
+        "bachelorScience": "理学学士",
+        "bba": "BBA",
+        "masterArts": "文学硕士",
+        "masterScience": "理学硕士",
+        "mba": "MBA",
+        "jd": "J.D.",
+        "md": "M.D.",
+        "phd": "Ph.D",
+        "noDegree": "无学位"
+      }
+    },
+    "skills": {
+      "title": "技能",
+      "subtitle": "突出让你脱颖而出的能力",
+      "list": "技能列表",
+      "add": "添加技能",
+      "emptyTitle": "尚无技能",
+      "emptyDescription": "添加你的核心技能及对应的熟练程度。",
+      "placeholders": {
+        "name": "技能名称",
+        "level": "熟练程度"
+      }
+    },
+    "projects": {
+      "title": "项目经历",
+      "subtitle": "展示你最引以为傲的作品",
+      "list": "项目列表",
+      "add": "添加项目",
+      "description": "描述",
+      "responsibilities": "职责",
+      "emptyTitle": "尚无项目",
+      "emptyDescription": "添加项目以展示你的实战经验。",
+      "placeholders": {
+        "name": "项目名称",
+        "subtitle": "副标题或一句话简介",
+        "position": "你的角色",
+        "domain": "领域或行业",
+        "technologies": "使用的技术",
+        "demo": "演示或在线地址"
+      },
+      "validation": {
+        "nameRequired": "项目名称为必填项"
+      }
+    },
+    "certifications": {
+      "title": "证书",
+      "subtitle": "添加能够证明你专业能力的资质",
+      "list": "证书列表",
+      "add": "添加证书",
+      "emptyTitle": "尚无证书",
+      "emptyDescription": "添加证书以展示你的资质。",
+      "placeholders": {
+        "name": "证书名称",
+        "issuer": "颁发机构"
+      },
+      "validation": {
+        "nameRequired": "证书名称为必填项",
+        "issuerRequired": "颁发机构为必填项"
+      }
+    },
+    "languages": {
+      "title": "语言",
+      "subtitle": "列出你掌握的语言及其熟练程度",
+      "list": "语言列表",
+      "add": "添加语言",
+      "emptyTitle": "尚无语言",
+      "emptyDescription": "添加你掌握的语言及对应的熟练程度。",
+      "placeholders": {
+        "name": "语言",
+        "level": "选择熟练程度"
+      },
+      "validation": {
+        "nameRequired": "语言为必填项",
+        "levelRequired": "熟练程度为必填项"
+      },
+      "levels": {
+        "elementary": "初级",
+        "limitedWorking": "有限工作能力",
+        "professionalWorking": "专业工作能力",
+        "fullProfessional": "完全专业能力",
+        "nativeOrBilingual": "母语或双语水平"
+      }
+    },
+    "extra": {
+      "finished": "完成"
+    }
   }
 }

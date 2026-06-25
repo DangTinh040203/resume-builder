@@ -1,4 +1,10 @@
 {
+  "Common": {
+    "scrollToTop": "العودة إلى الأعلى",
+    "back": "رجوع",
+    "next": "التالي",
+    "saving": "جارٍ الحفظ..."
+  },
   "Nav": {
     "home": "الرئيسية",
     "templates": "قوالب",
@@ -235,5 +241,569 @@
     "title": "هل أنت مستعد للحصول على وظيفة أحلامك؟",
     "description": "انضم إلى أكثر من 10000 متخصص قاموا بالفعل بتغيير حياتهم المهنية باستخدام مجموعة الأدوات التي تعمل بالذكاء الاصطناعي.",
     "button": "ابدأ مجانًا"
+  },
+  "Auth": {
+    "continueWith": "أو تابع باستخدام",
+    "errors": {
+      "generic": "حدث خطأ ما. يُرجى المحاولة مرة أخرى."
+    },
+    "fields": {
+      "confirmPassword": "تأكيد كلمة المرور",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور"
+    },
+    "layout": {
+      "and": "و",
+      "formSubtitle": "أنشئ سيرتك الذاتية المميزة في دقائق",
+      "formTitle": "مرحبًا بك في CVCraft",
+      "heroDescription": "أنشئ سيرًا ذاتية مذهلة ومتوافقة مع أنظمة ATS بمساعدة الذكاء الاصطناعي. احصل على المزيد من المقابلات وسرّع مسيرتك المهنية في دقائق.",
+      "heroLine1": "أنشئ سيرة ذاتية",
+      "heroLine2": "تضمن لك الوظيفة.",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة",
+      "termsPrefix": "بمتابعتك، فإنك توافق على",
+      "features": {
+        "0": "قوالب احترافية جاهزة لمسؤولي التوظيف",
+        "1": "اقتراحات محتوى مدعومة بالذكاء الاصطناعي",
+        "2": "مصمّمة لتناسب كل وصف وظيفي",
+        "3": "جاهزة في دقائق، وليس ساعات"
+      },
+      "stats": {
+        "0": {
+          "value": "50K+",
+          "label": "سيرة ذاتية أُنشئت"
+        },
+        "1": {
+          "value": "10K+",
+          "label": "مستخدم تم توظيفه"
+        },
+        "2": {
+          "value": "95%",
+          "label": "معدل النجاح"
+        }
+      }
+    },
+    "placeholders": {
+      "confirmPassword": "أعد إدخال كلمة المرور",
+      "createPassword": "أنشئ كلمة مرور",
+      "email": "you@example.com",
+      "password": "أدخل كلمة المرور"
+    },
+    "signIn": {
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة. يُرجى المحاولة مرة أخرى.",
+      "loading": "جارٍ تسجيل الدخول...",
+      "noAccount": "ليس لديك حساب؟",
+      "signUpLink": "إنشاء حساب",
+      "submit": "تسجيل الدخول",
+      "success": "تم تسجيل الدخول بنجاح. مرحبًا بعودتك!"
+    },
+    "signUp": {
+      "hasAccount": "هل لديك حساب بالفعل؟",
+      "loading": "جارٍ إنشاء الحساب...",
+      "signInLink": "تسجيل الدخول",
+      "submit": "إنشاء حساب"
+    },
+    "sso": {
+      "almostThere": "أوشكت على الانتهاء، جارٍ تسجيل دخولك..."
+    },
+    "validation": {
+      "codeIncomplete": "يُرجى إدخال جميع الأرقام الستة.",
+      "codeSixDigits": "يجب أن يتكون الرمز من 6 أرقام بالضبط.",
+      "confirmPasswordRequired": "يُرجى تأكيد كلمة المرور.",
+      "emailInvalid": "يُرجى إدخال عنوان بريد إلكتروني صالح.",
+      "emailRequired": "البريد الإلكتروني مطلوب.",
+      "passwordMax": "يجب ألا تتجاوز كلمة المرور 50 حرفًا.",
+      "passwordMin": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
+      "passwordRequired": "كلمة المرور مطلوبة.",
+      "passwordsDoNotMatch": "كلمتا المرور غير متطابقتين."
+    },
+    "verify": {
+      "didNotReceive": "لم تستلم الرمز؟",
+      "emailFallback": "عنوان بريدك الإلكتروني",
+      "incomplete": "تعذّر إكمال التحقق. يُرجى المحاولة مرة أخرى.",
+      "resendCode": "إعادة إرسال الرمز",
+      "resendFailed": "تعذّر إعادة إرسال الرمز. يُرجى المحاولة مرة أخرى.",
+      "resendIn": "إعادة الإرسال خلال {seconds} ثانية",
+      "resendSuccess": "تم إرسال رمز جديد إلى بريدك الإلكتروني.",
+      "sentTo": "أرسلنا رمز تحقق مكوّنًا من 6 أرقام إلى",
+      "submit": "تحقّق",
+      "success": "تم التحقق من حسابك. مرحبًا بك في CVCraft!",
+      "title": "تحقّق من بريدك الإلكتروني",
+      "verifying": "جارٍ التحقق..."
+    }
+  },
+  "Matching": {
+    "trigger": "المطابقة مع وظيفة",
+    "title": "تحليل مطابقة الوظيفة",
+    "description": {
+      "form": "الصق وصفًا وظيفيًا أو ارفعه بصيغة PDF، وسنوضّح مدى توافق سيرتك الذاتية معه.",
+      "result": "إليك مدى توافق سيرتك الذاتية مع الوصف الوظيفي."
+    },
+    "form": {
+      "textTab": "لصق نص",
+      "fileTab": "رفع ملف",
+      "jdPlaceholder": "الصق الوصف الوظيفي هنا...",
+      "uploadFile": "انقر لرفع وصف وظيفي",
+      "changeFile": "انقر لاختيار ملف مختلف",
+      "fileHint": "PDF حتى 10MB",
+      "analyze": "تحليل المطابقة"
+    },
+    "loading": {
+      "title": "جارٍ تحليل مطابقتك",
+      "description": "جارٍ مقارنة سيرتك الذاتية بالوصف الوظيفي..."
+    },
+    "result": {
+      "score": {
+        "excellent": "مطابقة ممتازة",
+        "good": "مطابقة جيدة",
+        "fair": "مطابقة مقبولة",
+        "needsImprovement": "تحتاج إلى تحسين"
+      },
+      "tabs": {
+        "breakdown": "التفصيل",
+        "analysis": "التحليل",
+        "improve": "التحسين"
+      },
+      "weight": "الوزن {weight}%",
+      "strengths": "نقاط القوة",
+      "noStrengths": "لم يتم تحديد نقاط قوة بارزة بعد.",
+      "missingKeywords": "الكلمات المفتاحية المفقودة",
+      "invalidJobDescription": "تعذّر قراءة وصف وظيفي صالح.",
+      "suggestionsToImprove": "اقتراحات للتحسين",
+      "noSuggestions": "لا توجد اقتراحات — سيرتك الذاتية مناسبة تمامًا.",
+      "analyzeAnother": "تحليل وظيفة أخرى"
+    },
+    "email": {
+      "view": "عرض البريد الإلكتروني",
+      "generate": "إنشاء بريد إلكتروني للتواصل",
+      "generating": "جارٍ الإنشاء...",
+      "generateFailed": "تعذّر إنشاء البريد الإلكتروني. يُرجى المحاولة مرة أخرى.",
+      "regenerate": "إعادة الإنشاء",
+      "ready": "جاهز للإرسال",
+      "dialogTitle": "بريدك الإلكتروني للتواصل",
+      "dialogDescription": "بريد إلكتروني مخصّص للتواصل تم إنشاؤه من سيرتك الذاتية والوصف الوظيفي.",
+      "subject": "الموضوع",
+      "subjectPlaceholder": "موضوع البريد الإلكتروني",
+      "subjectCopied": "تم نسخ الموضوع إلى الحافظة",
+      "bodyPlaceholder": "نص البريد الإلكتروني",
+      "edit": "تعديل",
+      "saveChanges": "حفظ التغييرات",
+      "cancel": "إلغاء",
+      "close": "إغلاق",
+      "copyToClipboard": "نسخ إلى الحافظة",
+      "copySubject": "نسخ الموضوع",
+      "copied": "تم النسخ",
+      "copyFailed": "تعذّر النسخ إلى الحافظة.",
+      "displayFailed": "تعذّر عرض البريد الإلكتروني. يُرجى المحاولة مرة أخرى."
+    },
+    "errors": {
+      "noResume": "يُرجى اختيار سيرة ذاتية أولاً.",
+      "noJobDescription": "يُرجى إضافة وصف وظيفي للمتابعة.",
+      "generic": "حدث خطأ ما. يُرجى المحاولة مرة أخرى."
+    }
+  },
+  "Builder": {
+    "title": "منشئ السيرة الذاتية",
+    "subtitle": "أنشئ سيرة ذاتية مميزة بمساعدة الذكاء الاصطناعي.",
+    "selectTemplateWarning": "يُرجى اختيار قالب قبل البدء في الإنشاء.",
+    "sections": {
+      "personal": "المعلومات الشخصية",
+      "summary": "الملخص",
+      "skills": "المهارات",
+      "education": "التعليم",
+      "experience": "الخبرة",
+      "projects": "المشاريع",
+      "extra": "إضافي"
+    },
+    "downloadPdf": {
+      "export": "تصدير PDF",
+      "failed": "تعذّر إنشاء ملف PDF. يُرجى المحاولة مرة أخرى.",
+      "selectTemplate": "يُرجى اختيار قالب أولاً."
+    },
+    "resumeControl": {
+      "title": "منشئ السيرة الذاتية",
+      "subtitle": "أنشئ سيرة ذاتية مميزة بمساعدة الذكاء الاصطناعي.",
+      "customize": "تخصيص",
+      "edit": "تعديل",
+      "mockInterview": "مقابلة تجريبية",
+      "parseResume": "استيراد سيرة ذاتية",
+      "parsing": "جارٍ الاستيراد...",
+      "parseSuccess": "تم استيراد السيرة الذاتية بنجاح!",
+      "parseFailed": "تعذّر علينا قراءة سيرتك الذاتية. يُرجى تجربة ملف مختلف.",
+      "parseTooltip": "ارفع سيرة ذاتية بصيغة PDF ودع الذكاء الاصطناعي يملأ بياناتك تلقائيًا.",
+      "save": "حفظ",
+      "saveTooltip": "احفظ تغييراتك (Ctrl+S)"
+    }
+  },
+  "TemplatesPage": {
+    "title": "اختر قالبك",
+    "description": "تصفّح مجموعتنا من القوالب المصممة باحترافية والمتوافقة مع أنظمة ATS، واختر الأنسب لك.",
+    "useTemplate": "استخدام هذا القالب",
+    "errors": {
+      "generic": "حدث خطأ ما. يُرجى المحاولة مرة أخرى."
+    }
+  },
+  "TemplateSelectionDialog": {
+    "title": "لننشئ سيرتك الذاتية",
+    "description": "كيف ترغب في البدء؟",
+    "cancel": "إلغاء",
+    "scratch": {
+      "title": "البدء من الصفر",
+      "description": "ابدأ بسيرة ذاتية فارغة واملأ بياناتك خطوة بخطوة."
+    },
+    "upload": {
+      "title": "رفع سيرة ذاتية",
+      "description": "ارفع سيرة ذاتية موجودة ودع الذكاء الاصطناعي يملأ بياناتك تلقائيًا."
+    },
+    "loading": {
+      "description": "يستغرق هذا عادةً بضع ثوانٍ فقط. انتظر قليلاً بينما نقوم بعملنا.",
+      "steps": {
+        "0": "جارٍ قراءة سيرتك الذاتية...",
+        "1": "جارٍ استخراج خبرتك...",
+        "2": "جارٍ تنظيم بياناتك...",
+        "3": "أوشكنا على الانتهاء..."
+      }
+    }
+  },
+  "TemplateFormat": {
+    "reset": "إعادة تعيين",
+    "sectionOrder": {
+      "title": "ترتيب الأقسام"
+    },
+    "sections": {
+      "personal": "المعلومات الشخصية",
+      "summary": "الملخص",
+      "skills": "المهارات",
+      "education": "التعليم",
+      "certifications": "الشهادات",
+      "languages": "اللغات",
+      "experience": "الخبرة",
+      "projects": "المشاريع"
+    },
+    "typography": "الطباعة",
+    "layout": "التخطيط",
+    "fontFamily": "عائلة الخط",
+    "selectFont": "اختر الخط",
+    "fontSize": "حجم الخط",
+    "titleSize": "حجم العنوان",
+    "sectionTitleSize": "حجم عنوان القسم",
+    "subtitleSize": "حجم العنوان الفرعي",
+    "lineHeight": "ارتفاع السطر",
+    "letterSpacing": "تباعد الأحرف",
+    "fontWeight": "سماكة الخط",
+    "selectFontWeight": "اختر سماكة الخط",
+    "sectionSpacing": "تباعد الأقسام",
+    "pageMargin": "هامش الصفحة",
+    "accentColor": "لون التمييز",
+    "fontWeights": {
+      "normal": "عادي",
+      "medium": "متوسط",
+      "semibold": "شبه عريض",
+      "bold": "عريض"
+    },
+    "colors": {
+      "blue": "أزرق",
+      "cyan": "سماوي",
+      "teal": "أزرق مخضر",
+      "emerald": "زمردي",
+      "green": "أخضر",
+      "lime": "أخضر ليموني",
+      "yellow": "أصفر",
+      "amber": "كهرماني",
+      "orange": "برتقالي",
+      "red": "أحمر",
+      "rose": "وردي غامق",
+      "pink": "وردي",
+      "fuchsia": "أرجواني فوشي",
+      "purple": "بنفسجي",
+      "violet": "بنفسجي فاتح",
+      "indigo": "نيلي",
+      "navy": "كحلي",
+      "slate": "رمادي أردوازي",
+      "black": "أسود"
+    }
+  },
+  "Interview": {
+    "dialog": {
+      "title": "مقابلة تجريبية بالذكاء الاصطناعي",
+      "states": {
+        "setup": "جهّز مقابلتك وابدأ عندما تكون مستعدًا.",
+        "connecting": "جارٍ الاتصال بالمحاوِر بالذكاء الاصطناعي...",
+        "active": "المقابلة جارية. أجب بصوتٍ عالٍ وتحدّث بشكل طبيعي.",
+        "evaluating": "جارٍ تحليل إجاباتك وإعداد الملاحظات...",
+        "result": "إليك أداءك. راجع ملاحظاتك أدناه.",
+        "error": "حدث خطأ ما. يُرجى المحاولة مرة أخرى."
+      },
+      "endTitle": "إنهاء المقابلة؟",
+      "endDescription": "ما زالت مقابلتك جارية. إذا غادرت الآن، ستنتهي جلستك ولن يتم حفظها.",
+      "continue": "المتابعة",
+      "end": "إنهاء المقابلة"
+    },
+    "setup": {
+      "jobDescription": "الوصف الوظيفي",
+      "jobDescriptionPlaceholder": "الصق الوصف الوظيفي للدور الذي تستعد له...",
+      "jobDescriptionHelp": "سنخصّص أسئلة المقابلة لتناسب هذا الدور.",
+      "interviewType": "نوع المقابلة",
+      "types": {
+        "all": {
+          "label": "مختلط",
+          "description": "مزيج من النوعين"
+        },
+        "behavioral": {
+          "label": "سلوكي",
+          "description": "المهارات الشخصية والخبرة"
+        },
+        "technical": {
+          "label": "تقني",
+          "description": "المهارات الخاصة بالدور"
+        }
+      },
+      "questions": "الأسئلة",
+      "speed": "السرعة",
+      "speedTooltip": "اضبط مدى سرعة حديث المحاوِر بالذكاء الاصطناعي.",
+      "slow": "بطيء",
+      "fast": "سريع",
+      "language": "اللغة",
+      "selectLanguage": "اختر اللغة",
+      "languages": {
+        "English": "الإنجليزية",
+        "Vietnamese": "الفيتنامية",
+        "Japanese": "اليابانية",
+        "Korean": "الكورية",
+        "Chinese": "الصينية (الماندرين)",
+        "French": "الفرنسية",
+        "German": "الألمانية",
+        "Spanish": "الإسبانية",
+        "Portuguese": "البرتغالية",
+        "Thai": "التايلاندية",
+        "Indonesian": "الإندونيسية",
+        "Hindi": "الهندية"
+      },
+      "voice": "الصوت",
+      "selectVoice": "اختر الصوت",
+      "voices": {
+        "Zephyr": "Zephyr — مشرق",
+        "Puck": "Puck — مرح",
+        "Charon": "Charon — معلوماتي",
+        "Kore": "Kore — حازم",
+        "Fenrir": "Fenrir — متحمس",
+        "Leda": "Leda — شبابي",
+        "Orus": "Orus — حازم"
+      },
+      "start": "بدء المقابلة",
+      "starting": "جارٍ البدء...",
+      "savingResume": "جارٍ حفظ السيرة الذاتية...",
+      "tryAgain": "حاول مرة أخرى"
+    },
+    "active": {
+      "aiSpeaking": "المحاوِر يتحدث",
+      "listening": "جارٍ الاستماع...",
+      "muted": "الميكروفون مكتوم",
+      "mute": "كتم الصوت",
+      "unmute": "إلغاء كتم الصوت",
+      "progress": "التقدّم",
+      "questionProgress": "السؤال {current} من {total}",
+      "stopInterview": "إنهاء المقابلة",
+      "stopTitle": "إنهاء المقابلة مبكرًا؟",
+      "stopDescription": "سنوقف المقابلة ونقيّم إجاباتك حتى الآن. لن تتمكن من متابعة هذه الجلسة بعد ذلك.",
+      "continue": "المتابعة",
+      "stopAndEvaluate": "إنهاء وتقييم"
+    },
+    "loading": {
+      "title": "أوشكنا على الانتهاء",
+      "connecting": "جارٍ الاتصال بمحاوِرك...",
+      "evaluating": "جارٍ تقييم أدائك..."
+    },
+    "result": {
+      "score": {
+        "excellent": "ممتاز",
+        "good": "جيد",
+        "fair": "مقبول",
+        "needsImprovement": "يحتاج إلى تحسين"
+      },
+      "verdict": {
+        "PASS": "ناجح",
+        "BORDERLINE": "على الحدود",
+        "FAIL": "راسب"
+      },
+      "evaluationCriteria": "معايير التقييم",
+      "criteria": {
+        "technicalKnowledge": "المعرفة التقنية",
+        "communicationSkills": "مهارات التواصل",
+        "problemSolving": "حل المشكلات",
+        "relevanceToRole": "الصلة بالدور",
+        "interviewConduct": "سلوك المقابلة"
+      },
+      "perQuestionFeedback": "ملاحظات لكل سؤال",
+      "suggestion": "اقتراح",
+      "strengths": "نقاط القوة",
+      "noStrengths": "لم يتم تحديد نقاط قوة بارزة.",
+      "areasForImprovement": "مجالات التحسين",
+      "noImprovements": "لم يتم تحديد مجالات للتحسين.",
+      "interviewAgain": "تدرّب مرة أخرى"
+    }
+  },
+  "BuilderForms": {
+    "actions": {
+      "add": "إضافة"
+    },
+    "fields": {
+      "startDate": "تاريخ البدء",
+      "date": "التاريخ",
+      "present": "حتى الآن"
+    },
+    "personal": {
+      "title": "المعلومات الشخصية",
+      "subtitle": "أخبرنا من أنت وكيف يمكن التواصل معك",
+      "basicDetails": "البيانات الأساسية",
+      "contactInformation": "معلومات الاتصال",
+      "nameLabel": "الاسم الكامل",
+      "headlineLabel": "العنوان المهني",
+      "emptyTitle": "لا توجد بيانات اتصال بعد",
+      "emptyDescription": "أضف بريدًا إلكترونيًا أو رقم هاتف أو روابط ليتمكن مسؤولو التوظيف من التواصل معك.",
+      "placeholders": {
+        "name": "مثال: جين دو",
+        "headline": "مثال: مصمم منتجات أول",
+        "contactLabel": "التسمية",
+        "contactValue": "القيمة"
+      }
+    },
+    "summary": {
+      "title": "الملخص المهني",
+      "subtitle": "اكتب عرضًا موجزًا يلخّص خبرتك وأهدافك",
+      "placeholder": "لخّص خلفيتك ونقاط قوتك الرئيسية وما تقدّمه للدور...",
+      "characters": "{count, plural, one {# حرف} other {# حرفًا}}",
+      "proTipLabel": "نصيحة احترافية:",
+      "proTip": "اجعله من 3 إلى 5 جمل وابدأ بأبرز إنجازاتك."
+    },
+    "experience": {
+      "title": "الخبرة العملية",
+      "subtitle": "اعرض أدوارك والأثر الذي حققته",
+      "history": "سجل الخبرات",
+      "add": "إضافة خبرة",
+      "endDate": "تاريخ الانتهاء",
+      "descriptionAchievements": "الوصف والإنجازات",
+      "emptyTitle": "لا توجد خبرة عملية بعد",
+      "emptyDescription": "أضف أدوارك لإبراز مسيرتك المهنية وإنجازاتك.",
+      "placeholders": {
+        "company": "اسم الشركة",
+        "position": "المسمى الوظيفي"
+      },
+      "validation": {
+        "companyRequired": "اسم الشركة مطلوب",
+        "positionRequired": "المسمى الوظيفي مطلوب"
+      }
+    },
+    "education": {
+      "title": "التعليم",
+      "subtitle": "اذكر شهاداتك ومؤسساتك التعليمية ومجالات دراستك",
+      "history": "سجل التعليم",
+      "add": "إضافة تعليم",
+      "endDate": "تاريخ الانتهاء",
+      "customDegree": "إضافة درجة مخصّصة",
+      "emptyTitle": "لم تتم إضافة تعليم بعد",
+      "emptyDescription": "أضف مؤسساتك التعليمية وشهاداتك لإكمال ملفك.",
+      "placeholders": {
+        "school": "المدرسة أو الجامعة",
+        "degree": "اختر درجة علمية",
+        "major": "مجال الدراسة"
+      },
+      "validation": {
+        "schoolRequired": "اسم المؤسسة التعليمية مطلوب",
+        "degreeRequired": "الدرجة العلمية مطلوبة"
+      },
+      "degrees": {
+        "highSchool": "شهادة الثانوية العامة",
+        "ged": "GED",
+        "associateArts": "درجة الزمالة في الآداب",
+        "associateScience": "درجة الزمالة في العلوم",
+        "associateAppliedScience": "درجة الزمالة في العلوم التطبيقية",
+        "bachelorArts": "بكالوريوس الآداب",
+        "bachelorScience": "بكالوريوس العلوم",
+        "bba": "BBA",
+        "masterArts": "ماجستير الآداب",
+        "masterScience": "ماجستير العلوم",
+        "mba": "MBA",
+        "jd": "J.D.",
+        "md": "M.D.",
+        "phd": "Ph.D",
+        "noDegree": "بدون درجة علمية"
+      }
+    },
+    "skills": {
+      "title": "المهارات",
+      "subtitle": "أبرز القدرات التي تميّزك",
+      "list": "قائمة المهارات",
+      "add": "إضافة مهارة",
+      "emptyTitle": "لم تتم إضافة مهارات بعد",
+      "emptyDescription": "أضف مهاراتك الرئيسية مع مستوى إتقانك لها.",
+      "placeholders": {
+        "name": "اسم المهارة",
+        "level": "مستوى الإتقان"
+      }
+    },
+    "projects": {
+      "title": "المشاريع",
+      "subtitle": "أبرز الأعمال التي تفخر بها أكثر",
+      "list": "قائمة المشاريع",
+      "add": "إضافة مشروع",
+      "description": "الوصف",
+      "responsibilities": "المسؤوليات",
+      "emptyTitle": "لم تتم إضافة مشاريع بعد",
+      "emptyDescription": "أضف مشاريع لإظهار خبرتك العملية.",
+      "placeholders": {
+        "name": "اسم المشروع",
+        "subtitle": "عنوان فرعي أو شعار",
+        "position": "دورك",
+        "domain": "المجال أو الصناعة",
+        "technologies": "التقنيات المستخدمة",
+        "demo": "رابط العرض التوضيحي أو المباشر"
+      },
+      "validation": {
+        "nameRequired": "اسم المشروع مطلوب"
+      }
+    },
+    "certifications": {
+      "title": "الشهادات",
+      "subtitle": "أضف الاعتمادات التي تؤكد خبرتك",
+      "list": "قائمة الشهادات",
+      "add": "إضافة شهادة",
+      "emptyTitle": "لم تتم إضافة شهادات بعد",
+      "emptyDescription": "أضف الشهادات لعرض مؤهلاتك.",
+      "placeholders": {
+        "name": "اسم الشهادة",
+        "issuer": "الجهة المانحة"
+      },
+      "validation": {
+        "nameRequired": "اسم الشهادة مطلوب",
+        "issuerRequired": "الجهة المانحة مطلوبة"
+      }
+    },
+    "languages": {
+      "title": "اللغات",
+      "subtitle": "اذكر اللغات التي تتحدثها ومستوى إتقانك لها",
+      "list": "قائمة اللغات",
+      "add": "إضافة لغة",
+      "emptyTitle": "لم تتم إضافة لغات بعد",
+      "emptyDescription": "أضف اللغات التي تتحدثها ومستوى إتقانك لها.",
+      "placeholders": {
+        "name": "اللغة",
+        "level": "اختر مستوى الإتقان"
+      },
+      "validation": {
+        "nameRequired": "اللغة مطلوبة",
+        "levelRequired": "مستوى الإتقان مطلوب"
+      },
+      "levels": {
+        "elementary": "مبتدئ",
+        "limitedWorking": "كفاءة عمل محدودة",
+        "professionalWorking": "كفاءة عمل احترافية",
+        "fullProfessional": "كفاءة احترافية كاملة",
+        "nativeOrBilingual": "لغة أم أو ثنائي اللغة"
+      }
+    },
+    "extra": {
+      "finished": "إنهاء"
+    }
   }
 }
