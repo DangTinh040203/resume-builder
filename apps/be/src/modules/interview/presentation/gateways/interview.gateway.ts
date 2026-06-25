@@ -14,7 +14,7 @@ import { Server, Socket } from 'socket.io';
 import { type StartInterviewCommand } from '@/modules/interview/application/commands';
 import { InterviewService } from '@/modules/interview/application/services/interview.service';
 import { InterviewEvaluationService } from '@/modules/interview/application/services/interview-evaluation.service';
-import { type StartInterviewDto } from '@/modules/interview/presentation/DTOs';
+import { StartInterviewDto } from '@/modules/interview/presentation/DTOs';
 import { WsAuthGuard } from '@/modules/interview/presentation/guards/ws-auth.guard';
 import { ResumeService } from '@/modules/resume/application/services/resume.service';
 
