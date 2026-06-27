@@ -1,0 +1,63 @@
+# Production compose — runs ON the VM (copied to /opt/resume-builder/docker-compose.yml).
+# Images are pulled from Artifact Registry; nothing is built here.
+#
+# Required env (exported by the deploy workflow before `docker compose`):
+#   GAR_IMAGE_PREFIX = asia-southeast1-docker.pkg.dev/resume-builder-500417/resume-builder-registry
+#   IMAGE_TAG        = <git sha>   (falls back to `latest`)
+#
+# Runtime secrets live in /opt/resume-builder/.env on the VM (chmod 600, NOT committed).
+
+name: resume-builder
+
+services:
+  fe:
+    image: ${GAR_IMAGE_PREFIX}/fe:${IMAGE_TAG:-latest}
+    restart: unless-stopped
+    expose:
+      - "3001"
+    # NEXT_PUBLIC_* are baked in at build. But clerkMiddleware (proxy.ts) runs on
+    # EVERY request and verifies the session server-side, so the secret key is
+    # required at RUNTIME too. Pulled from .env (the BE_ENV_PRODUCTION blob).
+    environment:
+      CLERK_SECRET_KEY: ${CLERK_SECRET_KEY}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3001 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      be:
+        condition: service_healthy
+
+  be:
+    image: ${GAR_IMAGE_PREFIX}/be:${IMAGE_TAG:-latest}
+    restart: unless-stopped
+    env_file:
+      - .env
+    expose:
+      - "4000"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:4000/api/v1/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Provision these on the VM (nginx config + Let's Encrypt certs via Certbot).
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - certbot_www:/var/www/certbot:ro
+    depends_on:
+      fe:
+        condition: service_healthy
+      be:
+        condition: service_healthy
+
+volumes:
+  certbot_www:

@@ -13,14 +13,14 @@ AI-powered resume builder — a **pnpm + Turborepo** monorepo with a **Next.js 1
 
 ## Stack
 
-| Concern | Choice |
-|---|---|
-| Monorepo | pnpm workspaces + Turborepo |
-| Frontend | Next.js 16, React 19, Redux Toolkit, Tailwind 4, @react-pdf/renderer |
-| Backend | NestJS 11, Prisma 7, Socket.IO |
-| Auth | Clerk (JWT + Svix webhooks) |
-| AI/LLM | Google Gemini 2.5 Flash (`@google/genai`) |
-| Database / Cache | PostgreSQL 16 / Redis 7 |
+| Concern          | Choice                                                               |
+| ---------------- | -------------------------------------------------------------------- |
+| Monorepo         | pnpm workspaces + Turborepo                                          |
+| Frontend         | Next.js 16, React 19, Redux Toolkit, Tailwind 4, @react-pdf/renderer |
+| Backend          | NestJS 11, Prisma 7, Socket.IO                                       |
+| Auth             | Clerk (JWT + Svix webhooks)                                          |
+| AI/LLM           | Google Gemini 2.5 Flash (`@google/genai`)                            |
+| Database / Cache | PostgreSQL 16 / Redis 7                                              |
 
 ## Structure
 
@@ -56,11 +56,11 @@ pnpm --filter @resume-builder/be db:migrate
 pnpm dev
 ```
 
-| Service | URL |
-|---|---|
-| Frontend | http://localhost:3001 |
+| Service     | URL                          |
+| ----------- | ---------------------------- |
+| Frontend    | http://localhost:3001        |
 | Backend API | http://localhost:4000/api/v1 |
-| Swagger | http://localhost:4000/api |
+| Swagger     | http://localhost:4000/api    |
 
 ## Scripts
 

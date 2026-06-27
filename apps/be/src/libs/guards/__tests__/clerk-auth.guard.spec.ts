@@ -45,6 +45,7 @@ describe('ClerkAuthGuard', () => {
     headers: Record<string, string> = {},
   ): ExecutionContext =>
     ({
+      getType: jest.fn().mockReturnValue('http'),
       getHandler: jest.fn(),
       getClass: jest.fn(),
       switchToHttp: jest.fn().mockReturnValue({
