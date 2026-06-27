@@ -17,13 +17,12 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Eye, EyeOff, Loader2 } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'nextjs-toploader/app';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import SSOButtons from '@/components/auth-screens/sso-buttons';
-import { Link } from '@/i18n/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import { handleClerkError } from '@/libs/clerk-toast';
 import {
   buttonScaleVariants,

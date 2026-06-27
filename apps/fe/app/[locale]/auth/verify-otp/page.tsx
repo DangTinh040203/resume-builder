@@ -17,12 +17,13 @@ import {
 import { toast } from '@resume-builder/ui/components/sonner';
 import { motion } from 'framer-motion';
 import { ArrowRight, Loader2, Mail, RefreshCw } from 'lucide-react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import React, { Suspense, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { useRouter } from '@/i18n/navigation';
 import { getClerkErrorMessage, handleClerkError } from '@/libs/clerk-toast';
 
 function VerifyOTPContent() {

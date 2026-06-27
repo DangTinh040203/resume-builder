@@ -163,9 +163,9 @@ const Header = () => {
           {/* Desktop Navigation with staggered animation */}
           <div
             className={`
-            hidden items-center gap-4
-            md:flex
-          `}
+              hidden items-center gap-4
+              md:flex
+            `}
           >
             {navLinks.map((link, i) => (
               <m.div
@@ -204,9 +204,9 @@ const Header = () => {
           {/* Auth Buttons with animation */}
           <div
             className={`
-            hidden items-center gap-2
-            md:flex
-          `}
+              hidden items-center gap-2
+              md:flex
+            `}
           >
             <LanguageSwitcher />
             {/* Loading placeholder handled by Clerk's internal loading state or we can use ClerkLoading if needed */}

@@ -30,7 +30,7 @@ const clerkHandler = clerkMiddleware(async (auth, req) => {
   const prefix = localePrefix(pathname);
 
   if (isAuthenticated && bare.startsWith('/auth')) {
-    return NextResponse.redirect(new URL(`${prefix}/not-found`, req.url));
+    return NextResponse.redirect(new URL(`${prefix}/`, req.url));
   }
 
   if (!isAuthenticated && bare.startsWith('/builder')) {
