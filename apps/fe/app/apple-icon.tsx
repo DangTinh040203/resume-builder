@@ -1,14 +1,14 @@
 import { ImageResponse } from 'next/og';
 
-// Favicon for CVCraft — matches the header logo (lucide `FileText` on the
-// brand violet gradient). Next.js injects this automatically as <link rel="icon">.
+// Apple touch icon (180×180) for iOS home-screen bookmarks — same brand mark
+// as the favicon, scaled up with iOS-appropriate corner rounding.
 export const size = {
-  width: 32,
-  height: 32,
+  width: 180,
+  height: 180,
 };
 export const contentType = 'image/png';
 
-export default function Icon() {
+export default function AppleIcon() {
   return new ImageResponse(
     (
       <div
@@ -20,13 +20,13 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          borderRadius: '7px',
+          borderRadius: '40px',
         }}
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          width='20'
-          height='20'
+          width='110'
+          height='110'
           viewBox='0 0 24 24'
           fill='none'
           stroke='white'
