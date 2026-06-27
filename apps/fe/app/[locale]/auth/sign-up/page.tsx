@@ -207,6 +207,10 @@ const SignUp = () => {
             />
           </motion.div>
 
+          {/* Clerk Smart CAPTCHA mounts here; without it Clerk falls back to
+              Invisible CAPTCHA and logs a warning on signUp.create() */}
+          <div id='clerk-captcha' />
+
           <motion.div
             variants={buttonScaleVariants}
             whileHover={
