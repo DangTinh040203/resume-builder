@@ -27,10 +27,18 @@ cd "$DEPLOY_DIR"
 PRIMARY="${DOMAINS[0]}"
 COMPOSE="docker compose -f ${DEPLOY_DIR}/docker-compose.yml"
 
-echo "▶ Fetching recommended TLS options (once)…"
-[[ -f "${LE_DIR}/options-ssl-nginx.conf" ]] || curl -fsSL \
-  https://raw.githubusercontent.com/certbot/certbot/main/certbot-nginx/certbot_nginx/_internal/tls_configs/options-ssl-nginx.conf \
-  | sudo tee "${LE_DIR}/options-ssl-nginx.conf" >/dev/null
+echo "▶ Writing recommended TLS options (once)…"
+# Inlined (certbot's raw GitHub path 404s now). Mozilla intermediate profile.
+[[ -f "${LE_DIR}/options-ssl-nginx.conf" ]] || sudo tee "${LE_DIR}/options-ssl-nginx.conf" >/dev/null <<'SSLOPTS'
+ssl_session_cache shared:le_nginx_SSL:10m;
+ssl_session_timeout 1440m;
+ssl_session_tickets off;
+
+ssl_protocols TLSv1.2 TLSv1.3;
+ssl_prefer_server_ciphers off;
+
+ssl_ciphers "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384";
+SSLOPTS
 [[ -f "${LE_DIR}/ssl-dhparams.pem" ]] || sudo openssl dhparam -out "${LE_DIR}/ssl-dhparams.pem" 2048
 
 echo "▶ Creating a dummy certificate for ${PRIMARY} so nginx can boot…"
@@ -42,7 +50,9 @@ sudo openssl req -x509 -nodes -newkey rsa:2048 -days 1 \
   -subj "/CN=${PRIMARY}" >/dev/null 2>&1
 
 echo "▶ Starting nginx with the dummy cert…"
-$COMPOSE up -d nginx
+# --no-deps: be/fe are already running; without it compose tries to (re)create
+# them and needs GAR_IMAGE_PREFIX/IMAGE_TAG (only set by the deploy workflow).
+$COMPOSE up -d --no-deps nginx
 
 echo "▶ Deleting the dummy cert…"
 sudo rm -rf "${LE_DIR}/live/${PRIMARY}" \
