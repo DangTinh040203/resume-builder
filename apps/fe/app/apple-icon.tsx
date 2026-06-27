@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
-// Apple touch icon (180×180) for iOS home-screen bookmarks — same brand mark
-// as the favicon, scaled up with iOS-appropriate corner rounding.
+// Apple touch icon (180×180) for iOS home-screen bookmarks — same brand "CV"
+// monogram as the favicon, scaled up with iOS-appropriate corner rounding.
 export const size = {
   width: 180,
   height: 180,
@@ -21,25 +21,13 @@ export default function AppleIcon() {
           alignItems: 'center',
           justifyContent: 'center',
           borderRadius: '40px',
+          color: 'white',
+          fontSize: 104,
+          fontWeight: 800,
+          letterSpacing: '-4px',
         }}
       >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='110'
-          height='110'
-          viewBox='0 0 24 24'
-          fill='none'
-          stroke='white'
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        >
-          <path d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z' />
-          <path d='M14 2v4a2 2 0 0 0 2 2h4' />
-          <path d='M10 9H8' />
-          <path d='M16 13H8' />
-          <path d='M16 17H8' />
-        </svg>
+        CV
       </div>
     ),
     {
