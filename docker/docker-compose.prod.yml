@@ -21,7 +21,9 @@ services:
     environment:
       CLERK_SECRET_KEY: ${CLERK_SECRET_KEY}
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:3001 || exit 1"]
+      # Next binds IPv4 0.0.0.0 only; `localhost` resolves to ::1 (IPv6) in alpine
+      # → connection refused. Force IPv4 with 127.0.0.1.
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3001 || exit 1"]
       interval: 30s
       timeout: 5s
       retries: 5
