@@ -106,6 +106,11 @@ const SignUp = () => {
     >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
+          {/* NOTE: Password-based sign-up disabled. OAuth (Google/GitHub) only.
+              Uncomment the blocks below to re-enable email/password sign-up.
+              (The Clerk Smart CAPTCHA mount point is only needed for the
+              email/password signUp.create() flow, so it is disabled too.) */}
+          {/*
           <motion.div variants={formItemVariants}>
             <FormField
               control={form.control}
@@ -207,8 +212,6 @@ const SignUp = () => {
             />
           </motion.div>
 
-          {/* Clerk Smart CAPTCHA mounts here; without it Clerk falls back to
-              Invisible CAPTCHA and logs a warning on signUp.create() */}
           <div id='clerk-captcha' />
 
           <motion.div
@@ -259,6 +262,7 @@ const SignUp = () => {
             </p>
             <Separator className='my-2 flex-1' />
           </motion.div>
+          */}
 
           <SSOButtons />
 

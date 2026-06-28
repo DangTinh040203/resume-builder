@@ -99,6 +99,9 @@ const SignIn = () => {
         onSubmit={form.handleSubmit(onSubmit)}
         className='space-y-6'
       >
+        {/* NOTE: Password-based sign-in disabled. OAuth (Google/GitHub) only.
+            Uncomment the blocks below to re-enable email/password sign-in. */}
+        {/*
         <motion.div variants={formItemVariants}>
           <FormField
             control={form.control}
@@ -203,6 +206,7 @@ const SignIn = () => {
           </p>
           <Separator className='my-2 flex-1' />
         </motion.div>
+        */}
 
         <SSOButtons />
 
