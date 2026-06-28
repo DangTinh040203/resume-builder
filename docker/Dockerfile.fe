@@ -32,7 +32,10 @@ ENV NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=$NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY \
     NEXT_PUBLIC_REDIRECT_URL=$NEXT_PUBLIC_REDIRECT_URL \
     NEXT_PUBLIC_CLERK_SIGN_IN_URL=$NEXT_PUBLIC_CLERK_SIGN_IN_URL \
     NEXT_TELEMETRY_DISABLED=1 \
-    NODE_ENV=production
+    NODE_ENV=production \
+    # CLERK_SECRET_KEY is a runtime-only secret (not passed at build), so skip
+    # the env schema's eager validation here. It runs in full at runtime.
+    SKIP_ENV_VALIDATION=true
 
 RUN pnpm --filter @resume-builder/fe build
 

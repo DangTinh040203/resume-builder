@@ -6,22 +6,21 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
+import { Env } from '@/configs/env.config';
 import { handleClerkError } from '@/libs/clerk-toast';
 import { buttonScaleVariants, formItemVariants } from '@/styles/animation';
-
-const redirectUrl = process.env.NEXT_PUBLIC_REDIRECT_URL || null;
 
 const SSOButtons = () => {
   const t = useTranslations('Auth');
   const { isLoaded, signIn } = useSignIn();
 
   const signInWith = async (strategy: OAuthStrategy) => {
-    if (!isLoaded || !redirectUrl) return;
+    if (!isLoaded) return;
 
     try {
       await signIn.authenticateWithRedirect({
         strategy,
-        redirectUrl: redirectUrl,
+        redirectUrl: Env.NEXT_PUBLIC_REDIRECT_URL,
         redirectUrlComplete: '/',
       });
     } catch (err: unknown) {
