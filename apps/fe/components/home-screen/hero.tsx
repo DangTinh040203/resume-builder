@@ -6,7 +6,6 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-import FloatingParticles from '@/components/common/floating-particles';
 import { Link } from '@/i18n/navigation';
 import { fadeInUp, staggerContainer } from '@/styles/animation';
 
@@ -29,28 +28,18 @@ const HeroSection = () => {
         md:px-4 md:pt-32
       `}
     >
-      <FloatingParticles />
-
       <div className='absolute inset-0 overflow-hidden'>
         <div
           className={`
             bg-primary/20 absolute top-[-10%] right-[-5%] h-[500px] w-[500px]
             rounded-full blur-[120px]
           `}
-          style={{
-            animation: 'hero-blob-1 15s linear infinite',
-            willChange: 'transform, opacity',
-          }}
         />
         <div
           className={`
             bg-accent/20 absolute bottom-[-10%] left-[-5%] h-[400px] w-[400px]
             rounded-full blur-[100px]
           `}
-          style={{
-            animation: 'hero-blob-2 18s linear infinite',
-            willChange: 'transform, opacity',
-          }}
         />
       </div>
 
@@ -69,10 +58,7 @@ const HeroSection = () => {
               damping: 20,
             }}
           >
-            <Sparkles
-              className='text-primary h-4 w-4 animate-spin'
-              style={{ animationDuration: '4s' }}
-            />
+            <Sparkles className='text-primary h-4 w-4' />
             <span className='text-sm font-medium'>{t('badge')}</span>
             <Badge
               className={`bg-primary/20 text-primary border-none text-[10px]`}
@@ -148,15 +134,6 @@ const HeroSection = () => {
                   lg:text-lg
                 `}
               >
-                <span
-                  className={`
-                    absolute inset-0 bg-linear-to-r from-transparent
-                    via-white/20 to-transparent
-                  `}
-                  style={{
-                    animation: 'btn-shine 4s ease-in-out infinite',
-                  }}
-                />
                 <span className='relative flex items-center gap-2'>
                   {t('buildProfile')}
                   <ArrowRight
@@ -209,7 +186,7 @@ const HeroSection = () => {
                 <div className='mb-2 flex items-center gap-2'>
                   <div
                     className={`
-                      h-2 w-2 animate-pulse rounded-full
+                      h-2 w-2 rounded-full
                       ${item.color}
                     `}
                   />
@@ -244,12 +221,8 @@ const HeroSection = () => {
                 border-primary/30 flex h-10 w-6 justify-center rounded-full
                 border-2 p-1
               `}
-              style={{ animation: 'scroll-bounce 2s ease-in-out infinite' }}
             >
-              <div
-                className='bg-primary h-2 w-1 rounded-full'
-                style={{ animation: 'scroll-dot 1.5s ease-in-out infinite' }}
-              />
+              <div className='bg-primary h-2 w-1 rounded-full' />
             </div>
           </div>
         </div>
