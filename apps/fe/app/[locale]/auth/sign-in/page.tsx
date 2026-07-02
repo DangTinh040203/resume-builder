@@ -1,7 +1,6 @@
 'use client';
 import { useSignIn } from '@clerk/nextjs';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Button } from '@resume-builder/ui/components/button';
 import {
   Form,
   FormControl,
@@ -23,7 +22,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import SSOButtons from '@/components/auth-screens/sso-buttons';
-import { Link } from '@/i18n/navigation';
+// import { Link } from '@/i18n/navigation';
 import { handleClerkError } from '@/libs/clerk-toast';
 import {
   buttonScaleVariants,
@@ -210,6 +209,9 @@ const SignIn = () => {
 
         <SSOButtons />
 
+        {/* NOTE: Sign-up link hidden. Uncomment (and the Link import above)
+            to show the "Don't have an account? Sign up" prompt. */}
+        {/*
         <motion.p
           variants={formItemVariants}
           className='text-muted-foreground text-center text-sm'
@@ -227,6 +229,7 @@ const SignIn = () => {
             </motion.span>
           </Link>
         </motion.p>
+        */}
       </motion.form>
     </Form>
   );

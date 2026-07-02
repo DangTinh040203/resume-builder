@@ -11,19 +11,43 @@ const NotFound = () => {
   const t = useTranslations('NotFound');
 
   return (
-    <div
+    <section
       className={`
-        from-background via-muted/50 to-background flex min-h-screen
-        items-center justify-center bg-linear-to-br p-4
+        from-background via-primary/5 to-accent/10 relative flex min-h-screen
+        items-center justify-center overflow-hidden bg-linear-to-br p-4
       `}
     >
-      <div className='max-w-md text-center'>
+      {/* Ambient gradient blobs (matches Hero aesthetic) */}
+      <div className='absolute inset-0 overflow-hidden'>
+        <div
+          className={`
+            bg-primary/20 absolute top-[-10%] right-[-5%] h-[500px] w-[500px]
+            rounded-full blur-[120px]
+          `}
+        />
+        <div
+          className={`
+            bg-accent/20 absolute bottom-[-10%] left-[-5%] h-[400px] w-[400px]
+            rounded-full blur-[100px]
+          `}
+        />
+      </div>
+
+      <div className='relative z-10 mx-auto max-w-md text-center'>
         <motion.div
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, type: 'spring' }}
         >
-          <h1 className='text-primary/20 text-9xl font-bold'>404</h1>
+          <h1
+            className={`
+              font-display gradient-text text-8xl leading-none font-extrabold
+              tracking-tight
+              md:text-9xl
+            `}
+          >
+            404
+          </h1>
         </motion.div>
 
         <motion.div
@@ -31,7 +55,7 @@ const NotFound = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <h2 className='text-foreground mb-2 text-2xl font-semibold'>
+          <h2 className='text-foreground mt-4 mb-2 text-2xl font-semibold'>
             {t('title')}
           </h2>
           <p className='text-muted-foreground mb-8'>{t('description')}</p>
@@ -46,11 +70,24 @@ const NotFound = () => {
             sm:flex-row
           `}
         >
-          <Button variant='outline' onClick={() => window.history.back()}>
+          <Button
+            variant='outline'
+            className={`
+              rounded-full border-2 backdrop-blur-sm transition-transform
+              hover:scale-105
+            `}
+            onClick={() => window.history.back()}
+          >
             <ArrowLeft className='mr-2 h-4 w-4' />
             {t('back')}
           </Button>
-          <Button asChild>
+          <Button
+            asChild
+            className={`
+              shadow-primary/20 rounded-full shadow-lg transition-transform
+              hover:scale-105
+            `}
+          >
             <Link href='/'>
               <Home className='mr-2 h-4 w-4' />
               {t('home')}
@@ -58,7 +95,7 @@ const NotFound = () => {
           </Button>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

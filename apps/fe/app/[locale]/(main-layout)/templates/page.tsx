@@ -1,5 +1,6 @@
 'use client';
 
+import { useUser } from '@clerk/nextjs';
 import { Button } from '@resume-builder/ui/components/button';
 import { toast } from '@resume-builder/ui/components/sonner';
 import { AxiosError } from 'axios';
@@ -34,11 +35,17 @@ const Templates = () => {
   >(null);
   const [isParsing, setIsParsing] = useState(false);
 
+  const { user, isLoaded: isUserLoaded } = useUser();
   const router = useRouter();
   const dispatch = useAppDispatch();
   const resumeService = useService(ResumeService);
 
   const handleSelectTemplate = (template: string) => {
+    if (!user) {
+      router.push('/auth/sign-in');
+      return;
+    }
+
     setSelectedTemplateForBuilder(template);
     setIsSelectionOpen(true);
   };
@@ -243,6 +250,7 @@ const Templates = () => {
                   `}
                 >
                   <Button
+                    disabled={!isUserLoaded}
                     onClick={() => handleSelectTemplate(templateId)}
                     className={`
                       mb-10 w-full rounded-full opacity-0 transition-opacity
@@ -264,6 +272,7 @@ const Templates = () => {
                   `}
                 >
                   <Button
+                    disabled={!isUserLoaded}
                     onClick={() => handleSelectTemplate(templateId)}
                     className={`mb-4 w-full rounded-full transition-opacity`}
                     size={'sm'}
