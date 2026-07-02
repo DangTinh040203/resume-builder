@@ -7,6 +7,7 @@ declare global {
     interface Request {
       auth: JwtPayload;
       clerkEvent: ClerkWebhook | null;
+      requestId: string;
     }
   }
 }
