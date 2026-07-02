@@ -19,3 +19,6 @@
 
 - **Setup**
   - [Dev Environment](dev-setup.md)
+
+- **Operations**
+  - [Monitoring & Logging](monitoring-logging.md)

@@ -1,4 +1,8 @@
-import { type MiddlewareConsumer, Module, type NestModule } from '@nestjs/common';
+import {
+  type MiddlewareConsumer,
+  Module,
+  type NestModule,
+} from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { APP_FILTER, APP_GUARD } from '@nestjs/core';
 import { EventEmitterModule } from '@nestjs/event-emitter';
@@ -56,6 +60,6 @@ import { UserModule } from '@/modules/user/user.module';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer): void {
-    consumer.apply(RequestIdMiddleware).forRoutes('*');
+    consumer.apply(RequestIdMiddleware).forRoutes('{*splat}');
   }
 }
