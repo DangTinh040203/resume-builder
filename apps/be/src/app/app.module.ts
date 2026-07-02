@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { type MiddlewareConsumer, Module, type NestModule } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { APP_FILTER, APP_GUARD } from '@nestjs/core';
 import { EventEmitterModule } from '@nestjs/event-emitter';
@@ -11,6 +11,7 @@ import { AppConfigModule } from '@/libs/configs/config.module';
 import { DatabaseModule } from '@/libs/databases/database.module';
 import { GlobalExceptionFilter } from '@/libs/filters';
 import { ClerkAuthGuard } from '@/libs/guards';
+import { RequestIdMiddleware } from '@/libs/middlewares/request-id.middleware';
 import { InterviewModule } from '@/modules/interview/interview.module';
 import { RagModule } from '@/modules/rag/rag.module';
 import { ResumeModule } from '@/modules/resume/resume.module';
@@ -53,4 +54,8 @@ import { UserModule } from '@/modules/user/user.module';
     },
   ],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer): void {
+    consumer.apply(RequestIdMiddleware).forRoutes('*');
+  }
+}

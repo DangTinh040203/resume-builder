@@ -30,6 +30,7 @@ export interface ApiErrorResponse {
   path: string; // The API endpoint where the error occurred
   message: string | string[] | object; // Error details (string or array of strings)
   error?: string; // Error Type (e.g., "Bad Request", "Not Found") - Optional
+  requestId?: string; // Correlation ID for tracing this request across logs
 }
 
 /**
@@ -106,6 +107,10 @@ export class GlobalExceptionFilter implements ExceptionFilter {
 
     if (error) {
       payload.error = error;
+    }
+
+    if (request.requestId) {
+      payload.requestId = request.requestId;
     }
 
     return payload;
