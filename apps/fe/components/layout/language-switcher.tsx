@@ -24,18 +24,11 @@ export function LanguageSwitcher() {
       <DropdownMenuTrigger asChild>
         <Button variant='ghost' size='sm' className='gap-2'>
           <Languages className='h-4 w-4' />
-          <span
-            className={`
-              hidden
-              sm:inline
-            `}
-          >
-            {t(locale)}
-          </span>
+          <span>{t(locale)}</span>
           <ChevronDown />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align='end'>
+      <DropdownMenuContent align='end' className='z-200'>
         {locales.map((loc) => (
           <DropdownMenuItem
             key={loc}

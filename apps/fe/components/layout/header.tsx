@@ -114,7 +114,7 @@ const Header = () => {
   return (
     <m.nav
       className={cn(
-        'relative z-100 transition-all duration-300',
+        'relative z-50 transition-all duration-300',
         pathname === '/'
           ? 'fixed top-0 right-0 left-0'
           : 'bg-background border-b',
@@ -274,6 +274,10 @@ const Header = () => {
                     variants={navItemVariants}
                     initial='hidden'
                     animate='visible'
+                    className={`
+                      hidden
+                      lg:block
+                    `}
                   >
                     <Link href='/auth/sign-in'>
                       <m.div
@@ -284,6 +288,7 @@ const Header = () => {
                       </m.div>
                     </Link>
                   </m.div>
+
                   <m.div
                     custom={navLinks.length + 1}
                     variants={navItemVariants}
@@ -312,37 +317,43 @@ const Header = () => {
           </div>
 
           {/* Animated Mobile Menu Button */}
-          <m.div className='md:hidden' whileTap={{ scale: 0.9 }}>
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <AnimatePresence mode='wait'>
-                {isOpen ? (
-                  <m.div
-                    key='close'
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <X className='h-5 w-5' />
-                  </m.div>
-                ) : (
-                  <m.div
-                    key='menu'
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Menu className='h-5 w-5' />
-                  </m.div>
-                )}
-              </AnimatePresence>
-            </Button>
-          </m.div>
+          <div className={`
+            flex items-center gap-2
+            md:hidden
+          `}>
+            <LanguageSwitcher />
+            <m.div whileTap={{ scale: 0.9 }}>
+              <Button
+                variant='ghost'
+                size='icon'
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <AnimatePresence mode='wait'>
+                  {isOpen ? (
+                    <m.div
+                      key='close'
+                      initial={{ rotate: -90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      exit={{ rotate: 90, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <X className='h-5 w-5' />
+                    </m.div>
+                  ) : (
+                    <m.div
+                      key='menu'
+                      initial={{ rotate: 90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      exit={{ rotate: -90, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Menu className='h-5 w-5' />
+                    </m.div>
+                  )}
+                </AnimatePresence>
+              </Button>
+            </m.div>
+          </div>
         </div>
 
         {/* Animated Mobile Navigation */}
@@ -360,7 +371,12 @@ const Header = () => {
               exit='exit'
             >
               <div className='flex flex-col gap-1 py-4'>
-                <div className='flex justify-center px-2 pb-3'>
+                <div
+                  className={`
+                    hidden justify-center px-2 pb-3
+                    md:flex
+                  `}
+                >
                   <LanguageSwitcher />
                 </div>
                 {navLinks.map((link, i) => (
