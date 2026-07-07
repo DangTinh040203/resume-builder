@@ -55,12 +55,9 @@ export class GeminiLiveAdapter implements ILiveInterviewProvider {
 
   constructor(private readonly configService: ConfigService) {
     this.genAI = new GoogleGenAI({
-      apiKey: this.configService.get<string>(Env.GEMINI_API_KEY),
+      apiKey: this.configService.getOrThrow<string>(Env.GEMINI_API_KEY),
     });
-    this.model = this.configService.get<string>(
-      Env.GEMINI_LIVE_MODEL,
-      'gemini-2.5-flash-native-audio-preview-12-2025',
-    );
+    this.model = this.configService.getOrThrow<string>(Env.GEMINI_LIVE_MODEL);
   }
 
   async connect(

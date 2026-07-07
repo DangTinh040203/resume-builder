@@ -11,7 +11,10 @@ import {
 import { ConfigService } from '@nestjs/config';
 
 import { Env } from '@/libs/configs';
-import { type LLMProvider } from '@/modules/rag/application/interfaces/llm-provider.interface';
+import {
+  type LLMProvider,
+  type LLMSendOptions,
+} from '@/modules/rag/application/interfaces/llm-provider.interface';
 
 @Injectable()
 export class GeminiAdapter implements LLMProvider {
@@ -26,33 +29,45 @@ export class GeminiAdapter implements LLMProvider {
     });
   }
 
-  async sendMessage(content: string, schema?: Schema): Promise<string> {
-    this.logger.log('[GeminiAdapter]: START');
-    const startTime = Date.now();
+  async sendMessage(
+    content: string,
+    schema?: Schema,
+    options?: LLMSendOptions,
+  ): Promise<string> {
+    try {
+      this.logger.log('[GeminiAdapter]: START');
+      const startTime = Date.now();
 
-    const config: GenerateContentConfig = {};
-    if (schema) {
-      config.responseMimeType = 'application/json';
-      config.responseSchema = schema;
+      const config: GenerateContentConfig = {};
+      if (schema) {
+        config.responseMimeType = 'application/json';
+        config.responseSchema = schema;
+      }
+      if (options?.thinkingConfig) {
+        config.thinkingConfig = options.thinkingConfig;
+      }
+
+      const response = await this.genAI.models.generateContent({
+        model: this.configService.getOrThrow<string>(Env.GEMINI_MODEL),
+        contents: content,
+        config: Object.keys(config).length > 0 ? config : undefined,
+      });
+
+      if (!response.text) {
+        this.logger.error('[GeminiAdapter]: Response text is empty');
+        throw new InternalServerErrorException();
+      }
+
+      const endTime = Date.now();
+      this.logger.log(
+        `[GeminiAdapter]: END - Duration: ${endTime - startTime}ms`,
+      );
+      this.logger.log('[GeminiAdapter]: Response text');
+
+      return response.text;
+    } catch (error) {
+      this.logger.error('[GeminiAdapter]: Error', error);
+      throw error;
     }
-
-    const response = await this.genAI.models.generateContent({
-      model: 'gemini-2.5-flash-lite',
-      contents: content,
-      config: Object.keys(config).length > 0 ? config : undefined,
-    });
-
-    if (!response.text) {
-      this.logger.error('[GeminiAdapter]: Response text is undefined');
-      throw new InternalServerErrorException();
-    }
-
-    const endTime = Date.now();
-    this.logger.log(
-      `[GeminiAdapter]: END - Duration: ${endTime - startTime}ms`,
-    );
-    this.logger.log('[GeminiAdapter]: Response text');
-
-    return response.text;
   }
 }

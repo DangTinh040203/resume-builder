@@ -22,6 +22,7 @@ export enum Env {
 
   GEMINI_API_KEY = 'GEMINI_API_KEY',
   GEMINI_LIVE_MODEL = 'GEMINI_LIVE_MODEL',
+  GEMINI_MODEL = 'GEMINI_MODEL',
 }
 
 export const validationSchema = Joi.object({
@@ -39,7 +40,6 @@ export const validationSchema = Joi.object({
   [Env.THROTTLE_TTL]: Joi.number().default(60000),
   [Env.THROTTLE_LIMIT]: Joi.number().default(10),
   [Env.GEMINI_API_KEY]: Joi.string().required(),
-  [Env.GEMINI_LIVE_MODEL]: Joi.string().default(
-    'gemini-2.5-flash-native-audio-preview-12-2025',
-  ),
+  [Env.GEMINI_LIVE_MODEL]: Joi.string(),
+  [Env.GEMINI_MODEL]: Joi.string(),
 });

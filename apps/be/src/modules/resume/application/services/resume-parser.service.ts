@@ -1,3 +1,4 @@
+import { ThinkingLevel } from '@google/genai';
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { PDFParse } from 'pdf-parse';
 
@@ -18,7 +19,9 @@ export class ResumeParserService {
 
     const prompt = RESUME_PARSER_PROMPT.replace('{cv_text}', data.text);
 
-    const response = await this.ragService.sendMessage(prompt, RESUME_SCHEMA);
+    const response = await this.ragService.sendMessage(prompt, RESUME_SCHEMA, {
+      thinkingConfig: { thinkingLevel: ThinkingLevel.MINIMAL },
+    });
 
     try {
       return JSON.parse(response);
