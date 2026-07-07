@@ -167,7 +167,12 @@ const Templates = () => {
         />
       </div>
 
-      <div className={`relative z-10 container pt-24 pb-12`}>
+      <div
+        className={`
+          relative z-10 container pt-10 pb-12
+          lg:pt-24
+        `}
+      >
         <motion.div
           initial='hidden'
           animate='visible'
@@ -197,7 +202,8 @@ const Templates = () => {
           initial='hidden'
           animate='visible'
           className={`
-            grid grid-cols-2 gap-6
+            grid grid-cols-2 gap-3
+            md:gap-6
             lg:grid-cols-3
             xl:grid-cols-4
           `}
@@ -274,7 +280,9 @@ const Templates = () => {
                   <Button
                     disabled={!isUserLoaded}
                     onClick={() => handleSelectTemplate(templateId)}
-                    className={`mb-4 w-full rounded-full transition-opacity`}
+                    className={`
+                      mb-4 w-full rounded-full text-xs transition-opacity
+                    `}
                     size={'sm'}
                   >
                     {t('useTemplate')}

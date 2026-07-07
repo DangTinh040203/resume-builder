@@ -317,10 +317,12 @@ const Header = () => {
           </div>
 
           {/* Animated Mobile Menu Button */}
-          <div className={`
+          <div
+            className={`
             flex items-center gap-2
             md:hidden
-          `}>
+          `}
+          >
             <LanguageSwitcher />
             <m.div whileTap={{ scale: 0.9 }}>
               <Button
@@ -370,7 +372,7 @@ const Header = () => {
               animate='visible'
               exit='exit'
             >
-              <div className='flex flex-col gap-1 py-4'>
+              <div className='flex flex-col gap-1 pt-4 pb-2'>
                 <div
                   className={`
                     hidden justify-center px-2 pb-3
@@ -429,7 +431,12 @@ const Header = () => {
                     </Link>
 
                     <div className='border-border mt-2 flex border-t pt-2'>
-                      <div className='border-border flex-1 border-r px-4 py-2'>
+                      <div
+                        className={`
+                          border-border flex flex-1 items-center border-r px-4
+                          py-2
+                        `}
+                      >
                         <div className='flex items-center gap-3'>
                           <UserAvatar />
                           <div className='flex flex-col'>

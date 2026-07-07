@@ -215,10 +215,12 @@ export const TemplateSelectionDialog = ({
               </motion.div>
             </div>
           ) : (
-            <div className={`
-              grid grid-cols-1 gap-6 py-8
-              md:grid-cols-2
-            `}>
+            <div
+              className={`
+                grid grid-cols-1 gap-6 py-8
+                md:grid-cols-2
+              `}
+            >
               <div>
                 <Card
                   className={`
@@ -229,8 +231,9 @@ export const TemplateSelectionDialog = ({
                 >
                   <CardContent
                     className={`
-                      flex flex-col items-center justify-center gap-4 p-8
+                      flex flex-col items-center justify-center gap-4
                       text-center
+                      lg:p-8
                     `}
                   >
                     <div
@@ -261,8 +264,9 @@ export const TemplateSelectionDialog = ({
                 >
                   <CardContent
                     className={`
-                      flex flex-col items-center justify-center gap-4 p-8
+                      flex flex-col items-center justify-center gap-4
                       text-center
+                      lg:p-8
                     `}
                   >
                     <div
