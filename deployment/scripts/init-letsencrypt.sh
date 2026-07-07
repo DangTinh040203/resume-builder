@@ -51,7 +51,7 @@ sudo openssl req -x509 -nodes -newkey rsa:2048 -days 1 \
 
 echo "▶ Starting nginx with the dummy cert…"
 # --no-deps: be/fe are already running; without it compose tries to (re)create
-# them and needs GAR_IMAGE_PREFIX/IMAGE_TAG (only set by the deploy workflow).
+# them and needs IMAGE_TAG (only set by the deploy workflow).
 $COMPOSE up -d --no-deps nginx
 
 echo "▶ Deleting the dummy cert…"

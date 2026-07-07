@@ -1,9 +1,10 @@
 # Production compose — runs ON the VM (copied to /opt/resume-builder/docker-compose.yml).
-# Images are pulled from Artifact Registry; nothing is built here.
+# Images are pulled from Artifact Registry by the deploy workflow (full
+# asia-southeast1-docker.pkg.dev/... path), then retagged to the short local
+# names below. Nothing is built or pulled here — hence pull_policy: never.
 #
 # Required env (exported by the deploy workflow before `docker compose`):
-#   GAR_IMAGE_PREFIX = asia-southeast1-docker.pkg.dev/resume-builder-500417/resume-builder-registry
-#   IMAGE_TAG        = <git sha>   (falls back to `latest`)
+#   IMAGE_TAG = <short git sha>   (falls back to `latest`)
 #
 # Runtime secrets live in /opt/resume-builder/.env on the VM (chmod 600, NOT committed).
 
@@ -11,7 +12,8 @@ name: resume-builder
 
 services:
   fe:
-    image: ${GAR_IMAGE_PREFIX}/fe:${IMAGE_TAG:-latest}
+    image: resume-builder/fe:${IMAGE_TAG:-latest}
+    pull_policy: never
     restart: unless-stopped
     expose:
       - "3001"
@@ -32,7 +34,8 @@ services:
         condition: service_healthy
 
   be:
-    image: ${GAR_IMAGE_PREFIX}/be:${IMAGE_TAG:-latest}
+    image: resume-builder/be:${IMAGE_TAG:-latest}
+    pull_policy: never
     restart: unless-stopped
     env_file:
       - .env
